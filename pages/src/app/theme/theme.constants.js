@@ -27,9 +27,9 @@
         goLogin:function(){
             window.location.href = "http://localhost:3000/auth.html";
         },
-        goError = function () {
+        goError:function () {
             window.location.href = "http://localhost:3000/404.html";
-        };
+        },
     })
     .constant('colorHelper', {
       tint: function(color, weight) {
