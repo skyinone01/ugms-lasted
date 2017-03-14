@@ -15,7 +15,7 @@
     };
 
     /** @ngInject */
-    this.$get = function($state, $http,layoutSizes) {
+    this.$get = function($state, $http,layoutSizes,appBase) {
       return new _factory();
 
       function _factory() {
@@ -23,16 +23,11 @@
 
         this.notIncluded = function($http,q){
 
-          //cookie
-          var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
-          if(arr=document.cookie.match(reg)){
-            token = unescape(arr[2]);
-          }
           var deferred = q.defer();//声明承诺
           $http({
             method: "GET",
-            headers: {'token':token},
-            url: "http://127.0.0.1:8080/demo/resources"
+            headers: {'token':appBase.getToken()},
+            url: "http://127.0.0.1:8080/resources"
           }).success(function(result){
             deferred.resolve(result);//请求成功
           }).error(function(err){

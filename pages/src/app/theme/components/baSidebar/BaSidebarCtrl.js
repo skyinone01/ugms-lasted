@@ -21,7 +21,6 @@
       //fn && fn(notIn);//痛过回调,解决在控制器异步取不到数据;
     },function error(err) {//错误回调
       next($scope,baSidebarService,[]);
-      console.log(err);
     });
 
     //var notIn =notIncluded($http,baSidebarService)

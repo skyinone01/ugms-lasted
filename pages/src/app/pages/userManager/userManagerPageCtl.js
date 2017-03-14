@@ -20,7 +20,7 @@
     }
 
     /** @ngInject */
-    function UserManagerPageCtrl($scope, $filter,$http,$stateProvider, $urlRouterProvider) {
+    function UserManagerPageCtrl($scope, $filter,$http,appBase) {
 
         $scope.smartTablePageSize = 10;
         $scope.users = [];
@@ -31,15 +31,20 @@
             {value: 3, text: '职员'}
         ];
 
+
         $scope.listUser=function(){
 
-            $http({
-                method: "GET",
-                url: "http://127.0.0.1:8080/demo/users",
-                headers: {"token":getCookie("token")}
-            }).success(function(res){
-                $scope.users = res;
-            });
+            appBase.doGet("users",null,function(ret){
+                 $scope.users = ret;
+            })
+
+//            $http({
+//                method: "GET",
+//                url: "http://127.0.0.1:8080/demo/users",
+//                headers: {"token":getCookie("token")}
+//            }).success(function(res){
+//                $scope.users = res;
+//            });
 
         }
 
@@ -70,26 +75,28 @@
         };
 
         $scope.saveUser = function(index){
-            $http({
-                method: "POST",
-                url: "http://127.0.0.1:8080/demo/users",
-                params: $scope.users[index]
-            }).success(function(res){
-                alert("保存成功")
+
+            appBase.doPost("users",$scope.users[index],function(ret){
+                alert("保存成功");
                 $scope.listUser();
-            });
+             })
+
         };
 
         $scope.deleteUser = function(index){
 
-            $http({
-                method: "POST",
-                url: "http://127.0.0.1:8080/demo/users/delete",
-                params: $scope.users[index]
-            }).success(function(res){
-                alert("删除成功")
-                $scope.removeUser(index)
-            });
+            appBase.doPost("users/delete",$scope.users[index],function(ret){
+                alert("删除成功");
+                scope.removeUser(index);
+             })
+//            $http({
+//                method: "POST",
+//                url: "http://127.0.0.1:8080/demo/users/delete",
+//                params: $scope.users[index]
+//            }).success(function(res){
+//                alert("删除成功")
+//                $scope.removeUser(index)
+//            });
         };
 
 

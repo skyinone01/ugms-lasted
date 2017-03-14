@@ -20,6 +20,17 @@
         amChart: 'assets/img/theme/vendor/amcharts/dist/amcharts/images/'
       }
     })
+    .constant('appCommon',{
+        autoCompleteUrl:function(uri){
+            return "http://localhost:3000/" + uri;
+        },
+        goLogin:function(){
+            window.location.href = "http://localhost:3000/auth.html";
+        },
+        goError = function () {
+            window.location.href = "http://localhost:3000/404.html";
+        };
+    })
     .constant('colorHelper', {
       tint: function(color, weight) {
         return mix('#ffffff', color, weight);

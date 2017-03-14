@@ -9,56 +9,49 @@
         .factory('appBase', appBase);
 
     /** @ngInject */
-    function appBase($http,$location) {
+    function appBase($http,$location,appCommon) {
         var methods = {};
         var progress = 0;
         var max = 100;
         var opened = false;
 
-        this.goLogin = function () {
-            alert("会话超时");
-            $location.href = "http://localhost:3000/auth.html";
-        };
-        this.goError = function () {
-            $location.href = "http://localhost:3000/404.html";
-        };
-
         return {
-            doPost: function (url,data,callback) {
+            doPost: function (uri,data,callback) {
                 $http({
                     method: "POST",
-                    headers: {'token':getToken},
+                    headers: {'token':getToken()},
                     data: data,
-                    url: url
+                    url: appCommon.autoCompleteUrl(uri)
                 }).success(function(result){
                     callback(result);
                 }).error(function(err){
                    alert("请求失败:"+err);
                 });
             },
-            doGet: function (url,params,callback) {
+            doGet: function (uri,params,callback) {
                 $http({
                     method: "GET",
-                    headers: {'token':getToken},
+                    headers: {'token':getToken()},
                     params: params,
-                    url: url
+                    url: appCommon.autoCompleteUrl(uri)
                 }).success(function(result){
                     callback(result);
                 }).error(function(err){
                     alert("请求失败:"+err);
                 });
             },
-            getToken:function(){
 
+            getToken:function(){
                 var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
                 if(arr=document.cookie.match(reg)){
-                    token = unescape(arr[2]);
-                    var Days = 1/12;
-                    var exp = new Date();
-                    exp.setTime(exp.getTime() + Days*24*60*60*1000);
-                    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+                      token = unescape(arr[2]);
+                      var Days = 1/12;
+                      var exp = new Date();
+                      exp.setTime(exp.getTime() + Days*24*60*60*1000);
+                      document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString();
                 }else {
-                    goLogin();
+                      alert("会话超时");
+                      appCommon.goLogin();
                 }
                 return token;
             }
