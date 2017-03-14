@@ -7,8 +7,6 @@
         <!-- configuration to be enabled when the "staging" profile is active -->
         <include resource="org/springframework/boot/logging/logback/base.xml"/>
     </springProfile>
-    <!--<logger name="com.heclouds.regina" level="INFO"/>
-    <jmxConfigurator/>-->
 
     <!--error file output -->
     <appender name="ERROR-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -23,7 +21,7 @@
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily 配置日志所生成的目录以及生成文件名的规则 -->
-            <fileNamePattern>regina-outer-logs/error/regina-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>ugms-outer-logs/error/ugms-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <!-- or whenever the file size reaches 64 MB -->
@@ -53,7 +51,7 @@
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily 配置日志所生成的目录以及生成文件名的规则 -->
-            <fileNamePattern>regina-outer-logs/info/regina-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>ugms-outer-logs/info/ugms-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <!-- or whenever the file size reaches 64 MB -->

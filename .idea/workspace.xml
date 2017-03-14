@@ -2,683 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/011-changing-color-scheme/new-color-scheme.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/blur-admin-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/blur-preview-mint.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/blur-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/genom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/my-little-kitten.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/new-york-location.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/vader-and-me-preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/my-app-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Alexander.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Andrey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Kostya.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Nasta.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Nick.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Vlad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/01_default.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/02_transparent.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/03_blue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/04_peachy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/05_material.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/06_transblue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/todo/check-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blue-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blur-bg-blurred.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blur-bg-mobile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blur-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/chernika.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/favicon-16x16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/favicon-32x32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/favicon-96x96.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/green-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/peachy-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/no-photo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/palette.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/transblue-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-andrey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-kostia.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-nasta.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-profile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-vova.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/tinder-logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_tree.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/findbugs-idea.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/hippo_shared_libs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_8_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_6_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_uuid_java_uuid_generator_3_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kevinsawicki_http_request_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_heclouds_regina_weedfs_1_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_40.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_logstash_logback_logstash_logback_encoder_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_11_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_11_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_java8_5_0_11_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_redis_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_12_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_10_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_1_1_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_7_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_1_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_1_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_1_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/bean.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/request/PageRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/BasicResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/DataResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/PagedDataResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/request/UserRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/ResourceResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/TokenResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/UserResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UgmsStatus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UserException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/WebapiException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/result/PagedResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/outer-api.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/MvcConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageDefault.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageResovler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZone.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZoneResovler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserInjected.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserResolver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/DemoController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/AuthenticationFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/MethodSecurityConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/SecurityConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAccessDeniedHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAuthenticationEntryPoint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/resources/banner.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/resources/logback-spring.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/001-getting-started/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/002-installation-guidelines/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/011-changing-color-scheme/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/012-project-structure/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/013-create-new-page/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/014-switch-to-blur-theme/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/051-sidebar/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/091-downloads/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/why-design.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/why-practices.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/why-structure.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/index.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/plugins/paginator.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/templates/article.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/templates/index.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/templates/layout.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/build.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/devRelease.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/docs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/images.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/inject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/marketplace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/watch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/preview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/amCharts.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/areaChart/AreaChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/areaChart/areaChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/barChart/BarChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/barChart/barChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/charts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/combinedChart/combinedChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/combinedChart/combinedChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/funnelChart/FunnelChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/funnelChart/funnelChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/ganttChart/ganttChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/ganttChart/ganttChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/lineChart/LineChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/lineChart/lineChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/pieChart/PieChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/pieChart/pieChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs1DCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs2DCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJsWaveCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartist/chartist.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartist/chartist.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartist/chartistCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/charts.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/morris/morris.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/morris/morris.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/morris/morrisCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/components.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/MailTabCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/composeBox/compose.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/composeBox/composeBoxCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/composeBox/composeModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/detail/MailDetailCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/detail/mailDetail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/list/MailListCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/list/mailList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/mail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/mail.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/mailMessages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/timeline/TimelineCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/timeline/timeline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/timeline/timeline.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/tree/tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/tree/tree.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/tree/treeCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/blurFeed/BlurFeedCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/blurFeed/blurFeed.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/blurFeed/blurFeed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/calendar/dashboardCalendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboard.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardCalendar/DashboardCalendarCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardCalendar/dashboardCalendar.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardCalendar/dashboardCalendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardLineChart/DashboardLineChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardLineChart/dashboardLineChart.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardLineChart/dashboardLineChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardMap/DashboardMapCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardMap/dashboardMap.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardMap/dashboardMap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardPieChart/DashboardPieChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardPieChart/dashboardPieChart.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardPieChart/dashboardPieChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardTodo/DashboardTodoCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardTodo/dashboardTodo.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardTodo/dashboardTodo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/pieCharts/dashboardPieChart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/popularApp/popularApp.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/popularApp/popularApp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/trafficChart/TrafficChartCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/trafficChart/trafficChart.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/trafficChart/trafficChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/weather/WeatherCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/weather/weather.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/weather/weather.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/form.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/inputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/checkboxesRadios.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/datePickers/datePickers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/datePickers/datepickerCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/datePickers/datepickerpopupCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/inputGroups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/OldSelectpickerPanelCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/select.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/selectpicker.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSwitches/OldSwitchPanelCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSwitches/switch.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSwitches/switch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/select/GroupSelectpickerOptions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/select/SelectpickerPanelCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/select/select.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/standardFields.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/switches/SwitchDemoPanelCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/switches/switch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/tagsInput/tagsInput.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/tagsInput/tagsInput.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/validationStates.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/layouts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/basicForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/blockForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/formWithoutLabels.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/horizontalForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/inlineForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/wizard/wizard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/wizard/wizrdCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/google-maps/GmapPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/google-maps/google-maps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/leaflet/LeafletPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/leaflet/leaflet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-bubbles/MapBubblePageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-bubbles/map-bubbles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-lines/MapLinesPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-lines/map-lines.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/maps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/maps.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/pages.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/ProfileModalCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/ProfilePageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/profile.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/profileModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/TablesPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/basic/tables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/smart/tables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/tables.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/basicTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/borderedTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/condensedTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/contextualTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/editableRowTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/editableTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/hoverRows.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/responsiveTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/smartTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/stripedRows.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/alerts/alerts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/alerts/alerts.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/ButtonPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/buttons.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/buttonGroups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/dropdowns.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/iconButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/largeButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/progressButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/grid/baseGrid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/grid/grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/grid/grid.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/IconsPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/icons.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/fontAwesomeIcons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/ionicons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/kameleon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/kameleonRounded.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/socicon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/ModalsPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/basicModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/dangerModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/infoModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/largeModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/smallModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/successModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/warningModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modals.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/notifications/NotificationsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/notifications/notifications.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/progressModal/ProgressModalCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/progressModal/progressModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/notifications/NotificationsPageCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/notifications/notifications.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/notifications/notifications.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/panels/panels.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/panels/panels.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/progressBars.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/progressBars.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/animated.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/label.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/stacked.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/striped.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/slider/slider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/slider/slider.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/contextualAccordion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/mainTabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/sampleAccordion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/sideTabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/tabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/tabs.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/typography/typography.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/typography/typography.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/ui.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/auth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/auth.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/authPageCtl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/userManager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/userManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/userManager.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/userManagerPageCtl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanel.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanel.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanelBlur.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanelBlurHelper.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanelSelf.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/BaSidebarCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/ba-sidebar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebarHelpers.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizard.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizardCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizardStep.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizardStep.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/backTop/backTop.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/backTop/backTop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/backTop/lib/jquery.backTop.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/components.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/contentTop/contentTop.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/contentTop/contentTop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/msgCenter/MsgCenterCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/msgCenter/msgCenter.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/msgCenter/msgCenter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/progressBarRound/progressBarRound.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/progressBarRound/progressBarRound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/toastrLibConfig.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/widgets/widgets.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/widgets/widgets.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/animatedChange.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/autoExpand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/autoFocus.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/includeWithScope.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/ionSlider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/ngFileSelect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/scrollPosition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/trackWidth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/zoomIn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/image/appImage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/image/kameleonImg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/image/profilePicture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/text/removeHtml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/inputs/baSwitcher/baSwitcher.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/inputs/baSwitcher/baSwitcher.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/inputs/inputs.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/appBase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/baProgressModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/baUtil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/fileReader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/preloader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/stopableInterval.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.configProvider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.run.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/chrome.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/firefox.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/ie.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/opera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/safari.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/arrow-green-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/arrow-red-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/comments.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/face.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/money.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/person.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/refresh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/shopping-cart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/feed/feed-image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/feed/feed-location.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/feed/feed-video.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Alien.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Analytics.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Apartment.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Batman.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Beach.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Bell.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Bonsai.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Boss-3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Boss-5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Burglar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Bus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Candy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Checklist.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Cheese.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Chessboard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Clipboard-Plan.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Desert.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Dna.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Euro-Coin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Food-Dome.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Hacker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Images.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Key.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Laptop-Signal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Locked-Cloud.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Love-Letter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Magician.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Makeup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Medal-2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Microscope.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Mind-Map-Paper.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Money-Increase.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Music-Equalizer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Ninja.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Online-Shopping.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Pantone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Party-Poppers.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Phone-Booth.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Programming.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Santa.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Shop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Street-View.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Student-3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Surfer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Surgeon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Tower.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Vector.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/auth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/reg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/404.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_buttonsPage.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_chartsPage.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_dashboard.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_email.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_form.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_iconsPage.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_modalNotifications.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_modals.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_notifications.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_profile.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_slider.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_table.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_tabsPage.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_tplSkinPanel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_tree.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_google-maps.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_leaflet.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_map-bubbles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_map-lines.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/auth.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/common.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_blur-admin-theme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_datePicker.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_layout.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_preloader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_socicon.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_table.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/bootstrap-overrides/_panel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/bootstrap-overrides/_tabs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_accordion.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_baWizard.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_backTop.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_contentTop.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_msgCenter.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_pageTop.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_progressRound.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_sidebar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_widgets.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/colorScheme/_blur.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/colorScheme/_mint.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_amChart.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_amChartMap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_blurFeed.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_calendar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_pieCharts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_popularApp.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_timeline.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_todo.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_trafficChart.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_weather.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-09.0.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-10.0.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-13.0.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-09.0.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-10.0.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-13.0.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/root.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/src/main/java/com/ugms/backend/RootMarker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/service.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/ServiceConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/bean/MysqlBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Member.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Resource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/RoleResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/MysqlRepositoryMarker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/ResourceRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/AbstractRDBRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/MybatisSupport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/RDBRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/RDBRepositoryBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/component/MybatisData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/component/MybatisDataBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/domain/UgmsPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/exception/CoreException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/handler/DataHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/handler/DataHandlerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/tools/DataTool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/InstantHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalDateHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalDateTimeHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalTimeHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OffsetDateTimeHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OptionalHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/ZonedDateTimeHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/ResourceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/RoleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/User.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ugms-web.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/AesUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/ContextUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/MD5Util.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/SpringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/StringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TimeUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TokenUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/UgmsConstant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/utils.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/resources/logback-spring.xml" afterPath="$PROJECT_DIR$/outer-api/src/main/resources/logback-spring.xml" />
     </list>
     <ignored path="regina-webapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -715,26 +40,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -785,14 +90,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="459">
+              <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/404.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appBase.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/appBase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -802,16 +137,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebapiConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -830,6 +155,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>webapi</find>
+      <find>regina</find>
     </findStrings>
     <replaceStrings>
       <replace>ugms</replace>
@@ -849,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserIdInjected.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserIdResolver.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/DemoController.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/api/response/TokenResponse.java" />
@@ -900,6 +225,7 @@
         <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/resources/logback-spring.xml" />
       </list>
     </option>
   </component>
@@ -983,16 +309,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1019,10 +335,284 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="outer-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="outer-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="outer-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="outerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1941,7 +1531,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34219268" sideWeight="0.506424" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40043527" sideWeight="0.49357602" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5856237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2896406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2220,20 +1810,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="201" column="5" lean-forward="false" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2276,13 +1852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/BaSidebarCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -2308,13 +1877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/appBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -2387,7 +1949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2503,7 +2064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2511,7 +2071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2563,13 +2122,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-213">
+          <caret line="12" column="67" lean-forward="false" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="459">
+          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/appBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
