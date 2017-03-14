@@ -1,0 +1,2664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/011-changing-color-scheme/new-color-scheme.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/blur-admin-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/blur-preview-mint.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/blur-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/genom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/my-little-kitten.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/new-york-location.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/feed/vader-and-me-preview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/my-app-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Alexander.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Andrey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Kostya.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Nasta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Nick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/profile/Vlad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/01_default.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/02_transparent.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/03_blue.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/04_peachy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/05_material.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/skin-thumbnails/06_transblue.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/todo/check-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/banner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/typography/typo07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blue-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blur-bg-blurred.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blur-bg-mobile.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/blur-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/chernika.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/favicon-16x16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/favicon-32x32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/favicon-96x96.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/green-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/peachy-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/no-photo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/palette.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/transblue-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-andrey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-kostia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-nasta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-profile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/pic-vova.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/pictures/tinder-logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_tree.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/findbugs-idea.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/hippo_shared_libs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_19.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_8_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_6_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_uuid_java_uuid_generator_3_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kevinsawicki_http_request_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_heclouds_regina_weedfs_1_1_0_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_40.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_logstash_logback_logstash_logback_encoder_4_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_11_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_11_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_java8_5_0_11_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_redis_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_4_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_12_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_10_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_1_1_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_7_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_1_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_1_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_1_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/bean.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/request/PageRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/BasicResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/DataResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/PagedDataResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/request/UserRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/ResourceResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/TokenResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/UserResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UgmsStatus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UserException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/WebapiException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/result/PagedResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/outer-api.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/MvcConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageDefault.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageResovler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZone.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZoneResovler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserInjected.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserResolver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/DemoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/AuthenticationFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/MethodSecurityConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/SecurityConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAccessDeniedHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAuthenticationEntryPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/resources/application.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/resources/banner.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/outer-api/src/main/resources/logback-spring.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/001-getting-started/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/002-installation-guidelines/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/011-changing-color-scheme/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/012-project-structure/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/013-create-new-page/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/014-switch-to-blur-theme/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/051-sidebar/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/articles/091-downloads/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/why-design.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/why-practices.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/images/why-structure.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/contents/index.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/plugins/paginator.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/templates/article.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/templates/index.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/docs/templates/layout.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/devRelease.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/docs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/images.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/inject.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/marketplace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/styles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulp/watch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/preview.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/amCharts.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/areaChart/AreaChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/areaChart/areaChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/barChart/BarChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/barChart/barChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/charts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/combinedChart/combinedChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/combinedChart/combinedChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/funnelChart/FunnelChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/funnelChart/funnelChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/ganttChart/ganttChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/ganttChart/ganttChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/lineChart/LineChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/lineChart/lineChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/pieChart/PieChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/amCharts/pieChart/pieChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs1DCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJs2DCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartJs/chartJsWaveCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartist/chartist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartist/chartist.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/chartist/chartistCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/charts.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/morris/morris.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/morris/morris.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/charts/morris/morrisCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/components.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/MailTabCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/composeBox/compose.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/composeBox/composeBoxCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/composeBox/composeModal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/detail/MailDetailCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/detail/mailDetail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/list/MailListCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/list/mailList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/mail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/mail.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/mail/mailMessages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/timeline/TimelineCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/timeline/timeline.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/timeline/timeline.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/tree/tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/tree/tree.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/components/tree/treeCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/blurFeed/BlurFeedCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/blurFeed/blurFeed.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/blurFeed/blurFeed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/calendar/dashboardCalendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboard.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardCalendar/DashboardCalendarCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardCalendar/dashboardCalendar.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardCalendar/dashboardCalendar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardLineChart/DashboardLineChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardLineChart/dashboardLineChart.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardLineChart/dashboardLineChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardMap/DashboardMapCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardMap/dashboardMap.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardMap/dashboardMap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardPieChart/DashboardPieChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardPieChart/dashboardPieChart.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardPieChart/dashboardPieChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardTodo/DashboardTodoCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardTodo/dashboardTodo.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboardTodo/dashboardTodo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/pieCharts/dashboardPieChart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/popularApp/popularApp.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/popularApp/popularApp.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/trafficChart/TrafficChartCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/trafficChart/trafficChart.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/trafficChart/trafficChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/weather/WeatherCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/weather/weather.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/dashboard/weather/weather.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/form.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/inputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/checkboxesRadios.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/datePickers/datePickers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/datePickers/datepickerCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/datePickers/datepickerpopupCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/inputGroups.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/OldSelectpickerPanelCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/select.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/selectpicker.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSwitches/OldSwitchPanelCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSwitches/switch.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSwitches/switch.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/select/GroupSelectpickerOptions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/select/SelectpickerPanelCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/select/select.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/standardFields.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/switches/SwitchDemoPanelCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/switches/switch.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/tagsInput/tagsInput.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/tagsInput/tagsInput.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/validationStates.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/layouts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/basicForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/blockForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/formWithoutLabels.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/horizontalForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/layouts/widgets/inlineForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/wizard/wizard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/wizard/wizrdCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/google-maps/GmapPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/google-maps/google-maps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/leaflet/LeafletPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/leaflet/leaflet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-bubbles/MapBubblePageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-bubbles/map-bubbles.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-lines/MapLinesPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/map-lines/map-lines.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/maps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/maps/maps.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/pages.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/ProfileModalCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/ProfilePageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/profile.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/profile/profileModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/TablesPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/basic/tables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/smart/tables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/tables.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/basicTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/borderedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/condensedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/contextualTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/editableRowTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/editableTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/hoverRows.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/responsiveTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/smartTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/tables/widgets/stripedRows.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/alerts/alerts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/alerts/alerts.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/ButtonPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/buttons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/buttons.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/buttonGroups.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/buttons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/dropdowns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/iconButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/largeButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/buttons/widgets/progressButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/grid/baseGrid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/grid/grid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/grid/grid.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/IconsPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/icons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/icons.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/fontAwesomeIcons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/ionicons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/kameleon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/kameleonRounded.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/icons/widgets/socicon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/ModalsPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/basicModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/dangerModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/infoModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/largeModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/smallModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/successModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modalTemplates/warningModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modals.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/modals.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/notifications/NotificationsCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/notifications/notifications.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/progressModal/ProgressModalCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/modals/progressModal/progressModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/notifications/NotificationsPageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/notifications/notifications.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/notifications/notifications.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/panels/panels.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/panels/panels.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/progressBars.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/progressBars.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/animated.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/basic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/label.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/stacked.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/progressBars/widgets/striped.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/slider/slider.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/slider/slider.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/contextualAccordion.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/mainTabs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/sampleAccordion.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/sideTabs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/tabs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/tabs/tabs.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/typography/typography.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/typography/typography.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/ui/ui.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/auth.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/auth.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/authPageCtl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/userManager.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/userManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/userManager.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/userManagerPageCtl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanel.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanel.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanelBlur.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanelBlurHelper.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baPanel/baPanelSelf.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/BaSidebarCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/ba-sidebar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebarHelpers.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizard.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizardCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizardStep.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baWizard/baWizardStep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/backTop/backTop.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/backTop/backTop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/backTop/lib/jquery.backTop.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/components.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/contentTop/contentTop.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/contentTop/contentTop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/msgCenter/MsgCenterCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/msgCenter/msgCenter.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/msgCenter/msgCenter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/progressBarRound/progressBarRound.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/progressBarRound/progressBarRound.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/toastrLibConfig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/widgets/widgets.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/widgets/widgets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/animatedChange.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/autoExpand.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/autoFocus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/includeWithScope.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/ionSlider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/ngFileSelect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/scrollPosition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/trackWidth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/zoomIn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/image/appImage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/image/kameleonImg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/image/profilePicture.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/filters/text/removeHtml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/inputs/baSwitcher/baSwitcher.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/inputs/baSwitcher/baSwitcher.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/inputs/inputs.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/appBase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/baProgressModal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/baUtil.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/fileReader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/preloader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/stopableInterval.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.configProvider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.run.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/fonts/socicon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/chrome.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/firefox.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/ie.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/opera.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/app/browsers/safari.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/arrow-green-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/arrow-red-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/comments.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/face.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/money.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/person.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/refresh.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/shopping-cart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/feed/feed-image.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/feed/feed-location.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/feed/feed-video.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Alien.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Analytics.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Apartment.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Batman.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Beach.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Bell.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Bonsai.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Boss-3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Boss-5.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Burglar.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Bus.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Candy.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Checklist.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Cheese.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Chessboard.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Clipboard-Plan.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Desert.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Dna.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Euro-Coin.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Food-Dome.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Hacker.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Images.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Key.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Laptop-Signal.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Locked-Cloud.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Love-Letter.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Magician.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Makeup.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Medal-2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Microscope.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Mind-Map-Paper.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Money-Increase.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Music-Equalizer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Ninja.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Online-Shopping.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Pantone.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Party-Poppers.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Phone-Booth.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Programming.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Santa.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Shop.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Street-View.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Student-3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Surfer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Surgeon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Tower.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/assets/img/theme/icon/kameleon/Vector.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/auth.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/reg.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/404.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_buttonsPage.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_chartsPage.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_dashboard.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_email.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_form.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_iconsPage.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_modalNotifications.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_modals.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_notifications.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_profile.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_slider.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_table.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_tabsPage.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_tplSkinPanel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_tree.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/_typography.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_google-maps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_leaflet.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_map-bubbles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/app/maps/_map-lines.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/auth.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/common.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/main.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_blur-admin-theme.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_datePicker.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_layout.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_preloader.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_socicon.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/_table.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/bootstrap-overrides/_panel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/bootstrap-overrides/_tabs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_accordion.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_baWizard.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_backTop.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_contentTop.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_msgCenter.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_pageTop.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_progressRound.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_sidebar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/components/_widgets.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/colorScheme/_blur.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/conf/colorScheme/_mint.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_amChart.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_amChartMap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_blurFeed.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_calendar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_pieCharts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_popularApp.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_timeline.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_todo.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_trafficChart.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/sass/theme/dashboard/_weather.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-09.0.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-10.0.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-13.0.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-09.0.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-10.0.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-13.0.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/root.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/src/main/java/com/ugms/backend/RootMarker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/service.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/ServiceConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/bean/MysqlBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Member.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Resource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/RoleResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/MysqlRepositoryMarker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/ResourceRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/AbstractRDBRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/MybatisSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/RDBRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/RDBRepositoryBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/component/MybatisData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/component/MybatisDataBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/domain/UgmsPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/exception/CoreException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/handler/DataHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/handler/DataHandlerImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/tools/DataTool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/InstantHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalDateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalDateTimeHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalTimeHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OffsetDateTimeHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OptionalHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/ZonedDateTimeHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/ResourceService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/RoleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/User.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ugms-web.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/AesUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/ContextUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/MD5Util.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/SpringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/StringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TimeUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TokenUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/UgmsConstant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/utils.iml" />
+    </list>
+    <ignored path="regina-webapi.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/inner-api/target/" />
+    <ignored path="$PROJECT_DIR$/service/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/outer-api/target/" />
+    <ignored path="$PROJECT_DIR$/root/target/" />
+    <ignored path="$PROJECT_DIR$/ws/target/" />
+    <ignored path="$PROJECT_DIR$/kafka-repo/target/" />
+    <ignored path="$PROJECT_DIR$/redis-repo/target/" />
+    <ignored path="$PROJECT_DIR$/weedfs/target/" />
+    <ignored path="$PROJECT_DIR$/test-api/target/" />
+    <ignored path="$PROJECT_DIR$/mongo-repo/target/" />
+    <ignored path="$PROJECT_DIR$/bean/target/" />
+    <ignored path="$PROJECT_DIR$/utils/target/" />
+    <ignored path="$PROJECT_DIR$/backend-api/target/" />
+    <ignored path="$PROJECT_DIR$/onenet-outer-api/target/" />
+    <ignored path="$PROJECT_DIR$/demo/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="regina-webapi" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleResourceRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/ResourceRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="46" column="72" lean-forward="false" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebapiConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1566">
+              <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>webapi</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ugms</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\shanghhs\ugms</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserIdInjected.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserIdResolver.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/DemoController.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/api/response/TokenResponse.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/TokenResponse.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/TokenResponse.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/MethodSecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAuthenticationEntryPoint.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/result/PagedResult.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/bean/MysqlBean.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/UgmsConstant.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TokenUtils.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TimeUtils.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/StringUtils.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/ContextUtils.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java" />
+        <option value="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/BaSidebarCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Resource.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/RoleResource.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/MysqlRepositoryMarker.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/request/UserCreateRequest.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/request/UserCreateRequest.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UgmsStatus.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/UserResponse.java" />
+        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/User.xml" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/request/UserRequest.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAccessDeniedHandler.java" />
+        <option value="$PROJECT_DIR$/pages/src/app/theme/services/appBase.js" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/User.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/ResourceRepository.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/ResourceService.java" />
+        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/ResourceResponse.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserInjected.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/MvcConfiguration.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageResovler.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/AesUtils.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleRepository.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ugms-web" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ugms-web" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="E:/regina/smartdata/trunk/data_push" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.41575664" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/regina/trunk/api/web/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/ThirdPartController.java" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="207" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="242" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="245" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1148" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="219" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="238" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="241" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1144" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ugms.backend.service.service" />
+      <recent name="com.heclouds.regina.service.service.impl" />
+      <recent name="com.heclouds.regina.service.request" />
+      <recent name="com.heclouds.regina.service.response" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ugms.backend.bean.bean.request" />
+      <recent name="com.ugms.backend.bean.bean.response" />
+      <recent name="com.ugms.backend.bean.api.response" />
+      <recent name="com.heclouds" />
+      <recent name="com.heclouds.regina.bean.api.request" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\shanghhs\ugms\service\src\main\resources\mybatis" />
+      <recent name="E:\regina\trunk\api\web\public-outer-api" />
+      <recent name="E:\regina\trunk\api\web" />
+      <recent name="E:\regina\trunk\api\web\inner-api\src\main\resources\static" />
+      <recent name="E:\regina\trunk\api\web\service\src\main\resources\scripts" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ugms.backend.bean.bean.response" />
+      <recent name="com.ugms.backend.service.repository.mysql" />
+      <recent name="com.ugms.backend.service.entity.mysql" />
+      <recent name="com.heclouds.regina.service.request" />
+      <recent name="com.heclouds.regina.service.repository.mysql" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\regina\trunk\api\web\service\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ugms">
+    <configuration default="false" name="ugms" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ugms.backend.outerapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.ugms.backend.outerapi.WebapiApplication" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=dev" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="outer-api" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="regina-webapi" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="WebapiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ugms.backend.outerapi.WebapiApplication" />
+      <module name="outer-api" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.ugms" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.ugms" />
+      </list>
+    </recent_temporary>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Roy\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="" />
+      <created>1461550387312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1461550387312</updated>
+      <workItem from="1461550390352" duration="810000" />
+      <workItem from="1461551554985" duration="935000" />
+      <workItem from="1461552589977" duration="2433000" />
+      <workItem from="1461555124928" duration="4626000" />
+      <workItem from="1461572160706" duration="437000" />
+      <workItem from="1461578817289" duration="393000" />
+      <workItem from="1461579556389" duration="24000" />
+      <workItem from="1461581504052" duration="174000" />
+      <workItem from="1461631918513" duration="52000" />
+      <workItem from="1461633059549" duration="710000" />
+      <workItem from="1461634410956" duration="703000" />
+      <workItem from="1461636510527" duration="849000" />
+      <workItem from="1461638328355" duration="184000" />
+      <workItem from="1461651619363" duration="6418000" />
+      <workItem from="1461661041184" duration="1005000" />
+      <workItem from="1461717636437" duration="22000" />
+      <workItem from="1461742565393" duration="7805000" />
+      <workItem from="1461805736908" duration="10296000" />
+      <workItem from="1461816128757" duration="9664000" />
+      <workItem from="1461832170799" duration="6793000" />
+      <workItem from="1461889744976" duration="10940000" />
+      <workItem from="1461914532944" duration="1519000" />
+      <workItem from="1462238762316" duration="3188000" />
+      <workItem from="1462242334311" duration="3642000" />
+      <workItem from="1462246190470" duration="579000" />
+      <workItem from="1462259649234" duration="25258000" />
+      <workItem from="1462408670764" duration="17000" />
+      <workItem from="1462411860817" duration="9576000" />
+      <workItem from="1462494976752" duration="6344000" />
+      <workItem from="1462517478992" duration="2957000" />
+      <workItem from="1462841160712" duration="4031000" />
+      <workItem from="1462929860055" duration="347000" />
+      <workItem from="1462957273919" duration="1851000" />
+      <workItem from="1463019044001" duration="9383000" />
+      <workItem from="1463100883964" duration="5461000" />
+      <workItem from="1463359804760" duration="2563000" />
+      <workItem from="1463451911360" duration="8936000" />
+      <workItem from="1463543461914" duration="2316000" />
+      <workItem from="1463558418087" duration="2475000" />
+      <workItem from="1463620534521" duration="24940000" />
+      <workItem from="1463965510953" duration="7773000" />
+      <workItem from="1463985726114" duration="3691000" />
+      <workItem from="1464050168410" duration="1979000" />
+      <workItem from="1464055485571" duration="2160000" />
+      <workItem from="1464144421987" duration="750000" />
+      <workItem from="1464145209804" duration="793000" />
+      <workItem from="1464243461403" duration="341000" />
+      <workItem from="1464315768700" duration="369000" />
+      <workItem from="1464570010189" duration="10009000" />
+      <workItem from="1464685672034" duration="412000" />
+      <workItem from="1464746176653" duration="8793000" />
+      <workItem from="1464768421878" duration="264000" />
+      <workItem from="1464769198145" duration="107000" />
+      <workItem from="1464828836876" duration="3000" />
+      <workItem from="1464835148231" duration="1061000" />
+      <workItem from="1464846708562" duration="47000" />
+      <workItem from="1465364565116" duration="7785000" />
+      <workItem from="1465693662590" duration="1064000" />
+      <workItem from="1465717331134" duration="1128000" />
+      <workItem from="1465806901620" duration="297000" />
+      <workItem from="1465883620189" duration="2472000" />
+      <workItem from="1466041127554" duration="265000" />
+      <workItem from="1466041713643" duration="1037000" />
+      <workItem from="1466058251548" duration="1958000" />
+      <workItem from="1466065579452" duration="3350000" />
+      <workItem from="1466125703779" duration="163000" />
+      <workItem from="1466146880760" duration="1970000" />
+      <workItem from="1466150362030" duration="50000" />
+      <workItem from="1466150424057" duration="1233000" />
+      <workItem from="1466386979041" duration="17000" />
+      <workItem from="1466387771686" duration="2676000" />
+      <workItem from="1466390464565" duration="49000" />
+      <workItem from="1466390653691" duration="236000" />
+      <workItem from="1466391458072" duration="55000" />
+      <workItem from="1467171440365" duration="20736000" />
+      <workItem from="1467684716428" duration="101470000" />
+      <workItem from="1467957200526" duration="4046000" />
+      <workItem from="1467969512408" duration="675000" />
+      <workItem from="1468198730945" duration="22344000" />
+      <workItem from="1468458402648" duration="21913000" />
+      <workItem from="1468804239342" duration="34519000" />
+      <workItem from="1468975720880" duration="64670000" />
+      <workItem from="1469407895967" duration="33350000" />
+      <workItem from="1469667430064" duration="6237000" />
+      <workItem from="1469674637372" duration="13330000" />
+      <workItem from="1469753050957" duration="521000" />
+      <workItem from="1469755182389" duration="9871000" />
+      <workItem from="1470012753281" duration="68917000" />
+      <workItem from="1470311678254" duration="4309000" />
+      <workItem from="1470617539390" duration="24958000" />
+      <workItem from="1470876662279" duration="35384000" />
+      <workItem from="1471222681467" duration="43112000" />
+      <workItem from="1471568875389" duration="8064000" />
+      <workItem from="1471604376062" duration="198000" />
+      <workItem from="1471827053610" duration="5766000" />
+      <workItem from="1471912860347" duration="12578000" />
+      <workItem from="1471999491603" duration="11433000" />
+      <workItem from="1472088952915" duration="7620000" />
+      <workItem from="1472431522333" duration="44086000" />
+      <workItem from="1472797709595" duration="1996000" />
+      <workItem from="1472804498924" duration="832000" />
+      <workItem from="1473039455075" duration="9835000" />
+      <workItem from="1473211159618" duration="6633000" />
+      <workItem from="1473386205397" duration="6173000" />
+      <workItem from="1473413615499" duration="1171000" />
+      <workItem from="1473643775134" duration="26029000" />
+      <workItem from="1474177330686" duration="32949000" />
+      <workItem from="1474592044416" duration="867000" />
+      <workItem from="1474593813052" duration="1422000" />
+      <workItem from="1474614969926" duration="2770000" />
+      <workItem from="1474850762596" duration="24646000" />
+      <workItem from="1475112457881" duration="11867000" />
+      <workItem from="1475205958794" duration="3180000" />
+      <workItem from="1475221818191" duration="2746000" />
+      <workItem from="1476147193115" duration="7569000" />
+      <workItem from="1476161511141" duration="6422000" />
+      <workItem from="1476234054160" duration="11939000" />
+      <workItem from="1476320733909" duration="7013000" />
+      <workItem from="1476407185971" duration="13064000" />
+      <workItem from="1476667340816" duration="31888000" />
+      <workItem from="1476841517041" duration="36273000" />
+      <workItem from="1477270840402" duration="34981000" />
+      <workItem from="1477875310739" duration="24641000" />
+      <workItem from="1478481310108" duration="10261000" />
+      <workItem from="1478653978643" duration="20620000" />
+      <workItem from="1478835903169" duration="6579000" />
+      <workItem from="1479172235206" duration="17845000" />
+      <workItem from="1479350270295" duration="16263000" />
+      <workItem from="1479690821288" duration="6060000" />
+      <workItem from="1479880937268" duration="2312000" />
+      <workItem from="1479949787434" duration="4813000" />
+      <workItem from="1480294741323" duration="6742000" />
+      <workItem from="1480992780484" duration="1286000" />
+      <workItem from="1481079360152" duration="711000" />
+      <workItem from="1481246530113" duration="1229000" />
+      <workItem from="1481593205779" duration="2119000" />
+      <workItem from="1481678503432" duration="2940000" />
+      <workItem from="1481768851850" duration="15730000" />
+      <workItem from="1482202146566" duration="21407000" />
+      <workItem from="1482804542531" duration="13308000" />
+      <workItem from="1483076702103" duration="59000" />
+      <workItem from="1483078006993" duration="620000" />
+      <workItem from="1483926441469" duration="13543000" />
+      <workItem from="1484199408372" duration="628000" />
+      <workItem from="1484718306335" duration="17615000" />
+      <workItem from="1484815755423" duration="1793000" />
+      <workItem from="1484874645352" duration="16604000" />
+      <workItem from="1485066831422" duration="16220000" />
+      <workItem from="1486178479177" duration="58955000" />
+      <workItem from="1486947987381" duration="7735000" />
+      <workItem from="1487140574676" duration="996000" />
+      <workItem from="1487143687699" duration="6672000" />
+      <workItem from="1487553231218" duration="9539000" />
+      <workItem from="1487638641154" duration="2629000" />
+      <workItem from="1487724454032" duration="14154000" />
+      <workItem from="1487898369177" duration="2419000" />
+      <workItem from="1488157523753" duration="4222000" />
+      <workItem from="1488244943671" duration="7933000" />
+      <workItem from="1488437062858" duration="2833000" />
+      <workItem from="1488762200045" duration="5254000" />
+      <workItem from="1488791924570" duration="41000" />
+      <workItem from="1488953888270" duration="3929000" />
+      <workItem from="1488962346220" duration="2112000" />
+      <workItem from="1489021272257" duration="3798000" />
+      <workItem from="1489030931385" duration="48000" />
+      <workItem from="1489035798212" duration="8784000" />
+      <workItem from="1489046284705" duration="1110000" />
+      <workItem from="1489047413861" duration="1220000" />
+      <workItem from="1489048654678" duration="2325000" />
+      <workItem from="1489108118489" duration="877000" />
+      <workItem from="1489109025596" duration="1765000" />
+      <workItem from="1489111292102" duration="265000" />
+      <workItem from="1489111817525" duration="12422000" />
+    </task>
+    <task id="LOCAL-00131">
+      <created>1470909745479</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1470909745479</updated>
+    </task>
+    <task id="LOCAL-00132">
+      <created>1470909772633</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1470909772633</updated>
+    </task>
+    <task id="LOCAL-00133">
+      <created>1470910761192</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1470910761192</updated>
+    </task>
+    <task id="LOCAL-00134">
+      <created>1470969861956</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1470969861956</updated>
+    </task>
+    <task id="LOCAL-00135">
+      <created>1471240852714</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1471240852728</updated>
+    </task>
+    <task id="LOCAL-00136">
+      <created>1471244365153</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1471244365153</updated>
+    </task>
+    <task id="LOCAL-00137">
+      <created>1471245377747</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1471245377747</updated>
+    </task>
+    <task id="LOCAL-00138">
+      <created>1471310871021</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1471310871021</updated>
+    </task>
+    <task id="LOCAL-00139">
+      <created>1471326186774</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1471326186774</updated>
+    </task>
+    <task id="LOCAL-00140">
+      <created>1471326571467</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1471326571467</updated>
+    </task>
+    <task id="LOCAL-00141">
+      <created>1471330317215</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1471330317215</updated>
+    </task>
+    <task id="LOCAL-00142">
+      <created>1471332278404</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1471332278405</updated>
+    </task>
+    <task id="LOCAL-00143">
+      <created>1471502951715</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1471502951715</updated>
+    </task>
+    <task id="LOCAL-00144">
+      <created>1471505246858</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1471505246858</updated>
+    </task>
+    <task id="LOCAL-00145">
+      <created>1471505480025</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1471505480025</updated>
+    </task>
+    <task id="LOCAL-00146">
+      <created>1471833243302</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1471833243310</updated>
+    </task>
+    <task id="LOCAL-00147">
+      <created>1471833258694</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1471833258694</updated>
+    </task>
+    <task id="LOCAL-00148">
+      <created>1471922788964</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1471922788972</updated>
+    </task>
+    <task id="LOCAL-00149">
+      <created>1472175435033</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1472175435041</updated>
+    </task>
+    <task id="LOCAL-00150">
+      <created>1472175594436</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1472175594436</updated>
+    </task>
+    <task id="LOCAL-00151">
+      <created>1472532346568</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1472532346591</updated>
+    </task>
+    <task id="LOCAL-00152">
+      <created>1472532489625</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1472532489625</updated>
+    </task>
+    <task id="LOCAL-00153">
+      <created>1472532769262</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1472532769262</updated>
+    </task>
+    <task id="LOCAL-00154">
+      <created>1472804670834</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1472804670843</updated>
+    </task>
+    <task id="LOCAL-00155">
+      <created>1473389559079</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1473389559106</updated>
+    </task>
+    <task id="LOCAL-00156">
+      <created>1474178240935</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1474178240949</updated>
+    </task>
+    <task id="LOCAL-00157">
+      <created>1474938359588</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1474938359598</updated>
+    </task>
+    <task id="LOCAL-00158">
+      <created>1475044542789</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1475044542789</updated>
+    </task>
+    <task id="LOCAL-00159">
+      <created>1476322819347</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1476322819355</updated>
+    </task>
+    <task id="LOCAL-00160">
+      <created>1476431612957</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1476431612991</updated>
+    </task>
+    <task id="LOCAL-00161">
+      <created>1476668037842</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1476668037852</updated>
+    </task>
+    <task id="LOCAL-00162">
+      <created>1476950882425</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1476950882434</updated>
+    </task>
+    <task id="LOCAL-00163">
+      <created>1476950920662</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1476950920662</updated>
+    </task>
+    <task id="LOCAL-00164">
+      <created>1476950976233</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1476950976233</updated>
+    </task>
+    <task id="LOCAL-00165">
+      <created>1477036043351</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1477036043351</updated>
+    </task>
+    <task id="LOCAL-00166">
+      <created>1477469911192</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1477469911200</updated>
+    </task>
+    <task id="LOCAL-00167">
+      <created>1478661853984</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1478661853991</updated>
+    </task>
+    <task id="LOCAL-00168">
+      <created>1479193782195</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1479193782205</updated>
+    </task>
+    <task id="LOCAL-00169">
+      <created>1479359251407</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1479359251417</updated>
+    </task>
+    <task id="LOCAL-00170">
+      <created>1479366189993</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1479366189993</updated>
+    </task>
+    <task id="LOCAL-00171">
+      <created>1479882302918</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1479882302939</updated>
+    </task>
+    <task id="LOCAL-00172">
+      <created>1482892667938</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1482892667949</updated>
+    </task>
+    <task id="LOCAL-00173">
+      <created>1487576161066</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1487576161079</updated>
+    </task>
+    <task id="LOCAL-00174">
+      <created>1487576826824</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1487576826824</updated>
+    </task>
+    <task id="LOCAL-00175" summary="kk">
+      <created>1489047241034</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1489047241044</updated>
+    </task>
+    <task id="LOCAL-00176" summary="kk">
+      <created>1489050807963</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1489050807963</updated>
+    </task>
+    <task id="LOCAL-00177" summary="kk">
+      <created>1489051051841</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1489051051841</updated>
+    </task>
+    <task id="LOCAL-00178" summary="kk">
+      <created>1489051110211</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1489051110211</updated>
+    </task>
+    <task id="LOCAL-00179" summary="mid night">
+      <created>1489420049388</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1489420049389</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1531370000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34219268" sideWeight="0.506424" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40043527" sideWeight="0.49357602" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5856237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4154334" sideWeight="0.49464667" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.397463" sideWeight="0.49785867" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增产品时生成调试注册码" />
+    <MESSAGE value="kk" />
+    <MESSAGE value="mid night" />
+    <option name="LAST_COMMIT_MESSAGE" value="mid night" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/heclouds/regina/service/thrift/DemoService.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/DemoController.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OptionalHandler.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>179</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>193</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>190</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>127</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/GroupController.java</url>
+          <line>182</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/InstantHandler.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/SoftwareController.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/3.0.0/kafka-avro-serializer-3.0.0.jar!/io/confluent/kafka/serializers/KafkaAvroDeserializer.class</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/3.0.0/kafka-avro-serializer-3.0.0.jar!/io/confluent/kafka/serializers/AbstractKafkaAvroDeserializer.class</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/3.0.0/kafka-avro-serializer-3.0.0.jar!/io/confluent/kafka/serializers/AbstractKafkaAvroDeserializer.class</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/3.0.0/kafka-avro-serializer-3.0.0.jar!/io/confluent/kafka/serializers/AbstractKafkaAvroDeserializer.class</url>
+          <line>85</line>
+          <properties />
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/3.0.0/kafka-avro-serializer-3.0.0.jar!/io/confluent/kafka/serializers/AbstractKafkaAvroDeserializer.class</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/3.0.0/kafka-avro-serializer-3.0.0.jar!/io/confluent/kafka/serializers/AbstractKafkaAvroDeserializer.class</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/AppConfigController.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/ThirdPartController.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/SdkController.java</url>
+          <line>189</line>
+          <properties />
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/ThirdPartController.java</url>
+          <line>142</line>
+          <properties />
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/ThirdPartController.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/AppHTML5Controller.java</url>
+          <line>168</line>
+          <properties />
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/weedfs/src/main/java/com/heclouds/regina/weedfs/WeedFSClient.java</url>
+          <line>173</line>
+          <properties />
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/heclouds/regina/service/service/impl/RedisServiceImpl.java</url>
+          <line>109</line>
+          <properties />
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/heclouds/regina/service/service/impl/RedisServiceImpl.java</url>
+          <line>107</line>
+          <properties />
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/ThirdPartController.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="244" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/AppHTML5Controller.java</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/AppHTML5Controller.java</url>
+          <line>186</line>
+          <properties />
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/demo/src/main/java/com/heclouds/regina/elastic/ElasticApplication.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inner-api/src/main/java/com/heclouds/regina/innerapi/controller/SoftwareController.java</url>
+          <line>85</line>
+          <properties />
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/onenet-outer-api/src/main/java/com/heclouds/onenet/outerapi/controller/DtuParserController.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="284" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="285" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="201" column="5" lean-forward="false" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/baProgressModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/baUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/preloader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/fileReader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/BaSidebarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/userManagerPageCtl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/authPageCtl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/appBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/response/UserEntry.java" />
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/ResourceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="82" lean-forward="false" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/ResourceResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAuthenticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserInjected.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserIdResolver.java" />
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserIdInjected.java" />
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZoneResovler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageDefault.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/WebapiException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/AesUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/component/MybatisDataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1082">
+          <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageResovler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/MvcConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-754">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/RoleResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/ResourceRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="46" column="72" lean-forward="false" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41575664" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41575664" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Kahlua</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ugms-web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41575664" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41575664" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41575664" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

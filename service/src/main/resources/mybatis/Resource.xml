@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Resource">
+
+    <select id="getByRole" resultType="com.ugms.backend.service.entity.mysql.Resource">
+        SELECT u.id as id,u.name,u.state as state,
+        u.mobile as mobile,u.role as roleId,r.name as role
+        FROM demo_resource r,demo_role_res rr
+        where rr.role = r.id
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT count(id)
+        FROM demo_user
+    </select>
+</mapper>
