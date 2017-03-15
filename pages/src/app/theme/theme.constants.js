@@ -6,6 +6,7 @@
   'use strict';
 
   var IMAGES_ROOT = 'assets/img/';
+  var URL_ROOT = 'http://localhost:8080/';
 
   angular.module('BlurAdmin.theme')
     .constant('layoutSizes', {
@@ -22,13 +23,27 @@
     })
     .constant('appCommon',{
         autoCompleteUrl:function(uri){
-            return "http://localhost:3000/" + uri;
+            return URL_ROOT + uri;
         },
         goLogin:function(){
-            window.location.href = "http://localhost:3000/auth.html";
+            window.location.href = URL_ROOT+"auth.html";
         },
         goError:function () {
-            window.location.href = "http://localhost:3000/404.html";
+            window.location.href = URL_ROOT+"404.html";
+        },
+        getToken:function(){
+            var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
+            if(arr=document.cookie.match(reg)){
+               token = unescape(arr[2]);
+                var Days = 1/12;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days*24*60*60*1000);
+                document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString();
+            }else {
+                alert("会话超时");
+               window.location.href = URL_ROOT+"auth.html";
+            }
+            return token;
         },
     })
     .constant('colorHelper', {

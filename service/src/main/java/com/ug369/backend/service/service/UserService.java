@@ -29,8 +29,8 @@ public class UserService {
 
     public User getUser(String username, String password){
 
-        User user = userRepository.findByUsernameAndPassword(username, bCryptPasswordEncoder.encode(password));
-        if (user == null){
+        User user = userRepository.findByUsername(username);
+        if (user == null || bCryptPasswordEncoder.matches(password,user.getPassword())){
             throw new UserException(UgmsStatus.AUTH_FAILED,"用户名或者明码错误");
         }
         return user;

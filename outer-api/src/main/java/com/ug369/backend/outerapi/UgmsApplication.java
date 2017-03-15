@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication(scanBasePackageClasses = RootMarker.class, exclude = MongoAutoConfiguration.class)
-public class WebapiApplication {
+public class UgmsApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(WebapiApplication.class, args);
+        ApplicationContext context = SpringApplication.run(UgmsApplication.class, args);
         ContextUtils.setApplicationContext(context);
 
     }

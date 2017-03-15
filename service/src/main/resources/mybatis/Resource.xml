@@ -4,11 +4,11 @@
 
 <mapper namespace="Resource">
 
-    <select id="getByRole" resultType="com.ug369.backend.service.entity.mysql.Resource">
-        SELECT u.id as id,u.name,u.state as state,
-        u.mobile as mobile,u.role as roleId,r.name as role
+    <select id="getByRole" parameterType="long" resultType="com.ug369.backend.service.entity.mysql.Resource">
+        SELECT r.id as id,r.name,r.state as state,
+        r.title as title,r.url as url
         FROM demo_resource r,demo_role_res rr
-        where rr.role = r.id
+        where r.id = rr.resource and rr.role = #{rid}
     </select>
 
     <select id="getCount" resultType="int">

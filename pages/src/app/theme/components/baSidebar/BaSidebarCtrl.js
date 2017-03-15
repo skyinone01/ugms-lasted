@@ -17,7 +17,7 @@
 
     promise.then(function success(result) {//成功回调
       //$scope.menuItems = baSidebarService.getMenuItems(result);
-      next($scope,baSidebarService,result);
+      next($scope,baSidebarService,result.data);
       //fn && fn(notIn);//痛过回调,解决在控制器异步取不到数据;
     },function error(err) {//错误回调
       next($scope,baSidebarService,[]);

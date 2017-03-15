@@ -24,10 +24,11 @@
         this.notIncluded = function($http,q){
 
           var deferred = q.defer();//声明承诺
+          var token = appBase.getToken();
           $http({
             method: "GET",
-            headers: {'token':appBase.getToken()},
-            url: "http://127.0.0.1:8080/resources"
+            url: appBase.autoCompleteUrl("user/resources"),
+            headers: {'token':token},
           }).success(function(result){
             deferred.resolve(result);//请求成功
           }).error(function(err){

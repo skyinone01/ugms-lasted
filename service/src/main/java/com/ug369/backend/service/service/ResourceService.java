@@ -18,7 +18,7 @@ public class ResourceService {
 
     public List<Resource> findByRole(long rid){
 
-        List<Resource> data = resourceRepository.getData("Resource.getByUser", rid);
+        List<Resource> data = resourceRepository.getData("Resource.getByRole", rid);
 
         return data;
     }

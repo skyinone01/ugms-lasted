@@ -23,7 +23,7 @@ import java.util.Locale;
  * Created by roy on 2017/3/8.
  */
 @Configuration
-public class WebapiConfiguration extends WebMvcConfigurerAdapter {
+public class UgmsConfiguration extends WebMvcConfigurerAdapter {
 
     //jackson的jdk8支持
     @Bean
@@ -88,9 +88,8 @@ public class WebapiConfiguration extends WebMvcConfigurerAdapter {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/*/**/*").allowedOrigins("*").maxAge(6048000);
-                registry.addMapping("/token").allowedOrigins("*").maxAge(6048000);
-                registry.addMapping("/*").allowedOrigins("*").maxAge(6048000);
+                registry.addMapping("/**/*").allowedOrigins("*").allowedHeaders("*").allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS").maxAge(6048000);
+                registry.addMapping("/*").allowedOrigins("*").allowedHeaders("*").allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS").maxAge(6048000);
             }
         };
     }
