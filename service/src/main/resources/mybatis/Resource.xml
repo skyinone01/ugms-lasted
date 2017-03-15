@@ -4,7 +4,7 @@
 
 <mapper namespace="Resource">
 
-    <select id="getByRole" resultType="com.ugms.backend.service.entity.mysql.Resource">
+    <select id="getByRole" resultType="com.ug369.backend.service.entity.mysql.Resource">
         SELECT u.id as id,u.name,u.state as state,
         u.mobile as mobile,u.role as roleId,r.name as role
         FROM demo_resource r,demo_role_res rr

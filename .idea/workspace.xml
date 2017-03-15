@@ -1,12 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="mid night">
+    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/auth.html" afterPath="$PROJECT_DIR$/pages/src/auth.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-09.0.log" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-09.0.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-13.0.log" afterPath="$PROJECT_DIR$/regina-outer-logs/error/regina-2017-03-13.0.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-09.0.log" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-09.0.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-10.0.log" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-10.0.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-13.0.log" afterPath="$PROJECT_DIR$/regina-outer-logs/info/regina-2017-03-13.0.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/User.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/User.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ugms-outer-logs/info/ugms-2017-03-14.0.log" afterPath="$PROJECT_DIR$/ugms-outer-logs/info/ugms-2017-03-14.0.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/request/PageRequest.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/base/request/PageRequest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/BasicResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/base/response/BasicResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/DataResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/base/response/DataResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/PagedDataResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/base/response/PagedDataResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/request/UserRequest.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/request/UserRequest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/ResourceResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/ResourceResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/TokenResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/TokenResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/UserResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/UserResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UgmsStatus.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/exception/UgmsStatus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UserException.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/exception/UserException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/WebapiException.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/exception/WebapiException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/result/PagedResult.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/result/PagedResult.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/ExceptionMessageHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiApplication.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/WebapiApplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/WebapiConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/MvcConfiguration.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/MvcConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageDefault.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/PageDefault.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageResovler.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/PageResovler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZone.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/TimeZone.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZoneResovler.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/TimeZoneResovler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserInjected.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/UserInjected.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserResolver.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/UserResolver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/DemoController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ResourceController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/TokenController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/AuthenticationFilter.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/AuthenticationFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/MethodSecurityConfiguration.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/MethodSecurityConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/SecurityConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAccessDeniedHandler.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/UgmsAccessDeniedHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAuthenticationEntryPoint.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/UgmsAuthenticationEntryPoint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/root/src/main/java/com/ugms/backend/RootMarker.java" afterPath="$PROJECT_DIR$/root/src/main/java/com/ug369/backend/RootMarker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/ServiceConfiguration.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/ServiceConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/bean/MysqlBean.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/bean/MysqlBean.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Member.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Member.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Resource.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Resource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Role.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/RoleResource.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/RoleResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/User.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/MysqlRepositoryMarker.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/MysqlRepositoryMarker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/ResourceRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/ResourceRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/RoleRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/RoleResourceRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/UserRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/AbstractRDBRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/AbstractRDBRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/MybatisSupport.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/MybatisSupport.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/RDBRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/RDBRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/RDBRepositoryBean.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/RDBRepositoryBean.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/component/MybatisData.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/component/MybatisData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/component/MybatisDataBase.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/component/MybatisDataBase.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/domain/UgmsPage.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/domain/UgmsPage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/exception/CoreException.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/exception/CoreException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/handler/DataHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/handler/DataHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/handler/DataHandlerImpl.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/handler/DataHandlerImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/tools/DataTool.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/tools/DataTool.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/InstantHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/InstantHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalDateHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/LocalDateHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalDateTimeHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/LocalDateTimeHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/LocalTimeHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/LocalTimeHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OffsetDateTimeHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/OffsetDateTimeHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OptionalHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/OptionalHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/ZonedDateTimeHandler.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/ZonedDateTimeHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/ResourceService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/RoleService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/RoleService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/UserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/AesUtils.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/AesUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/ContextUtils.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/ContextUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/MD5Util.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/MD5Util.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/SpringUtils.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/SpringUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/StringUtils.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/StringUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TimeUtils.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/TimeUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/TokenUtils.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/TokenUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/src/main/java/com/ugms/backend/utils/UgmsConstant.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/ug369/backend/utils/UgmsConstant.java" />
     </list>
     <ignored path="regina-webapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,104 +121,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="appBase.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/appBase.js">
+      <file leaf-file-name="dashboard.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboard.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="513">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme.constants.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.constants.js">
+      <file leaf-file-name="ExceptionMessageHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/ExceptionMessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebapiConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="91" column="82" lean-forward="false" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="82" />
-              <folding>
-                <element signature="e#2656#2657#0" expanded="true" />
-                <element signature="e#2706#2707#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TokenController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/DataResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExceptionMessageHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UgmsStatus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UgmsStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baSidebar.service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            <state relative-caret-position="648">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -186,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/bean/response/TokenResponse.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/MethodSecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/UgmsAuthenticationEntryPoint.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/resources/banner.txt" />
@@ -237,6 +231,7 @@
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java" />
         <option value="$PROJECT_DIR$/pages/src/auth.html" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/ExceptionMessageHandler.java" />
       </list>
     </option>
   </component>
@@ -356,6 +351,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -370,7 +391,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,11 +413,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,15 +439,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="root" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,7 +453,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="root" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -432,191 +461,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="userManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="userManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tables" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,10 +502,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -685,8 +530,18 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="outerapi" />
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -700,7 +555,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="outer-api" />
+              <option name="myItemId" value="bean" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -713,87 +568,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outer-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outer-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -804,8 +585,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1353,13 +1132,6 @@
       <workItem from="1489111292102" duration="265000" />
       <workItem from="1489111817525" duration="12422000" />
     </task>
-    <task id="LOCAL-00133">
-      <created>1470910761192</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1470910761192</updated>
-    </task>
     <task id="LOCAL-00134">
       <created>1470969861956</created>
       <option name="number" value="00134" />
@@ -1696,7 +1468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489503203557</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="mid night">
+      <created>1489506196791</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1489506196791</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1718,20 +1497,18 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.397463" sideWeight="0.49785867" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34219268" sideWeight="0.506424" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40043527" sideWeight="0.49357602" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2896406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2896406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19238901" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26666668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1746,9 +1523,11 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.397463" sideWeight="0.49785867" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19238901" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1784,7 +1563,7 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/OptionalHandler.java</url>
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/OptionalHandler.java</url>
           <line>20</line>
           <properties />
           <option name="timeStamp" value="23" />
@@ -1844,7 +1623,7 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/rdbsupport/typehandler/InstantHandler.java</url>
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/typehandler/InstantHandler.java</url>
           <line>19</line>
           <properties />
           <option name="timeStamp" value="47" />
@@ -1991,90 +1770,64 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/PageResovler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/TimeZone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/UserResolver.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/UserResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/AuthenticationFilter.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/AuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/annotation/MvcConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/MvcConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/RoleResource.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/RoleResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/Role.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/entity/mysql/User.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#563#564#0" expanded="false" />
             <element signature="e#597#598#0" expanded="false" />
-            <element signature="e#625#626#0" expanded="false" />
             <element signature="e#656#657#0" expanded="false" />
-            <element signature="e#683#684#0" expanded="false" />
             <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#755#756#0" expanded="false" />
             <element signature="e#788#789#0" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
             <element signature="e#861#862#0" expanded="false" />
-            <element signature="e#897#898#0" expanded="false" />
             <element signature="e#926#927#0" expanded="false" />
-            <element signature="e#953#954#0" expanded="false" />
             <element signature="e#991#992#0" expanded="false" />
-            <element signature="e#1023#1024#0" expanded="false" />
             <element signature="e#1058#1059#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
             <element signature="e#1137#1138#0" expanded="false" />
-            <element signature="e#1177#1178#0" expanded="false" />
             <element signature="e#1212#1213#0" expanded="false" />
-            <element signature="e#1243#1244#0" expanded="false" />
             <element signature="e#1291#1292#0" expanded="false" />
-            <element signature="e#1331#1332#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
@@ -2084,7 +1837,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleResourceRepository.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/RoleResourceRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
@@ -2094,7 +1847,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/RoleRepository.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/RoleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
@@ -2104,7 +1857,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/repository/mysql/ResourceRepository.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/ResourceRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
@@ -2114,7 +1867,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="46" column="72" lean-forward="false" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
@@ -2136,7 +1889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2144,7 +1896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-243">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2152,7 +1903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2160,7 +1910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2168,7 +1917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2176,7 +1924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2184,7 +1931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2192,7 +1938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-325">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2200,7 +1945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-486">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2208,7 +1952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2216,7 +1959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2224,7 +1966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2232,7 +1973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2244,7 +1984,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/ResourceController.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ResourceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
@@ -2252,7 +1992,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/security/SecurityConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
@@ -2260,7 +2000,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/DemoController.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -2272,7 +2012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2280,7 +2019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2288,7 +2026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-324">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2296,7 +2033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2304,7 +2040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2312,7 +2047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2320,7 +2054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2328,7 +2061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2336,7 +2068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-445">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2344,13 +2075,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="756">
           <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
           <folding />
         </state>
@@ -2358,7 +2088,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/appBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
+        <state relative-caret-position="432">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
@@ -2366,34 +2096,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="783">
           <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/WebapiConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/WebapiConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="1755">
           <caret line="91" column="82" lean-forward="false" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="82" />
           <folding>
-            <element signature="e#2656#2657#0" expanded="true" />
-            <element signature="e#2706#2707#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="false" />
+            <element signature="e#2707#2708#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/exception/UgmsStatus.java">
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/exception/UgmsStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="351">
           <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ugms/backend/bean/base/response/DataResponse.java">
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/base/response/DataResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="486">
           <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="18" />
           <folding />
         </state>
@@ -2401,32 +2131,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="756">
           <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ugms/backend/service/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
+        <state relative-caret-position="459">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/ExceptionMessageHandler.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/TokenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="396">
+          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ugms/backend/outerapi/controller/TokenController.java">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/pages.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="540">
+          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/dashboard/dashboard.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/ExceptionMessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding />
         </state>
       </provider>

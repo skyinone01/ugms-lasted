@@ -4,7 +4,7 @@
 
 <mapper namespace="User">
 
-    <select id="getAll" resultType="com.ugms.backend.bean.bean.response.UserResponse">
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.response.UserResponse">
         SELECT u.id as id,u.name,u.username as username,
         u.mobile as mobile,u.role as roleId,r.name as role
         FROM demo_user u,demo_role r

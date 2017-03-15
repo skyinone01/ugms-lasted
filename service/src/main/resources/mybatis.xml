@@ -3,11 +3,11 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeHandlers>
-        <typeHandler  handler="com.ugms.backend.service.repository.rdbsupport.typehandler.OptionalHandler"/>
-        <typeHandler  handler="com.ugms.backend.service.repository.rdbsupport.typehandler.LocalDateHandler"/>
-        <typeHandler  handler="com.ugms.backend.service.repository.rdbsupport.typehandler.LocalDateTimeHandler"/>
-        <typeHandler  handler="com.ugms.backend.service.repository.rdbsupport.typehandler.LocalTimeHandler"/>
-        <typeHandler  handler="com.ugms.backend.service.repository.rdbsupport.typehandler.OffsetDateTimeHandler"/>
-        <typeHandler  handler="com.ugms.backend.service.repository.rdbsupport.typehandler.ZonedDateTimeHandler"/>
+        <typeHandler  handler="com.ug369.backend.service.repository.rdbsupport.typehandler.OptionalHandler"/>
+        <typeHandler  handler="com.ug369.backend.service.repository.rdbsupport.typehandler.LocalDateHandler"/>
+        <typeHandler  handler="com.ug369.backend.service.repository.rdbsupport.typehandler.LocalDateTimeHandler"/>
+        <typeHandler  handler="com.ug369.backend.service.repository.rdbsupport.typehandler.LocalTimeHandler"/>
+        <typeHandler  handler="com.ug369.backend.service.repository.rdbsupport.typehandler.OffsetDateTimeHandler"/>
+        <typeHandler  handler="com.ug369.backend.service.repository.rdbsupport.typehandler.ZonedDateTimeHandler"/>
     </typeHandlers>
 </configuration>
