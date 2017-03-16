@@ -9,7 +9,7 @@
     <td>电话</td>
     <td>操作</td>
   </tr>
-  <tr ng-repeat="user in users"  class="editable-row">
+  <tr ng-repeat="user in users"  class="editable-row" ng-model="users">
     <td>
         {{$index}}
         <span style="display: none"   e-name="name" e-form="rowform" e-required>

@@ -9,7 +9,7 @@
         .factory('appBase', appBase);
 
     /** @ngInject */
-    function appBase($http,$location,appCommon) {
+    function appBase($http,$location,$uibModal,appCommon) {
         var methods = {};
         var progress = 0;
         var max = 100;
@@ -26,7 +26,7 @@
                 }).success(function(result){
                     callback(result);
                 }).error(function(err){
-                   alert("请求失败:"+err);
+                   appCommon.openInfoModal($uibModal,"请求失败："+err)
                 });
             },
             doGet: function (uri,params,callback) {
@@ -38,11 +38,11 @@
                 }).success(function(result){
                     callback(result);
                 }).error(function(err){
-                    alert("请求失败:"+err);
+                   appCommon.openInfoModal($uibModal,"请求失败："+err)
                 });
             },
             getToken: function(){
-               return appCommon.getToken();
+               return appCommon.getToken($uibModal);
             },
             autoCompleteUrl: function(uri){
                return appCommon.autoCompleteUrl(uri);

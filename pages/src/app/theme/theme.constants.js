@@ -6,7 +6,8 @@
   'use strict';
 
   var IMAGES_ROOT = 'assets/img/';
-  var URL_ROOT = 'http://localhost:8080/';
+  var PAGE_ROOT = 'http://localhost:3000/';
+  var API_ROOT = 'http://localhost:8080/';
 
   angular.module('BlurAdmin.theme')
     .constant('layoutSizes', {
@@ -23,15 +24,15 @@
     })
     .constant('appCommon',{
         autoCompleteUrl:function(uri){
-            return URL_ROOT + uri;
+            return API_ROOT + uri;
         },
         goLogin:function(){
-            window.location.href = URL_ROOT+"auth.html";
+            window.location.href = PAGE_ROOT+"auth.html";
         },
         goError:function () {
-            window.location.href = URL_ROOT+"404.html";
+            window.location.href = PAGE_ROOT+"404.html";
         },
-        getToken:function(){
+        getToken:function(uibModal,scope){
             var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
             if(arr=document.cookie.match(reg)){
                token = unescape(arr[2]);
@@ -39,12 +40,35 @@
                 var exp = new Date();
                 exp.setTime(exp.getTime() + Days*24*60*60*1000);
                 document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString();
+
+
             }else {
-                alert("会话超时");
-               window.location.href = URL_ROOT+"auth.html";
+               uibModal.open({
+                  animation: true,
+                  templateUrl: "app/pages/common/infoModal.html",
+                  controller:'infoModalCtrl',
+                  resolve:{
+                    content :function(){
+                        return "会话超时，返回登陆页面";
+                    }
+                  }
+                });
+               window.location.href = PAGE_ROOT+"auth.html";
             }
             return token;
         },
+        openInfoModal:function(uibModal,content){
+             uibModal.open({
+                  animation: true,
+                  templateUrl: "app/pages/common/infoModal.html",
+                  controller:'infoModalCtrl',
+                  resolve:{
+                        content :function(){
+                            return content;
+                        }
+                   }
+              });
+        }
     })
     .constant('colorHelper', {
       tint: function(color, weight) {

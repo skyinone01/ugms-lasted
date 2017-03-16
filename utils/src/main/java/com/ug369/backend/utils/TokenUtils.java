@@ -24,22 +24,19 @@ public class TokenUtils {
 	private int extra;
 
 	public Long validate(String token) {
-		try {
-			byte[] tokenBytes = Base64.decodeBase64(token);
-			byte[] org = aesUtils.decryptToken(tokenBytes, key);
-			ByteBuffer byteBuffer = ByteBuffer.wrap(org);
 
-			long epoch = byteBuffer.getLong();
-			long userId = byteBuffer.getLong();
-			long timeout = byteBuffer.getLong();
-			//过期时间校验：end < now + extra
-			Instant end = Instant.ofEpochMilli(epoch).plusSeconds(timeout - extra);
-			if (!end.isAfter(Instant.now())) {
-				throw new UserException(UgmsStatus.INVALID_TOKEN,"token is expired");
-			}
-			return userId;
-		} catch (UserException e) {
-			throw new UserException(UgmsStatus.INVALID_TOKEN,"token is invalid");
+		byte[] tokenBytes = Base64.decodeBase64(token);
+		byte[] org = aesUtils.decryptToken(tokenBytes, key);
+		ByteBuffer byteBuffer = ByteBuffer.wrap(org);
+
+		long epoch = byteBuffer.getLong();
+		long userId = byteBuffer.getLong();
+		long timeout = byteBuffer.getLong();
+		//过期时间校验：end < now + extra
+		Instant end = Instant.ofEpochMilli(epoch).plusSeconds(timeout - extra);
+		if (!end.isAfter(Instant.now())) {
+			throw new UserException(UgmsStatus.INVALID_TOKEN,"会话超时");
 		}
+		return userId;
 	}
 }

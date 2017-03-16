@@ -30,17 +30,17 @@
             url: appBase.autoCompleteUrl("user/resources"),
             headers: {'token':token},
           }).success(function(result){
-            deferred.resolve(result);//请求成功
+            deferred.resolve(result);
           }).error(function(err){
-            deferred.reject(err);//请求失败
+            deferred.reject(err);
           });
-          return deferred.promise;//返回承诺
+          return deferred.promise;
         };
 
         this.getMenuItems = function(notIn) {
           var states = defineMenuItemStates().filter(function(e){
             for (var i=0;i<notIn.length;i++){
-              if(e.stateRef == notIn[i] ){
+              if(e.stateRef == notIn[i].state ){
                 return false;
               }
             }
