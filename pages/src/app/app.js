@@ -1,5 +1,6 @@
 'use strict';
-
+var API_ROOT ="http://127.0.0.1:8080/";
+var PAGES_ROOT ="http://127.0.0.1:3000/";
 
 function getToken(){
     var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
@@ -11,24 +12,22 @@ function getToken(){
         document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString();
     }else {
          alert("会话超时，返回登陆页面")
-         window.location.href = "http://127.0.0.1:3000/auth.html";
+         window.location.href = PAGES_ROOT +"auth.html";
     }
     return token;
 }
 var permission;
 angular.element(document).ready(function() {
-   alert("hello");
-   var token = getToken();
-   $.ajax({
-     url: "http://127.0.0.1:8080/user/resources",
+    $.ajax({
+     url: API_ROOT + "user/resources",
      type: "GET",
-     beforeSend: function(xhr){xhr.setRequestHeader('token', token);},
+     headers:{'token':getToken()},
      success: function(data) {
         permission = data.data;
      },
      error:function(error){
-        alert("加载权限失败 " + error.error);
-        window.location.href = "http://127.0.0.1:3000/auth.html";
+        alert(error.responseJSON.error);
+        window.location.href = PAGES_ROOT +"auth.html";
      }
    });
 });

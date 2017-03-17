@@ -10,10 +10,6 @@
 
     /** @ngInject */
     function appBase($http,$location,$uibModal,appCommon) {
-        var methods = {};
-        var progress = 0;
-        var max = 100;
-        var opened = false;
 
         return {
 

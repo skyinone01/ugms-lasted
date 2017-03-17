@@ -20,7 +20,7 @@
     }
 
     /** @ngInject */
-    function UserManagerPageCtrl($scope, $filter,$http,appBase) {
+    function UserManagerPageCtrl($scope, $filter,appBase) {
 
         $scope.smartTablePageSize = 10;
         $scope.users = [];
