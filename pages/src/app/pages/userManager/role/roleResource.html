@@ -1,0 +1,52 @@
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+            <em class="ion-ios-close-empty sn-link-close"></em>
+        </button>
+        <h4 class="modal-title">角色-资源列表</h4>
+    </div>
+    <div class="horizontal-scroll">
+
+        <div class="widgets">
+            <div class="row">
+                <div class="col-md-12">
+                    <div ba-panel ba-panel-title="Editable Cells" ba-panel-class="with-scroll">
+
+                        <table class="table table-hover" st-table="permissions">
+                            <thead>
+                            <tr class="sortable">
+                                <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+                                <th st-sort="firstName">资源名称</th>
+                                <th st-sort="lastName">路由</th>
+                                <th st-sort="username">是否可见</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in items" class="editable-tr-wrap">
+                                <td class="table-id">{{item.id}}</td>
+                                <td><span editable-text="item.name" blur="cancel">{{item.name}}</span></td>
+                                <td><span editable-text="item.state" blur="cancel">{{item.state}}</span></td>
+                                <td><span editable-text="item.visible" blur="cancel">{{item.visible}}</span></td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="6" class="text-center">
+                                    <div st-pagination="" st-items-by-page="12" st-displayed-pages="5"></div>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="$dismiss()">保存</button>
+    </div>
+</div>
+
+
+

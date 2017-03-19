@@ -9,42 +9,84 @@ function getToken(){
         var Days = 1/48;
         var exp = new Date();
         exp.setTime(exp.getTime() + Days*24*60*60*1000);
-        document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString();
+        document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString()+ "; path=/";
     }else {
          alert("会话超时，返回登陆页面")
          window.location.href = PAGES_ROOT +"auth.html";
     }
     return token;
 }
-var permission;
+function setCookie(name,value){
+      var Days = 1/48;
+      var exp = new Date();
+      exp.setTime(exp.getTime() + Days*24*60*60*1000);
+      document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+ ";path=/";
+}
+
+function goError(){
+    window.location.href = PAGES_ROOT+"404.html";
+}
+function goLogin(){
+    window.location.href = PAGE_ROOT+"auth.html";
+}
+
+// start ---
+var app = angular.module('BlurAdmin', [
+            'ngAnimate',
+            'ui.bootstrap',
+            'ui.sortable',
+            'ui.router',
+            'ngTouch',
+            'toastr',
+            'smart-table',
+            "xeditable",
+            'ui.slimscroll',
+            'ngJsTree',
+            'angular-progress-button-styles',
+
+            'BlurAdmin.theme',
+            'BlurAdmin.pages'
+          ]), permissionList;
+
+app.run(function(permissions) {
+  permissions.setPermissions(permissionList)
+});
+
 angular.element(document).ready(function() {
-    $.ajax({
+   var token = window.location.href;
+   if(token.indexOf("token") != -1){
+      setCookie("token",token.split("token=")[1]);
+   }
+   $.ajax({
      url: API_ROOT + "user/resources",
      type: "GET",
      headers:{'token':getToken()},
      success: function(data) {
-        permission = data.data;
+        permissionList = data.data;
+        angular.bootstrap(document, ['BlurAdmin']);
      },
      error:function(error){
-        alert(error.responseJSON.error);
+        alert("加载权限失败");
         window.location.href = PAGES_ROOT +"auth.html";
      }
    });
 });
 
-angular.module('BlurAdmin', [
-  'ngAnimate',
-  'ui.bootstrap',
-  'ui.sortable',
-  'ui.router',
-  'ngTouch',
-  'toastr',
-  'smart-table',
-  "xeditable",
-  'ui.slimscroll',
-  'ngJsTree',
-  'angular-progress-button-styles',
 
-  'BlurAdmin.theme',
-  'BlurAdmin.pages'
-]);
+// end---
+angular.module('BlurAdmin')
+  .factory('permissions', function ($rootScope) {
+    var permissionList;
+    return {
+      setPermissions: function(permissions) {
+           permissionList = permissions;
+           $rootScope.$broadcast('permissionsChanged')
+      },
+      hasPermission: function (stateRef) {
+              stateRef = stateRef.trim();
+              return permissionList.some(function(item) {
+                return item.stateRef.trim() === stateRef
+              });
+      }
+   };
+  });

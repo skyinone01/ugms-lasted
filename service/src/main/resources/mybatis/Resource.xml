@@ -4,15 +4,27 @@
 
 <mapper namespace="Resource">
 
-    <select id="getByRole" parameterType="long" resultType="com.ug369.backend.service.entity.mysql.Resource">
-        SELECT r.id as id,r.name,r.state as state,
-        r.title as title,r.url as url
+    <select id="getByRole" parameterType="long" resultType="com.ug369.backend.bean.bean.response.PermissionResponse">
+        SELECT r.state as stateRef
         FROM demo_resource r,demo_role_res rr
         where r.id = rr.resource and rr.role = #{rid}
     </select>
 
+    <select id="getResourceByRole" parameterType="long" resultType="list">
+        SELECT r.id
+        FROM demo_resource r,demo_role_res rr
+        where r.id = rr.resource and rr.role = #{rid}
+    </select>
+
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.response.ResourceEntryUGMS">
+        SELECT u.id as id,u.name as name,u.state as state,
+        u.url as url
+        FROM demo_resource u
+    </select>
+
     <select id="getCount" resultType="int">
         SELECT count(id)
-        FROM demo_user
+        FROM demo_resource
     </select>
+
 </mapper>

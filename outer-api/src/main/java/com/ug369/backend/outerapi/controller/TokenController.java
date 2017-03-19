@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.nio.ByteBuffer;
 import java.time.Instant;
 
@@ -37,7 +40,7 @@ public class TokenController {
      */
 	@RequestMapping(value = "/token", method = RequestMethod.GET)
 	public DataResponse<TokenResponse> getToken(@RequestParam("username") String username,
-	                             @RequestParam("password") String password) {
+												@RequestParam("password") String password, HttpServletRequest request,HttpServletResponse hresponse) {
 		User user = userService.getUser(username, password);
 		ByteBuffer byteBuffer = ByteBuffer.allocate(32);
 		byteBuffer.putLong(Instant.now().toEpochMilli());
@@ -48,7 +51,9 @@ public class TokenController {
 		TokenResponse response = new TokenResponse();
 		response.setToken(Base64.encodeBase64URLSafeString(tokenBytes));
 		response.setTimeout(timeout);
-
+		Cookie cookie = new Cookie("token",response.getToken());
+		cookie.setMaxAge(30);
+		hresponse.addCookie(cookie);
 		return new DataResponse<>(response);
 	}
 }

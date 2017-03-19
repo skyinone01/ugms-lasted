@@ -44,8 +44,11 @@ public class UserService {
             if (user == null){
                 throw new UserException(UgmsStatus.NOT_FOUND,"用户:"+request.getId());
             }
-            if (StringUtils.isNotEmpty(request.getName())){
+            if (StringUtils.isNotEmpty(request.getUsername())){
                 user.setName(request.getName());
+            }
+            if (StringUtils.isNotEmpty(request.getUsername())){
+                user.setUsername(request.getUsername());
             }
             if (StringUtils.isNotEmpty(request.getMobile())){
                 user.setMobile(request.getMobile());

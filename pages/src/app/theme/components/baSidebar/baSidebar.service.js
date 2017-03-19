@@ -15,36 +15,39 @@
     };
 
     /** @ngInject */
-    this.$get = function($state, $http,layoutSizes,appBase) {
+    this.$get = function($state, $http,layoutSizes,permissions) {
       return new _factory();
 
       function _factory() {
         var isMenuCollapsed = shouldMenuBeCollapsed();
 
-        this.notIncluded = function($http,q){
+//        this.notIncluded = function($http,q){
+//
+//          var deferred = q.defer();//声明承诺
+//          var token = appBase.getToken();
+//          $http({
+//            method: "GET",
+//            url: appBase.autoCompleteUrl("user/resources"),
+//            headers: {'token':token},
+//          }).success(function(result){
+//            deferred.resolve(result);
+//          }).error(function(err){
+//            deferred.reject(err);
+//          });
+//          return deferred.promise;
+//        };
 
-          var deferred = q.defer();//声明承诺
-          var token = appBase.getToken();
-          $http({
-            method: "GET",
-            url: appBase.autoCompleteUrl("user/resources"),
-            headers: {'token':token},
-          }).success(function(result){
-            deferred.resolve(result);
-          }).error(function(err){
-            deferred.reject(err);
-          });
-          return deferred.promise;
-        };
-
-        this.getMenuItems = function(notIn) {
+        this.getMenuItems = function() {
           var states = defineMenuItemStates().filter(function(e){
-            for (var i=0;i<notIn.length;i++){
-              if(e.stateRef == notIn[i].state ){
-                return false;
-              }
-            }
             return true;
+//          return permissions.hasPermission(e.stateRef);
+//            for (var i=0;i<notIn.length;i++){
+//                return permissions.hasPermission(e.stateRef);
+////              if(e.stateRef == notIn[i].state ){
+////                return false;
+////              }
+//            }
+//            return true;
           });
 
           var menuItems = states.filter(function(item) {

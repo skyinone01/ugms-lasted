@@ -9,6 +9,7 @@ import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
 import com.ug369.backend.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,7 +37,7 @@ public class UserController {
      * 新增or修改用户
      */
     @RequestMapping(value = "/users", method = RequestMethod.POST)
-    public BasicResponse userAdd(UserRequest user) {
+    public BasicResponse userAdd(@RequestBody  UserRequest user) {
         userService.createOrUpdate(user);
         return BasicResponse.success();
     }

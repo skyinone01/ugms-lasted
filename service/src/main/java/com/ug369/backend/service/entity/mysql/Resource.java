@@ -19,6 +19,15 @@ public class Resource implements Serializable {
     private String url;
     private String title;
     private String state;
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public long getId() {
         return id;

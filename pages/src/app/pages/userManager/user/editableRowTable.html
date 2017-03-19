@@ -1,51 +1,57 @@
 <div class="add-row-editable-table">
-  <button class="btn btn-primary" ng-click="addUser()">新增用户</button>
+    <button class="btn btn-primary" ng-click="addUser()">新增用户</button>
 </div>
 <table class="table table-bordered table-hover table-condensed">
-  <tr>
-    <td></td>
-    <td>姓名</td>
-    <td>角色</td>
-    <td>电话</td>
-    <td>操作</td>
-  </tr>
-  <tr ng-repeat="user in users"  class="editable-row" ng-model="users">
-    <td>
-        {{$index}}
-        <span style="display: none"   e-name="name" e-form="rowform" e-required>
+    <tr>
+        <td></td>
+        <td>姓名</td>
+        <td>用户名</td>
+        <td>角色</td>
+        <td>电话</td>
+        <td>操作</td>
+    </tr>
+    <tr ng-repeat="user in users"  class="editable-row"  >
+        <td >
+            {{$index}}
+            <span style="display: none"   e-name="id" e-form="rowform" e-required>
           {{ user.id || '0' }}
         </span>
-    </td>
-    <td>
-        <span editable-text="user.name"  e-name="name" e-form="rowform" e-required>
+        </td>
+        <td >
+        <span editable-text="user.name"  e-name="name" e-form="rowform" e-required  >
           {{ user.name || 'empty' }}
         </span>
-    </td>
-    <td class="select-td">
+        </td>
+        <td>
+        <span editable-text="user.username"  e-name="username" e-form="rowform" e-required  >
+          {{ user.username || 'empty' }}
+        </span>
+        </td>
+        <td class="select-td" >
         <span editable-select="user.role"  e-name="name" e-form="rowform" e-selectpicker
               e-ng-options="s.value as s.text for s in role">
           {{ showStatus(user) }}
-        </span>
-    </td>
-    <td>
-        <span editable-text="user.mobile" e-name="mobile"  e-form="rowform" e-required>
+        </span >
+        </td>
+        <td >
+        <span editable-text="user.mobile" e-name="mobile"  e-form="rowform" e-required  >
           {{ user.mobile || 'empty' }}
         </span>
-    </td>
-    <td>
-      <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline"
-            shown="inserted == user" >
-        <button type="submit" ng-click="saveUser($index)" ng-disabled="rowform.$waiting" class="btn btn-primary editable-table-button btn-xs">
-          保存
-        </button>
-        <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">
-          取消
-        </button>
-      </form>
-      <div class="buttons" ng-show="!rowform.$visible">
-        <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
-        <button class="btn btn-danger editable-table-button btn-xs" ng-click="deleteUser($index)">删除</button>
-      </div>
-    </td>
-  </tr>
+        </td>
+        <td>
+            <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline"
+                  shown="inserted == user" >
+                <button type="submit" ng-click="saveUser($index)"  ng-disabled="rowform.$waiting"  class="btn btn-primary editable-table-button btn-xs">
+                    保存
+                </button>
+                <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">
+                    取消
+                </button>
+            </form>
+            <div class="buttons" ng-show="!rowform.$visible">
+                <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
+                <button class="btn btn-danger editable-table-button btn-xs" ng-click="deleteUser($index)">删除</button>
+            </div>
+        </td>
+    </tr>
 </table>

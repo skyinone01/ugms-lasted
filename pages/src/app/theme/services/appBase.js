@@ -20,9 +20,13 @@
                     data: data,
                     url: appCommon.autoCompleteUrl(uri)
                 }).success(function(result){
-                    callback(result);
+                       if(result.errno === 0){
+                         callback(result);
+                       }else{
+                          appCommon.openInfoModal($uibModal,"失败："+result.error);
+                       }
                 }).error(function(err){
-                   appCommon.openInfoModal($uibModal,"请求失败："+err)
+                   appCommon.openInfoModal($uibModal,"失败："+err)
                 });
             },
             doGet: function (uri,params,callback) {
@@ -32,9 +36,13 @@
                     params: params,
                     url: appCommon.autoCompleteUrl(uri)
                 }).success(function(result){
-                    callback(result);
+                    if(result.errno === 0){
+                      callback(result);
+                    }else{
+                       appCommon.openInfoModal($uibModal,"失败："+result.error);
+                    }
                 }).error(function(err){
-                   appCommon.openInfoModal($uibModal,"请求失败："+err)
+                   appCommon.openInfoModal($uibModal,"失败："+err)
                 });
             },
             getToken: function(){
@@ -42,6 +50,9 @@
             },
             autoCompleteUrl: function(uri){
                return appCommon.autoCompleteUrl(uri);
+            },
+            bubMsg: function(msg){
+               appCommon.openInfoModal($uibModal,msg);
             }
         };
     }
