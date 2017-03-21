@@ -51,53 +51,70 @@
             })
         };
         $scope.change = function(obj,data){
-            alert(obj);
+
         };
 
-        $scope.valueChange = function(event,index){
-            var key = $(event.target).parent().parent().prev().attr("e-name");
+        //$scope.beforeChange;
+        //$scope.onClick = function(value){
+        //    $scope.beforeChange = value;
+        //}
+
+        $scope.mouseLeave = function(event,index){
+            //var selected = $filter('filter')($scope.role, {value: data});
+            //var name  = $('#'+index+'_'+$scope.beforeChange).attr("e-name");
+            //if( data != 'undefined' && data !=""){
+            //    $scope.beforeChange = data;
+            //}else{
+            //    $scope.beforeChange ="";
+            //}
+
+            var name = $(event.target).parent().parent().prev().attr("e-name");
+            var data = event.target.value;
             if(index >= $scope.update.length){
-                 switch(key){
+                 switch(name){
                        case "description":
-                           $scope.insert[index].description =event.target.value;
+                           $scope.insert[index].description =data;
                              break;
                        case "name":
-                           $scope.insert[index].name =event.target.value;
+                           $scope.insert[index].name =data;
                              break;
                        case "url":
-                           $scope.insert[index].url =event.target.value;
+                           $scope.insert[index].url =data;
                              break;
                        case "state":
-                           $scope.insert[index].state =event.target.value;
+                           $scope.insert[index].state =data;
                              break;
                  }
             }else{
-                switch(key){
+                switch(name){
                       case "description":
-                           $scope.update[index].description =event.target.value;
+                           $scope.update[index].description =data;
                              break;
                        case "name":
-                           $scope.update[index].name =event.target.value;
+                           $scope.update[index].name =data;
                              break;
                        case "url":
-                           $scope.update[index].url =event.target.value;
+                           $scope.update[index].url =data;
                              break;
                        case "state":
-                           $scope.update[index].state =event.target.value;
+                           $scope.update[index].state =data;
                              break;
                  }
             }
         };
 
-        $scope.cancelSave = function(index){
-
-        };
-
         $scope.deleteResource = function(index){
-            appBase.doPost("resources/delete",$scope.resources[index],function(ret){
+            if (index > $scope.resources.length){
                 appBase.bubMsg("删除成功");
-                $scope.removeResource(index);
-             })
+                $scope.listResource();
+
+            }{
+                appBase.doDelete("resources/"+$scope.resources[index].id,null,function(ret){
+                    appBase.bubMsg("删除成功");
+                    $scope.listResource();
+                })
+            }
+
         };
 
     }

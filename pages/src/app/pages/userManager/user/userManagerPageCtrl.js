@@ -63,44 +63,59 @@
                 data = $scope.update[index];
             }
             appBase.doPost("users",data,function(ret){
-                alert("保存成功");
+                appBase.bubMsg("保存成功");
                 $scope.listUser();
             })
         };
         $scope.change = function(obj,data){
             alert(obj);
         };
+        $scope.beforeChange;
+        $scope.onClick = function(value){
+            $scope.beforeChange = value;
+        }
+        $scope.valueChange = function(data,index){
+            var selected = $filter('filter')($scope.role, {value: data});
+            var name;
+            if(selected.length){
+                name="role";
+            }else {
+                name = $('#'+index+'_'+$scope.beforeChange).attr("e-name");
+                if( data != 'undefined' && data !=""){
+                    $scope.beforeChange = data;
+                }else{
+                    $scope.beforeChange ="";
+                }
+            }
 
-        $scope.valueChange = function(event,index){
-            var key = $(event.target).parent().parent().prev().attr("e-name");
             if(index >= $scope.update.length){
-                 switch(key){
+                 switch(name){
                        case "username":
-                           $scope.insert[index].username =event.target.value;
+                           $scope.insert[index].username =data;
                              break;
                        case "name":
-                           $scope.insert[index].name =event.target.value;
+                           $scope.insert[index].name =data;
                              break;
                        case "mobile":
-                           $scope.insert[index].mobile =event.target.value;
+                           $scope.insert[index].mobile =data;
                              break;
                        case "role":
-                           $scope.insert[index].role =event.target.value;
+                           $scope.insert[index].role =data;
                              break;
                  }
             }else{
-                switch(key){
+                switch(name){
                        case "username":
-                           $scope.update[index].username =event.target.value;
+                           $scope.update[index].username =data;
                              break;
                        case "role":
-                           $scope.update[index].role =event.target.value;
+                           $scope.update[index].role =data;
                              break;
                        case "mobile":
-                           $scope.update[index].mobile =event.target.value;
+                           $scope.update[index].mobile =data;
                            break;
                        case "name":
-                           $scope.update[index].name =event.target.value;
+                           $scope.update[index].name =data;
                            break;
                  }
             }
@@ -110,10 +125,17 @@
 
         };
 
+        $scope.showRole = function(user) {
+            if(user.role && $scope.role.length) {
+                var selected = $filter('filter')($scope.role, {value: user.role});
+                return selected.length ? selected[0].text : '未设置';
+            } else return '未设置'
+        };
+
         $scope.deleteUser = function(index){
-            appBase.doPost("users/delete",$scope.users[index],function(ret){
-                alert("删除成功");
-                scope.removeUser(index);
+            appBase.doDelete("users/"+$scope.users[index].id,null,function(ret){
+                appBase.bubMsg("删除成功");
+                $scope.removeUser(index);
              })
         };
 

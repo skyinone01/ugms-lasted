@@ -12,7 +12,7 @@
   function infoModalCtrl($scope, $uibModal, content) {
     $scope.content = content;
     $scope.title = "提示";
-  }
 
+  }
 
 })();

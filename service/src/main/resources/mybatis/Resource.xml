@@ -18,7 +18,7 @@
 
     <select id="getAll" resultType="com.ug369.backend.bean.bean.response.ResourceEntryUGMS">
         SELECT u.id as id,u.name as name,u.state as state,
-        u.url as url
+        u.url as url,u.description as description
         FROM demo_resource u
     </select>
 

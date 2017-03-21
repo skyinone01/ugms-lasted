@@ -18,23 +18,23 @@
         </span>
         </td>
         <td >
-        <span editable-text="user.name"  e-name="name" e-form="rowform" e-required  >
+        <span id="{{$index}}_{{user.name}}" editable-text="user.name"  e-name="name" e-form="rowform" e-required  >
           {{ user.name || 'empty' }}
         </span>
         </td>
         <td>
-        <span editable-text="user.username"  e-name="username" e-form="rowform" e-required  >
+        <span id="{{$index}}_{{user.username}}" editable-text="user.username"  e-name="username" e-form="rowform" e-required  >
           {{ user.username || 'empty' }}
         </span>
         </td>
         <td class="select-td" >
-        <span editable-select="user.role"  e-name="name" e-form="rowform" e-selectpicker
+        <span id="{{$index}}_{{user.role}}" editable-select="user.role"  e-name="role" e-form="rowform" e-selectpicker
               e-ng-options="s.value as s.text for s in role">
-          {{ showStatus(user) }}
+          {{ showRole(user) }}
         </span >
         </td>
         <td >
-        <span editable-text="user.mobile" e-name="mobile"  e-form="rowform" e-required  >
+        <span id="{{$index}}_{{user.mobile}}"  editable-text="user.mobile" e-name="mobile"  e-form="rowform" e-required  >
           {{ user.mobile || 'empty' }}
         </span>
         </td>

@@ -14,4 +14,9 @@ public interface RoleResourceRepository extends RDBRepository<RoleResource, Long
 
     List<RoleResource> findByRole(long role);
 
+    RoleResource findByRoleAndResource(long role,long resource);
+
+    void deleteByRole(long rid);
+
+
 }

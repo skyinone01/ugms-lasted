@@ -50,6 +50,15 @@ public class ResourceController {
     }
 
     /**
+     * 资源列表保存 for role
+     */
+    @RequestMapping(value = "role/resources", method = RequestMethod.PUT)
+    public BasicResponse resources4Role(@RequestParam("rid") long rid, @RequestBody ResourceEntryUGMS resourceEntryUGMS) {
+        resourceService.updateRoleResource(rid,resourceEntryUGMS);
+        return BasicResponse.success();
+    }
+
+    /**
      * 新增or修改资源
      */
     @RequestMapping(value = "/resources", method = RequestMethod.POST)
@@ -61,9 +70,9 @@ public class ResourceController {
     /**
      * 删除资源
      */
-    @RequestMapping(value = "/resources/delete", method = RequestMethod.POST)
-    public BasicResponse resourceDelete(@RequestBody ResourceEntryUGMS entry) {
-        resourceService.deleteOne(entry.getId());
+    @RequestMapping(value = "/resources/{id}", method = RequestMethod.DELETE)
+    public BasicResponse resourceDelete(@PathVariable("id") long id) {
+        resourceService.deleteOne(id);
         return BasicResponse.success();
     }
 }

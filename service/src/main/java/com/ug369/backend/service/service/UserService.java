@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -30,7 +31,7 @@ public class UserService {
     public User getUser(String username, String password){
 
         User user = userRepository.findByUsername(username);
-        if (user == null || bCryptPasswordEncoder.matches(password,user.getPassword())){
+        if (user == null || !bCryptPasswordEncoder.matches(password,user.getPassword())){
             throw new UserException(UgmsStatus.AUTH_FAILED,"用户名或者明码错误");
         }
         return user;
@@ -87,6 +88,11 @@ public class UserService {
     public PagedResult getAll(PageRequest pageRequest) {
         Map map = new HashMap();
         return userRepository.getDataPageBatch("User.getAll", "User.getCount", map, pageRequest);
+    }
+
+    public List<User> findByRole(long roleId){
+        List<User> users = userRepository.findByRole(roleId);
+        return users;
     }
 
     public void delete(long id) {

@@ -29,6 +29,38 @@
                    appCommon.openInfoModal($uibModal,"失败："+err)
                 });
             },
+            doPut: function (uri,data,callback) {
+                $http({
+                    method: "PUT",
+                    headers: {'token':appCommon.getToken()},
+                    data: data,
+                    url: appCommon.autoCompleteUrl(uri)
+                }).success(function(result){
+                    if(result.errno === 0){
+                        callback(result);
+                    }else{
+                        appCommon.openInfoModal($uibModal,"失败："+result.error);
+                    }
+                }).error(function(err){
+                    appCommon.openInfoModal($uibModal,"失败："+err)
+                });
+            },
+            doDelete: function (uri,data,callback) {
+                $http({
+                    method: "DELETE",
+                    headers: {'token':appCommon.getToken()},
+                    data: data,
+                    url: appCommon.autoCompleteUrl(uri)
+                }).success(function(result){
+                    if(result.errno === 0){
+                        callback(result);
+                    }else{
+                        appCommon.openInfoModal($uibModal,"失败："+result.error);
+                    }
+                }).error(function(err){
+                    appCommon.openInfoModal($uibModal,"失败："+err)
+                });
+            },
             doGet: function (uri,params,callback) {
                 $http({
                     method: "GET",
@@ -53,6 +85,12 @@
             },
             bubMsg: function(msg){
                appCommon.openInfoModal($uibModal,msg);
+            },
+            goLogin:function(){
+                appCommon.goLogin();
+            },
+            goError:function(){
+                appCommon.goError();
             }
         };
     }

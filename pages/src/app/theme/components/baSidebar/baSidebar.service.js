@@ -39,15 +39,15 @@
 
         this.getMenuItems = function() {
           var states = defineMenuItemStates().filter(function(e){
-            return true;
-//          return permissions.hasPermission(e.stateRef);
-//            for (var i=0;i<notIn.length;i++){
-//                return permissions.hasPermission(e.stateRef);
-////              if(e.stateRef == notIn[i].state ){
-////                return false;
-////              }
-//            }
-//            return true;
+            //return true;
+          return permissions.hasPermission(e.stateRef);
+            //for (var i=0;i<notIn.length;i++){
+            //    return permissions.hasPermission(e.stateRef);
+            //  if(e.stateRef == notIn[i].state ){
+            //    return false;
+            //  }
+            //}
+            //return true;
           });
 
           var menuItems = states.filter(function(item) {

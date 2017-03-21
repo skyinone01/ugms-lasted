@@ -1,0 +1,10 @@
+<div class="modal-content" style="width: 200px;height: 150px">
+  <div class="modal-header bg-info">
+    <i class="ion-information-circled modal-icon"></i><span ng-model="title"> {{title}}</span>
+  </div>
+  <div class="modal-body text-center" ng-model="content" >{{content}}</div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-info" ng-click="$dismiss()">确定</button>
+    <button type="button" class="btn btn-info" ng-click="$dismiss()">取消</button>
+  </div>
+</div>

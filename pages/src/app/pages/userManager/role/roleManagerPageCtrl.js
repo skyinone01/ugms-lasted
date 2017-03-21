@@ -8,6 +8,9 @@
     angular.module('BlurAdmin.pages.userResource.roleManager')
         .controller('RoleManagerPageCtrl', RoleManagerPageCtrl);
 
+    angular.module('BlurAdmin.pages.userResource.roleManager')
+        .controller('RoleResourceCtrl', RoleResourceCtrl);
+
     /** @ngInject */
     function RoleManagerPageCtrl($scope, $filter,appBase,$uibModal) {
         $scope.roles = [];
@@ -48,7 +51,7 @@
                 $scope.listRole();
             })
         };
-        $scope.valueChange = function(event,index){
+        $scope.mouseLeave = function(event,index){
             var key = $(event.target).parent().parent().prev().attr("e-name");
             if(index >= $scope.roleUpdate.length){
                  switch(key){
@@ -82,31 +85,62 @@
         };
 
         $scope.deleteRole = function(index){
-            appBase.doPost("roles/delete",$scope.roles[index],function(ret){
-                appBase.bubMsg("删除成功");
-                $scope.removeUser(index);
-             })
-        };
 
-        $scope.permissions=[];
+            appBase.doGet("users/"+$scope.roles[index].id,null,function(ret){
+                if(ret.data.length >0 ){
+                    appBase.bubMsg("当前角色下还有用户，不能删除");
+                    return;
+                }else {
+                    appBase.doDelete("roles/"+$scope.roles[index].id,function(ret){
+                        appBase.bubMsg("删除成功");
+                        $scope.listRole();
+                    })
+                }
+            })
+
+        };
 
         $scope.permission = function (index) {
-              appBase.doGet("role/resources/?rid="+$scope.roles[index].id,null,function(ret){
-                   $scope.permissions = ret.data.items;
-                   var page = "app/pages/userManager/role/roleResource.html";
-                   $uibModal.open({
-                     animation: true,
-                     templateUrl: page,
-                     size: 1500,
-                     resolve: {
-                       items: function () {
-                         return $scope.permissions;
-                       }
-                     }
-                   });
-              })
-
-
+            var page = "app/pages/userManager/role/roleResource.html";
+            var modalInstance  = $uibModal.open({
+                animation: true,
+                templateUrl: page,
+                controller:'RoleResourceCtrl',
+                size: 1500,
+                resolve: {
+                    index:function(){
+                        return index;
+                    },
+                    roles:function(){
+                        return $scope.roles;
+                    }
+                }
+            });
         };
+    }
+
+    function RoleResourceCtrl($scope,$uibModal,$uibModalInstance,roles,index,appBase) {
+        $scope.items=[];
+        appBase.doGet("role/resources/?rid="+roles[index].id,null,function(ret){
+            $scope.items = ret.data.items;
+        })
+
+        $scope.save = function(event,rIndex){
+            var name = $($(event.target).parents('td')[0]).attr('name');
+            if (name.trim() != "visible"){
+                appBase.bubMsg("不能修复除|是否可见|的其他属性值");
+                return;
+            }
+            var value = $(event.target).parent().prev().val();
+            if (value.trim() != "true" && value.trim() != "false"){
+                appBase.bubMsg("属性值只能为true 或者 false");
+            }
+            var update = $scope.items[rIndex];
+            update.visible = value;
+
+            appBase.doPut("role/resources/?rid="+roles[index].id,update,function(ret){
+                appBase.bubMsg("保存成功");
+            })
+        }
     }
 })();

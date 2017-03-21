@@ -11,7 +11,7 @@
         <div class="widgets">
             <div class="row">
                 <div class="col-md-12">
-                    <div ba-panel ba-panel-title="Editable Cells" ba-panel-class="with-scroll">
+                    <div ba-panel  ba-panel-class="with-scroll">
 
                         <table class="table table-hover" st-table="permissions">
                             <thead>
@@ -23,11 +23,15 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr ng-repeat="item in items" class="editable-tr-wrap">
-                                <td class="table-id">{{item.id}}</td>
-                                <td><span editable-text="item.name" blur="cancel">{{item.name}}</span></td>
-                                <td><span editable-text="item.state" blur="cancel">{{item.state}}</span></td>
-                                <td><span editable-text="item.visible" blur="cancel">{{item.visible}}</span></td>
+                            <tr ng-repeat="item in items" class="editable-tr-wrap" >
+                                <td class="table-id">
+                                    {{$index}}
+                                    <span style="display: none"  id="resourceId_{{$index}}" e-form="rowform" e-required>
+                                    {{ item.id || '0' }} </span>
+                                </td>
+                                <td name="name"><span editable-text="item.name" blur="cancel">{{item.name}}</span></td>
+                                <td name="state"><span editable-text="item.state" blur="cancel">{{item.state}}</span></td>
+                                <td name="visible"><span editable-text="item.visible" blur="cancel">{{item.visible}}</span></td>
                             </tr>
                             </tbody>
                             <tfoot>
@@ -44,7 +48,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" ng-click="$dismiss()">保存</button>
+        <button type="button" class="btn btn-primary" ng-click="$dismiss()">退出</button>
     </div>
 </div>
 

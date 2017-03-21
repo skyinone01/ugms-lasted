@@ -13,6 +13,7 @@ import com.ug369.backend.service.repository.mysql.RoleResourceRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -93,6 +94,26 @@ public class ResourceService {
         });
 
         return dataPageBatch;
+
+    }
+
+    @Transactional
+    public void updateRoleResource(long roleId, ResourceEntryUGMS resourceEntryUGMS) {
+        RoleResource one = roleResourceRepository.findByRoleAndResource(roleId,resourceEntryUGMS.getId());
+        if(resourceEntryUGMS.isVisible()){
+            if (one != null){
+                return;
+            }else {
+                one = new RoleResource();
+                one.setResource(resourceEntryUGMS.getId());
+                one.setRole(roleId);
+                roleResourceRepository.save(one);
+            }
+        }else {
+            if (one != null){
+                roleResourceRepository.delete(one);
+            }
+        }
 
     }
 }

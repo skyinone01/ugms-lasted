@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by roy on 2017/3/10.
  */
@@ -17,4 +19,6 @@ public interface UserRepository extends RDBRepository<User, Long> {
 	User findByUsernameAndPassword(String username,String password);
 
 	User findByUsername(String username);
+
+	List<User> findByRole(long roleId);
 }
