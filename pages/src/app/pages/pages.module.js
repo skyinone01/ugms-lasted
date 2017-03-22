@@ -20,6 +20,7 @@
     'BlurAdmin.pages.common',
 
     'BlurAdmin.pages.userResource',
+    'BlurAdmin.pages.welcome',
     //'BlurAdmin.pages.auth',
   ])
       .config(routeConfig);
