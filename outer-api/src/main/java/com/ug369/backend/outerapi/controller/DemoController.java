@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by Roy on 2017/3/8.
+ * http://121.40.225.78:8080/youge-erp/
  */
 @RestController
 public class DemoController {

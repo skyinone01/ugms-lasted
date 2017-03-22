@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/common/confirmModal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageToCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/exception/UgmsStatus.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/exception/UgmsStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/outer-api.iml" afterPath="$PROJECT_DIR$/outer-api/outer-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ResourceController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ResourceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/TokenController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/TokenController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/common/commonPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/common/commonPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/editableRowTable.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/editableRowTable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/resourceManagerPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/resourceManagerPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleResource.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleResource.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/userManagerPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/userManagerPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.directive.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.html" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/pageTop/pageTop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/services/appBase.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/services/appBase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/index.html" afterPath="$PROJECT_DIR$/pages/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/service.iml" afterPath="$PROJECT_DIR$/service/service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/RoleResourceRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/RoleResourceRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/UserRepository.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/mysql/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/UserService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java" />
     </list>
     <ignored path="regina-webapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,11 +41,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25112614">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="66" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DemoController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20979021">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -131,9 +116,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -201,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/userManagerPageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/resourceManager.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.js" />
@@ -252,6 +234,7 @@
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/UserService.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js" />
+        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java" />
       </list>
     </option>
   </component>
@@ -353,6 +336,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1064,17 +1058,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1889,13 +1872,8 @@
       <workItem from="1489728952218" duration="11360000" />
       <workItem from="1489971528689" duration="30332000" />
       <workItem from="1490057489732" duration="880000" />
-      <workItem from="1490088075303" duration="61000" />
-    </task>
-    <task id="LOCAL-00137">
-      <created>1471245377747</created>
-      <option name="number" value="00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1471245377747</updated>
+      <workItem from="1490088075303" duration="111000" />
+      <workItem from="1490174212082" duration="27000" />
     </task>
     <task id="LOCAL-00138">
       <created>1471310871021</created>
@@ -2185,11 +2163,17 @@
       <option name="project" value="LOCAL" />
       <updated>1489592385691</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="1.权限问题修改&#10;2.新增全局权限">
+      <created>1490088140326</created>
+      <option name="number" value="00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1490088140406</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1574003000" />
+    <option name="totallyTimeSpent" value="1574080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2213,7 +2197,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40043527" sideWeight="0.49357602" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1917735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1917735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2501,13 +2485,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/PermissionResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2836,9 +2813,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2876,8 +2851,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25112614">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="66" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20979021">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           <folding />
         </state>
       </provider>
