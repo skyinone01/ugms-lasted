@@ -1,0 +1,54 @@
+<div class="widgets">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="欢迎页列表" ba-panel-class="with-scroll">
+                <div class="add-row-editable-table">
+                    <button class="btn btn-primary" ng-click="addWelcome()">新增欢迎页</button>
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                    <tr>
+                        <td></td>
+                        <td>标题</td>
+                        <td>创建时间</td>
+                        <td>状态</td>
+                        <td>排序</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr ng-repeat="welcome in welcomes"  class="editable-row"  >
+                        <td >
+                            {{$index}}
+                            <span style="display: none"   e-name="id"  e-required>
+                              {{ welcome.id || '0' }}
+                            </span>
+                        </td>
+                        <td >
+                            <span   e-name="title" e-required  >
+                              {{ welcome.title || 'empty' }}
+                            </span>
+                        </td>
+                        <td>
+                            <span   e-name="createTime" e-required  >
+                              {{ welcome.createTime || 'empty' }}
+                            </span>
+                        </td>
+                        <td>
+                            <span    e-name="sort" e-required  >
+                              {{ welcome.sort || 'empty' }}
+                            </span>
+                        </td>
+                        <td>
+                            <div class="buttons" >
+                                <button class="btn btn-primary editable-table-button btn-xs" ng-click="detailWelcome($index)">详情</button>
+                                <button class="btn btn-danger editable-table-button btn-xs" ng-click="stopWelcome($index)">停用</button>
+                                <button class="btn btn-danger editable-table-button btn-xs" ng-click="deleteWelcome($index)">删除</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>
