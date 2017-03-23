@@ -20,5 +20,5 @@ public interface UserRepository extends RDBRepository<User, Long> {
 
 	User findByUsername(String username);
 
-	List<User> findByRole(long roleId);
+//	List<User> findByRole(long roleId);
 }

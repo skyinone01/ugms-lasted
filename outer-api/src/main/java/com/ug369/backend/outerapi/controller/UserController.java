@@ -8,7 +8,6 @@ import com.ug369.backend.bean.bean.request.UserRequest;
 import com.ug369.backend.bean.bean.response.UserResponse;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
-import com.ug369.backend.service.entity.mysql.User;
 import com.ug369.backend.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -38,8 +37,8 @@ public class UserController {
      * 用户列表 for role
      */
     @RequestMapping(value = "/users/{role_id}", method = RequestMethod.GET)
-    public DataResponse<User> userList4Role(@PathVariable("role_id") long roleId) {
-         List<User> users = userService.findByRole(roleId);
+    public DataResponse<UserResponse> userList4Role(@PathVariable("role_id") long roleId) {
+         List<UserResponse> users = userService.findByRole(roleId);
 
         return new DataResponse(users);
     }

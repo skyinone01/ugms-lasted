@@ -7,8 +7,8 @@ import java.io.Serializable;
  * Created by Roy on 2017/3/10.
  */
 @Entity
-@Table(name = "ug_role_resource")
-public class RoleResource implements Serializable {
+@Table(name = "ug_user_role")
+public class UserRole implements Serializable {
 
     private static final long serialVersionUID = 2406271872055393481L;
 
@@ -16,7 +16,7 @@ public class RoleResource implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long role;
-    private long resource;
+    private long user;
 
     public long getId() {
         return id;
@@ -34,11 +34,11 @@ public class RoleResource implements Serializable {
         this.role = role;
     }
 
-    public long getResource() {
-        return resource;
+    public long getUser() {
+        return user;
     }
 
-    public void setResource(long resource) {
-        this.resource = resource;
+    public void setUser(long user) {
+        this.user = user;
     }
 }

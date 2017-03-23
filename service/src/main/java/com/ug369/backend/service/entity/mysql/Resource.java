@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by Roy on 2017/3/10.
  */
 @Entity
-@Table(name = "demo_resource")
+@Table(name = "ug_resource")
 public class Resource implements Serializable {
 
     private static final long serialVersionUID = 2406271872055393481L;

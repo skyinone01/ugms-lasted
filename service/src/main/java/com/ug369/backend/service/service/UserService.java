@@ -2,11 +2,14 @@ package com.ug369.backend.service.service;
 
 import com.ug369.backend.bean.base.request.PageRequest;
 import com.ug369.backend.bean.bean.request.UserRequest;
+import com.ug369.backend.bean.bean.response.UserResponse;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.service.entity.mysql.User;
+import com.ug369.backend.service.entity.mysql.UserRole;
 import com.ug369.backend.service.repository.mysql.UserRepository;
+import com.ug369.backend.service.repository.mysql.UserRoleRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -24,6 +27,8 @@ import java.util.Map;
 public class UserService {
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    UserRoleRepository userRoleRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -32,9 +37,13 @@ public class UserService {
 
         User user = userRepository.findByUsername(username);
         if (user == null || !bCryptPasswordEncoder.matches(password,user.getPassword())){
-            throw new UserException(UgmsStatus.AUTH_FAILED,"用户名或者明码错误");
+            throw new UserException(UgmsStatus.AUTH_FAILED,"用户名或者密码错误");
         }
         return user;
+    }
+
+    public UserRole getRoleByUser(long userId){
+        return userRoleRepository.findByUser(userId);
     }
 
     @Transactional
@@ -55,7 +64,13 @@ public class UserService {
                 user.setMobile(request.getMobile());
             }
             if (request.getRole() != 0){
-                user.setRole(request.getRole());
+                UserRole userRole = userRoleRepository.findByUser(request.getId());
+                if (userRole == null){
+                    userRole = new UserRole();
+                    userRole.setUser(request.getId());
+                }
+                userRole.setRole(request.getRole());
+                userRoleRepository.save(userRole);
             }
             if (StringUtils.isNotEmpty(request.getPassword())){
                 user.setUsername(bCryptPasswordEncoder.encode(user.getPassword()));
@@ -69,10 +84,15 @@ public class UserService {
             user.setMobile(request.getMobile());
             user.setUsername(request.getUsername());
             user.setName(request.getName());
-            user.setRole(request.getRole());
+//            user.setRole(request.getRole());
             user.setPassword(bCryptPasswordEncoder.encode("1234abcd"));
-
             userRepository.save(user);
+
+            UserRole userRole = new UserRole();
+            userRole.setRole(request.getRole());
+            userRole.setUser(user.getId());
+            userRoleRepository.save(userRole);
+
         }
 
     }
@@ -90,8 +110,8 @@ public class UserService {
         return userRepository.getDataPageBatch("User.getAll", "User.getCount", map, pageRequest);
     }
 
-    public List<User> findByRole(long roleId){
-        List<User> users = userRepository.findByRole(roleId);
+    public List<UserResponse> findByRole(long roleId){
+        List<UserResponse> users = (List<UserResponse>) userRepository.getData("User.getAll", "User.getCount", roleId);
         return users;
     }
 

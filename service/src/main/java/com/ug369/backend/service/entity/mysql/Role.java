@@ -8,10 +8,8 @@ import java.io.Serializable;
  * Created by Roy on 2017/3/10.
  */
 @Entity
-@Table(name = "demo_role")
+@Table(name = "ug_role")
 public class Role implements Serializable{
-
-
 	private static final long serialVersionUID = -8566197653568234573L;
 
 	@Id

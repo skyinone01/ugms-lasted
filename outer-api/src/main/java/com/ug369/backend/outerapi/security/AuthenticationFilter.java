@@ -1,10 +1,10 @@
 package com.ug369.backend.outerapi.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ug369.backend.bean.base.response.BasicResponse;
-import com.ug369.backend.bean.exception.UgmsStatus;
+import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.service.entity.mysql.User;
+import com.ug369.backend.service.entity.mysql.UserRole;
 import com.ug369.backend.service.service.UserService;
 import com.ug369.backend.utils.TokenUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -21,7 +21,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * Created by roy on 2017/3/7.
@@ -49,10 +48,17 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 					Long userId = tokenUtils.validate(token);
 					User user = userService.findById(userId);
 					if (user != null) {
-						if (user.getRole() != 0) {
+						UserRole role = userService.getRoleByUser(userId);
+						if (role !=null && role.getRole()!=0) {
+							WebUser webUser = new WebUser();
+							webUser.setId(userId);
+							webUser.setMobile(user.getMobile());
+							webUser.setName(user.getName());
+							webUser.setRole(role.getRole());
+							webUser.setUsername(user.getUsername());
 							SecurityContextHolder.getContext().setAuthentication(
-									new UsernamePasswordAuthenticationToken(user, user, AuthorityUtils
-											.createAuthorityList("ROLE_" + user.getRole())));
+									new UsernamePasswordAuthenticationToken(webUser, webUser, AuthorityUtils
+											.createAuthorityList("ROLE_" + role.getId())));
 						}
 					}
 
@@ -61,15 +67,15 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 				}
 			}else {
 
-				if (!request.getMethod().equals("OPTIONS")){
-					response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-					PrintWriter writer = response.getWriter();
-					writer.print(objectMapper
-							.writeValueAsString(new BasicResponse(UgmsStatus.AUTH_FAILED, "没有认证信息")));
-					writer.flush();
-					writer.close();
-					return;
-				}
+//				if (!request.getMethod().equals("OPTIONS")){
+//					response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+//					PrintWriter writer = response.getWriter();
+//					writer.print(objectMapper
+//							.writeValueAsString(new BasicResponse(UgmsStatus.AUTH_FAILED, "没有认证信息")));
+//					writer.flush();
+//					writer.close();
+//					return;
+//				}
 			}
 		}
 		filter.doFilter(request, response);

@@ -1,25 +1,15 @@
-package com.ug369.backend.service.entity.mysql;
-
-import javax.persistence.*;
-import java.io.Serializable;
+package com.ug369.backend.bean.base.request;
 
 /**
- * Created by roy on 2017/3/12.
+ * Created by Roy on 2017/3/23.
  */
+public class WebUser {
 
-@Entity
-@Table(name = "ug_user")
-public class User implements Serializable{
-
-	private static final long serialVersionUID = 2406271872055393481L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String mobile;
     private String username;
-    private String password;
+    private long role;
 
     public long getId() {
         return id;
@@ -53,12 +43,11 @@ public class User implements Serializable{
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public long getRole() {
+        return role;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setRole(long role) {
+        this.role = role;
     }
-
 }

@@ -16,10 +16,13 @@ public class DemoController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping("/test/adduser")
+	@RequestMapping("/init/adduser")
 	public String ok() {
 		UserRequest request = new UserRequest();
-		request.setUsername("skyinone");
+		request.setUsername("admin");
+		request.setName("系统管理员");
+		request.setRole(1L);
+		request.setMobile("13800000000");
 		request.setPassword("abcd1234");
 		userService.createOrUpdate(request);
 		return "ok";
