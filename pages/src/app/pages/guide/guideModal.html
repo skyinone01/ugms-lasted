@@ -1,0 +1,47 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+            <em class="ion-ios-close-empty sn-link-close"></em>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div ba-panel ba-panel-class="profile-page">
+            <div class="panel-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label for="inputName" class="col-sm-3 control-label">标题</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="models.title" id="inputName"
+                                       placeholder="请输入标题...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label class="col-sm-3 control-label">图片</label>
+                            <div class="col-sm-9">
+                                <div class="userpic">
+                                    <div class="userpic-wrapper">
+                                        <img ng-src="{{ models.ygimgBig == '' ? picture : models.ygimgBig }}"
+                                             ng-click="uploadPicture()">
+                                    </div>
+                                    <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
+                                    <a href class="change-userpic" ng-click="uploadPicture()">Change Profile Picture</a>
+                                    <input type="file" ng-show="false" id="uploadFile" ng-model="models.ygurl"
+                                           ng-file-select="onFileSelect($files)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="save()">提交</button>
+    </div>
+</div>

@@ -4,7 +4,7 @@
 (function () {
     'use strict';
 
-    angular.module('BlurAdmin.pages.welcome')
+    angular.module('BlurAdmin.pages.content.welcome')
         .controller('WelcomePageCtrl', WelcomePageCtrl);
 
     /** @ngInject */
@@ -16,7 +16,7 @@
 //                 $scope.welcomes = ret.data.items;
 //            })
 //        }
-        $scope.addWelcome = function(){
+        $scope.open = function(){
                 $uibModal.open({
     				animation: true,
     				templateUrl: page,
@@ -27,10 +27,11 @@
     				}
     			});
         }
+
         $scope.pageNum = 1;
 		$scope.searchNameValue = '';
 
-		appBase.doGet("welcomes","{'page':0,'size':20}",function(response){
+		appBase.doGet("welcome","{'page':0,'size':20}",function(response){
 		     if(response.data != null){
 		         $scope.items = response.data.items;
 		     }
