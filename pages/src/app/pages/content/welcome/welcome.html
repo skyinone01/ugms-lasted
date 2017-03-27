@@ -49,17 +49,17 @@
             <td>{{item.title}}</td>
             <td>{{item.status}}</td>
             <td>{{item.sort}}</td>
-            <td>{{item.createdTime | date:'longDate'}}</td>
+            <td>{{item.create_date | date:'longDate'}}</td>
             <td>
                 <button class="status-button btn btn-xs btn-warning"
                         data-toggle="modal"
-                        ng-click="open('app/pages/guide/welcomeModal.html', 'lg',item.id)"
+                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id)"
                 >
                     修改
                 </button>
                 <button class="status-button btn btn-xs btn-info"
                         data-toggle="modal"
-                        ng-click="open('app/pages/guide/welcomeModal.html', 'lg',item.id)"
+                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id)"
                 >
                     查看
                 </button>

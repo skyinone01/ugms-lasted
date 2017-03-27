@@ -35,31 +35,29 @@
 			id: modelId,
 			title: '',
 			url: '',
-			flag: 0,
-			sort: 0,
-			imgBig: ''
+			useable: 0,
+			begin_date: '',
+			orders: ''
 		};
-
 		$scope.link = '';
 		$scope.ok = function () {
 			$uibModalInstance.close($scope.link);
 		};
-		$scope.save = (function () {
-		    appBase.dePost("welcome",$scope.welcome,function(response){
+
+		$scope.save = function(){
+		    var formData = new FormData();
+		    formData.append('file',$scope.file);
+		    formData.append('id',modelId);
+		    formData.append('title',$scope.file);
+		    formData.append('useable',$scope.useable);
+		    formData.append('begin_date',$scope.begin_date);
+		    formData.append('orders',$scope.orders);
+
+		    appBase.doFormData("welcome",formData,function(response){
 		        appBase.bubMsg("保存成功");
 		        window.location.reload();
 		    });
-		});
-
-
-		appBase.doPut("welcome",$scope.welcome,function(response){
-			$scope.welcome.id = response.data.id;
-			$scope.welcome.ygtype = response.data.ygtype;
-			$scope.welcome.title = response.data.title;
-			$scope.welcome.url = response.data.url;
-			$scope.welcome.imgBig = response.data.imgBig;
-		});
-
+		}
 
 	}
 

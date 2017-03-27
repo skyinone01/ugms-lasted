@@ -6,12 +6,20 @@
 
     <select id="getAll" resultType="com.ug369.backend.bean.bean.response.UserResponse">
         SELECT u.id as id,u.name,u.username as username,
-        u.mobile as mobile,u.role as role
-        FROM demo_user u
+        u.mobile as mobile,r.id as role
+        FROM ug_user u,ug_role r,ug_user_role ur
+        WHERE ur.role = r.id and u.id =ur.user
     </select>
 
     <select id="getCount" resultType="int">
         SELECT count(id)
-        FROM demo_user
+        FROM ug_user
+    </select>
+
+    <select id="getUserByRole" resultType="com.ug369.backend.bean.bean.response.UserResponse">
+        SELECT u.id as id,u.name as name,u.username as username,
+        u.mobile as mobile
+        FROM ug_user u,ug_user_role ur
+        WHERE ur.user = u.id and ur.role =#{rid}
     </select>
 </mapper>

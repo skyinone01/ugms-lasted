@@ -2,6 +2,7 @@ package com.ug369.backend.service.service;
 
 import com.ug369.backend.bean.base.request.PageRequest;
 import com.ug369.backend.bean.bean.response.WelcomeEntry;
+import com.ug369.backend.bean.bean.response.WelcomeResponse;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
@@ -11,6 +12,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.HashMap;
 
 /**
  * Created by Administrator on 2017/3/22.
@@ -23,7 +26,7 @@ public class WelcomeService {
 
     public PagedResult<WelcomeEntry> getAll(PageRequest pageRequest) {
 
-        PagedResult<WelcomeEntry> welcomes = welcomeRepository.getDataPageBatch("welcome.getAll", "welcome.getCount", pageRequest, null);
+        PagedResult<WelcomeEntry> welcomes = welcomeRepository.getDataPageBatch("Welcome.getAll", "Welcome.getCount", new HashMap<>(),pageRequest);
         return welcomes;
     }
 
@@ -53,8 +56,8 @@ public class WelcomeService {
         if (!StringUtils.isEmpty(welcomeEntry.getPicture())){
             one.setPicture(welcomeEntry.getPicture());
         }
-        if(welcomeEntry.getOrder()!=0){
-            one.setOrder(welcomeEntry.getOrder());
+        if(welcomeEntry.getOrders()!=0){
+            one.setOrder(welcomeEntry.getOrders());
         }
         if(welcomeEntry.getStatus()!=0){
             one.setStatus(welcomeEntry.getStatus());
@@ -64,5 +67,22 @@ public class WelcomeService {
         }
 
         welcomeRepository.save(one);
+    }
+
+    public WelcomeResponse findOne(long id) {
+
+        Welcome one = welcomeRepository.findOne(id);
+        if (one == null){
+            throw new UserException(UgmsStatus.NOT_FOUND,"欢迎页不存在");
+        }
+
+        WelcomeResponse response = new WelcomeResponse();
+        response.setId(one.getId());
+        response.setContent(one.getContent());
+        response.setPicture(one.getPicture());
+        response.setTitle(one.getTitle());
+        response.setOrders(one.getOrder());
+
+        return response;
     }
 }

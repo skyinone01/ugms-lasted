@@ -77,6 +77,24 @@
                    appCommon.openInfoModal($uibModal,"失败："+err)
                 });
             },
+            doFormData: function (uri,formData,callback) {
+                $http({
+                    method: "POST",
+                    headers: {'token':appCommon.getToken()},
+                    data: formData,
+                    url: appCommon.autoCompleteUrl(uri),
+                    headers: {'Content-Type':undefined},
+                    transformRequest: angular.identity
+                }).success(function(result){
+                    if(result.errno === 0){
+                      callback(result);
+                    }else{
+                       appCommon.openInfoModal($uibModal,"失败："+result.error);
+                    }
+                }).error(function(err){
+                   appCommon.openInfoModal($uibModal,"失败："+err)
+                });
+            },
             getToken: function(){
                return appCommon.getToken($uibModal);
             },

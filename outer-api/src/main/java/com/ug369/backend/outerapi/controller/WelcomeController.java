@@ -2,8 +2,10 @@ package com.ug369.backend.outerapi.controller;
 
 import com.ug369.backend.bean.base.request.PageRequest;
 import com.ug369.backend.bean.base.response.BasicResponse;
+import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
 import com.ug369.backend.bean.bean.response.WelcomeEntry;
+import com.ug369.backend.bean.bean.response.WelcomeResponse;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
@@ -32,9 +34,6 @@ public class WelcomeController {
 
     @Value("${ugms.content.file.path}")
     private String filePath;
-
-    @Value("${ugms.static.file.prex}")
-    private String staticPath;
 
     /**
      * 欢迎页列表列表
@@ -66,7 +65,7 @@ public class WelcomeController {
         File img = new File(filePath + "/" + name);
         org.apache.commons.io.FileUtils.writeByteArrayToFile(img, file.getBytes(),false);
 
-        welcomeEntry.setPicture(staticPath+"/"+name);
+        welcomeEntry.setPicture(filePath+"/"+name);
         welcomeService.createOrUpdate(welcomeEntry);
 
         return BasicResponse.success();
@@ -82,5 +81,14 @@ public class WelcomeController {
         return BasicResponse.success();
     }
 
+    /**
+     * 详情
+     */
+    @RequestMapping(value = "/welcome/{id}", method = RequestMethod.GET)
+    public DataResponse<WelcomeResponse> welcomeOne(@PathVariable("id") long id) {
+
+        WelcomeResponse response = welcomeService.findOne(id);
+        return new DataResponse<>(response);
+    }
 
 }
