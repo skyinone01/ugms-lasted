@@ -13,7 +13,7 @@ gulp.task('marketplace-release', ['build', 'dev-release'], function () {
       name: 'version',
       message: 'Please enter release version (x.x.x)'
     }, function (res) {
-      var nameAndVersion = 'blur-admin-' + res.version;
+      var nameAndVersion = 'ugms-' + res.version;
       return gulp
         .src(['src/**', 'release/**', 'dev-release/**', 'gulp/**', 'bower.json', 'gulpfile.js', 'package.json', 'README.md', '.gitignore'], {base: "."})
         .pipe(rename(function (path) {

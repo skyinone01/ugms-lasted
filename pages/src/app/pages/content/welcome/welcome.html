@@ -6,7 +6,7 @@
                        ng-model="searchNameValue"
                        class="form-control with-danger-addon"
                        placeholder="请输入名称..."
-                       ng-change="selectStatus(pageNum,searchNameValue)"
+                       ng-change="selectStatus(page,searchNameValue)"
                 >
             </div>
         </div>
@@ -16,7 +16,7 @@
         <button type="button"
                 class="btn btn-info"
                 data-toggle="modal"
-                ng-click="open('app/pages/guide/welcomeModal.html', 'lg')">
+                ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg')">
             添加欢迎页
         </button>
     </div>
@@ -71,9 +71,9 @@
         <tfoot>
         <tr>
             <td colspan="7" class="text-center">
-                <input class="btn btn-primary" type="button" value="上一页" ng-click="btnUp(pageNum-1)"/>
-                {{pageNum}}
-                <input class="btn btn-primary" type="button" value="下一页" ng-click="btnNext(pageNum)"/>
+                <input class="btn btn-primary" type="button" value="上一页" ng-click="btnUp(page-1)"/>
+                {{page}}
+                <input class="btn btn-primary" type="button" value="下一页" ng-click="btnNext(page)"/>
             </td>
         </tr>
         </tfoot>

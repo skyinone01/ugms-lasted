@@ -21,9 +21,9 @@ public class WelcomeController {
     private WelcomeService welcomeService;
 
     /**
-     * 用户列表
+     * 欢迎页列表列表
      */
-    @RequestMapping(value = "/welcomes", method = RequestMethod.GET)
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
     public PagedDataResponse<WelcomeEntry> userList(@PageDefault PageRequest pageRequest) {
         PagedResult<WelcomeEntry> users = welcomeService.getAll(pageRequest);
 

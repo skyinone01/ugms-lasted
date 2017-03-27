@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Resource">
+
+    <select id="getByRole" parameterType="long" resultType="com.ug369.backend.bean.bean.response.PermissionResponse">
+        SELECT r.state as stateRef
+        FROM ug_resource r,ug_role_resource rr
+        where r.id = rr.resource and rr.role = #{rid}
+    </select>
+
+    <select id="getResourceByRole" parameterType="long" resultType="list">
+        SELECT r.id
+        FROM ug_resource r,ug_role_resource rr
+        where r.id = rr.resource and rr.role = #{rid}
+    </select>
+
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.response.ResourceEntryUGMS">
+        SELECT u.id as id,u.name as name,u.state as state,
+        u.url as url,u.description as description
+        FROM ug_resource u
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT count(id)
+        FROM ug_resource
+    </select>
+
+</mapper>

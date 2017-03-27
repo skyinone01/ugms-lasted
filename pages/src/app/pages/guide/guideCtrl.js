@@ -1,39 +1,20 @@
 /**
- * @author roy
+ * @author v.lugovsky
+ * created on 16.12.2015
  */
 (function () {
-    'use strict';
+	'use strict';
 
-    angular.module('BlurAdmin.pages.welcome')
-        .controller('WelcomePageCtrl', WelcomePageCtrl);
+	angular.module('BlurAdmin.pages.guide')
+		.controller('guideCtrl', guideCtrl);
 
-    /** @ngInject */
-    function WelcomePageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
-//
-//        $scope.welcomes = [];
-//        $scope.listWelcome=function(){
-//            appBase.doGet("welcomes",null,function(ret){
-//                 $scope.welcomes = ret.data.items;
-//            })
-//        }
-        $scope.addWelcome = function(){
-                $uibModal.open({
-    				animation: true,
-    				templateUrl: page,
-    				size: size,
-    				controller: 'welcomeModalCtrl',
-    				resolve: {
-    					modelId: id
-    				}
-    			});
-        }
-        $scope.pageNum = 1;
+	/** @ngInject */
+	function guideCtrl($scope, $http, $uibModal, baProgressModal,appBase) {
+		$scope.pageNum = 1;
 		$scope.searchNameValue = '';
 
-		appBase.doGet("welcomes","{'page':0,'size':20}",function(response){
-		     if(response.data != null){
-		         $scope.items = response.data.items;
-		     }
+		appBase.doGet("welcomes",{'page':0,'size':20},function(response){
+             $scope.items = response.data.items;
 		})
 
 		$scope.selectStatus = (function (pageNum, name) {
@@ -127,8 +108,5 @@
 				$scope.pageNum = pageNum == 0 ? 1 : pageNum;
 			});
 		});
-
-
-    }
-
+	}
 })();

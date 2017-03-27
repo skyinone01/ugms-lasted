@@ -1,4 +1,7 @@
 'use strict';
+//var API_ROOT ="http://120.26.221.137:8080/";
+//var PAGES_ROOT ="http://120.26.221.137:3000/ugms/";
+
 var API_ROOT ="http://127.0.0.1:8080/";
 var PAGES_ROOT ="http://127.0.0.1:3000/";
 
@@ -11,7 +14,7 @@ function getToken(){
         exp.setTime(exp.getTime() + Days*24*60*60*1000);
         document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString()+ "; path=/";
     }else {
-         alert("会话超时，返回登陆页面")
+
          window.location.href = PAGES_ROOT +"auth.html";
     }
     return token;
@@ -66,7 +69,7 @@ angular.element(document).ready(function() {
         angular.bootstrap(document, ['BlurAdmin']);
      },
      error:function(error){
-        alert("加载权限失败");
+
         window.location.href = PAGES_ROOT +"auth.html";
      }
    });
