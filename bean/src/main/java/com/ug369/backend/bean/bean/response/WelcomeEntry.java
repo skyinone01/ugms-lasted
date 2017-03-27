@@ -7,12 +7,15 @@ import java.util.Date;
  */
 public class WelcomeEntry {
 
-    enum STATUS{NEW,USED,STOPEUSE}
     private long id;
+    private String picture;
+    private String content;
     private String title;
-    private Date createTime;
-    private STATUS satus;
     private int order;
+    private Date begin_date;
+    private Date create_date;
+    private int status;
+    private int useable;
 
     public long getId() {
         return id;
@@ -20,6 +23,22 @@ public class WelcomeEntry {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getTitle() {
@@ -30,27 +49,43 @@ public class WelcomeEntry {
         this.title = title;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public STATUS getSatus() {
-        return satus;
-    }
-
-    public void setSatus(STATUS satus) {
-        this.satus = satus;
-    }
-
     public int getOrder() {
         return order;
     }
 
     public void setOrder(int order) {
         this.order = order;
+    }
+
+    public Date getBegin_date() {
+        return begin_date;
+    }
+
+    public void setBegin_date(Date begin_date) {
+        this.begin_date = begin_date;
+    }
+
+    public Date getCreate_date() {
+        return create_date;
+    }
+
+    public void setCreate_date(Date create_date) {
+        this.create_date = create_date;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public int getUseable() {
+        return useable;
+    }
+
+    public void setUseable(int useable) {
+        this.useable = useable;
     }
 }

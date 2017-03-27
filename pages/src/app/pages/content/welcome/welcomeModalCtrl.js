@@ -51,15 +51,14 @@
 		    });
 		});
 
-		if (modelId) {
-		    appBase.doGet("welcome/"+modelId,null,function(response){
-                    $scope.welcome.id = response.data.id;
-//					$scope.welcome.ygtype = response.data.ygtype;
-					$scope.welcome.title = response.data.title;
-					$scope.welcome.url = response.data.url;
-					$scope.welcome.imgBig = response.data.imgBig;
-		    });
-		}
+
+		appBase.doPut("welcome",$scope.welcome,function(response){
+			$scope.welcome.id = response.data.id;
+			$scope.welcome.ygtype = response.data.ygtype;
+			$scope.welcome.title = response.data.title;
+			$scope.welcome.url = response.data.url;
+			$scope.welcome.imgBig = response.data.imgBig;
+		});
 
 
 	}
