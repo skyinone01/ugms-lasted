@@ -82,7 +82,7 @@
     </dependencies>
 
     <build>
-        <finalName>regina-outerapi</finalName>
+        <finalName>ugms</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

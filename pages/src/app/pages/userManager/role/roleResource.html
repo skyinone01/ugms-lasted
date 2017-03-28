@@ -29,8 +29,8 @@
                                     <span style="display: none"  id="resourceId_{{$index}}" e-form="rowform" e-required>
                                     {{ item.id || '0' }} </span>
                                 </td>
-                                <td name="name"><span editable-text="item.name" blur="cancel">{{item.name}}</span></td>
-                                <td name="state"><span editable-text="item.state" blur="cancel">{{item.state}}</span></td>
+                                <td name="name"><span blur="cancel">{{item.name}}</span></td>
+                                <td name="state"><span  blur="cancel">{{item.state}}</span></td>
                                 <td name="visible"><span editable-text="item.visible" blur="cancel">{{item.visible}}</span></td>
                             </tr>
                             </tbody>

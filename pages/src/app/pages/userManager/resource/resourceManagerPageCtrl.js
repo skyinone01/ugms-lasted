@@ -59,7 +59,7 @@
         //    $scope.beforeChange = value;
         //}
 
-        $scope.mouseLeave = function(event,index){
+        $scope.valueChange = function(event,index){
             //var selected = $filter('filter')($scope.role, {value: data});
             //var name  = $('#'+index+'_'+$scope.beforeChange).attr("e-name");
             //if( data != 'undefined' && data !=""){

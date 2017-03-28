@@ -40,7 +40,14 @@
         this.getMenuItems = function() {
           var states = defineMenuItemStates().filter(function(e){
 //            return true;
-          return permissions.hasPermission(e.stateRef);
+          var name =permissions.hasPermission(e.stateRef);
+          if(name!=null){
+              e.title = name;
+              return true;
+          }else{
+              return false;
+          }
+//          return permissions.hasPermission(e.stateRef);
             //for (var i=0;i<notIn.length;i++){
             //    return permissions.hasPermission(e.stateRef);
             //  if(e.stateRef == notIn[i].state ){

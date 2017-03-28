@@ -51,7 +51,7 @@
                 $scope.listRole();
             })
         };
-        $scope.mouseLeave = function(event,index){
+        $scope.valueChange = function(event,index){
             var key = $(event.target).parent().parent().prev().attr("e-name");
             if(index >= $scope.roleUpdate.length){
                  switch(key){

@@ -5,7 +5,7 @@
 <mapper namespace="Resource">
 
     <select id="getByRole" parameterType="long" resultType="com.ug369.backend.bean.bean.response.PermissionResponse">
-        SELECT r.state as stateRef
+        SELECT r.state as stateRef,r.name as name
         FROM ug_resource r,ug_role_resource rr
         where r.id = rr.resource and rr.role = #{rid}
     </select>

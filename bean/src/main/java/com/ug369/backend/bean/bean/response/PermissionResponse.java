@@ -6,6 +6,7 @@ package com.ug369.backend.bean.bean.response;
 public class PermissionResponse {
 
     private String stateRef;
+    private String name;
     private boolean visible = true;
 
     public String getStateRef() {
@@ -24,4 +25,11 @@ public class PermissionResponse {
         this.visible = visible;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

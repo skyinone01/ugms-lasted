@@ -1,9 +1,9 @@
 'use strict';
-//var API_ROOT ="http://120.26.221.137:8080/";
-//var PAGES_ROOT ="http://120.26.221.137:3000/ugms/";
+var API_ROOT ="http://120.26.221.137:8080/";
+var PAGES_ROOT ="http://120.26.221.137:3000/ugms/";
 
-var API_ROOT ="http://127.0.0.1:8080/";
-var PAGES_ROOT ="http://127.0.0.1:3000/";
+//var API_ROOT ="http://127.0.0.1:8080/";
+//var PAGES_ROOT ="http://127.0.0.1:3000/";
 
 function getToken(){
     var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
@@ -87,9 +87,16 @@ angular.module('BlurAdmin')
       },
       hasPermission: function (stateRef) {
               stateRef = stateRef.trim();
-              return permissionList.some(function(item) {
-                return item.stateRef.trim() === stateRef
-              });
+              for(var i=0;i<permissionList.length;i++){
+                 var item = permissionList[i];
+                 if( item.stateRef.trim() === stateRef){
+                    return item.name;
+                 }
+              }
+              return null;
+//              return permissionList.some(function(item) {
+//                return item.stateRef.trim() === stateRef
+//              });
       }
    };
   });
