@@ -83,8 +83,8 @@
                     headers: {'token':appCommon.getToken()},
                     data: formData,
                     url: appCommon.autoCompleteUrl(uri),
-                    headers: {'Content-Type':undefined},
-                    transformRequest: angular.identity
+                    headers:{'Content-Type': undefined},
+                    transformRequest:angular.identity,
                 }).success(function(result){
                     if(result.errno === 0){
                       callback(result);

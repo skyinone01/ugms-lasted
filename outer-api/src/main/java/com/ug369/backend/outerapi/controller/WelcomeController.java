@@ -14,6 +14,7 @@ import com.ug369.backend.service.service.WelcomeService;
 import com.ug369.backend.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -48,9 +49,10 @@ public class WelcomeController {
     /**
      * 新增、修改 欢迎页
      */
-    @RequestMapping(value = "/welcome", method = RequestMethod.PUT)
+    @RequestMapping(value = "/welcome", method = RequestMethod.POST,produces = MediaType.MULTIPART_FORM_DATA_VALUE,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public BasicResponse welcome( @RequestBody WelcomeEntry welcomeEntry,
-                                  @RequestParam(value = "file") MultipartFile file) throws NoSuchAlgorithmException, IOException {
+                                  @RequestParam("file") MultipartFile file) throws NoSuchAlgorithmException, IOException {
+
         if(!StringUtils.isPicture(file.getName())){
             throw  new UserException(UgmsStatus.BAD_REQUEST,"图片格式不符合要求");
         }

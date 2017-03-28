@@ -26,9 +26,9 @@
 		$scope.getFile = function (file) {
 			fileReader.readAsDataUrl(file, $scope)
 				.then(function (result) {
-					$scope.picture = result;
-					$scope.file = file;
+					$scope.welcome.url = result;
 			});
+			$scope.file = file;
 		};
 
 		$scope.welcome = {
@@ -44,7 +44,7 @@
 			$uibModalInstance.close($scope.link);
 		};
 
-		$scope.save = function(){
+		$scope.saveOrUpdate = function(){
 		    var formData = new FormData();
 		    formData.append('file',$scope.file);
 		    formData.append('id',modelId);
@@ -58,7 +58,6 @@
 		        window.location.reload();
 		    });
 		}
-
 	}
 
 })();

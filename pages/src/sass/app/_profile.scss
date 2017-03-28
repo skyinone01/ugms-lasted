@@ -66,13 +66,13 @@ h3.with-line {
 
 .userpic {
   border: 1px dashed #b8b8b8;
-  width: 202px;
-  height: 202px;
+  width: 482px;
+  height: 252px;
   position: relative;
   cursor: pointer;
   .userpic-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 480px;
+    height: 250px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -102,7 +102,7 @@ h3.with-line {
   }
   a.change-userpic {
     display: none;
-    width: 202px;
+    width: 482px;
     background: rgba(0, 0, 0, 0.7);
     transition: all 200ms ease-in-out;
     color: $default-text;

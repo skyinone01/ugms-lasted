@@ -58,7 +58,7 @@
                             <div class="col-sm-9">
                                 <div class="userpic">
                                     <div class="userpic-wrapper">
-                                        <img ng-src="{{ welcome.picture == '' ? picture : welcome.picture }}"
+                                        <img ng-src="{{ welcome.url == '' ? picture : welcome.url }}"
                                              ng-click="uploadPicture()">
                                     </div>
                                     <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
@@ -75,6 +75,6 @@
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" ng-click="save()">提交</button>
+        <button type="button" class="btn btn-primary" ng-click="saveOrUpdate()">提交</button>
     </div>
 </div>

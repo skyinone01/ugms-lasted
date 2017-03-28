@@ -71,51 +71,59 @@
             alert(obj);
         };
         $scope.beforeChange;
-        $scope.onClick = function(value){
-            $scope.beforeChange = value;
-        }
-        $scope.valueChange = function(data,index){
+        $scope.change = function(data,index){
             var selected = $filter('filter')($scope.role, {value: data});
-            var name;
             if(selected.length){
-                name="role";
-            }else {
-                name = $('#'+index+'_'+$scope.beforeChange).attr("e-name");
-                if( data != 'undefined' && data !=""){
-                    $scope.beforeChange = data;
+                if(index >= $scope.update.length){
+                     $scope.insert[index].role =data;
                 }else{
-                    $scope.beforeChange ="";
+                    $scope.update[index].name =data;
                 }
             }
+        }
+        $scope.valueChange = function(event,index){
+            var  name = $(event.target).parent().parent().prev().attr("e-name");
+//            var name;
+//            if(selected.length){
+//                name="role";
+//            }else {
+//                name = $(event.target).parent().parent().prev().attr("e-name");
+////                var key = $(event.target).parent().parent().prev().attr("e-name");
+//                if( data != 'undefined' && data !=""){
+//                    $scope.beforeChange = data;
+//                }else{
+//                    $scope.beforeChange ="";
+//                }
+//            }
 
             if(index >= $scope.update.length){
                  switch(name){
                        case "username":
-                           $scope.insert[index].username =data;
+                           $scope.insert[index].username =event.target.value;
                              break;
                        case "name":
-                           $scope.insert[index].name =data;
+                           $scope.insert[index].name =event.target.value;
                              break;
                        case "mobile":
-                           $scope.insert[index].mobile =data;
+                           $scope.insert[index].mobile =event.target.value;
                              break;
                        case "role":
-                           $scope.insert[index].role =data;
+                           $scope.insert[index].role =event.target.value;
                              break;
                  }
             }else{
                 switch(name){
                        case "username":
-                           $scope.update[index].username =data;
+                           $scope.update[index].username =event.target.value;
                              break;
                        case "role":
-                           $scope.update[index].role =data;
+                           $scope.update[index].role =event.target.value;
                              break;
                        case "mobile":
-                           $scope.update[index].mobile =data;
+                           $scope.update[index].mobile =event.target.value;
                            break;
                        case "name":
-                           $scope.update[index].name =data;
+                           $scope.update[index].name =event.target.value;
                            break;
                  }
             }
