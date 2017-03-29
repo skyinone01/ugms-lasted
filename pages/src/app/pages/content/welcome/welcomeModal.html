@@ -45,7 +45,7 @@
                         <div class="form-group row clearfix">
                             <label for="inputName" class="col-sm-3 control-label">是否启用</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" ng-model="welcome.userable" id="inputUseable"
+                                <input type="text" class="form-control" ng-model="welcome.useable" id="inputUseable"
                                        placeholder="整数...">
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             <div class="col-sm-9">
                                 <div class="userpic">
                                     <div class="userpic-wrapper">
-                                        <img ng-src="{{ welcome.url == '' ? picture : welcome.url }}"
+                                        <img ng-src="{{ welcome.picture == '' ? picture : welcome.picture }}"
                                              ng-click="uploadPicture()">
                                     </div>
                                     <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>

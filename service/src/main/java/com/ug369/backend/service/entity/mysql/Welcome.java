@@ -16,7 +16,7 @@ public class Welcome {
     private String picture;
     private String content;
     private String title;
-    private int order;
+    private int orders;
     private Date begin_date;
     private Date create_date;
     private int status;
@@ -54,12 +54,12 @@ public class Welcome {
         this.content = content;
     }
 
-    public int getOrder() {
-        return order;
+    public int getOrders() {
+        return orders;
     }
 
-    public void setOrder(int order) {
-        this.order = order;
+    public void setOrders(int orders) {
+        this.orders = orders;
     }
 
     public Date getBegin_date() {
