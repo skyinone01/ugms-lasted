@@ -27,4 +27,11 @@
         FROM ug_resource
     </select>
 
+    <delete id="deleteByRole" parameterType="long">
+        DELETE
+        FROM ug_resource
+        WHERE role = #{rid}
+
+    </delete>
+
 </mapper>

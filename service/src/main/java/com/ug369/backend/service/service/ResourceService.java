@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -98,22 +99,23 @@ public class ResourceService {
     }
 
     @Transactional
-    public void updateRoleResource(long roleId, ResourceEntryUGMS resourceEntryUGMS) {
-        RoleResource one = roleResourceRepository.findByRoleAndResource(roleId,resourceEntryUGMS.getId());
-        if(resourceEntryUGMS.isVisible()){
-            if (one != null){
-                return;
-            }else {
-                one = new RoleResource();
-                one.setResource(resourceEntryUGMS.getId());
-                one.setRole(roleId);
-                roleResourceRepository.save(one);
+    public void updateRoleResource(Long roleId,List<ResourceEntryUGMS> resourceEntryUGMS) {
+
+
+        List<Long> add = new ArrayList<>();
+        resourceEntryUGMS.forEach(o->{
+            if(o.isVisible()){
+                add.add(o.getId());
             }
-        }else {
-            if (one != null){
-                roleResourceRepository.delete(one);
-            }
-        }
+        });
+
+        roleResourceRepository.deleteByRole(roleId);
+        add.forEach(o->{
+            RoleResource rr = new RoleResource();
+            rr.setResource(o);
+            rr.setRole(roleId);
+            roleResourceRepository.save(rr);
+        });
 
     }
 }

@@ -13,6 +13,8 @@ import com.ug369.backend.service.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Created by roy on 2017/3/13.
  */
@@ -53,7 +55,7 @@ public class ResourceController {
      * 资源列表保存 for role
      */
     @RequestMapping(value = "role/resources", method = RequestMethod.PUT)
-    public BasicResponse resources4Role(@RequestParam("rid") long rid, @RequestBody ResourceEntryUGMS resourceEntryUGMS) {
+    public BasicResponse resources4Role(@RequestParam("rid") long rid, @RequestBody List<ResourceEntryUGMS> resourceEntryUGMS) {
         resourceService.updateRoleResource(rid,resourceEntryUGMS);
         return BasicResponse.success();
     }

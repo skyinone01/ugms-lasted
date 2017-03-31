@@ -17,7 +17,7 @@
         $scope.listResource=function(){
             appBase.doGet("resources",null,function(ret){
                  $scope.resources = ret.data.items;
-                 $scope.update = ret.data.items;
+                 $scope.update = ret.data.items.slice(0);
             })
         }
         $scope.listResource();
@@ -41,7 +41,7 @@
         $scope.saveResource = function(index){
             var data;
             if(index >= $scope.update.length){
-                data = $scope.insert[index];
+                data = $scope.insert[index-$scope.update.length];
             }else{
                 data = $scope.update[index];
             }
@@ -50,26 +50,12 @@
                 $scope.listResource();
             })
         };
-        $scope.change = function(obj,data){
 
-        };
+        $scope.valueChange = function(parent,index){
 
-        //$scope.beforeChange;
-        //$scope.onClick = function(value){
-        //    $scope.beforeChange = value;
-        //}
-
-        $scope.valueChange = function(event,index){
-            //var selected = $filter('filter')($scope.role, {value: data});
-            //var name  = $('#'+index+'_'+$scope.beforeChange).attr("e-name");
-            //if( data != 'undefined' && data !=""){
-            //    $scope.beforeChange = data;
-            //}else{
-            //    $scope.beforeChange ="";
-            //}
-
-            var name = $(event.target).parent().parent().prev().attr("e-name");
-            var data = event.target.value;
+            //var name = $(event.target).parent().parent().prev().attr("e-name");
+            var name = parent.$editable.name;
+            var data = parent.$data;
             if(index >= $scope.update.length){
                  switch(name){
                        case "description":

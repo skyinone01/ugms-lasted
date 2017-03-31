@@ -1,6 +1,5 @@
 package com.ug369.backend.bean.bean.response;
 
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
@@ -18,15 +17,6 @@ public class WelcomeEntry {
     private Date create_date;
     private int status;
     private int useable;
-    private MultipartFile file;
-
-    public MultipartFile getFile() {
-        return file;
-    }
-
-    public void setFile(MultipartFile file) {
-        this.file = file;
-    }
 
     public long getId() {
         return id;

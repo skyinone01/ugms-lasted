@@ -31,7 +31,22 @@
                                 </td>
                                 <td name="name"><span blur="cancel">{{item.name}}</span></td>
                                 <td name="state"><span  blur="cancel">{{item.state}}</span></td>
-                                <td name="visible"><span editable-text="item.visible" blur="cancel">{{item.visible}}</span></td>
+
+                                <td name="visible">
+                                    <!--<span editable-text="item.visible" blur="cancel">{{item.visible}}</span>-->
+                                    <!--<select name="visible" selectpicker="selectpicker" ng-options="s.value as s.text for s in visible" class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="item.visible" ng-change="valueChange($index)" tabindex="-98" style="">-->
+                                        <!--&lt;!&ndash;<option data-hidden="true" disabled="" value="" class="" selected="selected">Select something</option>&ndash;&gt;-->
+                                        <!--<option label="true" value="true">true</option>-->
+                                        <!--<option label="false" value="false">false</option>-->
+                                    <!--</select>-->
+                                    <!--<button type="submit" ng-click="save($event,$index)" title="Submit" aria-label="Submit">save</button>-->
+                                    <input type="checkbox" ng-model="item.visible" id="checkboxSuccess" >
+                                    <!--<span editable-select="item.visible"  e-name="visible" e-form="rowform" e-selectpicker-->
+                                          <!--e-ng-options="s.value as s.text for s in visible" blur="cancel">-->
+                                            <!--{{item.visible}}-->
+                                    <!--</span >-->
+
+                                </td>
                             </tr>
                             </tbody>
                             <tfoot>
@@ -48,7 +63,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" ng-click="$dismiss()">退出</button>
+        <button type="button" class="btn btn-primary" ng-click="save($dismiss())">保存</button>
     </div>
 </div>
 

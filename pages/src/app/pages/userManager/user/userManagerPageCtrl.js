@@ -1,6 +1,6 @@
 /**
- * @author v.lugovsky
- * created on 16.12.2015
+ * @author roy
+ * created on 03.12.2017
  */
 (function () {
     'use strict';
@@ -19,7 +19,7 @@
         $scope.listUser=function(){
             appBase.doGet("users",null,function(ret){
                  $scope.users = ret.data.items;
-                 $scope.update = ret.data.items;
+                 $scope.update = ret.data.items.slice(0);
             })
         }
         $scope.listRole=function(){
@@ -50,6 +50,8 @@
                 username: '',
                 name:'',
                 mobile: '',
+                department: '',
+                email: '',
                 role: null
             };
             $scope.users.push($scope.inserted);
@@ -57,8 +59,8 @@
         };
         $scope.saveUser = function(index){
             var data;
-            if(index >= $scope.users.length){
-                data = $scope.insert[index];
+            if(index >= $scope.update.length){
+                data = $scope.insert[index-$scope.update.length];
             }else{
                 data = $scope.update[index];
             }
@@ -67,63 +69,51 @@
                 $scope.listUser();
             })
         };
-        $scope.change = function(obj,data){
-            alert(obj);
-        };
-        $scope.beforeChange;
-        $scope.change = function(data,index){
-            var selected = $filter('filter')($scope.role, {value: data});
-            if(selected.length){
-                if(index >= $scope.update.length){
-                     $scope.insert[index].role =data;
-                }else{
-                    $scope.update[index].name =data;
-                }
-            }
-        }
-        $scope.valueChange = function(event,index){
-            var  name = $(event.target).parent().parent().prev().attr("e-name");
-//            var name;
-//            if(selected.length){
-//                name="role";
-//            }else {
-//                name = $(event.target).parent().parent().prev().attr("e-name");
-////                var key = $(event.target).parent().parent().prev().attr("e-name");
-//                if( data != 'undefined' && data !=""){
-//                    $scope.beforeChange = data;
-//                }else{
-//                    $scope.beforeChange ="";
-//                }
-//            }
 
+        $scope.valueChange = function(parent,index){
+            //var  name = $(event.target).parent().parent().prev().attr("e-name");
+            var  name = parent.$editable.name;
+            var  data = parent.$data;
             if(index >= $scope.update.length){
                  switch(name){
                        case "username":
-                           $scope.insert[index].username =event.target.value;
+                           $scope.insert[index-$scope.update.length].username =data;
                              break;
                        case "name":
-                           $scope.insert[index].name =event.target.value;
+                           $scope.insert[index-$scope.update.length].name =data;
                              break;
                        case "mobile":
-                           $scope.insert[index].mobile =event.target.value;
+                           $scope.insert[index-$scope.update.length].mobile =data;
                              break;
                        case "role":
-                           $scope.insert[index].role =event.target.value;
+                           $scope.insert[index-$scope.update.length].role =data;
                              break;
+                     case "department":
+                         $scope.insert[index-$scope.update.length].department =data;
+                         break;
+                     case "email":
+                         $scope.insert[index-$scope.update.length].email =data;
+                         break;
                  }
             }else{
                 switch(name){
                        case "username":
-                           $scope.update[index].username =event.target.value;
+                           $scope.update[index].username =data;
                              break;
                        case "role":
-                           $scope.update[index].role =event.target.value;
+                           $scope.update[index].role =data;
                              break;
                        case "mobile":
-                           $scope.update[index].mobile =event.target.value;
+                           $scope.update[index].mobile =data;
                            break;
+                        case "department":
+                            $scope.update[index].department =data;
+                            break;
+                        case "email":
+                            $scope.update[index].email =data;
+                            break;
                        case "name":
-                           $scope.update[index].name =event.target.value;
+                           $scope.update[index].name =data;
                            break;
                  }
             }

@@ -10,7 +10,26 @@ public class UserResponse {
     private String name;
     private String mobile;
     private String role;
+    private String department;
+    private String email;
     private long roleId;
+
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public long getId() {
         return id;

@@ -20,6 +20,25 @@ public class User implements Serializable{
     private String mobile;
     private String username;
     private String password;
+    private String department;
+    private String email;
+
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public long getId() {
         return id;

@@ -18,8 +18,8 @@
     var app = angular.module('authApp', []);
     var API_URL ="http://120.26.221.137:8080/";
     var home="http://120.26.221.137:3000/ugms/";
-    <!--var API_URL ="http://127.0.0.1:8080/";-->
-    <!--var home="http://127.0.0.1:3000/";-->
+//    var API_URL ="http://127.0.0.1:8080/";
+//    var home="http://127.0.0.1:3000/";
     app.controller('authCtl', function($scope,$http) {
       $scope.submit = function() {
         var url = API_URL+"token?username="+$scope.username+"&password="+$scope.password;

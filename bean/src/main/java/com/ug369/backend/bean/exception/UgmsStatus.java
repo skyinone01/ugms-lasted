@@ -25,7 +25,10 @@ public enum UgmsStatus {
 	
 	INTERNAL_ERROR(7,"服务器内部错误"),
 
+	LOGIC_ERROR(8,"逻辑错误"),
+
 	INVALID_TOKEN(100,"无效token"),
+
 
 	VALIDATE_FAILED(101,"验证失败"),
 	;

@@ -5,11 +5,14 @@ import com.ug369.backend.bean.bean.response.RoleEntry;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.service.entity.mysql.Role;
+import com.ug369.backend.service.entity.mysql.UserRole;
 import com.ug369.backend.service.repository.mysql.RoleRepository;
+import com.ug369.backend.service.repository.mysql.UserRoleRepository;
 import org.apache.commons.collections.IteratorUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +29,9 @@ public class RoleService {
 
     @Autowired
     private RoleRepository roleRepository;
+
+    @Autowired
+    private UserRoleRepository userRoleRepository;
 
     public Role findByName(String name) {
         return roleRepository.findByName(name);
@@ -72,7 +78,12 @@ public class RoleService {
         return null;
     }
 
+    @Transactional
     public void deleteOne(long rid){
+        List<UserRole> byRole = userRoleRepository.findByRole(rid);
+        if (byRole!=null && byRole.size()>0){
+            throw new UserException(UgmsStatus.LOGIC_ERROR,"不能删除，当前角色下还有用户!");
+        }
         roleRepository.delete(rid);
     }
 

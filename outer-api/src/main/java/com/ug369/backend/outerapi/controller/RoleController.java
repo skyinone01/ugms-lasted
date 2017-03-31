@@ -8,10 +8,7 @@ import com.ug369.backend.bean.bean.response.RoleEntry;
 import com.ug369.backend.outerapi.annotation.PageDefault;
 import com.ug369.backend.service.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Administrator on 2017/3/18.
@@ -52,9 +49,9 @@ public class RoleController {
     /**
      * 删除角色
      */
-    @RequestMapping(value = "/roles/delete", method = RequestMethod.POST)
-    public BasicResponse roleDelete(@RequestBody CommonRoleEntry entry) {
-        roleService.deleteOne(entry.getId());
+    @RequestMapping(value = "/roles/{rid}", method = RequestMethod.DELETE)
+    public BasicResponse roleDelete( @PathVariable("rid") Long rid) {
+        roleService.deleteOne(rid);
         return BasicResponse.success();
     }
 }

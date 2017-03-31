@@ -19,7 +19,7 @@
         $scope.listRole=function(){
             appBase.doGet("common/roles",null,function(ret){
                  $scope.roles = ret.data;
-                 $scope.roleUpdate = ret.data;
+                 $scope.roleUpdate = ret.data.slice(0);
             })
         }
         $scope.listRole();
@@ -41,8 +41,8 @@
         };
         $scope.saveRole = function(index){
             var data;
-            if(index >= $scope.roles.length){
-                data = $scope.insert[index];
+            if(index >= $scope.roleUpdate.length){
+                data = $scope.insert[index-$scope.roleUpdate.length];
             }else{
                 data = $scope.roleUpdate[index];
             }
@@ -51,30 +51,32 @@
                 $scope.listRole();
             })
         };
-        $scope.valueChange = function(event,index){
-            var key = $(event.target).parent().parent().prev().attr("e-name");
+        $scope.valueChange = function(parent,index){
+            //var key = $(event.target).parent().parent().prev().attr("e-name");
+            var key = parent.$editable.name;
+            var data = parent.$data;
             if(index >= $scope.roleUpdate.length){
                  switch(key){
                        case "description":
-                           $scope.insert[index].description =event.target.value;
+                           $scope.insert[index-$scope.roleUpdate.length].description =data;
                              break;
                        case "name":
-                           $scope.insert[index].name =event.target.value;
+                           $scope.insert[index-$scope.roleUpdate.length].name =data;
                              break;
                        case "code":
-                           $scope.insert[index].code =event.target.value;
+                           $scope.insert[index-$scope.roleUpdate.length].code =data;
                              break;
                  }
             }else{
                 switch(key){
                        case "description":
-                           $scope.roleUpdate[index].description =event.target.value;
+                           $scope.roleUpdate[index].description =data;
                              break;
                        case "name":
-                           $scope.roleUpdate[index].name =event.target.value;
+                           $scope.roleUpdate[index].name =data;
                              break;
                        case "code":
-                           $scope.roleUpdate[index].code =event.target.value;
+                           $scope.roleUpdate[index].code =data;
                            break;
                  }
             }
@@ -86,16 +88,9 @@
 
         $scope.deleteRole = function(index){
 
-            appBase.doGet("users/"+$scope.roles[index].id,null,function(ret){
-                if(ret.data.length >0 ){
-                    appBase.bubMsg("当前角色下还有用户，不能删除");
-                    return;
-                }else {
-                    appBase.doDelete("roles/"+$scope.roles[index].id,function(ret){
-                        appBase.bubMsg("删除成功");
-                        $scope.listRole();
-                    })
-                }
+            appBase.doDelete("roles/"+$scope.roles[index].id,null,function(res){
+                appBase.bubMsg("删除成功");
+                $scope.listRole();
             })
 
         };
@@ -120,26 +115,19 @@
     }
 
     function RoleResourceCtrl($scope,$uibModal,$uibModalInstance,roles,index,appBase) {
+
+        $scope.visible = [{'value':'true','text':'true'},{'value':'false','text':'false'}]
+
         $scope.items=[];
         appBase.doGet("role/resources/?rid="+roles[index].id,null,function(ret){
             $scope.items = ret.data.items;
         })
 
-        $scope.save = function(event,rIndex){
-            var name = $($(event.target).parents('td')[0]).attr('name');
-            if (name.trim() != "visible"){
-                appBase.bubMsg("不能修复除|是否可见|的其他属性值");
-                return;
-            }
-            var value = $(event.target).parent().prev().val();
-            if (value.trim() != "true" && value.trim() != "false"){
-                appBase.bubMsg("属性值只能为true 或者 false");
-            }
-            var update = $scope.items[rIndex];
-            update.visible = value;
+        $scope.save = function(callback){
 
-            appBase.doPut("role/resources/?rid="+roles[index].id,update,function(ret){
+            appBase.doPut("role/resources/?rid="+roles[index].id,$scope.items,function(ret){
                 appBase.bubMsg("保存成功");
+                callback;
             })
         }
     }

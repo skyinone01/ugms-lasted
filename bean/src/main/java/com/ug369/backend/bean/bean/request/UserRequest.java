@@ -15,9 +15,28 @@ public class UserRequest {
     @NotEmpty
     private String password;
     private String name;
+    private String department;
+    private String email;
     private String mobile;
     private long role;
     private long id;
+
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getUsername() {
         return username;
