@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="1 send email&#10;2 bug修复&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="1 菜单过虐&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/request/UserRequest.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/request/UserRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/UserResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/UserResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/outer-api.iml" afterPath="$PROJECT_DIR$/outer-api/outer-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/WelcomeController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/WelcomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModal.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModalCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModalCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/auth.html" afterPath="$PROJECT_DIR$/pages/src/auth.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/service.iml" afterPath="$PROJECT_DIR$/service/service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/UserService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/utils.iml" afterPath="$PROJECT_DIR$/utils/utils.iml" />
     </list>
     <ignored path="regina-webapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,6 +69,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="baSidebar.service.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="welcome.module.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.module.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -259,13 +253,13 @@
         <option value="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/UserResponse.java" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/request/UserRequest.java" />
-        <option value="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/WelcomeController.java" />
         <option value="$PROJECT_DIR$/pages/src/auth.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModalCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModal.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
       </list>
     </option>
   </component>
@@ -1462,20 +1456,6 @@
       <workItem from="1490929415118" duration="9520000" />
       <workItem from="1490945024468" duration="379000" />
     </task>
-    <task id="LOCAL-00145">
-      <created>1471505480025</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1471505480025</updated>
-    </task>
-    <task id="LOCAL-00146">
-      <created>1471833243302</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1471833243310</updated>
-    </task>
     <task id="LOCAL-00147">
       <created>1471833258694</created>
       <option name="number" value="00147" />
@@ -1805,7 +1785,21 @@
       <option name="project" value="LOCAL" />
       <updated>1490960992815</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="1 输入框验证&#10;2 时间选择框插件&#10;3 状态转换&#10;">
+      <created>1490975428939</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1490975428940</updated>
+    </task>
+    <task id="LOCAL-00195" summary="1 菜单过虐&#10;">
+      <created>1490975510575</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1490975510575</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1883,7 +1877,9 @@
     <MESSAGE value="1 资源名称修改 赋权修改&#10;2 全局资源权限加载修改&#10;" />
     <MESSAGE value="1 multipart file support&#10;2 &#10;" />
     <MESSAGE value="1 send email&#10;2 bug修复&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 send email&#10;2 bug修复&#10;" />
+    <MESSAGE value="1 输入框验证&#10;2 时间选择框插件&#10;3 状态转换&#10;" />
+    <MESSAGE value="1 菜单过虐&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 菜单过虐&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2427,14 +2423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/pages/common/datePickerPopupCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -2533,6 +2521,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
           <folding />
         </state>
       </provider>
