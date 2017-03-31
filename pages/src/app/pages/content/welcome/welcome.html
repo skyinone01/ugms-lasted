@@ -2,12 +2,12 @@
     <div class="col-md-9">
         <div class="row">
             <div class="col-md-3">
-                <input type="text"
-                       ng-model="searchNameValue"
-                       class="form-control with-danger-addon"
-                       placeholder="请输入名称..."
-                       ng-change="selectStatus(page,searchNameValue)"
-                >
+                <!--<input type="text"-->
+                       <!--ng-model="searchNameValue"-->
+                       <!--class="form-control with-danger-addon"-->
+                       <!--placeholder="请输入名称..."-->
+                       <!--ng-change="selectStatus(page,searchNameValue)"-->
+                <!--&gt;-->
             </div>
         </div>
     </div>
@@ -47,23 +47,34 @@
                 </span>
             </td>
             <td>{{item.title}}</td>
-            <td>{{item.status}}</td>
+            <td>{{showStatus(item.status)}}</td>
             <td>{{item.orders}}</td>
             <td>{{item.create_date | date:'longDate'}}</td>
             <td>
-                <button class="status-button btn btn-xs btn-primary "
-                        data-toggle="modal"
-                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id)"
-                >
-                    编辑
-                </button>
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
                         ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id)"
+                        ng-show="showButton($index,'detail')"
                 >
-                    查看
+                    详情
                 </button>
-                <button class="status-button btn btn-danger btn-xs btn-success" ng-click="delete(item.id)">删除</button>
+                <button class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal"
+                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id)"
+                        ng-show="showButton($index,'edit')"
+                >
+                    编辑
+                </button>
+
+                <button class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation($index)"
+                        ng-show="showButton($index,'operate')"
+                >
+                    {{showButtonName($index)}}
+                </button>
+                <button class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
+                        ng-click="delete(item.id)">删除</button>
             </td>
         </tr>
         </tbody>

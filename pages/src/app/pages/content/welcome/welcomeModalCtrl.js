@@ -9,15 +9,14 @@
 		.controller('welcomeModalCtrl', welcomeModalCtrl);
 
 	/** @ngInject */
-	function welcomeModalCtrl($scope, $uibModalInstance, modelId, $http, fileReader, $filter,appBase) {
-
+	function welcomeModalCtrl($scope, $uibModalInstance, modelId, fileReader, $filter,appBase,callback) {
 
 		 if(modelId == null){
 		    $scope.welcome = {
          			id: 0,
          			title: '',
          			url: '',
-         			useable: 0,
+         			useable: '',
          			begin_date: '',
          			orders: '',
          			status:''
@@ -44,6 +43,8 @@
 			fileReader.readAsDataUrl(file, $scope)
 				.then(function (result) {
 					$scope.welcome.picture = result;
+					$scope.mark="mark";
+
 			});
 			$scope.file = file;
 		};
@@ -61,13 +62,14 @@
 		    formData.append('id', $scope.welcome.id);
 		    formData.append('title',$scope.welcome.title);
 		    formData.append('useable',$scope.welcome.useable);
-		    formData.append('begin_date',$scope.welcome.begin_date);
+		    formData.append('begin_date',$("#data_id").val());
 		    formData.append('orders',$scope.welcome.orders);
 //		    formData.append('status',$scope.welcome.status);
 
 		    appBase.doFormData("welcome",formData,function(response){
 		        appBase.bubMsg("保存成功");
-		        window.location.reload();
+		        callback
+//		        window.location.reload();
 		    });
 		}
 	}

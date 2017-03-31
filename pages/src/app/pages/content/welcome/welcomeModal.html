@@ -4,6 +4,8 @@
             <em class="ion-ios-close-empty sn-link-close"></em>
         </button>
     </div>
+    <form name="myForm" novalidate>
+
     <div class="modal-body">
         <div ba-panel ba-panel-class="profile-page">
             <div class="panel-content">
@@ -12,8 +14,11 @@
                         <div class="form-group row clearfix">
                             <label for="inputName" class="col-sm-3 control-label">标题</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" ng-model="welcome.title" id="inputName"
-                                       placeholder="请输入标题...">
+                                <input type="text" name="title" class="form-control" ng-model="welcome.title" id="inputName"
+                                       placeholder="请输入标题..." required>
+                                <span ng-show="myForm.title.$pristine">
+                                     <span ng-show="myForm.title.$error.required" style="color:red" >标题是必须的</span>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -23,20 +28,36 @@
                         <div class="form-group row clearfix">
                             <label for="inputName" class="col-sm-3 control-label">排序</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" ng-model="welcome.orders" id="inputSort"
-                                       placeholder="整数...">
+                                <input type="number" name="orders" class="form-control" ng-model="welcome.orders" id="inputSort"
+                                       placeholder="整数..." required>
+                                <span  ng-show="myForm.orders.$pristine">
+                                    <span ng-show="myForm.orders.$error.required" style="color:red" >排序是必须的</span>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group row clearfix">
+                        <div class="form-group row clearfix datepicker">
                             <label for="inputName" class="col-sm-3 control-label">起始日期</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" ng-model="welcome.begin_date" id="inputBeginDate"
-                                       placeholder="日期...">
+
+                            <div class="col-sm-9" ng-controller="datePickerPopupCtrl">
+
+                                <p class="input-group">
+                                    <input type="text" id="data_id" name="date" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="welcome.begin_date" is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" readonly required/>
+                                    <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+
+                                </p>
+                                <span  ng-show="myForm.date.$pristine">
+                                        <span ng-show="myForm.date.$error.required" style="color:red">起始日期是必须的</span>
+                                </span>
+                                <!--<label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>-->
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -45,8 +66,11 @@
                         <div class="form-group row clearfix">
                             <label for="inputName" class="col-sm-3 control-label">是否启用</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" ng-model="welcome.useable" id="inputUseable"
-                                       placeholder="整数...">
+                                <input type="number" name="useable" class="form-control" ng-model="welcome.useable" id="inputUseable"
+                                       placeholder="整数..." required>
+                                <span  ng-show="myForm.useable.$pristine">
+                                    <span ng-show="myForm.useable.$error.required" style="color:red">是否启用是必须的</span>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -58,14 +82,19 @@
                             <div class="col-sm-9">
                                 <div class="userpic">
                                     <div class="userpic-wrapper">
-                                        <img ng-src="{{ welcome.picture == '' ? picture : welcome.picture }}"
+                                        <img  ng-src="{{ welcome.picture == '' ? picture : welcome.picture }}"
                                              ng-click="uploadPicture()">
                                     </div>
                                     <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
                                     <a href class="change-userpic" ng-click="uploadPicture()">选择图片</a>
-                                    <input type="file" ng-show="false" id="uploadFile" ng-model="welcome.url"
-                                           ng-file-select="onFileSelect($files)">
+                                    <input type="file" name="url" ng-show="false" id="uploadFile" ng-model="welcome.url"
+                                           ng-file-select="onFileSelect($files)" required>
+
                                 </div>
+                                <input id="hidden_img" type="text" ng-show="false" name="mark" ng-model="mark" required>
+                                <span  ng-show="myForm.mark.$pristine">
+                                        <span ng-show="myForm.mark.$error.required" style="color:red">图片是必须的</span>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -75,6 +104,12 @@
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" ng-click="saveOrUpdate()">提交</button>
+        <button type="button" class="btn btn-primary" ng-click="saveOrUpdate()"
+                ng-disabled="myForm.orders.$pristine ||
+                            myForm.title.$pristine||
+                            myForm.useable.$pristine||
+                            myForm.mark.$pristine||
+                            myForm.date.$pristine">提交</button>
     </div>
+    </form>
 </div>

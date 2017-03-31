@@ -39,6 +39,16 @@
           {{ user.email || '' }}
         </span>
         </td>
+        <td>
+        <span id="{{$index}}_{{user.department}}" editable-text="user.department"  e-name="department" e-form="rowform" e-required  >
+          {{ user.department || 'empty' }}
+        </span>
+        </td>
+        <td>
+        <span id="{{$index}}_{{user.email}}" editable-text="user.email"  e-name="email" e-form="rowform" e-required  >
+          {{ user.email || 'empty' }}
+        </span>
+        </td>
         <td class="select-td" >
         <span id="{{$index}}_{{user.role}}" editable-select="user.role"  e-name="role" e-form="rowform" e-selectpicker
               e-ng-options="s.value as s.text for s in role">

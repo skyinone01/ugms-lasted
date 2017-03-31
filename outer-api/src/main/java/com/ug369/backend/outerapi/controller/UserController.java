@@ -12,8 +12,6 @@ import com.ug369.backend.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 /**
  * Created by Roy on 2017/3/10.
  */
@@ -37,10 +35,9 @@ public class UserController {
      * 用户列表 for role
      */
     @RequestMapping(value = "/users/{role_id}", method = RequestMethod.GET)
-    public DataResponse<UserResponse> userList4Role(@PathVariable("role_id") long roleId) {
-         List<UserResponse> users = userService.findByRole(roleId);
-
-        return new DataResponse(users);
+    public DataResponse userList4Role(@PathVariable("role_id") long roleId) {
+        int count = userService.findByRole(roleId);
+        return new DataResponse(count);
     }
 
     /**

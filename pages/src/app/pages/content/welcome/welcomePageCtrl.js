@@ -9,67 +9,58 @@
 
     /** @ngInject */
     function WelcomePageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
-//
-//        $scope.welcomes = [];
-//        $scope.listWelcome=function(){
-//            appBase.doGet("welcomes",null,function(ret){
-//                 $scope.welcomes = ret.data.items;
-//            })
-//        }
-        $scope.open = function(){
-                $uibModal.open({
-    				animation: true,
-    				templateUrl: page,
-    				size: size,
-    				controller: 'welcomeModalCtrl',
-    				resolve: {
-    					modelId: id
-    				}
-    			});
+
+        $scope.listWelcome = function(){
+                appBase.doGet("welcome","{'page':0,'size':20}",function(response){
+        		     if(response.data != null){
+        		         $scope.items = response.data.items;
+        		     }
+        		})
         }
+
 
         $scope.pageNum = 1;
 		$scope.searchNameValue = '';
+		$scope.listWelcome();
 
-		appBase.doGet("welcome","{'page':0,'size':20}",function(response){
-		     if(response.data != null){
-		         $scope.items = response.data.items;
-		     }
-		})
 
-		$scope.selectStatus = (function (pageNum, name) {
-			var url = 'http://120.26.88.27:8080/youge-backend/showMessage/'
-				+ (pageNum == 1 ? 0 : pageNum) * 15
-				+ '/15?YGType=1';
+        $scope.showButton = function(index,name){
+            if(name == 'edit'){
+                var s = $scope.items[index].status;
+                if(s==4 || s==5){
+                    return false;
+                }
+            }
+            return true;
+        }
+        $scope.showButtonName = function(index){
+            switch($scope.items[index].status){
+                case 1:
+                    return "审核";
+                case 2:
+                    return "审核";
+                case 3:
+                     return "审核";
+                case 4:
+                    return "发布";
+                case 5:
+                    return "停用";
+                case 6:
+                     return "启用";
 
-			if (name != undefined && name != '') {
-				url = url + '&YGTitle=' + name;
-			}
-			$http.get(url).then(function (response) {
-				$scope.smartTableData = [];
-				response.data.list.forEach(function (value) {
-					$scope.smartTableData.push({
-						YGID: value.ygid,
-						YGTitle: value.ygtitle,
-						YGCreateDate: value.ygcreateDate
-					})
-				});
-			});
-		});
+            }
+        }
 
-		$scope.delete = (function (id) {
-			var result = confirm('确认删除！');
-			if (result) {
-				$http.delete('http://120.26.88.27:8080/youge-backend/showMessage/' + id)
-					.then(function (response) {
-						if (response.data == 1) {
-							alert("删除成功");
-							$scope.selectStatus($scope.pageNum, '', '');
-						}
-						else alert('失败');
-					});
-			}
-		});
+        $scope.statusEmu = ["草稿" ,"待审核","审核未通过","审核通过","已发布","已作废"];
+		$scope.showStatus = function(status){
+             return $scope.statusEmu[status-1];
+		}
+
+		$scope.deleteOne = function(id){
+            appBase.doDelete("welcome/"+id,null,function(res){
+                appBase.bubMsg("删除成功");
+            });
+		}
 
 		$scope.open = function (page, size, id) {
 			$uibModal.open({
@@ -78,13 +69,12 @@
 				size: size,
 				controller: 'welcomeModalCtrl',
 				resolve: {
-					modelId: id
+					modelId: id,
+					callback:$scope.listWelcome
 				}
 			});
 		};
 		$scope.openProgressDialog = baProgressModal.open;
-
-
 
 		$scope.btnNext = (function (pageNum) {
 			var offset = 15 * pageNum;

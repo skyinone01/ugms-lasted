@@ -80,7 +80,8 @@ public class WelcomeController {
 
         Date begin = null;
         if (!org.apache.commons.lang3.StringUtils.isEmpty(begin_date)){
-            begin = SimpleDateFormat.getDateInstance().parse(begin_date);
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
+            begin = simpleDateFormat.parse(begin_date);
         }
         welcomeService.createOrUpdate(id,staticUrl+name,title,useable,begin,orders,status);
 
