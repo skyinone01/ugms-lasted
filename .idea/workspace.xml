@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="1 菜单过虐&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/WelcomeController.java" afterPath="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/WelcomeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/app.js" afterPath="$PROJECT_DIR$/pages/src/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModal.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModalCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModalCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/selectpicker.directive.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/form/inputs/widgets/oldSelect/selectpicker.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/auth.html" afterPath="$PROJECT_DIR$/pages/src/auth.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/WelcomeService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/WelcomeService.java" />
     </list>
     <ignored path="regina-webapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auth.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9029126">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state vertical-scroll-proportion="-11.230769">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -147,10 +138,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme.constants.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="theme.constants.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.5936073">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
@@ -269,9 +260,9 @@
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModal.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomeModalCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/auth.html" />
         <option value="$PROJECT_DIR$/pages/src/app/app.js" />
         <option value="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
-        <option value="$PROJECT_DIR$/pages/src/auth.html" />
       </list>
     </option>
   </component>
@@ -1628,13 +1619,7 @@
       <workItem from="1490928271763" duration="724000" />
       <workItem from="1490929415118" duration="9520000" />
       <workItem from="1490945024468" duration="379000" />
-      <workItem from="1491008730984" duration="14246000" />
-    </task>
-    <task id="LOCAL-00148">
-      <created>1471922788964</created>
-      <option name="number" value="00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1471922788972</updated>
+      <workItem from="1491008730984" duration="14384000" />
     </task>
     <task id="LOCAL-00149">
       <created>1472175435033</created>
@@ -1924,11 +1909,17 @@
       <option name="project" value="LOCAL" />
       <updated>1490975532212</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="1 菜单过虐&#10;">
+      <created>1491037440461</created>
+      <option name="number" value="00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1491037440515</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1608140000" />
+    <option name="totallyTimeSpent" value="1608278000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1954,7 +1945,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25136018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26175213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26175213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -2640,6 +2631,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.230769">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2650,16 +2649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.5936073">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9029126">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding />
         </state>
       </provider>
