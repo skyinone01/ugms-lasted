@@ -9,9 +9,9 @@
 		.controller('welcomeModalCtrl', welcomeModalCtrl);
 
 	/** @ngInject */
-	function welcomeModalCtrl($scope, $uibModalInstance, modelId, fileReader, $filter,appBase,callback) {
+	function welcomeModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
 
-		 if(modelId == null){
+		 if(modelId == 0){
 		    $scope.welcome = {
          			id: 0,
          			title: '',
@@ -24,26 +24,43 @@
 		 }else{
 		     appBase.doGet("welcome/"+modelId,null,function(response){
                 $scope.welcome=response.data;
+				 $scope.picmark = "mark"
 		     });
 		 }
 
 		$scope.picture = $filter('appImage')('theme/no-photo.png');
-
+		$scope.useables=[{'value':1,'text':'启用'},{'value':2,'text':'禁用'}]
 		$scope.removePicture = function () {
 			$scope.picture = $filter('appImage')('theme/no-photo.png');
 			$scope.noPicture = true;
 		};
 
+		//op 1 新增 2详情 3编辑 4 审核
+		$scope.initInput= function(){
+			if(op==2 || op==4){
+				return true;
+			}else {
+				return false;
+			}
+		}
+
+
 		$scope.uploadPicture = function () {
 			var fileInput = document.getElementById('uploadFile');
 			fileInput.click();
 		};
-
+		$scope.showSubmit = function(){
+			if(op =="detail"){
+				return false;
+			}else {
+				return true
+			}
+		}
 		$scope.getFile = function (file) {
 			fileReader.readAsDataUrl(file, $scope)
 				.then(function (result) {
 					$scope.welcome.picture = result;
-					$scope.mark="mark";
+					$scope.picmark="mark";
 
 			});
 			$scope.file = file;
@@ -55,7 +72,7 @@
 			$uibModalInstance.close($scope.link);
 		};
 
-		$scope.saveOrUpdate = function(){
+		$scope.saveOrUpdate = function(dismis){
 
 		    var formData = new FormData();
 		    formData.append('file',$scope.file);
@@ -64,12 +81,11 @@
 		    formData.append('useable',$scope.welcome.useable);
 		    formData.append('begin_date',$("#data_id").val());
 		    formData.append('orders',$scope.welcome.orders);
-//		    formData.append('status',$scope.welcome.status);
 
 		    appBase.doFormData("welcome",formData,function(response){
 		        appBase.bubMsg("保存成功");
-		        callback
-//		        window.location.reload();
+				dismis;
+				$state.go("content.welcome", {}, { reload: true });
 		    });
 		}
 	}

@@ -108,4 +108,14 @@ public class WelcomeController {
         return new DataResponse<>(response);
     }
 
+    /**
+     * 状态改变
+     */
+    @RequestMapping(value = "/welcome/{id}", method = RequestMethod.PUT)
+    public BasicResponse updateOne(@PathVariable("id") long id,@RequestParam("op") int op) {
+
+        welcomeService.changeStatus(id,op);
+        return BasicResponse.success();
+    }
+
 }

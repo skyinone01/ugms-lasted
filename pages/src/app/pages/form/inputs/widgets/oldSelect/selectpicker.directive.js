@@ -17,7 +17,7 @@
       priority: 1500, // make priority bigger than ngOptions and ngRepeat
       link: {
         pre: function(scope, elem, attrs) {
-          elem.append('<option data-hidden="true" disabled value="">' + (attrs.title || 'Select something') + '</option>')
+          elem.append('<option data-hidden="true" disabled value="">' + (attrs.title || '请选择') + '</option>')
         },
         post: function(scope, elem, attrs) {
           function refresh() {

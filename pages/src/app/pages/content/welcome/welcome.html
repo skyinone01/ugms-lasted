@@ -16,7 +16,7 @@
         <button type="button"
                 class="btn btn-info"
                 data-toggle="modal"
-                ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg')">
+                ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',0,1)">
             添加欢迎页
         </button>
     </div>
@@ -53,14 +53,14 @@
             <td>
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id)"
+                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id,2)"
                         ng-show="showButton($index,'detail')"
                 >
                     详情
                 </button>
                 <button class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
-                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id)"
+                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id,3)"
                         ng-show="showButton($index,'edit')"
                 >
                     编辑
@@ -68,13 +68,13 @@
 
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="operation($index)"
+                        ng-click="operation($event,item.id)"
                         ng-show="showButton($index,'operate')"
                 >
                     {{showButtonName($index)}}
                 </button>
                 <button class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
-                        ng-click="delete(item.id)">删除</button>
+                        ng-click="deleteOne(item.id)">删除</button>
             </td>
         </tr>
         </tbody>

@@ -48,8 +48,10 @@ public class WelcomeService {
             one.setCreate_date(new Date());
         }
 
-        if (status!=null){
+        if (status!=null && status!=0){
             one.setStatus(status);
+        }else {
+            one.setStatus(1);
         }
         if (!StringUtils.isEmpty(title)){
             one.setTitle(title);
@@ -90,4 +92,15 @@ public class WelcomeService {
     }
 
 
+    @Transactional
+    public void changeStatus(long id, int op) {
+        //审核 1 发布 2 启用 3 停用 4
+        //1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
+        Welcome one = welcomeRepository.findOne(id);
+        if (one == null){
+            throw  new UserException(UgmsStatus.NOT_FOUND,"此欢迎页不在了");
+        }
+        one.setStatus(op);
+        welcomeRepository.save(one);
+    }
 }
