@@ -10,19 +10,17 @@
     /** @ngInject */
     function WelcomePageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
 
+        $scope.perPage = 20;
+        $scope.page = 1;
         $scope.listItem = function(){
-                appBase.doGet("welcome","{'page':0,'size':20}",function(response){
+                appBase.doGet("welcome?page="+$scope.page+"&perPage="+$scope.perPage,null,function(response){
         		     if(response.data != null){
         		         $scope.items = response.data.items;
+        		         $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
         		     }
         		})
         }
-
-
-        $scope.pageNum = 1;
-		$scope.searchNameValue = '';
 		$scope.listItem();
-
 
         $scope.showButton = function(index,name){
             if(name == 'edit'){
@@ -95,7 +93,7 @@
 					op=4;
 					break;
 				case "停用":
-					op=2;
+					op=5;
 					break;
 			}
 
@@ -104,50 +102,29 @@
 				$scope.listItem();
 			});
 		}
+        $scope.upAble = function(page){
+            if(page == 1){
+                return true;
+            }
+            return false;
+        }
 
-		$scope.btnNext = (function (pageNum) {
-			var offset = 15 * pageNum;
-			$http.get('http://120.26.88.27:8080/youge-backend/showMessage/' + offset + '/15?YGType=1').then(function (response) {
-				if (response.data.lastPage > pageNum) {
-					$scope.smartTableData = [];
-				}
-				else {
-					return true;
-				}
-				response.data.list.forEach(function (value) {
-					$scope.smartTableData.push({
-						YGID: value.ygid,
-						YGTitle: value.ygtitle,
-						YGCreateDate: value.ygcreateDate
-					})
-				});
-				$scope.pageNum = pageNum + 1;
-			});
-		});
+        $scope.nextAble = function(page){
+            if(page == $scope.totalPage){
+                return true;
+            }
+            return false;
+        }
 
-		$scope.btnUp = (function (pageNum) {
-			var offset = 15 * (pageNum - 1);
-			$http.get('http://120.26.88.27:8080/youge-backend/showMessage/' + offset + '/15?YGType=1').then(function (response) {
-				if (response.data.hasNextPage) {
-					if (offset < 0) {
-						return true;
-					}
-					$scope.smartTableData = [];
-				}
-				else {
-					return true;
-				}
-				response.data.list.forEach(function (value) {
-					$scope.smartTableData.push({
-						YGID: value.ygid,
-						YGTitle: value.ygtitle,
-						YGCreateDate: value.ygcreateDate
-					})
-				});
-				$scope.pageNum = pageNum == 0 ? 1 : pageNum;
-			});
-		});
+		$scope.btnNext = function(){
+		    $scope.page = $scope.page+1;
+		    $scope.listItem();
+		};
 
+		$scope.btnUp = function () {
+			$scope.page = $scope.page-1;
+            $scope.listItem();
+		};
 
     }
 

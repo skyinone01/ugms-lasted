@@ -95,7 +95,10 @@ public class BannerController {
         }
 //        bannerRequest.setContent(title);
         bannerRequest.setTitle(title);
+        bannerRequest.setLink(link);
+        bannerRequest.setId(id);
         bannerRequest.setOrderId(orderId);
+        bannerRequest.setStatus(status);
         bannerRequest.setPicture(picUrl);
 
         bannerService.createOrUpdate(bannerRequest);

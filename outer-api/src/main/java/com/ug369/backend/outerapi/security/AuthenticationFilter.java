@@ -2,6 +2,8 @@ package com.ug369.backend.outerapi.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ug369.backend.bean.base.request.WebUser;
+import com.ug369.backend.bean.base.response.BasicResponse;
+import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.service.entity.mysql.User;
 import com.ug369.backend.service.entity.mysql.UserRole;
@@ -21,6 +23,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by roy on 2017/3/7.
@@ -67,15 +70,15 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 				}
 			}else {
 
-//				if (!request.getMethod().equals("OPTIONS")){
-//					response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-//					PrintWriter writer = response.getWriter();
-//					writer.print(objectMapper
-//							.writeValueAsString(new BasicResponse(UgmsStatus.AUTH_FAILED, "没有认证信息")));
-//					writer.flush();
-//					writer.close();
-//					return;
-//				}
+				if (!request.getMethod().equals("OPTIONS")){
+					response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+					PrintWriter writer = response.getWriter();
+					writer.print(objectMapper
+							.writeValueAsString(new BasicResponse(UgmsStatus.AUTH_FAILED, "没有认证信息")));
+					writer.flush();
+					writer.close();
+					return;
+				}
 			}
 		}
 		filter.doFilter(request, response);

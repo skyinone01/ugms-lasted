@@ -17,7 +17,7 @@
                 class="btn btn-info"
                 data-toggle="modal"
                 ng-click="open('app/pages/content/banner/bannerModal.html', 'lg',0,1)">
-            添加欢迎页
+            添加Banner
         </button>
     </div>
 </div>
@@ -25,7 +25,7 @@
 <div ba-panel style="margin-top: 10px">
 
 
-    <table class="table table-bordered table-hover" st-table="smartTableData">
+    <table class="table " st-table="smartTableData">
 
         <thead>
         <tr class="primary">
@@ -57,14 +57,14 @@
             <td>
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id,2)"
+                        ng-click="open('app/pages/content/banner/bannerModal.html', 'lg',item.id,2)"
                         ng-show="showButton($index,'detail')"
                 >
                     详情
                 </button>
                 <button class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
-                        ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id,3)"
+                        ng-click="open('app/pages/content/banner/bannerModal.html', 'lg',item.id,3)"
                         ng-show="showButton($index,'edit')"
                 >
                     编辑
@@ -86,9 +86,9 @@
         <tfoot>
         <tr>
             <td colspan="8" class="text-center">
-                <input class="btn btn-primary" type="button" value="上一页" ng-click="btnUp(page-1)"/>
-                {{page}}
-                <input class="btn btn-primary" type="button" value="下一页" ng-click="btnNext(page)"/>
+                <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                {{page}}/{{totalPage}}
+                <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
             </td>
         </tr>
         </tfoot>

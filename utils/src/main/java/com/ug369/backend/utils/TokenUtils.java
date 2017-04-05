@@ -35,7 +35,7 @@ public class TokenUtils {
 		//过期时间校验：end < now + extra
 		Instant end = Instant.ofEpochMilli(epoch).plusSeconds(timeout - extra);
 		if (!end.isAfter(Instant.now())) {
-			throw new UserException(UgmsStatus.INVALID_TOKEN,"会话超时");
+			throw new UserException(UgmsStatus.AUTH_FAILED,"会话超时");
 		}
 		return userId;
 	}

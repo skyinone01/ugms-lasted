@@ -26,7 +26,7 @@
                           appCommon.openInfoModal($uibModal,"失败："+result.error);
                        }
                 }).error(function(err){
-                   appCommon.openInfoModal($uibModal,"失败："+err)
+                   appCommon.openInfoModal($uibModal,"通信失败")
                 });
             },
             doPut: function (uri,data,callback) {
@@ -42,7 +42,7 @@
                         appCommon.openInfoModal($uibModal,"失败："+result.error);
                     }
                 }).error(function(err){
-                    appCommon.openInfoModal($uibModal,"失败："+err)
+                    appCommon.openInfoModal($uibModal,"通信失败")
                 });
             },
             doDelete: function (uri,data,callback) {
@@ -58,7 +58,7 @@
                         appCommon.openInfoModal($uibModal,"失败："+result.error);
                     }
                 }).error(function(err){
-                    appCommon.openInfoModal($uibModal,"失败："+err)
+                    appCommon.openInfoModal($uibModal,"通信失败")
                 });
             },
             doGet: function (uri,params,callback) {
@@ -74,7 +74,7 @@
                        appCommon.openInfoModal($uibModal,"失败："+result.error);
                     }
                 }).error(function(err){
-                   appCommon.openInfoModal($uibModal,"失败："+err)
+                   appCommon.openInfoModal($uibModal,"通信失败")
                 });
             },
             doFormData: function (uri,formData,callback) {
@@ -92,7 +92,7 @@
                        appCommon.openInfoModal($uibModal,"失败："+result.error);
                     }
                 }).error(function(err){
-                   appCommon.openInfoModal($uibModal,"失败："+err)
+                   appCommon.openInfoModal($uibModal,"通信失败")
                 });
             },
             getToken: function(){
