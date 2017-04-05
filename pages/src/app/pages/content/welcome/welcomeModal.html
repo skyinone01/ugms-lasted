@@ -42,7 +42,8 @@
                             <div class="col-sm-9" ng-controller="datePickerPopupCtrl">
 
                                 <p class="input-group">
-                                    <input type="text" id="data_id" name="date" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="welcome.begin_date" is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" readonly required/>
+                                    <input type="text" id="data_id" name="date1" ng-change="setDate()" ng-disabled="inputEdit" ng-show="false" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="welcome.begin_date" is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" readonly required/>
+                                    <input type="text" id="data_date" name="date" ng-disabled="true" ng-model="realDate" class="form-control"   ng-required="true" readonly required/>
                                     <span class="input-group-btn">
                                     <button type="button" ng-disabled="inputEdit" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
                                     </span>
@@ -55,31 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="row">-->
-                    <!--<div class="col-md-6">-->
-                        <!--<div class="form-group row clearfix">-->
-                            <!--<label for="inputName" class="col-sm-3 control-label">是否启用</label>-->
-                            <!--<div class="col-sm-9">-->
 
-                                <!--&lt;!&ndash;<input type="number" name="useable" class="form-control" ng-model="welcome.useable" id="inputUseable"&ndash;&gt;-->
-                                       <!--&lt;!&ndash;placeholder="整数..." required>&ndash;&gt;-->
-
-                                <!--<select name="useables" selectpicker="selectpicker" ng-options="s.value as s.text for s in useables"-->
-                                        <!--class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="welcome.useable"-->
-                                        <!--tabindex="-98" style="">-->
-
-                                <!--</select>-->
-                                <!--<p>-->
-                                    <!--<input  type="text" ng-show="false" name="useable" ng-model="welcome.useable" required>-->
-                                    <!--<span ng-show="myForm.useable.$error.required" style="color:red">是否启用是必须的</span>-->
-                                <!--</p>-->
-
-
-                            <!--</div>-->
-
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group row clearfix">
@@ -102,6 +79,32 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row" ng-show="showApply()">
+                <div class="col-md-6">
+                <div class="form-group row clearfix">
+                <label for="inputName" class="col-sm-3 control-label">是否通过</label>
+                <div class="col-sm-9">
+
+                <!--<input type="number" name="useable" class="form-control" ng-model="welcome.useable" id="inputUseable"-->
+                <!--placeholder="整数..." required>-->
+
+                <select name="applySelect" selectpicker="selectpicker" ng-options="s.value as s.text for s in useables"
+                class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="welcome.status"
+                tabindex="-98" style="" ng-change="setApplyStatus()" >
+
+                </select>
+                <p>
+                    <input  type="text" ng-show="false" name="apply" ng-model="applyStatus" required>
+                    <span ng-show="myForm.apply.$error.required" style="color:red">审核状态必须改变</span>
+                </p>
+
+
+                </div>
+
+                </div>
+                </div>
+                </div>
             </div>
         </div>
 
@@ -111,7 +114,7 @@
                 ng-disabled="myForm.orders.$error.required ||
                             myForm.title.$error.required||
                             myForm.date.$error.required||
-                            myForm.useable.$error.required||
+                            (showApply() && myForm.apply.$error.required)||
                             myForm.picmark.$error.required">提交</button>
     </div>
     </form>

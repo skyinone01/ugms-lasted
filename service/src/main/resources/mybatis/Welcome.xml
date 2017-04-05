@@ -7,7 +7,7 @@
     <select id="getAll" resultType="com.ug369.backend.bean.bean.response.WelcomeEntry">
         SELECT u.id as id,u.content as content,u.title as title,
         u.picture as picture,u.status as status,u.orders as orders,
-        u.create_date as create_date
+        u.create_date as create_date,u.begin_date as begin_date
         FROM ug_welcome u
     </select>
 

@@ -34,6 +34,7 @@
             <td>标题</td>
             <td>状态</td>
             <td>排序</td>
+            <td>起始时间</td>
             <td>创建时间</td>
             <td>操作</td>
         </tr>
@@ -49,6 +50,7 @@
             <td>{{item.title}}</td>
             <td>{{showStatus(item.status)}}</td>
             <td>{{item.orders}}</td>
+            <td>{{item.begin_date | date:'longDate'}}</td>
             <td>{{item.create_date | date:'longDate'}}</td>
             <td>
                 <button class="status-button btn-primary btn-xs btn "
@@ -68,7 +70,7 @@
 
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="operation($event,item.id)"
+                        ng-click="operation(showButtonName($index),item.id)"
                         ng-show="showButton($index,'operate')"
                 >
                     {{showButtonName($index)}}

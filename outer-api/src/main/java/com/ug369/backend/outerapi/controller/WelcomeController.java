@@ -64,26 +64,32 @@ public class WelcomeController {
                                   @RequestParam(value = "status",required = false) Integer status,
                                   @RequestParam(value = "file",required = false) MultipartFile file) throws NoSuchAlgorithmException, IOException, ParseException {
 
-        if(!StringUtils.isPicture(file.getOriginalFilename())){
-            throw  new UserException(UgmsStatus.BAD_REQUEST,"图片格式不符合要求");
+
+        String picUrl = null;
+        if(file != null){
+            if(!StringUtils.isPicture(file.getOriginalFilename())){
+                throw  new UserException(UgmsStatus.BAD_REQUEST,"图片格式不符合要求");
+            }
+            ByteBuffer buffer = ByteBuffer.wrap(file.getBytes());
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+            messageDigest.update(buffer);
+            byte[] md5sum = messageDigest.digest();
+
+            String name = StringUtils.MD5ToString(md5sum) +
+                    file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
+            File img = new File(filePath + name);
+            org.apache.commons.io.FileUtils.writeByteArrayToFile(img, file.getBytes(),false);
+            picUrl = staticUrl+name;
         }
 
-        ByteBuffer buffer = ByteBuffer.wrap(file.getBytes());
-        MessageDigest messageDigest = MessageDigest.getInstance("MD5");
-        messageDigest.update(buffer);
-        byte[] md5sum = messageDigest.digest();
 
-        String name = StringUtils.MD5ToString(md5sum) +
-                file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
-        File img = new File(filePath + name);
-        org.apache.commons.io.FileUtils.writeByteArrayToFile(img, file.getBytes(),false);
 
         Date begin = null;
         if (!org.apache.commons.lang3.StringUtils.isEmpty(begin_date)){
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             begin = simpleDateFormat.parse(begin_date);
         }
-        welcomeService.createOrUpdate(id,staticUrl+name,title,useable,begin,orders,status);
+        welcomeService.createOrUpdate(id,picUrl,title,useable,begin,orders,status);
 
         return BasicResponse.success();
     }

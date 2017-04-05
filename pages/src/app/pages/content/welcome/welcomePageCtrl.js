@@ -60,7 +60,7 @@
 		};
 		$scope.openProgressDialog = baProgressModal.open;
 
-		$scope.statusEmu = ["待审核","审核未通过","审核通过","已发布","已作废"];
+		$scope.statusEmu = ["待审核","审批通过","审批未通过","已发布","已作废"];
 		$scope.showStatus = function(status){
 			return $scope.statusEmu[status-1];
 		}
@@ -82,8 +82,7 @@
 		}
 		//审核 1 发布 2 启用 3 停用 4
 		//1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
-		$scope.operation = function(event,id){
-			var name = event.target.value;
+		$scope.operation = function(name,id){
 			var op=0;
 			switch(name){
 				case "审核":
@@ -100,7 +99,7 @@
 					break;
 			}
 
-			appBase.doGet("welcome/"+id+"?op="+op,null,function(response){
+			appBase.doPut("welcome/"+id+"?op="+op,null,function(response){
 				appBase.bubMsg(name+"成功");
 				$scope.listItem();
 			});

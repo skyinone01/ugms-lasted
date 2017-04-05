@@ -23,13 +23,16 @@
          	};
 		 }else{
 		     appBase.doGet("welcome/"+modelId,null,function(response){
-                $scope.welcome=response.data;
+                 $scope.welcome=response.data;
+				 $("#data_date").val(response.data.begin_date)
+				 $scope.realDate =response.data.begin_date
 				 $scope.picmark = "mark"
 		     });
 		 }
 
 		$scope.picture = $filter('appImage')('theme/no-photo.png');
-		$scope.useables=[{'value':1,'text':'启用'},{'value':2,'text':'禁用'}]
+		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}]
+
 		$scope.removePicture = function () {
 			$scope.picture = $filter('appImage')('theme/no-photo.png');
 			$scope.noPicture = true;
@@ -50,7 +53,7 @@
 			fileInput.click();
 		};
 		$scope.showSubmit = function(){
-			if(op =="detail"){
+			if(op ==2){
 				return false;
 			}else {
 				return true
@@ -61,7 +64,6 @@
 				.then(function (result) {
 					$scope.welcome.picture = result;
 					$scope.picmark="mark";
-
 			});
 			$scope.file = file;
 		};
@@ -72,13 +74,33 @@
 			$uibModalInstance.close($scope.link);
 		};
 
+		$scope.setDate = function(){
+			$scope.realDate = $("#data_id").val();
+			//$("#data_date").val($("#data_id").val());
+		}
+		$scope.showApply = function(){
+			if(op ==4){
+				return true;
+			}else {
+				return false
+			}
+		}
+		$scope.setApplyStatus = function(){
+			var status = $scope.welcome.status;
+			if (status ==2 || status ==3){
+				$scope.applyStatus = status;
+			}
+		}
 		$scope.saveOrUpdate = function(dismis){
 
 		    var formData = new FormData();
 		    formData.append('file',$scope.file);
 		    formData.append('id', $scope.welcome.id);
 		    formData.append('title',$scope.welcome.title);
-		    formData.append('useable',$scope.welcome.useable);
+			if ($scope.applyStatus != null){
+				formData.append('status',$scope.applyStatus);
+			}
+		    formData.append('useable',1);
 		    formData.append('begin_date',$("#data_id").val());
 		    formData.append('orders',$scope.welcome.orders);
 
