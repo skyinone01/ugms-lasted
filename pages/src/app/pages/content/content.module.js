@@ -7,6 +7,7 @@
 
     angular.module('BlurAdmin.pages.content', [
        'BlurAdmin.pages.content.welcome',
+       'BlurAdmin.pages.content.banner',
     ])
         .config(routeConfig);
 

@@ -39,7 +39,7 @@
 
         this.getMenuItems = function() {
           var states = defineMenuItemStates().filter(function(e){
-//            return true;
+            //return true;
           var name =permissions.hasPermission(e.stateRef);
           if(name!=null){
               e.title = name;
