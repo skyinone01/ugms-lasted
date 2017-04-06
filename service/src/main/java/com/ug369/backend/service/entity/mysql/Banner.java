@@ -9,7 +9,7 @@ import java.util.Date;
  * Created by Roy on 2017/3/27.
  */
 @Entity
-@Table(name = "ug_banner")
+@Table(name = "yg_sys_advertisement")
 public class Banner {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id

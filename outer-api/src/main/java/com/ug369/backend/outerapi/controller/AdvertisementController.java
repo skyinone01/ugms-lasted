@@ -30,7 +30,7 @@ import java.text.SimpleDateFormat;
  * Created by Administrator on 2017/3/22.
  */
 @RestController
-public class BannerController {
+public class AdvertisementController {
 
     @Autowired
     private BannerAdvertisementService bannerAdvertisementService;
@@ -44,7 +44,7 @@ public class BannerController {
     /**
      * banner页列表列表
      */
-    @RequestMapping(value = "/banner", method = RequestMethod.GET)
+    @RequestMapping(value = "/advertisement", method = RequestMethod.GET)
     public PagedDataResponse<BannerRequest> welcome(@PageDefault PageRequest pageRequest) {
         PagedResult<BannerRequest> users = bannerAdvertisementService.getAll(pageRequest);
 
@@ -54,7 +54,7 @@ public class BannerController {
     /**
      * 新增、修改 banner
      */
-    @RequestMapping(value = "/banner", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @RequestMapping(value = "/advertisement", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public BasicResponse welcome( @RequestParam(value = "title",required = false) String title,
                                   @RequestParam(value = "id") Long id,
                                   @RequestParam(value = "useable",required = false) Integer useable,
@@ -105,7 +105,7 @@ public class BannerController {
     /**
      * 删除
      */
-    @RequestMapping(value = "/banner/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/advertisement/{id}", method = RequestMethod.DELETE)
     public BasicResponse welcome(@PathVariable("id") long id) {
 
         bannerAdvertisementService.delete(id);
@@ -115,7 +115,7 @@ public class BannerController {
     /**
      * 详情
      */
-    @RequestMapping(value = "/banner/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/advertisement/{id}", method = RequestMethod.GET)
     public DataResponse<Banner> welcomeOne(@PathVariable("id") long id) {
 
         Banner response = bannerAdvertisementService.findOne(id);
@@ -125,7 +125,7 @@ public class BannerController {
     /**
      * 状态改变
      */
-    @RequestMapping(value = "/banner/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/advertisement/{id}", method = RequestMethod.PUT)
     public BasicResponse updateOne(@PathVariable("id") long id,@RequestParam("op") int op) {
 
         bannerAdvertisementService.changeStatus(id,op);

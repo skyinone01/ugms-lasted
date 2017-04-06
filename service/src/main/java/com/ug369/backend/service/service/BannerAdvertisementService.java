@@ -19,7 +19,7 @@ import java.util.HashMap;
  * Created by Administrator on 2017/3/22.
  */
 @Service
-public class BannerService {
+public class BannerAdvertisementService {
 
     @Autowired
     private BannerRepository bannerRepository;
