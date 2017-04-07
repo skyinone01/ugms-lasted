@@ -21,6 +21,7 @@
 
     'BlurAdmin.pages.userResource',
     'BlurAdmin.pages.content',
+    'BlurAdmin.pages.userStatistics',
     //'BlurAdmin.pages.auth',
   ])
       .config(routeConfig);
