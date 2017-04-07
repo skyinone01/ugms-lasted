@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Statistics">
+    <resultMap id="BaseResultMap" type="com.ug369.backend.service.entity.mysql.Statistics">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="createTime" property="createTime" jdbcType="VARCHAR"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="moduleName" property="moduleName" jdbcType="VARCHAR"/>
+        <result column="moduleId" property="moduleId" jdbcType="INTEGER"/>
+        <result column="terminalType" property="terminalType" jdbcType="INTEGER"/>
+        <result column="logType" property="logType" jdbcType="BIGINT"/>
+        <result column="loginDate" property="loginDate" jdbcType="VARCHAR"/>
+        <result column="quitDate" property="quitDate" jdbcType="VARCHAR"/>
+        <result column="deviceToken" property="deviceToken" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="TotalMap" type="com.ug369.backend.service.entity.mysql.TotalStatistics">
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="AgeMap" type="com.ug369.backend.service.entity.mysql.UserAgeStatistics">
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="DeviceMap" type="com.ug369.backend.service.entity.mysql.UserDeviceStatistics">
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="ModuleMap" type="com.ug369.backend.service.entity.mysql.UserModuleStatistics">
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="SexMap" type="com.ug369.backend.service.entity.mysql.UserModuleStatistics">
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="UserCountMap" type="com.ug369.backend.service.entity.mysql.UserCountStatistics">
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="UserMap" type="com.ug369.backend.service.entity.mysql.UserCountStatistics">
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <select id="selectTotal" resultMap="TotalMap">
+        select deviceType type, count(1) count
+        from yg_user_info a
+        left outer join yg_user_base_info b on a.user_id = b. user_id
+        group by deviceType
+
+        union all
+
+        select 2 type, count(user_id) count from yg_user_info where DATE_FORMAT(userCreateTime,'%Y-%m-%d') = DATE_FORMAT(CURDATE(),'%Y-%m-%d')
+
+        union all
+
+        select 3 type, count(*) count from yg_user_info a left outer join yg_user_base_info b on a.user_id = b.user_id
+
+        union all
+
+        select user_sex type, count(1) count
+        from yg_user_info a
+        left outer join yg_user_base_info b on a.user_id = b. user_id
+        group by user_sex
+
+        union all
+
+        select 0 type, count(user_qq_openid) count
+        from yg_user_info a
+        left outer join yg_user_base_info b on a.user_id = b. user_id
+
+        union all
+
+        select 1 type, count(user_weixin_openid) count
+        from yg_user_info a
+        left outer join yg_user_base_info b on a.user_id = b. user_id
+    </select>
+
+    <!--年龄-->
+    <select id="selectAge" parameterType="hashmap" resultMap="AgeMap">
+        select b.age,sum(case when a.AgeType is not null then 1 else 0 end) as 'count' from (select userCreateTime,user_birthday,@age:=DATE_FORMAT(FROM_DAYS(TO_DAYS(b.userCreateTime)-TO_DAYS(user_birthday)),'%Y') + 1,
+        case
+        when   30 > @age  then 30
+        when   @age>=30 and 40>@age then 40
+        when   @age>=40 and 50>@age then 50
+        when   @age>=50 and 60>@age then 60
+        when   @age>=60 and 70>@age then 70
+        when   @age>=70 and 80>@age then 80
+        when   @age>=80 then 90
+        end as AgeType from yg_user_base_info a inner join yg_user_info b on a.user_id=b.user_id where
+        userCreateTime is not null and user_birthday is not null
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            AND userCreateTime BETWEEN ${startDate} AND ${endDate}
+        </if>
+        order by AgeType ) a
+        right join ( select 30 as age union select 40 as age union select 50 as age union select 60 as age union select 70 as age union select 80 as age union select 90 as age) b
+        on b.age=a.AgeType
+        group by age
+    </select>
+
+    <!--年龄-->
+    <select id="selectAgeType" resultMap="AgeMap">
+        select count(0) 'count' from yg_user_base_info
+        where
+        30 > ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1)
+
+        union all
+
+        select count(0) 'count' from yg_user_base_info
+        where
+        ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1) >= 30
+        and
+        40 >ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1)
+
+        union all
+
+        select count(0) 'count' from yg_user_base_info
+        where
+        ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1) >= 40
+        and
+        50 >ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1)
+
+        union all
+
+        select count(0) 'count' from yg_user_base_info
+        where
+        ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1) >= 50
+        and
+        60 > ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1)
+
+        union all
+
+        select count(0) 'count' from yg_user_base_info
+        where
+        ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1) >= 60
+        and
+        70 > ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1)
+
+        union all
+
+        select count(0) 'count' from yg_user_base_info
+        where
+        ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1) >= 70
+        and
+        80 > ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1)
+
+        union all
+
+        select count(0) 'count' from yg_user_base_info
+        where
+        ifnull(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS( user_birthday)),'%Y') + 1, 1) >= 80
+
+    </select>
+
+    <!--机型-->
+    <select id="selectDevice" resultMap="DeviceMap">
+        SELECT
+            deviceType type ,
+            count(1) count
+        FROM
+            yg_user_base_info
+        WHERE
+            model_number IS NOT NULL
+        GROUP BY
+            deviceType
+        ORDER BY
+            count DESC
+   </select>
+
+    <!--pv-->
+    <select id="selectModule" resultMap="ModuleMap">
+        SELECT
+        count(id) count ,
+        a.moduleName type
+        FROM
+        yg_sys_uservisitlog a
+        WHERE
+        a.moduleId IS NOT NULL
+        AND a.moduleName IS NOT NULL
+        AND a.logType = 'moduleStats'
+        <if test="null != startDate and null != endDate">
+            AND createTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY
+        a.moduleId ,
+        a.moduleName
+        ORDER BY
+        count DESC
+        limit 20
+    </select>
+
+    <!--性别-->
+    <select id="selectSex" resultMap="SexMap">
+        select user_sex type, count(1) count
+        from yg_user_info a
+        <if test="null != startDate and null != endDate">
+            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        left outer join yg_user_base_info b on a.user_id = b. user_id
+        group by user_sex
+    </select>
+
+    <!--月-->
+    <select id="selectUserCountMonth" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m%d') as type
+        from yg_user_info u
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m%d')
+        ORDER BY userCreateTime asc;
+    </select>
+
+    <!--年-->
+    <select id="selectUserCountYear" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m') as type
+        from yg_user_info u
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m')
+        ORDER BY userCreateTime asc;
+    </select>
+
+    <!--年-->
+    <select id="selectUserCountDay" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m%d%h') as type
+        from yg_user_info u
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m%d%h')
+        ORDER BY userCreateTime asc;
+    </select>
+
+    <select id="selectActiveUser" resultMap="UserMap">
+        SELECT
+        count(1) count ,
+        b.user_name type
+        FROM
+        yg_sys_uservisitlog a
+        LEFT OUTER JOIN yg_user_info b ON a.userId = b.user_id
+        where b.user_name is not null
+        GROUP BY
+        a.userId
+        order by count desc
+        limit 5
+    </select>
+
+    <select id="selectActiveDevice" resultMap="UserMap">
+        SELECT
+            model_number type ,
+            count(1) count
+        FROM
+            yg_user_base_info
+        WHERE
+            model_number IS NOT NULL
+        GROUP BY
+            model_number
+        ORDER BY
+            count DESC
+        limit 5
+    </select>
+
+    <select id="selectActiveModule" resultMap="UserMap">
+        SELECT
+        count(1) count ,
+        moduleName type
+        FROM
+        yg_sys_uservisitlog a
+        where moduleName is not null
+        GROUP BY
+        moduleName
+        order by count desc
+        limit 5
+    </select>
+
+    <!--uv-->
+    <select id="selectUv" resultMap="UserMap">
+        SELECT
+            count(DISTINCT userId) count ,
+            DATE_FORMAT(createTime , '%Y年%m月%d日') type
+        FROM
+            yg_sys_uservisitlog
+        WHERE
+            moduleName = '生活日记'
+        AND logType = 'moduleStats'
+        GROUP BY
+            DATE_FORMAT(createTime , '%Y年%m月%d日')
+        HAVING
+            count != 0
+        AND type IS NOT NULL
+        ORDER BY
+            type ASC
+    </select>
+</mapper>
