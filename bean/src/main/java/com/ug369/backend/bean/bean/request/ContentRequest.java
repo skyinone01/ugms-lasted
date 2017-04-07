@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class ContentRequest {
 
-    private Long id;
+    private Integer id;
     private Date createDate;
     private String title;
     private String icon;
@@ -15,7 +15,7 @@ public class ContentRequest {
     private Integer orderId;
     private Integer isMark;
     private Integer isLink;
-    private Integer linkUrl;
+    private String linkUrl;
     private Integer typeId;
     private Integer isdel;
     private Integer status;
@@ -29,11 +29,11 @@ public class ContentRequest {
     private Integer issystem;
     private String pictures;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -93,11 +93,11 @@ public class ContentRequest {
         this.isLink = isLink;
     }
 
-    public Integer getLinkUrl() {
+    public String getLinkUrl() {
         return linkUrl;
     }
 
-    public void setLinkUrl(Integer linkUrl) {
+    public void setLinkUrl(String linkUrl) {
         this.linkUrl = linkUrl;
     }
 

@@ -13,7 +13,8 @@
         $scope.perPage = 20;
         $scope.page = 1;
         $scope.listItem = function(){
-                appBase.doGet("message?page="+$scope.page+"&perPage="+$scope.perPage,null,function(response){
+				var param = "page="+$scope.page+"&perPage="+$scope.perPage+"&category=message";
+                appBase.doGet("message?"+param,null,function(response){
         		     if(response.data != null){
         		         $scope.items = response.data.items;
         		         $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
@@ -63,7 +64,7 @@
 			return $scope.statusEmu[status-1];
 		}
 
-		//1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
+		//0草稿、1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
 		$scope.showButtonName = function(index){
 			switch($scope.items[index].status){
 				case 1:
@@ -111,6 +112,9 @@
         }
 
         $scope.nextAble = function(page){
+			if ($scope.totalPage ==0){
+				return true;
+			}
             if(page == $scope.totalPage){
                 return true;
             }

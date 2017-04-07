@@ -4,22 +4,49 @@
 
 <mapper namespace="Message">
 
-    <select id="getAll" resultType="com.ug369.backend.bean.bean.request.BannerRequest">
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.request.ContentRequest">
         SELECT u.id as id,u.context as context,u.title as title,
         u.icon as icon,u.status as status,u.orderId as orderId,
-        u.createDate as createDate,u.summary as summary
+        u.createDate as createDate,u.summary as summary,
         u.typeId as typeId,u.linkUrl as linkUrl,
         u.category as category,u.typeStr as typeStr,
-        u.senderId as senderId,u.readed as readed,
-        u.messageType as messageType,u.userId as userId,
-        u.pictures as pictures,
-        u.isLink as isLink,u.isMark as isMark
+        u.messageType as messageType,
+        u.pictures as pictures
         FROM yg_sys_content u
+        WHERE u.category = #{category}
+        AND u.status &gt; 0 AND u.status &lt; 6
+        <if test="userId != null">
+              AND u.userId = #{userId}
+        </if>
+        ORDER BY u.createDate DESC
+    </select>
+
+    <select id="getTypes" resultType="com.ug369.backend.bean.bean.request.TypeRequest">
+        SELECT u.id as value,u.typename as text
+        FROM yg_sys_type u
+        WHERE u.isdel is NULL  OR  u.isdel is FALSE
     </select>
 
     <select id="getCount" resultType="int">
         SELECT COUNT(id)
         FROM yg_sys_content u
+        WHERE u.category = #{category}
+        AND u.status &gt; 0 AND u.status &lt; 6
+        <if test="userId != null">
+            AND u.userId = #{userId}
+        </if>
     </select>
+
+    <select id="getOne" resultType="com.ug369.backend.bean.bean.request.ContentRequest">
+        select c.id as id, c.category as category, c.context as context,
+                c.createdate as createDate, c.icon as icon,
+                c.linkurl as linkUrl, c.messagetype as messageType, c.orderid as orderId,
+                c.pictures as pictures,c.status as status, c.summary as summary, c.title as title,
+                c.typeid as typeId, c.typestr as typeStr, c.userid as userId
+        from yg_sys_content c
+        where c.id=#{id}
+    </select>
+
+
 
 </mapper>

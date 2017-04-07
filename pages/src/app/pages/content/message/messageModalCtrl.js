@@ -15,19 +15,14 @@
 		    $scope.item = {
          			id: 0,
          			title: '',
-         			url: '',
-         			useable: '',
-         			beginDate: '',
-         			endDate: '',
-         			orders: '',
+				    pictures: '',
+				    context: '',
+         			orderId: '',
          			status:''
          	};
 		 }else{
 		     appBase.doGet("message/"+modelId,null,function(response){
                  $scope.item=response.data;
-				 $("#data_date").val(response.data.begin_date)
-				 $scope.realDate =response.data.beginDate
-				 $scope.realEndDate =response.data.endDate
 				 $scope.picmark = "mark"
 		     });
 		 }
@@ -76,14 +71,6 @@
 			$uibModalInstance.close($scope.link);
 		};
 
-		$scope.setDate = function(){
-			$scope.realDate = $("#data_id").val();
-			//$("#data_date").val($("#data_id").val());
-		}
-        $scope.setEndDate = function(){
-			$scope.realEndDate = $("#data_endId").val();
-			//$("#data_date").val($("#data_id").val());
-		}
 		$scope.showApply = function(){
 			if(op ==4){
 				return true;
@@ -102,15 +89,15 @@
 		    var formData = new FormData();
 		    formData.append('file',$scope.file);
 		    formData.append('id', $scope.item.id);
-		    formData.append('link', $scope.item.link);
 		    formData.append('title',$scope.item.title);
-			if ($scope.applyStatus != null){
+			if(op ==1){
+				formData.append('status',1);
+			}else if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}
-		    formData.append('useable',1);
-		    formData.append('beginDate',$("#data_id").val());
-		    formData.append('endDate',$("#data_endId").val());
-		    formData.append('orders',$scope.item.orders);
+		    formData.append('orderId',$scope.item.orderId);
+		    formData.append('context',$scope.item.context);
+		    formData.append('category',"message");
 
 		    appBase.doFormData("message",formData,function(response){
 		        appBase.bubMsg("保存成功");

@@ -8,6 +8,12 @@
     angular.module('BlurAdmin.pages.content', [
        'BlurAdmin.pages.content.welcome',
        'BlurAdmin.pages.content.banner',
+       'BlurAdmin.pages.content.advertisement',
+       'BlurAdmin.pages.content.description',
+       'BlurAdmin.pages.content.discovery',
+       'BlurAdmin.pages.content.help',
+       'BlurAdmin.pages.content.message',
+       'BlurAdmin.pages.content.share',
     ])
         .config(routeConfig);
 

@@ -12,43 +12,43 @@ public class Content {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column(name = "createDate")
+    private int id;
+    @Column(name = "createdate")
     private Date createDate;
     private String title;
     private String icon;
     private String context;
-    @Column(name = "orderId")
-    private int orderId;
-    @Column(name = "isMark")
-    private int isMark;
-    @Column(name = "isLink")
-    private int isLink;
-    @Column(name = "linkUrl")
-    private int linkUrl;
-    @Column(name = "typeId")
-    private int typeId;
-    private int isdel;
-    private int status;
+    @Column(name = "orderid")
+    private Integer orderId;
+    @Column(name = "ismark")
+    private boolean isMark=false;
+    @Column(name = "islink")
+    private boolean isLink=false;
+    @Column(name = "linkurl")
+    private String linkUrl;
+    @Column(name = "typeid")
+    private Integer typeId;
+    private boolean isdel=false;
+    private Integer status;
     private String summary;
     private String category;
-    @Column(name = "typeStr")
+    @Column(name = "typestr")
     private String typeStr;
-    @Column(name = "senderId")
-    private int senderId;
-    private int readed;
-    @Column(name = "messageType")
+    @Column(name = "senderid")
+    private Integer senderId;
+    private boolean readed =false;
+    @Column(name = "messagetype")
     private int messageType;
-    @Column(name = "userId")
-    private int userId;
-    private int issystem;
+    @Column(name = "userid")
+    private Integer userId;
+    private boolean issystem = false;
     private String pictures;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -84,59 +84,59 @@ public class Content {
         this.context = context;
     }
 
-    public int getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
-    public int getIsMark() {
+    public boolean isMark() {
         return isMark;
     }
 
-    public void setIsMark(int isMark) {
-        this.isMark = isMark;
+    public void setMark(boolean mark) {
+        isMark = mark;
     }
 
-    public int getIsLink() {
+    public boolean isLink() {
         return isLink;
     }
 
-    public void setIsLink(int isLink) {
-        this.isLink = isLink;
+    public void setLink(boolean link) {
+        isLink = link;
     }
 
-    public int getLinkUrl() {
+    public String getLinkUrl() {
         return linkUrl;
     }
 
-    public void setLinkUrl(int linkUrl) {
+    public void setLinkUrl(String linkUrl) {
         this.linkUrl = linkUrl;
     }
 
-    public int getTypeId() {
+    public Integer getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(int typeId) {
+    public void setTypeId(Integer typeId) {
         this.typeId = typeId;
     }
 
-    public int getIsdel() {
+    public boolean isdel() {
         return isdel;
     }
 
-    public void setIsdel(int isdel) {
+    public void setIsdel(boolean isdel) {
         this.isdel = isdel;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -164,19 +164,19 @@ public class Content {
         this.typeStr = typeStr;
     }
 
-    public int getSenderId() {
+    public Integer getSenderId() {
         return senderId;
     }
 
-    public void setSenderId(int senderId) {
+    public void setSenderId(Integer senderId) {
         this.senderId = senderId;
     }
 
-    public int getReaded() {
+    public boolean isReaded() {
         return readed;
     }
 
-    public void setReaded(int readed) {
+    public void setReaded(boolean readed) {
         this.readed = readed;
     }
 
@@ -188,19 +188,19 @@ public class Content {
         this.messageType = messageType;
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public int getIssystem() {
+    public boolean issystem() {
         return issystem;
     }
 
-    public void setIssystem(int issystem) {
+    public void setIssystem(boolean issystem) {
         this.issystem = issystem;
     }
 

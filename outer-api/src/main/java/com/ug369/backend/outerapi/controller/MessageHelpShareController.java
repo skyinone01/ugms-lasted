@@ -1,17 +1,21 @@
 package com.ug369.backend.outerapi.controller;
 
 import com.ug369.backend.bean.base.request.PageRequest;
+import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
 import com.ug369.backend.bean.bean.request.ContentRequest;
+import com.ug369.backend.bean.bean.request.TypeRequest;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
+import com.ug369.backend.outerapi.annotation.UserInjected;
 import com.ug369.backend.service.entity.mysql.Content;
 import com.ug369.backend.service.service.MessageHelpShareService;
 import com.ug369.backend.utils.StringUtils;
+import com.ug369.backend.utils.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
@@ -40,12 +44,17 @@ public class MessageHelpShareController {
     @Value("${ugms.static.url}")
     private String staticUrl;
 
+    @Autowired
+    private TokenUtils tokenUtils;
+
     /**
      * message 列表
      */
     @RequestMapping(value = "/message", method = RequestMethod.GET)
-    public PagedDataResponse<Content> welcome(@PageDefault PageRequest pageRequest) {
-        PagedResult<Content> users = messageHelpShareService.getAll(pageRequest);
+    public PagedDataResponse<Content> welcome(@PageDefault PageRequest pageRequest,
+                                              @UserInjected WebUser user,
+                                              @RequestParam("category") String category) {
+        PagedResult<Content> users = messageHelpShareService.getAll(pageRequest,user,category);
 
         return PagedDataResponse.of(users);
     }
@@ -54,13 +63,16 @@ public class MessageHelpShareController {
      * 新增、修改 message
      */
     @RequestMapping(value = "/message", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public BasicResponse welcome( @RequestParam(value = "title",required = false) String title,
-                                  @RequestParam(value = "id" ,required = false) Long id,
+    public BasicResponse welcome(    @UserInjected WebUser user,
+                                     @RequestParam(value = "title",required = false) String title,
+                                  @RequestParam(value = "id" ,required = false) int id,
                                   @RequestParam(value = "typeStr",required = false) String typeStr,
                                   @RequestParam(value = "typeId",required = false) Integer typeId,
-                                  @RequestParam(value = "orders",required = false) Integer orderId,
+                                  @RequestParam(value = "orderId",required = false) Integer orderId,
                                   @RequestParam(value = "context",required = false) String context,
                                   @RequestParam(value = "summary",required = false) String summary,
+                                  @RequestParam(value = "category",required = false) String category,
+                                  @RequestParam(value = "linkUrl",required = false) String linkUrl,
                                   @RequestParam(value = "status",required = false) Integer status,
                                   @RequestParam(value = "file",required = false) MultipartFile file) throws NoSuchAlgorithmException, IOException, ParseException {
 
@@ -82,7 +94,9 @@ public class MessageHelpShareController {
             picUrl = staticUrl+name;
         }
 
+//        Long uid = tokenUtils.validate(token);
         ContentRequest contentRequest = new ContentRequest();
+        contentRequest.setUserId((int)user.getId());
         contentRequest.setId(id);
         contentRequest.setTitle(title);
         contentRequest.setStatus(status);
@@ -90,8 +104,10 @@ public class MessageHelpShareController {
         contentRequest.setSummary(summary);
         contentRequest.setTypeId(typeId);
         contentRequest.setTypeStr(typeStr);
+        contentRequest.setCategory(category);
         contentRequest.setOrderId(orderId);
         contentRequest.setPictures(picUrl);
+        contentRequest.setLinkUrl(linkUrl);
 
         messageHelpShareService.createOrUpdate(contentRequest);
         return BasicResponse.success();
@@ -101,7 +117,7 @@ public class MessageHelpShareController {
      * 删除
      */
     @RequestMapping(value = "/message/{id}", method = RequestMethod.DELETE)
-    public BasicResponse welcome(@PathVariable("id") long id) {
+    public BasicResponse welcome(@PathVariable("id") int id) {
 
         messageHelpShareService.delete(id);
         return BasicResponse.success();
@@ -111,9 +127,9 @@ public class MessageHelpShareController {
      * 详情
      */
     @RequestMapping(value = "/message/{id}", method = RequestMethod.GET)
-    public DataResponse<Content> welcomeOne(@PathVariable("id") long id) {
+    public DataResponse<ContentRequest> welcomeOne(@PathVariable("id") int id) {
 
-        Content response = messageHelpShareService.findOne(id);
+        ContentRequest response = messageHelpShareService.findOne(id);
         return new DataResponse<>(response);
     }
 
@@ -121,10 +137,19 @@ public class MessageHelpShareController {
      * 状态改变
      */
     @RequestMapping(value = "/message/{id}", method = RequestMethod.PUT)
-    public BasicResponse updateOne(@PathVariable("id") long id,@RequestParam("op") int op) {
+    public BasicResponse updateOne(@PathVariable("id") int id,@RequestParam("op") int op) {
 
         messageHelpShareService.changeStatus(id,op);
         return BasicResponse.success();
+    }
+
+    /**
+     * list types
+     */
+    @RequestMapping(value = "/types", method = RequestMethod.GET)
+    public DataResponse<TypeRequest> types() {
+
+        return new DataResponse(messageHelpShareService.getTypes());
     }
 
 }

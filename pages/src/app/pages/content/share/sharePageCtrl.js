@@ -13,7 +13,8 @@
         $scope.perPage = 20;
         $scope.page = 1;
         $scope.listItem = function(){
-                appBase.doGet("share?page="+$scope.page+"&perPage="+$scope.perPage,null,function(response){
+			var param = "page="+$scope.page+"&perPage="+$scope.perPage+"&category=share";
+			appBase.doGet("message?"+param,null,function(response){
         		     if(response.data != null){
         		         $scope.items = response.data.items;
         		         $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
@@ -37,7 +38,7 @@
 			if(!result){
 				return;
 			}
-            appBase.doDelete("share/"+id,null,function(res){
+            appBase.doDelete("message/"+id,null,function(res){
                 appBase.bubMsg("删除成功");
 				$scope.listItem();
             });
@@ -97,7 +98,7 @@
 					break;
 			}
 
-			appBase.doPut("share/"+id+"?op="+op,null,function(response){
+			appBase.doPut("message/"+id+"?op="+op,null,function(response){
 				appBase.bubMsg(name+"成功");
 				$scope.listItem();
 			});

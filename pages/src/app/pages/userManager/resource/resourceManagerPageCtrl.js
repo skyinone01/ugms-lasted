@@ -59,16 +59,16 @@
             if(index >= $scope.update.length){
                  switch(name){
                        case "description":
-                           $scope.insert[index].description =data;
+                           $scope.insert[index-$scope.update.length].description =data;
                              break;
                        case "name":
-                           $scope.insert[index].name =data;
+                           $scope.insert[index-$scope.update.length].name =data;
                              break;
                        case "url":
-                           $scope.insert[index].url =data;
+                           $scope.insert[index-$scope.update.length].url =data;
                              break;
                        case "state":
-                           $scope.insert[index].state =data;
+                           $scope.insert[index-$scope.update.length].state =data;
                              break;
                  }
             }else{

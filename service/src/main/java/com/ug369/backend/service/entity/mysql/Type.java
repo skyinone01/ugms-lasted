@@ -11,19 +11,20 @@ public class Type {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column(name = "typeName")
+    private int id;
+    @Column(name = "typename")
     private String typeName;
+    @Column(name = "orderid")
     private int orderId;
-    @Column(name = "belongType")
+    @Column(name = "belongtype")
     private String belongType;
     private int isdel;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
