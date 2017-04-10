@@ -11,20 +11,20 @@ public class Type {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(name = "typename")
     private String typeName;
     @Column(name = "orderid")
-    private int orderId;
+    private Integer orderId;
     @Column(name = "belongtype")
     private String belongType;
-    private int isdel;
+    private Boolean isdel;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -36,11 +36,11 @@ public class Type {
         this.typeName = typeName;
     }
 
-    public int getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
@@ -52,11 +52,11 @@ public class Type {
         this.belongType = belongType;
     }
 
-    public int getIsdel() {
+    public Boolean getIsdel() {
         return isdel;
     }
 
-    public void setIsdel(int isdel) {
+    public void setIsdel(Boolean isdel) {
         this.isdel = isdel;
     }
 }

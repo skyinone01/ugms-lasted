@@ -10,6 +10,13 @@
 
 	/** @ngInject */
 	function shareModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
+		$scope.listTypes = function(){
+			appBase.doGet("types",null,function(response){
+				$scope.typeOptions=response.data;
+			});
+		}
+		$scope.types = [{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
+		$scope.listTypes();
 
 		 if(modelId == 0){
 		    $scope.item = {
@@ -33,13 +40,8 @@
 		     });
 		 }
 
-		$scope.types = [];
-		$scope.listTypes = function(){
-			appBase.doGet("types",null,function(response){
-				$scope.types=response.data;
-			});
-		}
-		$scope.listTypes();
+		//$scope.types = [{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
+
 		$scope.picture = $filter('appImage')('theme/no-photo.png');
 		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
 
@@ -99,10 +101,7 @@
 		}
 
 		$scope.setApplyType = function(){
-			var status = $scope.item.status;
-			if (status ==2 || status ==3){
-				$scope.typeStr = status;
-			}
+			$scope.typeStr = $scope.item.typeStr;
 		}
 		$scope.saveOrUpdate = function(dismis){
 
@@ -115,9 +114,9 @@
 			}else if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}
-			formData.append('orderId',$scope.item.orderId);
-			formData.append('typeId',$scope.item.typeId);
-			formData.append('typeStr',$scope.item.typeStr);
+			//formData.append('orderId',$scope.item.orderId);
+			formData.append('typeId',$scope.item.typeStr);
+			//formData.append('typeStr',$scope.item.type.text);
 			formData.append('linkUrl',$scope.item.linkUrl);
 			formData.append('summary',$scope.item.summary);
 			formData.append('context',$scope.item.context);

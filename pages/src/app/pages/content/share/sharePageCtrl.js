@@ -112,6 +112,9 @@
         }
 
         $scope.nextAble = function(page){
+			if($scope.totalPage == 0){
+				return true;
+			}
             if(page == $scope.totalPage){
                 return true;
             }

@@ -8,6 +8,7 @@ import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.service.entity.mysql.Content;
+import com.ug369.backend.service.entity.mysql.Type;
 import com.ug369.backend.service.repository.mysql.MessageHelpShareRepository;
 import com.ug369.backend.service.repository.mysql.TypeRepository;
 import org.apache.commons.lang3.StringUtils;
@@ -79,7 +80,9 @@ public class MessageHelpShareService {
             one.setTypeStr(request.getTypeStr());
         }
         if (request.getTypeId() != null){
+            Type type = typeRepository.findOne(request.getTypeId());
             one.setTypeId(request.getTypeId());
+            one.setTypeStr(type.getTypeName());
         }
         if (!StringUtils.isEmpty(request.getPictures())){
             one.setPictures(request.getPictures());
