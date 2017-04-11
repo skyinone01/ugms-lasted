@@ -55,17 +55,17 @@
                             <div class="col-sm-9">
 
 
-                                <select class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty"
-                                        ng-model="item.typeStr" ng-change="setApplyType()" >
-                                    <option ng-repeat="x in typeOptions" value="{{x.value}}">{{x.text}}</option>
-                                </select>
-                                <!--<select name="applySelectType" selectpicker="selectpicker" ng-options="s.value as s.text for s in typeOptions"-->
-                                        <!--class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="item.type"-->
-                                        <!--tabindex="-98" style="" >-->
-
+                                <!--<select class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty"-->
+                                        <!--ng-model="item.typeStr" ng-init="" ng-change="setApplyType()"  ng-disabled="inputEdit">-->
+                                    <!--<option ng-repeat="x in typeOptions" value="{{x.value}}">{{x.text}}</option>-->
                                 <!--</select>-->
+                                <select name="applySelectType"  ng-options="s.text for s in typeOptions"
+                                        class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="selectType"
+                                        tabindex="-98" style="" ng-disabled="inputEdit" ng-change="setApplyType(this)" >
+                                </select>
                                 <p>
                                     <input  type="text" ng-show="false" name="applyTypeTe" ng-model="typeStr" required>
+                                    <input  type="text" ng-show="false" name="applyTypeId" ng-model="typeId" required>
                                     <span ng-show="myForm.applyTypeTe.$error.required" style="color:red">类别是必须的</span>
                                 </p>
                             </div>

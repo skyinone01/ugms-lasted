@@ -13,32 +13,37 @@
 		$scope.listTypes = function(){
 			appBase.doGet("types",null,function(response){
 				$scope.typeOptions=response.data;
+				if(modelId == 0){
+					$scope.item = {
+						id: 0,
+						title: '',
+						url: '',
+						pictures: '',
+						linkUrl: '',
+						context: '',
+						summary: '',
+						orderId: '',
+						typeId: '',
+						typeStr: '',
+						status:''
+					};
+				}else{
+					appBase.doGet("message/"+modelId,null,function(response){
+						$scope.item=response.data;
+						$scope.typeStr = $scope.item.typeStr;
+						for(var i=0;i< $scope.typeOptions.length;i++){
+							if ($scope.typeOptions[i].value ==$scope.item.typeId){
+								$scope.selectType =$scope.typeOptions[i];
+							}
+						}
+						$scope.picmark = "mark"
+					});
+				}
 			});
 		}
-		$scope.types = [{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
 		$scope.listTypes();
 
-		 if(modelId == 0){
-		    $scope.item = {
-         			id: 0,
-         			title: '',
-         			url: '',
-				    pictures: '',
-				    linkUrl: '',
-         			context: '',
-         			summary: '',
-         			orderId: '',
-         			typeId: '',
-         			typeStr: '',
-         			status:''
-         	};
-		 }else{
-		     appBase.doGet("message/"+modelId,null,function(response){
-                 $scope.item=response.data;
-				 $scope.typeStr = $scope.item.typeStr;
-				 $scope.picmark = "mark"
-		     });
-		 }
+
 
 		//$scope.types = [{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
 
@@ -100,8 +105,9 @@
 			}
 		}
 
-		$scope.setApplyType = function(){
-			$scope.typeStr = $scope.item.typeStr;
+		$scope.setApplyType = function(x){
+			$scope.typeStr = x.selectType.text;
+			$scope.typeId = x.selectType.value;
 		}
 		$scope.saveOrUpdate = function(dismis){
 
@@ -115,7 +121,9 @@
 				formData.append('status',$scope.applyStatus);
 			}
 			//formData.append('orderId',$scope.item.orderId);
-			formData.append('typeId',$scope.item.typeStr);
+			if($scope.typeId != null){
+				formData.append('typeId',$scope.typeId);
+			}
 			//formData.append('typeStr',$scope.item.type.text);
 			formData.append('linkUrl',$scope.item.linkUrl);
 			formData.append('summary',$scope.item.summary);
