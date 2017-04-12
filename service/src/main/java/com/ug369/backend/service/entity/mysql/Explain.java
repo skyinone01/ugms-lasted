@@ -12,14 +12,14 @@ public class Explain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "layoutCode")
+    @Column(name = "layoutcode")
     private String layoutCode;
     private String type;
     private String title;
     private String content;
-    private int useable;
-    private int status;
-    private int isdel;
+    private Boolean useable;
+    private Integer status;
+    private Boolean isdel;
     private String pictures;
 
     public long getId() {
@@ -62,27 +62,27 @@ public class Explain {
         this.content = content;
     }
 
-    public int getUseable() {
+    public Boolean getUseable() {
         return useable;
     }
 
-    public void setUseable(int useable) {
+    public void setUseable(Boolean useable) {
         this.useable = useable;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public int getIsdel() {
+    public Boolean getIsdel() {
         return isdel;
     }
 
-    public void setIsdel(int isdel) {
+    public void setIsdel(Boolean isdel) {
         this.isdel = isdel;
     }
 

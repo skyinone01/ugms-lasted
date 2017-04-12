@@ -24,6 +24,8 @@ import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/3/22.
@@ -51,12 +53,21 @@ public class DescriptionController {
     }
 
     /**
-     * 新增、修改 banner
+     * lay out
+     */
+    @RequestMapping(value = "/description/layout", method = RequestMethod.GET)
+    public DataResponse<List<Map<String, String>>> getLayout() {
+        List<Map<String, String>> layout = descriptionService.getLayout();
+        return new DataResponse(layout);
+    }
+
+    /**
+     * 新增、修改 说明
      */
     @RequestMapping(value = "/description", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public BasicResponse welcome( @RequestParam(value = "title",required = false) String title,
                                   @RequestParam(value = "id") Long id,
-                                  @RequestParam(value = "useable",required = false) Integer useable,
+                                  @RequestParam(value = "useable",required = false) Boolean useable,
                                   @RequestParam(value = "type",required = false) String type,
                                   @RequestParam(value = "layoutCode",required = false) String layoutCode,
                                   @RequestParam(value = "content",required = false) String content,

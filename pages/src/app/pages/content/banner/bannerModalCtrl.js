@@ -112,6 +112,7 @@
 		    formData.append('beginDate',$("#data_id").val());
 		    formData.append('endDate',$("#data_endid").val());
 		    formData.append('orders',$scope.welcome.orders);
+		    formData.append('isBanner',1);
 
 		    appBase.doFormData("banner",formData,function(response){
 		        appBase.bubMsg("保存成功");

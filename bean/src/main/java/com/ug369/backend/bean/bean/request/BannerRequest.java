@@ -22,7 +22,7 @@ public class BannerRequest {
     private Date createDate;
     private Integer status;
     private Integer weight;
-    private Integer isdefault;
+    private Boolean isdefault;
     private Integer useable;
     private Integer isBanner;
     private Integer type;
@@ -135,11 +135,11 @@ public class BannerRequest {
         this.weight = weight;
     }
 
-    public Integer getIsdefault() {
+    public Boolean getIsdefault() {
         return isdefault;
     }
 
-    public void setIsdefault(Integer isdefault) {
+    public void setIsdefault(Boolean isdefault) {
         this.isdefault = isdefault;
     }
 

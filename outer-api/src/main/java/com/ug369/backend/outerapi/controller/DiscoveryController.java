@@ -5,6 +5,7 @@ import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
 import com.ug369.backend.bean.bean.request.DiscoveryRequest;
+import com.ug369.backend.bean.bean.request.DiscoveryTypeRequest;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
@@ -29,7 +30,7 @@ import java.text.ParseException;
  * Created by Administrator on 2017/3/22.
  */
 @RestController
-public class DiscoveryController {
+public class  DiscoveryController {
 
     @Autowired
     private DiscoveryService discoveryService;
@@ -44,11 +45,38 @@ public class DiscoveryController {
      * 列表
      */
     @RequestMapping(value = "/discovery", method = RequestMethod.GET)
-    public PagedDataResponse<Discovery> welcome(@PageDefault PageRequest pageRequest) {
-        PagedResult<Discovery> users = discoveryService.getAll(pageRequest);
+    public PagedDataResponse<DiscoveryRequest> welcome(@PageDefault PageRequest pageRequest) {
+        PagedResult<DiscoveryRequest> users = discoveryService.getAll(pageRequest);
 
         return PagedDataResponse.of(users);
     }
+
+    /**
+     * type
+     */
+    @RequestMapping(value = "/type", method = RequestMethod.GET)
+    public DataResponse type() {
+        return new DataResponse(discoveryService.getTypes());
+    }
+
+    /**
+     * type
+     */
+    @RequestMapping(value = "/type/{id}", method = RequestMethod.DELETE)
+    public BasicResponse typeDelete(@PathVariable("id") Integer id) {
+        discoveryService.deleteType(id);
+        return BasicResponse.success();
+    }
+
+    /**
+     * type
+     */
+    @RequestMapping(value = "/type", method = RequestMethod.PUT)
+    public BasicResponse typeAddOrUpdate(@RequestBody DiscoveryTypeRequest request) {
+        discoveryService.createOrUpdateType(request);
+        return BasicResponse.success();
+    }
+
 
     /**
      * 新增、修改
@@ -56,9 +84,9 @@ public class DiscoveryController {
     @RequestMapping(value = "/discovery", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public BasicResponse welcome( @RequestParam(value = "title",required = false) String title,
                                   @RequestParam(value = "id") Long id,
-                                  @RequestParam(value = "orders",required = false) Integer orderId,
+                                  @RequestParam(value = "orderId",required = false) Integer orderId,
                                   @RequestParam(value = "typeId",required = false) Integer typeId,
-                                  @RequestParam(value = "isLink",required = false) Integer isLink,
+                                  @RequestParam(value = "isLink",required = false) Boolean isLink,
                                   @RequestParam(value = "linkUrl",required = false) String linkUrl,
                                   @RequestParam(value = "context",required = false) String context,
                                   @RequestParam(value = "summary",required = false) String summary,
@@ -88,7 +116,7 @@ public class DiscoveryController {
         discoveryRequest.setTitle(title);
         discoveryRequest.setOrderId(orderId);
         discoveryRequest.setIcon(picUrl);
-        discoveryRequest.setIsLink(isLink);
+        discoveryRequest.setLink(isLink);
         discoveryRequest.setLinkUrl(linkUrl);
         discoveryRequest.setContext(context);
         discoveryRequest.setStatus(status);

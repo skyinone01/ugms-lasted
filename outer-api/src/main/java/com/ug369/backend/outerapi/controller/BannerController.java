@@ -46,7 +46,7 @@ public class BannerController {
      */
     @RequestMapping(value = "/banner", method = RequestMethod.GET)
     public PagedDataResponse<BannerRequest> welcome(@PageDefault PageRequest pageRequest) {
-        PagedResult<BannerRequest> users = bannerAdvertisementService.getAll(pageRequest);
+        PagedResult<BannerRequest> users = bannerAdvertisementService.getAll(pageRequest,1);
 
         return PagedDataResponse.of(users);
     }
@@ -60,9 +60,11 @@ public class BannerController {
                                   @RequestParam(value = "useable",required = false) Integer useable,
                                   @RequestParam(value = "beginDate",required = false) String begin_date,
                                   @RequestParam(value = "endDate",required = false) String endDate,
-                                  @RequestParam(value = "orders",required = false) Integer orderId,
+                                  @RequestParam(value = "orderId",required = false) Integer orderId,
                                   @RequestParam(value = "link",required = false) String link,
                                   @RequestParam(value = "status",required = false) Integer status,
+                                  @RequestParam(value = "isBanner",required = false) Integer isBanner,
+                                  @RequestParam(value = "isDefault",required = false) Boolean isDefault,
                                   @RequestParam(value = "file",required = false) MultipartFile file) throws NoSuchAlgorithmException, IOException, ParseException {
 
 
@@ -97,6 +99,11 @@ public class BannerController {
         bannerRequest.setTitle(title);
         bannerRequest.setOrderId(orderId);
         bannerRequest.setPicture(picUrl);
+        bannerRequest.setStatus(status);
+        bannerRequest.setLink(link);
+        bannerRequest.setUseable(useable);
+        bannerRequest.setIsBanner(isBanner);
+        bannerRequest.setIsdefault(isDefault);
 
         bannerAdvertisementService.createOrUpdate(bannerRequest);
         return BasicResponse.success();
@@ -116,7 +123,7 @@ public class BannerController {
      * 详情
      */
     @RequestMapping(value = "/banner/{id}", method = RequestMethod.GET)
-    public DataResponse<Banner> welcomeOne(@PathVariable("id") long id) {
+    public DataResponse<Banner> welcomeOne(@PathVariable("id") int id) {
 
         Banner response = bannerAdvertisementService.findOne(id);
         return new DataResponse<>(response);

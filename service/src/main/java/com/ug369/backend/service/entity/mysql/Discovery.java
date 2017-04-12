@@ -12,31 +12,31 @@ public class Discovery {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column(name = "createDate")
+    private Long id;
+    @Column(name = "createdate")
     private Date createDate;
     private String title;
     private String icon;
     private String context;
-    @Column(name = "orderId")
-    private int orderId;
-    @Column(name = "isMark")
-    private int isMark;
-    @Column(name = "isLink")
-    private int isLink;
-    @Column(name = "linkUrl")
+    @Column(name = "orderid")
+    private Integer orderId;
+    @Column(name = "ismark")
+    private Boolean isMark;
+    @Column(name = "islink")
+    private Boolean isLink;
+    @Column(name = "linkurl")
     private String linkUrl;
-    @Column(name = "typeId")
-    private int typeId;
-    private int isdel;
-    private int status;
+    @Column(name = "typeid")
+    private Integer typeId;
+    private Boolean isdel;
+    private Integer status;
     private String summary;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -72,28 +72,28 @@ public class Discovery {
         this.context = context;
     }
 
-    public int getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
-    public int getIsMark() {
+    public Boolean getMark() {
         return isMark;
     }
 
-    public void setIsMark(int isMark) {
-        this.isMark = isMark;
+    public void setMark(Boolean mark) {
+        isMark = mark;
     }
 
-    public int getIsLink() {
+    public Boolean getLink() {
         return isLink;
     }
 
-    public void setIsLink(int isLink) {
-        this.isLink = isLink;
+    public void setLink(Boolean link) {
+        isLink = link;
     }
 
     public String getLinkUrl() {
@@ -104,27 +104,27 @@ public class Discovery {
         this.linkUrl = linkUrl;
     }
 
-    public int getTypeId() {
+    public Integer getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(int typeId) {
+    public void setTypeId(Integer typeId) {
         this.typeId = typeId;
     }
 
-    public int getIsdel() {
+    public Boolean getIsdel() {
         return isdel;
     }
 
-    public void setIsdel(int isdel) {
+    public void setIsdel(Boolean isdel) {
         this.isdel = isdel;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

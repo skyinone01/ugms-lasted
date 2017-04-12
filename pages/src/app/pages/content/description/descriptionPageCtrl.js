@@ -44,7 +44,7 @@
 		}
 
 		//op 1 新增 2详情 3编辑 4 审核
-		$scope.open = function (page, size, id,opstr) {
+		$scope.open = function (page, size, id,opstr,type) {
 			$uibModal.open({
 				animation: true,
 				templateUrl: page,
@@ -53,6 +53,7 @@
 				resolve: {
 					modelId: id,
 					op: opstr,
+					type: type,
 				}
 			});
 		};
@@ -61,6 +62,20 @@
 		$scope.statusEmu = ["待审核","审批通过","审批未通过","已发布","已作废"];
 		$scope.showStatus = function(status){
 			return $scope.statusEmu[status-1];
+		}
+
+		$scope.showType = function(type){
+			if(type=="attention"){
+				return "注意事项";
+			}else{
+				return "说明页";
+			}
+		}
+		$scope.showUseable=function(use){
+			if(!use){
+				return "否";
+			}
+			return "是";
 		}
 
 		//1待审批、2审批通过、3审批不通过、4已发布、5已作作废】

@@ -4,6 +4,11 @@
 
 <mapper namespace="Description">
 
+    <resultMap id="layout" type="map">
+        <result property="code" column="app_layout_code" />
+        <result property="name" column="app_layout_name" />
+    </resultMap>
+
     <select id="getAll" resultType="com.ug369.backend.service.entity.mysql.Explain">
         SELECT u.id as id,u.layoutCode as layoutCode,u.title as title,
         u.type as type,u.content as content,u.useable as useable,
@@ -14,6 +19,12 @@
     <select id="getCount" resultType="int">
         SELECT COUNT(id)
         FROM yg_sys_explain u
+    </select>
+
+    <select id="getLayout" resultMap="layout">
+        SELECT app_layout_code,app_layout_name
+        FROM yg_app_layout
+        where app_layout_parent="1"
     </select>
 
 </mapper>

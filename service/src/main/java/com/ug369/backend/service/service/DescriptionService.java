@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/3/22.
@@ -26,7 +28,21 @@ public class DescriptionService {
     public PagedResult<Explain> getAll(PageRequest pageRequest) {
 
         PagedResult<Explain> explainPagedResult = descriptionRepository.getDataPageBatch("Description.getAll", "Description.getCount", new HashMap<>(),pageRequest);
+
+        List<Map<String,String>> layout = descriptionRepository.getData("Description.getLayout", new HashMap<>());
+
+        explainPagedResult.getItems().forEach(o->{
+            layout.forEach(t->{
+                if (t.get("code").equals(o.getLayoutCode())){
+                    o.setLayoutCode(t.get("name"));
+                }
+            });
+        });
+
         return explainPagedResult;
+    }
+    public List<Map<String,String>> getLayout(){
+        return descriptionRepository.getData("Description.getLayout", new HashMap<>());
     }
 
     @Transactional
@@ -48,6 +64,8 @@ public class DescriptionService {
 
         if (request.getStatus()!=null ){
             one.setStatus(request.getStatus());
+        }else{
+            one.setStatus(1);
         }
         if (!StringUtils.isEmpty(request.getContent())){
             one.setContent(request.getContent());
@@ -58,8 +76,10 @@ public class DescriptionService {
         if (request.getType()!=null){
             one.setType(request.getType());
         }
-        if (request.getUseable()!=null){
-            one.setUseable(request.getUseable());
+        if (request.getUseable()!=null && request.getUseable()==false){
+            one.setUseable(false);
+        }else {
+            one.setUseable(true);
         }
         if (!StringUtils.isEmpty(request.getPictures())){
             one.setPictures(request.getPictures());

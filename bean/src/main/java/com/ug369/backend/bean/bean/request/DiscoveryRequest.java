@@ -13,11 +13,12 @@ public class DiscoveryRequest {
     private String icon;
     private String context;
     private Integer orderId;
-    private Integer isMark;
-    private Integer isLink;
+    private Boolean isMark;
+    private Boolean isLink;
     private String linkUrl;
     private Integer typeId;
-    private Integer isdel;
+    private String typeStr;
+    private Boolean isdel;
     private Integer status;
     private String summary;
 
@@ -69,20 +70,20 @@ public class DiscoveryRequest {
         this.orderId = orderId;
     }
 
-    public Integer getIsMark() {
+    public Boolean getMark() {
         return isMark;
     }
 
-    public void setIsMark(Integer isMark) {
-        this.isMark = isMark;
+    public void setMark(Boolean mark) {
+        isMark = mark;
     }
 
-    public Integer getIsLink() {
+    public Boolean getLink() {
         return isLink;
     }
 
-    public void setIsLink(Integer isLink) {
-        this.isLink = isLink;
+    public void setLink(Boolean link) {
+        isLink = link;
     }
 
     public String getLinkUrl() {
@@ -101,11 +102,11 @@ public class DiscoveryRequest {
         this.typeId = typeId;
     }
 
-    public Integer getIsdel() {
+    public Boolean getIsdel() {
         return isdel;
     }
 
-    public void setIsdel(Integer isdel) {
+    public void setIsdel(Boolean isdel) {
         this.isdel = isdel;
     }
 
@@ -123,5 +124,13 @@ public class DiscoveryRequest {
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    public String getTypeStr() {
+        return typeStr;
+    }
+
+    public void setTypeStr(String typeStr) {
+        this.typeStr = typeStr;
     }
 }

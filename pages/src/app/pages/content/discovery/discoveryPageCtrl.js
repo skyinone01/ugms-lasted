@@ -58,6 +58,15 @@
 		};
 		$scope.openProgressDialog = baProgressModal.open;
 
+		$scope.openType = function (page, size, id,opstr,type) {
+			$uibModal.open({
+				animation: true,
+				templateUrl: page,
+				size: size,
+				controller: 'typeModalCtrl'
+			});
+		};
+
 		$scope.statusEmu = ["待审核","审批通过","审批未通过","已发布","已作废"];
 		$scope.showStatus = function(status){
 			return $scope.statusEmu[status-1];

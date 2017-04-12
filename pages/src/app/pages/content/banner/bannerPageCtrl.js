@@ -11,7 +11,7 @@
     function BannerPageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
 
         $scope.listItem = function(){
-                appBase.doGet("banner","{'page':0,'size':20}",function(response){
+                appBase.doGet("banner?type=1","{'page':0,'size':20}",function(response){
         		     if(response.data != null){
         		         $scope.items = response.data.items;
         		     }

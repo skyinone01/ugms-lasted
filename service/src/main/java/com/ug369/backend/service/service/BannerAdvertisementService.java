@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/3/22.
@@ -24,9 +25,11 @@ public class BannerAdvertisementService {
     @Autowired
     private BannerRepository bannerRepository;
 
-    public PagedResult<BannerRequest> getAll(PageRequest pageRequest) {
+    public PagedResult<BannerRequest> getAll(PageRequest pageRequest,int type) {
 
-        PagedResult<BannerRequest> welcomes = bannerRepository.getDataPageBatch("Banner.getAll", "Banner.getCount", new HashMap<>(),pageRequest);
+        Map param = new HashMap<>();
+        param.put("type",type);
+        PagedResult<BannerRequest> welcomes = bannerRepository.getDataPageBatch("Banner.getAll", "Banner.getCount", param,pageRequest);
         return welcomes;
     }
 
@@ -53,6 +56,17 @@ public class BannerAdvertisementService {
         }else {
             one.setStatus(1);
         }
+        if (request.getIsBanner() != null &&request.getIsBanner()==1){
+            one.setBanner(true);
+        }else {
+            one.setBanner(false);
+        }
+
+        if (request.getIsdefault() != null){
+            one.setIsdefault(request.getIsdefault());
+        }else {
+            one.setIsdefault(false);
+        }
         if (!StringUtils.isEmpty(request.getContactName())){
             one.setContactName(request.getContactName());
         }
@@ -63,7 +77,7 @@ public class BannerAdvertisementService {
             one.setContent(request.getContent());
         }
         if (!StringUtils.isEmpty(request.getTitle())){
-            one.setTitle(request.getTitle());
+            one.setName(request.getTitle());
         }
         if (!StringUtils.isEmpty(request.getLink())){
             one.setLink(request.getLink());
@@ -80,14 +94,11 @@ public class BannerAdvertisementService {
         if (request.getEndDate() != null){
             one.setEndDate(request.getEndDate());
         }
-        if (request.getIsBanner() != null){
-            one.setIsBanner(request.getIsBanner());
-        }
-        if (request.getIsdefault() != null){
-            one.setIsdefault(request.getIsdefault());
-        }
+
         if (request.getOrderId() != null){
             one.setOrderId(request.getOrderId());
+        }else {
+            one.setOrderId(0);
         }
         if (request.getType()!=null){
             one.setType(request.getType());

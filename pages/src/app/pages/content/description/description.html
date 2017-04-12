@@ -16,8 +16,14 @@
         <button type="button"
                 class="btn btn-info"
                 data-toggle="modal"
-                ng-click="open('app/pages/content/description/descriptionModal.html', 'lg',0,1)">
-            添加发现
+                ng-click="open('app/pages/content/description/descriptionModal.html', 'lg',0,1,0)">
+            添加注意事项
+        </button>
+        <button type="button"
+                class="btn btn-info"
+                data-toggle="modal"
+                ng-click="open('app/pages/content/description/descriptionModal.html', 'lg',0,1,1)">
+            添加说明页
         </button>
     </div>
 </div>
@@ -32,11 +38,10 @@
 
             <td></td>
             <td>标题</td>
+            <td>模板</td>
+            <td>类型</td>
+            <td>是否可用</td>
             <td>状态</td>
-            <td>排序</td>
-            <td>起始时间</td>
-            <td>截止时间</td>
-            <td>创建时间</td>
             <td>操作</td>
         </tr>
         </thead>
@@ -49,11 +54,10 @@
                 </span>
             </td>
             <td>{{item.title}}</td>
+            <td>{{item.layoutCode}}</td>
+            <td>{{showType(item.type)}}</td>
+            <td>{{showUseable(item.useable)}}</td>
             <td>{{showStatus(item.status)}}</td>
-            <td>{{item.orders}}</td>
-            <td>{{item.beginDate | date:'longDate'}}</td>
-            <td>{{item.endDate | date:'longDate'}}</td>
-            <td>{{item.createDate | date:'longDate'}}</td>
             <td>
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"

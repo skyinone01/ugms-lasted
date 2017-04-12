@@ -10,7 +10,7 @@ public class DescriptionRequest {
     private String type;
     private String title;
     private String content;
-    private Integer useable;
+    private Boolean useable;
     private Integer status;
     private Integer isdel;
     private String pictures;
@@ -55,11 +55,11 @@ public class DescriptionRequest {
         this.content = content;
     }
 
-    public Integer getUseable() {
+    public Boolean getUseable() {
         return useable;
     }
 
-    public void setUseable(Integer useable) {
+    public void setUseable(Boolean useable) {
         this.useable = useable;
     }
 
