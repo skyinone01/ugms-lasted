@@ -45,8 +45,8 @@ public class BannerController {
      * banner页列表列表
      */
     @RequestMapping(value = "/banner", method = RequestMethod.GET)
-    public PagedDataResponse<BannerRequest> welcome(@PageDefault PageRequest pageRequest) {
-        PagedResult<BannerRequest> users = bannerAdvertisementService.getAll(pageRequest,1);
+    public PagedDataResponse<BannerRequest> welcome(@PageDefault PageRequest pageRequest,@RequestParam("type") int type) {
+        PagedResult<BannerRequest> users = bannerAdvertisementService.getAll(pageRequest,type);
 
         return PagedDataResponse.of(users);
     }
@@ -56,12 +56,17 @@ public class BannerController {
      */
     @RequestMapping(value = "/banner", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public BasicResponse welcome( @RequestParam(value = "title",required = false) String title,
-                                  @RequestParam(value = "id") Long id,
+                                  @RequestParam(value = "id") Integer id,
                                   @RequestParam(value = "useable",required = false) Integer useable,
                                   @RequestParam(value = "beginDate",required = false) String begin_date,
                                   @RequestParam(value = "endDate",required = false) String endDate,
                                   @RequestParam(value = "orderId",required = false) Integer orderId,
                                   @RequestParam(value = "link",required = false) String link,
+                                  @RequestParam(value = "contactName",required = false) String contactName,
+                                  @RequestParam(value = "contactPhone",required = false) String contactPhone,
+                                  @RequestParam(value = "content",required = false) String content,
+                                  @RequestParam(value = "weight",required = false) Integer weight,
+                                  @RequestParam(value = "type",required = false) Integer type,
                                   @RequestParam(value = "status",required = false) Integer status,
                                   @RequestParam(value = "isBanner",required = false) Integer isBanner,
                                   @RequestParam(value = "isDefault",required = false) Boolean isDefault,
@@ -96,6 +101,7 @@ public class BannerController {
             bannerRequest.setEndDate(simpleDateFormat.parse(endDate));
         }
 //        bannerRequest.setContent(title);
+        bannerRequest.setId(id);
         bannerRequest.setTitle(title);
         bannerRequest.setOrderId(orderId);
         bannerRequest.setPicture(picUrl);
@@ -105,6 +111,13 @@ public class BannerController {
         bannerRequest.setIsBanner(isBanner);
         bannerRequest.setIsdefault(isDefault);
 
+        //广告
+        bannerRequest.setContactName(contactName);
+        bannerRequest.setContactPhone(contactPhone);
+        bannerRequest.setWeight(weight);
+        bannerRequest.setType(type);
+        bannerRequest.setContent(content);
+
         bannerAdvertisementService.createOrUpdate(bannerRequest);
         return BasicResponse.success();
     }
@@ -113,7 +126,7 @@ public class BannerController {
      * 删除
      */
     @RequestMapping(value = "/banner/{id}", method = RequestMethod.DELETE)
-    public BasicResponse welcome(@PathVariable("id") long id) {
+    public BasicResponse welcome(@PathVariable("id") Integer id) {
 
         bannerAdvertisementService.delete(id);
         return BasicResponse.success();
@@ -123,7 +136,7 @@ public class BannerController {
      * 详情
      */
     @RequestMapping(value = "/banner/{id}", method = RequestMethod.GET)
-    public DataResponse<Banner> welcomeOne(@PathVariable("id") int id) {
+    public DataResponse<Banner> bannerOne(@PathVariable("id") int id) {
 
         Banner response = bannerAdvertisementService.findOne(id);
         return new DataResponse<>(response);
@@ -133,7 +146,7 @@ public class BannerController {
      * 状态改变
      */
     @RequestMapping(value = "/banner/{id}", method = RequestMethod.PUT)
-    public BasicResponse updateOne(@PathVariable("id") long id,@RequestParam("op") int op) {
+    public BasicResponse updateOne(@PathVariable("id") Integer id,@RequestParam("op") int op) {
 
         bannerAdvertisementService.changeStatus(id,op);
         return BasicResponse.success();

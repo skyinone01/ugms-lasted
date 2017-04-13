@@ -84,9 +84,9 @@
         <tfoot>
         <tr>
             <td colspan="7" class="text-center">
-                <input class="btn btn-primary" type="button" value="上一页" ng-click="btnUp(page-1)"/>
-                {{page}}
-                <input class="btn btn-primary" type="button" value="下一页" ng-click="btnNext(page)"/>
+                <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                {{page}}/{{totalPage}}
+                <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
             </td>
         </tr>
         </tfoot>

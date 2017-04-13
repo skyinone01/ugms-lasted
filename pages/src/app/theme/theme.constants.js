@@ -21,7 +21,7 @@
       images: {
         root: IMAGES_ROOT,
         profile: IMAGES_ROOT + 'app/profile/',
-        amMap: 'assets/img/theme/vendor/ammap//dist/ammap/images/',
+        amMap: 'assets/img/theme/vendor/ammap/dist/ammap/images/',
         amChart: 'assets/img/theme/vendor/amcharts/dist/amcharts/images/'
       }
     })
@@ -30,6 +30,14 @@
             return API_ROOT + uri;
         },
         goLogin:function(){
+            var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
+            if(arr=document.cookie.match(reg)){
+                token = unescape(arr[2]);
+                var Days = 0;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days*24*60*60*1000);
+                document.cookie = "token" + "="+ escape (token) + ";expires=" + exp.toGMTString();
+            }
             window.location.href = PAGE_ROOT+"auth.html";
         },
         goError:function () {

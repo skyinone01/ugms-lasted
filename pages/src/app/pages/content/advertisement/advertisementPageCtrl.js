@@ -2,45 +2,53 @@
  * @author roy
  */
 (function () {
-    'use strict';
+	'use strict';
 
-    angular.module('BlurAdmin.pages.content.advertisement')
-        .controller('AdvertisementPageCtrl', AdvertisementPageCtrl);
+	angular.module('BlurAdmin.pages.content.advertisement')
+			.controller('AdvertisementPageCtrl', AdvertisementPageCtrl);
 
-    /** @ngInject */
-    function AdvertisementPageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
+	/** @ngInject */
+	function AdvertisementPageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
 
-        $scope.perPage = 20;
-        $scope.page = 1;
-        $scope.listItem = function(){
-                appBase.doGet("advertisement?page="+$scope.page+"&perPage="+$scope.perPage,null,function(response){
-        		     if(response.data != null){
-        		         $scope.items = response.data.items;
-        		         $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
-        		     }
-        		})
-        }
+		$scope.perPage = 20;
+		$scope.page = 1;
+		$scope.listItem = function(){
+			var param = "page="+$scope.page+"&perPage="+$scope.perPage+"&type=0";
+			appBase.doGet("banner?"+param,null,function(response){
+				if(response.data != null){
+					$scope.items = response.data.items;
+
+					$scope.items = response.data.items;
+					$scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
+				}
+			})
+		}
+
+
+		$scope.pageNum = 1;
+		$scope.searchNameValue = '';
 		$scope.listItem();
 
-        $scope.showButton = function(index,name){
-            if(name == 'edit'){
-                var s = $scope.items[index].status;
-                if(s==4 || s==5){
-                    return false;
-                }
-            }
-            return true;
-        }
+
+		$scope.showButton = function(index,name){
+			if(name == 'edit'){
+				var s = $scope.items[index].status;
+				if(s==4 || s==5){
+					return false;
+				}
+			}
+			return true;
+		}
 
 		$scope.deleteOne = function(id){
 			var result = confirm('确认删除！');
 			if(!result){
 				return;
 			}
-            appBase.doDelete("advertisement/"+id,null,function(res){
-                appBase.bubMsg("删除成功");
+			appBase.doDelete("banner/"+id,null,function(res){
+				appBase.bubMsg("删除成功");
 				$scope.listItem();
-            });
+			});
 		}
 
 		//op 1 新增 2详情 3编辑 4 审核
@@ -84,7 +92,7 @@
 			var op=0;
 			switch(name){
 				case "审核":
-					$scope.open('app/pages/content/advertisement/advertisementModal.html', 'lg',id,4)
+					$scope.open('app/pages/content/banner/bannerModal.html', 'lg',id,4)
 					return;
 				case "发布":
 					op=4;
@@ -93,40 +101,40 @@
 					op=4;
 					break;
 				case "停用":
-					op=5;
+					op=2;
 					break;
 			}
 
-			appBase.doPut("advertisement/"+id+"?op="+op,null,function(response){
+			appBase.doPut("banner/"+id+"?op="+op,null,function(response){
 				appBase.bubMsg(name+"成功");
 				$scope.listItem();
 			});
 		}
 
-        $scope.upAble = function(page){
-            if(page == 1){
-                return true;
-            }
-            return false;
-        }
+		$scope.upAble = function(page){
+			if(page == 1){
+				return true;
+			}
+			return false;
+		}
 
-        $scope.nextAble = function(page){
-            if(page == $scope.totalPage){
-                return true;
-            }
-            return false;
-        }
+		$scope.nextAble = function(page){
+			if(page == $scope.totalPage){
+				return true;
+			}
+			return false;
+		}
 
 		$scope.btnNext = function(){
-		    $scope.page = $scope.page+1;
-		    $scope.listItem();
+			$scope.page = $scope.page+1;
+			$scope.listItem();
 		};
 
 		$scope.btnUp = function () {
 			$scope.page = $scope.page-1;
-            $scope.listItem();
+			$scope.listItem();
 		};
 
-    }
+	}
 
 })();

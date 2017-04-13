@@ -10,10 +10,15 @@
     /** @ngInject */
     function BannerPageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
 
+		$scope.perPage = 20;
+		$scope.page = 1;
         $scope.listItem = function(){
-                appBase.doGet("banner?type=1","{'page':0,'size':20}",function(response){
+			   var param = "page="+$scope.page+"&perPage="+$scope.perPage+"&type=1";
+                appBase.doGet("banner?"+param,null,function(response){
         		     if(response.data != null){
         		         $scope.items = response.data.items;
+						 $scope.items = response.data.items;
+						 $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
         		     }
         		})
         }
@@ -105,48 +110,29 @@
 			});
 		}
 
-		$scope.btnNext = (function (pageNum) {
-			var offset = 15 * pageNum;
-			$http.get('http://120.26.88.27:8080/youge-backend/showMessage/' + offset + '/15?YGType=1').then(function (response) {
-				if (response.data.lastPage > pageNum) {
-					$scope.smartTableData = [];
-				}
-				else {
-					return true;
-				}
-				response.data.list.forEach(function (value) {
-					$scope.smartTableData.push({
-						YGID: value.ygid,
-						YGTitle: value.ygtitle,
-						YGCreateDate: value.ygcreateDate
-					})
-				});
-				$scope.pageNum = pageNum + 1;
-			});
-		});
+		$scope.upAble = function(page){
+			if(page == 1){
+				return true;
+			}
+			return false;
+		}
 
-		$scope.btnUp = (function (pageNum) {
-			var offset = 15 * (pageNum - 1);
-			$http.get('http://120.26.88.27:8080/youge-backend/showMessage/' + offset + '/15?YGType=1').then(function (response) {
-				if (response.data.hasNextPage) {
-					if (offset < 0) {
-						return true;
-					}
-					$scope.smartTableData = [];
-				}
-				else {
-					return true;
-				}
-				response.data.list.forEach(function (value) {
-					$scope.smartTableData.push({
-						YGID: value.ygid,
-						YGTitle: value.ygtitle,
-						YGCreateDate: value.ygcreateDate
-					})
-				});
-				$scope.pageNum = pageNum == 0 ? 1 : pageNum;
-			});
-		});
+		$scope.nextAble = function(page){
+			if(page == $scope.totalPage){
+				return true;
+			}
+			return false;
+		}
+
+		$scope.btnNext = function(){
+			$scope.page = $scope.page+1;
+			$scope.listItem();
+		};
+
+		$scope.btnUp = function () {
+			$scope.page = $scope.page-1;
+			$scope.listItem();
+		};
 
 
     }

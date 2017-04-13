@@ -15,10 +15,10 @@ public class Banner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @JsonProperty(value = "title")
     private String name;
     private String picture;
     private String content;
-    @JsonProperty(value = "orders")
     @Column(name="orderid")
     private Integer orderId;
     private String link;

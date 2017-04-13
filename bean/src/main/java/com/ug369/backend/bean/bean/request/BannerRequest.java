@@ -8,7 +8,7 @@ import java.util.Date;
  * Created by Roy on 2017/4/5.
  */
 public class BannerRequest {
-    private Long id;
+    private Integer id;
     private String name;
     private String picture;
     private String content;
@@ -39,11 +39,11 @@ public class BannerRequest {
         this.title = title;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

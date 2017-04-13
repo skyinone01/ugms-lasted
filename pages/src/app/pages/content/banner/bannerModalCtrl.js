@@ -24,6 +24,7 @@
          			status:''
          	};
 		 }else{
+
 		     appBase.doGet("banner/"+modelId,null,function(response){
                  $scope.welcome=response.data;
 				 //$("#data_date").val(response.data.begin_date)
@@ -108,10 +109,14 @@
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}
+			if ($scope.realDate != null){
+				formData.append('beginDate',$scope.realDate );
+			}
+			if ($scope.realendDate != null){
+				formData.append('endDate',$scope.realendDate);
+			}
 		    formData.append('useable',1);
-		    formData.append('beginDate',$("#data_id").val());
-		    formData.append('endDate',$("#data_endid").val());
-		    formData.append('orders',$scope.welcome.orders);
+		    formData.append('orderId',$scope.welcome.orderId);
 		    formData.append('isBanner',1);
 
 		    appBase.doFormData("banner",formData,function(response){

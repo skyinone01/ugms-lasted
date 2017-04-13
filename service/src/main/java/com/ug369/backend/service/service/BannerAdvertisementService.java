@@ -34,7 +34,7 @@ public class BannerAdvertisementService {
     }
 
     @Transactional
-    public void delete(long id) {
+    public void delete(Integer id) {
         bannerRepository.delete(id);
     }
 
@@ -109,7 +109,7 @@ public class BannerAdvertisementService {
         bannerRepository.save(one);
     }
 
-    public Banner findOne(long id) {
+    public Banner findOne(Integer id) {
         Banner one = bannerRepository.findOne(id);
         if (one == null){
             throw new UserException(UgmsStatus.NOT_FOUND,"Banner页不存在");
@@ -119,7 +119,7 @@ public class BannerAdvertisementService {
 
 
     @Transactional
-    public void changeStatus(long id, int op) {
+    public void changeStatus(Integer id, int op) {
         //审核 1 发布 2 启用 3 停用 4
         //1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
         Banner one = bannerRepository.findOne(id);

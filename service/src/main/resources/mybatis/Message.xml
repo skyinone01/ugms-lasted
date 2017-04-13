@@ -15,9 +15,9 @@
         FROM yg_sys_content u
         WHERE u.category = #{category}
         AND u.status &gt; 0 AND u.status &lt; 6
-        <if test="userId != null">
-              AND u.userId = #{userId}
-        </if>
+        <!--<if test="userId != null">-->
+              <!--AND u.userId = #{userId}-->
+        <!--</if>-->
         ORDER BY u.createDate DESC
     </select>
 
@@ -32,9 +32,9 @@
         FROM yg_sys_content u
         WHERE u.category = #{category}
         AND u.status &gt; 0 AND u.status &lt; 6
-        <if test="userId != null">
-            AND u.userId = #{userId}
-        </if>
+        <!--<if test="userId != null">-->
+            <!--AND u.userId = #{userId}-->
+        <!--</if>-->
     </select>
 
     <select id="getOne" resultType="com.ug369.backend.bean.bean.request.ContentRequest">
