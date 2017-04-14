@@ -45,6 +45,26 @@
             }else{
                 data = $scope.update[index];
             }
+            if(data.name == null || data.name.trim() ==""){
+                appBase.bubMsg("资源名称不能为空");
+                $scope.listResource();
+                return;
+            }
+            if(data.description == null || data.description.trim() ==""){
+                appBase.bubMsg("描述不能为空");
+                $scope.listResource();
+                return;
+            }
+            if(data.state == null || data.state.trim() ==""){
+                appBase.bubMsg("前端路由不能为空");
+                $scope.listResource();
+                return;
+            }
+            if(data.url == null || data.url.trim() ==""){
+                appBase.bubMsg("匹配URI不能为空");
+                $scope.listResource();
+                return;
+            }
             appBase.doPost("resources",data,function(ret){
                 appBase.bubMsg("保存成功");
                 $scope.listResource();

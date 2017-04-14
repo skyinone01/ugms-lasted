@@ -46,6 +46,21 @@
             }else{
                 data = $scope.roleUpdate[index];
             }
+            if(data.name == null || data.name.trim() ==""){
+                appBase.bubMsg("角色名字不能为空");
+                $scope.listRole();
+                return;
+            }
+            if(data.code == null || data.code.trim() ==""){
+                appBase.bubMsg("角色Code不能为空");
+                $scope.listRole();
+                return;
+            }
+            if(data.description == null || data.description.trim() ==""){
+                appBase.bubMsg("角色描述不能为空");
+                $scope.listRole();
+                return;
+            }
             appBase.doPost("roles",data,function(ret){
                 appBase.bubMsg("保存成功");
                 $scope.listRole();
