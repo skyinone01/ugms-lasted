@@ -97,6 +97,39 @@ angular.module('BlurAdmin')
 //              return permissionList.some(function(item) {
 //                return item.stateRef.trim() === stateRef
 //              });
-      }
+      },
+        editable: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.editable == true){
+                    return true;
+                }
+            }
+            return false;
+
+        },
+        deleteable: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.deleteable == true){
+                    return true;
+                }
+            }
+            return false;
+
+        },
+        operateable: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.operateable == true){
+                    return true;
+                }
+            }
+            return false;
+        }
    };
   });
+

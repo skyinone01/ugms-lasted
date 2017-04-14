@@ -17,6 +17,33 @@ public class RoleResource implements Serializable {
     private long id;
     private long role;
     private long resource;
+    private Boolean deleteable;
+    private Boolean editable;
+    private Boolean operateable;
+
+    public Boolean getDeleteable() {
+        return deleteable;
+    }
+
+    public void setDeleteable(Boolean deleteable) {
+        this.deleteable = deleteable;
+    }
+
+    public Boolean getEditable() {
+        return editable;
+    }
+
+    public void setEditable(Boolean editable) {
+        this.editable = editable;
+    }
+
+    public Boolean getOperateable() {
+        return operateable;
+    }
+
+    public void setOperateable(Boolean operateable) {
+        this.operateable = operateable;
+    }
 
     public long getId() {
         return id;

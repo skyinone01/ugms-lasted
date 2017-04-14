@@ -101,7 +101,7 @@
                 animation: true,
                 templateUrl: page,
                 controller:'RoleResourceCtrl',
-                size: 1500,
+                size: 2000,
                 resolve: {
                     index:function(){
                         return index;

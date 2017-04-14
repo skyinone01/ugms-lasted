@@ -13,7 +13,7 @@
     </div>
 
     <div class="col-md-3 text-right">
-        <button type="button"
+        <button has-permission="content.discovery:edit" type="button"
                 class="btn btn-info"
                 data-toggle="modal"
                 ng-click="openType('app/pages/content/discovery/typeModal.html', 'lg',0,1)">
@@ -66,7 +66,7 @@
                 >
                     详情
                 </button>
-                <button class="status-button btn btn-xs btn-primary "
+                <button has-permission="content.discovery:edit" class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
                         ng-click="open('app/pages/content/discovery/discoveryModal.html', 'lg',item.id,3)"
                         ng-show="showButton($index,'edit')"
@@ -74,14 +74,14 @@
                     编辑
                 </button>
 
-                <button class="status-button btn-primary btn-xs btn "
+                <button has-permission="content.discovery:operate" class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
                         ng-click="operation(showButtonName($index),item.id)"
                         ng-show="showButton($index,'operate')"
                 >
                     {{showButtonName($index)}}
                 </button>
-                <button class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
+                <button has-permission="content.discovery:delete" class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
                         ng-click="deleteOne(item.id)">删除</button>
             </td>
         </tr>

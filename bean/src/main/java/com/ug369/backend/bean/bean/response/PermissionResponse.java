@@ -8,6 +8,9 @@ public class PermissionResponse {
     private String stateRef;
     private String name;
     private boolean visible = true;
+    private boolean deleteable;
+    private boolean editable;
+    private boolean operateable;
 
     public String getStateRef() {
         return stateRef;
@@ -31,5 +34,29 @@ public class PermissionResponse {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isDeleteable() {
+        return deleteable;
+    }
+
+    public void setDeleteable(boolean deleteable) {
+        this.deleteable = deleteable;
+    }
+
+    public boolean isEditable() {
+        return editable;
+    }
+
+    public void setEditable(boolean editable) {
+        this.editable = editable;
+    }
+
+    public boolean isOperateable() {
+        return operateable;
+    }
+
+    public void setOperateable(boolean operateable) {
+        this.operateable = operateable;
     }
 }

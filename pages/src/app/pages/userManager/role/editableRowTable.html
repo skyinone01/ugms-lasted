@@ -43,9 +43,9 @@
                 </button>
             </form>
             <div class="buttons" ng-show="!rowform.$visible">
-                <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
-                <button class="btn btn-danger editable-table-button btn-xs" ng-click="deleteRole($index)">删除</button>
-                <button class="btn btn-primary editable-table-button btn-xs" ng-click="permission($index)">赋权</button>
+                <button has-permission="users.role:edit"  class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
+                <button has-permission="users.role:delete"  class="btn btn-danger editable-table-button btn-xs" ng-click="deleteRole($index)">删除</button>
+                <button has-permission="users.role:operate"  class="btn btn-primary editable-table-button btn-xs" ng-click="permission($index)">赋权</button>
             </div>
         </td>
     </tr>

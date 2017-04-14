@@ -85,14 +85,15 @@ public class ResourceService {
 
         Map map = new HashMap();
         PagedResult<ResourceEntryUGMS> dataPageBatch = resourceRepository.getDataPageBatch("Resource.getAll", "Resource.getCount", map, pageRequest);
-        dataPageBatch.getItems().forEach( o ->{
-            byRole.forEach(or ->{
-                if (or.getResource() == o.getId()){
-                    o.setVisible(true);
-                    return;
-                }
-            });
-        });
+        dataPageBatch.getItems().forEach( o -> byRole.forEach(or ->{
+            if (or.getResource() == o.getId()){
+                o.setVisible(true);
+                o.setDelete(or.getDeleteable());
+                o.setEdit(or.getEditable());
+                o.setOperate(or.getOperateable());
+                return;
+            }
+        }));
 
         return dataPageBatch;
 
@@ -102,18 +103,21 @@ public class ResourceService {
     public void updateRoleResource(Long roleId,List<ResourceEntryUGMS> resourceEntryUGMS) {
 
 
-        List<Long> add = new ArrayList<>();
+        List<ResourceEntryUGMS> add = new ArrayList<>();
         resourceEntryUGMS.forEach(o->{
             if(o.isVisible()){
-                add.add(o.getId());
+                add.add(o);
             }
         });
 
         roleResourceRepository.deleteByRole(roleId);
         add.forEach(o->{
             RoleResource rr = new RoleResource();
-            rr.setResource(o);
+            rr.setResource(o.getId());
             rr.setRole(roleId);
+            rr.setDeleteable(o.isDelete());
+            rr.setEditable(o.isEdit());
+            rr.setOperateable(o.isOperate());
             roleResourceRepository.save(rr);
         });
 

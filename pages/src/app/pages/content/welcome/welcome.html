@@ -60,7 +60,7 @@
                 >
                     详情
                 </button>
-                <button class="status-button btn btn-xs btn-primary "
+                <button has-permission="content.welcome:edit" class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
                         ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id,3)"
                         ng-show="showButton($index,'edit')"
@@ -68,14 +68,14 @@
                     编辑
                 </button>
 
-                <button class="status-button btn-primary btn-xs btn "
+                <button has-permission="content.welcome:operate" class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
                         ng-click="operation(showButtonName($index),item.id)"
                         ng-show="showButton($index,'operate')"
                 >
                     {{showButtonName($index)}}
                 </button>
-                <button class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
+                <button has-permission="content.welcome:delete" class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
                         ng-click="deleteOne(item.id)">删除</button>
             </td>
         </tr>

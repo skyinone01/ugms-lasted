@@ -11,6 +11,9 @@ public class ResourceEntryUGMS {
     private String state;
     private String description;
     private boolean visible;
+    private boolean delete;
+    private boolean edit;
+    private boolean operate;
 
     public boolean isVisible() {
         return visible;
@@ -58,5 +61,29 @@ public class ResourceEntryUGMS {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isDelete() {
+        return delete;
+    }
+
+    public void setDelete(boolean delete) {
+        this.delete = delete;
+    }
+
+    public boolean isEdit() {
+        return edit;
+    }
+
+    public void setEdit(boolean edit) {
+        this.edit = edit;
+    }
+
+    public boolean isOperate() {
+        return operate;
+    }
+
+    public void setOperate(boolean operate) {
+        this.operate = operate;
     }
 }

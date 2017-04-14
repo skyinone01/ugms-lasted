@@ -1,25 +1,28 @@
 
-<div class="modal-content">
+<div class="modal-content" style="width: 800px">
     <div class="modal-header">
         <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
             <em class="ion-ios-close-empty sn-link-close"></em>
         </button>
         <h4 class="modal-title">角色-资源列表</h4>
     </div>
-    <div class="horizontal-scroll">
+    <div class="horizontal-scroll" >
 
-        <div class="widgets">
+        <div class="widgets" >
             <div class="row">
                 <div class="col-md-12">
-                    <div ba-panel  ba-panel-class="with-scroll">
+                    <div ba-panel  ba-panel-class="with-scroll" >
 
-                        <table class="table table-hover" st-table="permissions">
+                        <table class="table table-hover" st-table="permissions" >
                             <thead>
                             <tr class="sortable">
                                 <th class="table-id" st-sort="id" st-sort-default="true">#</th>
                                 <th st-sort="firstName">资源名称</th>
                                 <th st-sort="lastName">路由</th>
                                 <th st-sort="username">是否可见</th>
+                                <th st-sort="edit">是否可编辑</th>
+                                <th st-sort="delete">是否可删除</th>
+                                <th st-sort="operate">是否可审核</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -33,19 +36,16 @@
                                 <td name="state"><span  blur="cancel">{{item.state}}</span></td>
 
                                 <td name="visible">
-                                    <!--<span editable-text="item.visible" blur="cancel">{{item.visible}}</span>-->
-                                    <!--<select name="visible" selectpicker="selectpicker" ng-options="s.value as s.text for s in visible" class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="item.visible" ng-change="valueChange($index)" tabindex="-98" style="">-->
-                                        <!--&lt;!&ndash;<option data-hidden="true" disabled="" value="" class="" selected="selected">Select something</option>&ndash;&gt;-->
-                                        <!--<option label="true" value="true">true</option>-->
-                                        <!--<option label="false" value="false">false</option>-->
-                                    <!--</select>-->
-                                    <!--<button type="submit" ng-click="save($event,$index)" title="Submit" aria-label="Submit">save</button>-->
                                     <input type="checkbox" ng-model="item.visible" id="checkboxSuccess" >
-                                    <!--<span editable-select="item.visible"  e-name="visible" e-form="rowform" e-selectpicker-->
-                                          <!--e-ng-options="s.value as s.text for s in visible" blur="cancel">-->
-                                            <!--{{item.visible}}-->
-                                    <!--</span >-->
-
+                                </td>
+                                <td name="edit">
+                                    <input type="checkbox" ng-model="item.edit" id="checkboxedit" >
+                                </td>
+                                <td name="delete">
+                                    <input type="checkbox" ng-model="item.delete" id="checkboxdelete" >
+                                </td>
+                                <td name="operate">
+                                    <input type="checkbox" ng-model="item.operate" id="checkboxoperate" >
                                 </td>
                             </tr>
                             </tbody>
