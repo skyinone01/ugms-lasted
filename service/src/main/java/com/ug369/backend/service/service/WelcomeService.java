@@ -31,12 +31,12 @@ public class WelcomeService {
     }
 
     @Transactional
-    public void delete(long id) {
+    public void delete(Integer id) {
         welcomeRepository.delete(id);
     }
 
     @Transactional
-    public void createOrUpdate(Long id, String picture, String title, Integer useable,
+    public void createOrUpdate(Integer id, String picture, String title, Boolean useable,
                                Date begin_date, Integer orders,Integer status,String applyDetail,String applyPeople) {
         Welcome one;
         if (id!=null && id.longValue() != 0){
@@ -57,13 +57,13 @@ public class WelcomeService {
             one.setStatus(1);
         }
         if (!StringUtils.isEmpty(title)){
-            one.setTitle(title);
+            one.setContent(title);
         }
         if (!StringUtils.isEmpty(picture)){
             one.setPicture(picture);
         }
         if(orders!=null){
-            one.setOrders(orders);
+            one.setA_order(orders);
         }
         if(begin_date!=null){
             one.setBegin_date(begin_date);
@@ -75,7 +75,7 @@ public class WelcomeService {
         welcomeRepository.save(one);
     }
 
-    public Welcome findOne(long id) {
+    public Welcome findOne(Integer id) {
 
         Welcome one = welcomeRepository.findOne(id);
         if (one == null){
@@ -96,7 +96,7 @@ public class WelcomeService {
 
 
     @Transactional
-    public void changeStatus(long id, int op) {
+    public void changeStatus(Integer id, int op) {
         //审核 1 发布 2 启用 3 停用 4
         //1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
         Welcome one = welcomeRepository.findOne(id);

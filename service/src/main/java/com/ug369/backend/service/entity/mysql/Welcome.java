@@ -1,5 +1,7 @@
 package com.ug369.backend.service.entity.mysql;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -7,53 +9,35 @@ import java.util.Date;
  * Created by Roy on 2017/3/27.
  */
 @Entity
-@Table(name = "ug_welcome")
+@Table(name = "yg_content_guide")
 public class Welcome {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
     private String picture;
+    @JsonProperty("title")
     private String content;
-    private String title;
-    private int orders;
+//    private String title;
+    private String link;
+    @JsonProperty("orders")
+    private Integer a_order;
+    private Integer group_id;
+    private Integer timer;
     private Date begin_date;
     private Date create_date;
-    private int status;
-    private int useable;
+    private Integer status;
+    private Boolean useable;
+    private Boolean isgroup;
     private String applypeople;
     private String applydetail;
 
 
-    public String getApplypeople() {
-        return applypeople;
-    }
-
-    public void setApplypeople(String applypeople) {
-        this.applypeople = applypeople;
-    }
-
-    public String getApplydetail() {
-        return applydetail;
-    }
-
-    public void setApplydetail(String applydetail) {
-        this.applydetail = applydetail;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -72,13 +56,45 @@ public class Welcome {
     public void setContent(String content) {
         this.content = content;
     }
+//
+//    public String getTitle() {
+//        return title;
+//    }
+//
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
 
-    public int getOrders() {
-        return orders;
+    public String getLink() {
+        return link;
     }
 
-    public void setOrders(int orders) {
-        this.orders = orders;
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public Integer getA_order() {
+        return a_order;
+    }
+
+    public void setA_order(Integer a_order) {
+        this.a_order = a_order;
+    }
+
+    public Integer getGroup_id() {
+        return group_id;
+    }
+
+    public void setGroup_id(Integer group_id) {
+        this.group_id = group_id;
+    }
+
+    public Integer getTimer() {
+        return timer;
+    }
+
+    public void setTimer(Integer timer) {
+        this.timer = timer;
     }
 
     public Date getBegin_date() {
@@ -97,19 +113,43 @@ public class Welcome {
         this.create_date = create_date;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public int getUseable() {
+    public Boolean getUseable() {
         return useable;
     }
 
-    public void setUseable(int useable) {
+    public void setUseable(Boolean useable) {
         this.useable = useable;
+    }
+
+    public Boolean getIsgroup() {
+        return isgroup;
+    }
+
+    public void setIsgroup(Boolean isgroup) {
+        this.isgroup = isgroup;
+    }
+
+    public String getApplypeople() {
+        return applypeople;
+    }
+
+    public void setApplypeople(String applypeople) {
+        this.applypeople = applypeople;
+    }
+
+    public String getApplydetail() {
+        return applydetail;
+    }
+
+    public void setApplydetail(String applydetail) {
+        this.applydetail = applydetail;
     }
 }

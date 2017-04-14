@@ -59,8 +59,8 @@ public class WelcomeController {
      */
     @RequestMapping(value = "/welcome", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public BasicResponse welcome( @RequestParam(value = "title",required = false) String title,
-                                  @RequestParam(value = "id") Long id,
-                                  @RequestParam(value = "useable",required = false) Integer useable,
+                                  @RequestParam(value = "id") Integer id,
+                                  @RequestParam(value = "useable",required = false) Boolean useable,
                                   @RequestParam(value = "begin_date",required = false) String begin_date,
                                   @RequestParam(value = "applyDetail",required = false) String applyDetail,
                                   @RequestParam(value = "orders",required = false) Integer orders,
@@ -102,7 +102,7 @@ public class WelcomeController {
      * 删除
      */
     @RequestMapping(value = "/welcome/{id}", method = RequestMethod.DELETE)
-    public BasicResponse welcome(@PathVariable("id") long id) {
+    public BasicResponse welcome(@PathVariable("id") Integer id) {
 
         welcomeService.delete(id);
         return BasicResponse.success();
@@ -112,7 +112,7 @@ public class WelcomeController {
      * 详情
      */
     @RequestMapping(value = "/welcome/{id}", method = RequestMethod.GET)
-    public DataResponse<Welcome> welcomeOne(@PathVariable("id") long id) {
+    public DataResponse<Welcome> welcomeOne(@PathVariable("id") Integer id) {
 
         Welcome response = welcomeService.findOne(id);
         return new DataResponse<>(response);
@@ -122,7 +122,7 @@ public class WelcomeController {
      * 状态改变
      */
     @RequestMapping(value = "/welcome/{id}", method = RequestMethod.PUT)
-    public BasicResponse updateOne(@PathVariable("id") long id,@RequestParam("op") int op) {
+    public BasicResponse updateOne(@PathVariable("id") Integer id,@RequestParam("op") int op) {
 
         welcomeService.changeStatus(id,op);
         return BasicResponse.success();

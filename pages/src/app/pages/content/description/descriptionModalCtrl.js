@@ -11,6 +11,7 @@
 	/** @ngInject */
 	function descriptionModalCtrl($scope, $uibModalInstance, modelId,op,type, fileReader, $filter,appBase,$state) {
 
+		$scope.showApplyDetail =false;
 		 appBase.doGet("description/layout",null,function(response){
 			$scope.layouts=response.data;
 			 if(modelId == 0){
@@ -37,6 +38,9 @@
 						 if($scope.layouts[i].code == response.data.layoutCode){
 							 $scope.layout = $scope.layouts[i];
 						 }
+					 }
+					 if( response.data.status==3 && op==2){
+						 $scope.showApplyDetail =true;
 					 }
 					 $scope.typeStr = $scope.item.type;
 					 $scope.item.type="说明页";
@@ -110,6 +114,11 @@
 			var status = $scope.item.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 		$scope.setApplyLayout = function(x){
@@ -132,6 +141,9 @@
 		    formData.append('file',$scope.file);
 		    formData.append('id', $scope.item.id);
 		    formData.append('title',$scope.item.title);
+			if($scope.item.applydetail !=null){
+				formData.append('applyDetail',$scope.item.applydetail);
+			}
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}

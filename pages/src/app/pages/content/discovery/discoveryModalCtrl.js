@@ -11,6 +11,7 @@
 	/** @ngInject */
 	function discoveryModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
 
+		$scope.showApplyDetail =false;
 		appBase.doGet("type",null,function(response){
 			$scope.types=response.data;
 
@@ -36,6 +37,9 @@
 						if($scope.types[i].id == response.data.typeId){
 							$scope.type = $scope.types[i]
 						}
+					}
+					if( response.data.status==3 && op==2){
+						$scope.showApplyDetail =true;
 					}
 					$scope.picmark = "mark"
 				});
@@ -102,6 +106,11 @@
 			var status = $scope.item.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 		$scope.saveOrUpdate = function(dismis){
@@ -117,6 +126,9 @@
 		    formData.append('isLink', $scope.item.isLink);
 		    formData.append('typeId', $scope.typeId);
 		    formData.append('title',$scope.item.title);
+			if($scope.item.applydetail !=null){
+				formData.append('applyDetail',$scope.item.applydetail);
+			}
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}

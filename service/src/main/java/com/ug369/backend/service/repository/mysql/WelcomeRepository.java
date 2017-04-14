@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * Created by Roy on 2017/3/27.
  */
 @Repository
-public interface WelcomeRepository extends RDBRepository<Welcome, Long> {
+public interface WelcomeRepository extends RDBRepository<Welcome, Integer> {
 
 
 }

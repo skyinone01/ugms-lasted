@@ -42,7 +42,7 @@
                 c.createdate as createDate, c.icon as icon,
                 c.linkurl as linkUrl, c.messagetype as messageType, c.orderid as orderId,
                 c.pictures as pictures,c.status as status, c.summary as summary, c.title as title,
-                c.typeid as typeId, c.typestr as typeStr, c.userid as userId
+                c.typeid as typeId, c.typestr as typeStr, c.userid as userId,c.applypeople as applypeople,c.applydetail as applydetail
         from yg_sys_content c
         where c.id=#{id}
     </select>

@@ -12,8 +12,10 @@
 	function advertisementModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
 
 		$scope.picture = $filter('appImage')('theme/no-photo.png');
-		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}]
-		$scope.types=[{'value':0,'text':'内部广告'},{'value':1,'text':'外部广告'}]
+		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
+		$scope.types=[{'value':0,'text':'内部广告'},{'value':1,'text':'外部广告'}];
+		$scope.showApplyDetail =false;
+
 		if(modelId == 0){
 			$scope.welcome = {
 				id: 0,
@@ -28,6 +30,8 @@
 				weight:'',
 				contactName:'',
 				contactPhone:'',
+				applydetail:'',
+				applypeole:'',
 				type:'',
 			};
 		}else{
@@ -39,6 +43,9 @@
 					if($scope.types[i].value == response.data.type){
 						$scope.type = $scope.types[i];
 					}
+				}
+				if( response.data.status==3 && op==2){
+					$scope.showApplyDetail =true;
 				}
 				$scope.typeId = response.data.type;
 				$scope.realDate =response.data.beginDate
@@ -62,7 +69,6 @@
 				return false;
 			}
 		}
-
 
 		$scope.uploadPicture = function () {
 			var fileInput = document.getElementById('uploadFile');
@@ -105,10 +111,16 @@
 				return false
 			}
 		}
+
 		$scope.setApplyStatus = function(){
 			var status = $scope.welcome.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 		$scope.selectType = function(x){
@@ -126,6 +138,9 @@
 				formData.append('weight',$scope.welcome.weight);
 			}
 			formData.append('type',$scope.typeId);
+			if($scope.welcome.applydetail !=null){
+				formData.append('applyDetail',$scope.welcome.applydetail);
+			}
 			if($scope.welcome.contactName !=null){
 				formData.append('contactName',$scope.welcome.contactName);
 			}

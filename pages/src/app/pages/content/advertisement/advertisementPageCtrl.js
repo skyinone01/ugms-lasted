@@ -43,12 +43,6 @@
 					return false;
 				}
 			}
-			if(name == 'operate'){
-				var s = $scope.items[index].status;
-				if(s==3){
-					return false;
-				}
-			}
 			return true;
 		}
 
@@ -104,7 +98,7 @@
 			var op=0;
 			switch(name){
 				case "审核":
-					$scope.open('app/pages/content/banner/bannerModal.html', 'lg',id,4)
+					$scope.open('app/pages/content/advertisement/advertisementModal.html', 'lg',id,4)
 					return;
 				case "发布":
 					op=4;

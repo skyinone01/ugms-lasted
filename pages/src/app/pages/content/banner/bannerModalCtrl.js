@@ -11,6 +11,7 @@
 	/** @ngInject */
 	function bannerModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
 
+		$scope.showApplyDetail =false;
 		 if(modelId == 0){
 		    $scope.welcome = {
          			id: 0,
@@ -30,6 +31,9 @@
 				 //$("#data_date").val(response.data.begin_date)
 				 $scope.realDate =response.data.beginDate
 				 $scope.realendDate =response.data.endDate
+				 if( response.data.status==3 && op==2){
+					 $scope.showApplyDetail =true;
+				 }
 				 $scope.picmark = "mark"
 		     });
 		 }
@@ -97,6 +101,11 @@
 			var status = $scope.welcome.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 		$scope.saveOrUpdate = function(dismis){
@@ -114,6 +123,9 @@
 			}
 			if ($scope.realendDate != null){
 				formData.append('endDate',$scope.realendDate);
+			}
+			if($scope.welcome.applydetail !=null){
+				formData.append('applyDetail',$scope.welcome.applydetail);
 			}
 		    formData.append('useable',1);
 		    formData.append('orderId',$scope.welcome.orderId);

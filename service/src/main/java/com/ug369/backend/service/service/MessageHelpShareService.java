@@ -62,8 +62,8 @@ public class MessageHelpShareService {
         }
         if (request.getStatus()!=null&& (request.getStatus()==2 || request.getStatus()==3)){
             one.setStatus(request.getStatus());
-            one.setApplydetail(request.getApplyDetail());
-            one.setApplypeople(request.getApplyPeople());
+            one.setApplydetail(request.getApplydetail());
+            one.setApplypeople(request.getApplypeople());
         }else {
             one.setStatus(1);
         }

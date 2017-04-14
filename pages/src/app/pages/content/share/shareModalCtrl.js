@@ -10,6 +10,7 @@
 
 	/** @ngInject */
 	function shareModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
+		$scope.showApplyDetail =false;
 		$scope.listTypes = function(){
 			appBase.doGet("types",null,function(response){
 				$scope.typeOptions=response.data;
@@ -36,7 +37,10 @@
 								$scope.selectType =$scope.typeOptions[i];
 							}
 						}
-						$scope.picmark = "mark"
+						if( response.data.status==3 && op==2){
+							$scope.showApplyDetail =true;
+						}
+						$scope.picmark = "mark";
 					});
 				}
 			});
@@ -102,6 +106,11 @@
 			var status = $scope.item.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 
@@ -129,6 +138,9 @@
 			formData.append('summary',$scope.item.summary);
 			formData.append('context',$scope.item.context);
 			formData.append('category',"share");
+			if($scope.item.applydetail !=null){
+				formData.append('applyDetail',$scope.item.applydetail);
+			}
 
 		    appBase.doFormData("message",formData,function(response){
 		        appBase.bubMsg("保存成功");

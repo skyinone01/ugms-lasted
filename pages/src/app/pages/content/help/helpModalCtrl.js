@@ -10,7 +10,7 @@
 
 	/** @ngInject */
 	function helpModalCtrl($scope, $uibModalInstance, modelId,op, $filter,appBase,$state) {
-
+		$scope.showApplyDetail =false;
 		 if(modelId == 0){
 		    $scope.item = {
          			id: 0,
@@ -22,6 +22,9 @@
 		 }else{
 		     appBase.doGet("message/"+modelId,null,function(response){
                  $scope.item=response.data;
+				 if( response.data.status==3 && op==2){
+					 $scope.showApplyDetail =true;
+				 }
 		     });
 		 }
 		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}]
@@ -58,6 +61,11 @@
 			var status = $scope.item.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 		$scope.saveOrUpdate = function(dismis){
@@ -73,6 +81,9 @@
 			formData.append('orderId',$scope.item.orderId);
 			formData.append('context',$scope.item.context);
 			formData.append('category',"help");
+			if($scope.item.applydetail !=null){
+				formData.append('applyDetail',$scope.item.applydetail);
+			}
 
 			appBase.doFormData("message",formData,function(response){
 				appBase.bubMsg("保存成功");

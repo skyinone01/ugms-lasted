@@ -156,6 +156,30 @@
                 </div>
                 </div>
                 </div>
+                <div class="row" ng-show="!showSubmit()">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label for="inputName" class="col-sm-3 control-label">审批人</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="applypeople"  class="form-control" ng-model="item.applypeople"
+                                       required readonly>
+                                <!--<span ng-show="myForm.contactName.$error.required" style="color:red" >联系人是必须的</span>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"  ng-show="showApplyDetail">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label for="inputName" class="col-sm-3 control-label">未通过原因</label>
+                            <div class="col-sm-9">
+                                <textarea name="applydetail"  class="form-control" ng-model="item.applydetail"
+                                          placeholder="请输入未通过原因..." required></textarea>
+                                <span ng-show="myForm.applydetail.$error.required" style="color:red" >未通过原因是必须的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -169,6 +193,7 @@
                             myForm.context.$error.required||
                             myForm.isLinkInput.$error.required||
                             (item.isLink&&myForm.link.$error.required)||
+                              (showApplyDetail && myForm.applydetail.$error.required)||
                             myForm.applytype.$error.required||
                             (showApply() && myForm.apply.$error.required)||
                             myForm.picmark.$error.required">提交</button>

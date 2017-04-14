@@ -28,23 +28,23 @@ public class ContentRequest {
     private Integer userId;
     private Integer issystem;
     private String pictures;
-    private String applyDetail;
-    private String applyPeople;
+    private String applydetail;
+    private String applypeople;
 
-    public String getApplyDetail() {
-        return applyDetail;
+    public String getApplydetail() {
+        return applydetail;
     }
 
-    public void setApplyDetail(String applyDetail) {
-        this.applyDetail = applyDetail;
+    public void setApplydetail(String applydetail) {
+        this.applydetail = applydetail;
     }
 
-    public String getApplyPeople() {
-        return applyPeople;
+    public String getApplypeople() {
+        return applypeople;
     }
 
-    public void setApplyPeople(String applyPeople) {
-        this.applyPeople = applyPeople;
+    public void setApplypeople(String applypeople) {
+        this.applypeople = applypeople;
     }
 
     public Integer getId() {

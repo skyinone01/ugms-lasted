@@ -109,8 +109,8 @@ public class MessageHelpShareController {
         contentRequest.setOrderId(orderId);
         contentRequest.setPictures(picUrl);
         contentRequest.setLinkUrl(linkUrl);
-        contentRequest.setApplyDetail(applyDetail);
-        contentRequest.setApplyPeople(user.getName());
+        contentRequest.setApplydetail(applyDetail);
+        contentRequest.setApplypeople(user.getName());
 
         messageHelpShareService.createOrUpdate(contentRequest);
         return BasicResponse.success();
