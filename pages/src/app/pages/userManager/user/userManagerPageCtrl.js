@@ -64,12 +64,51 @@
             }else{
                 data = $scope.update[index];
             }
+            if(data.department == null || data.department.trim()==""){
+                appBase.bubMsg("部门 不能为空");
+                $scope.listUser();
+                return;
+            }
+            if(data.role == null || data.role==""){
+                appBase.bubMsg("角色 不能为空");
+                $scope.listUser();
+                return;
+            }
+            if(data.name == null || data.name.trim()==""){
+                appBase.bubMsg("名字 不能为空");
+                $scope.listUser();
+                return;
+            }
+            if(data.email == null || data.email.trim()==""){
+                appBase.bubMsg("邮箱 不能为空");
+                return;
+            }
+            if(data.mobile == null || data.mobile.trim()==""){
+                appBase.bubMsg("手机号 不能为空");
+                $scope.listUser();
+                return;
+            }else{
+                var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if(!myreg.test(data.mobile))
+                {
+                    appBase.bubMsg('请输入有效的手机号码！');
+                    $scope.listUser();
+                    return;
+                }
+            }
+            if(data.username == null || data.username.trim()==""){
+                appBase.bubMsg("用户名 不能为空");
+                $scope.listUser();
+                return;
+            }
             appBase.doPost("users",data,function(ret){
                 appBase.bubMsg("保存成功");
                 $scope.listUser();
             })
         };
-
+        $scope.cancel = function(){
+            $scope.listUser();
+        }
         $scope.valueChange = function(parent,index){
             //var  name = $(event.target).parent().parent().prev().attr("e-name");
             var  name = parent.$editable.name;
@@ -133,7 +172,7 @@
         $scope.deleteUser = function(index){
             appBase.doDelete("users/"+$scope.users[index].id,null,function(ret){
                 appBase.bubMsg("删除成功");
-                $scope.removeUser(index);
+                $scope.listUser();
              })
         };
 

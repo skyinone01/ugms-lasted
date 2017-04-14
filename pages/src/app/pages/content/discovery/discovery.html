@@ -19,7 +19,7 @@
                 ng-click="openType('app/pages/content/discovery/typeModal.html', 'lg',0,1)">
             类别管理
         </button>
-        <button type="button"
+        <button has-permission="content.discovery:edit" type="button"
                 class="btn btn-info"
                 data-toggle="modal"
                 ng-click="open('app/pages/content/discovery/discoveryModal.html', 'lg',0,1)">
