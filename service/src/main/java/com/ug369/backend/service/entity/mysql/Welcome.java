@@ -21,6 +21,25 @@ public class Welcome {
     private Date create_date;
     private int status;
     private int useable;
+    private String applypeople;
+    private String applydetail;
+
+
+    public String getApplypeople() {
+        return applypeople;
+    }
+
+    public void setApplypeople(String applypeople) {
+        this.applypeople = applypeople;
+    }
+
+    public String getApplydetail() {
+        return applydetail;
+    }
+
+    public void setApplydetail(String applydetail) {
+        this.applydetail = applydetail;
+    }
 
     public String getTitle() {
         return title;

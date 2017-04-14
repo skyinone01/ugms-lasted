@@ -53,15 +53,17 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" ng-show="showUseable(item.useable)">
                     <div class="col-md-6">
                         <div class="form-group row clearfix">
                             <label for="inputName" class="col-sm-3 control-label">是否启用</label>
                             <div class="col-sm-9">
-                                <select name="applyuseable" selectpicker="selectpicker" ng-options="s.value as s.text for s in use"
-                                        class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="item.useable"
-                                        tabindex="-98" style=""  >
-                                </select>
+                                <input type="text" name="content" ng-disabled="inputEdit" class="form-control" ng-model="useableStr"
+                                          required readonly>
+                                <!--<select name="applyuseable" selectpicker="selectpicker" ng-options="s.value as s.text for s in use"-->
+                                        <!--class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="item.useable"-->
+                                        <!--tabindex="-98" style=""  >-->
+                                <!--</select>-->
                             </div>
                         </div>
                     </div>
@@ -89,7 +91,7 @@
                             <div class="col-sm-9">
                                 <div class="userpic">
                                     <div class="userpic-wrapper">
-                                        <img   ng-src="{{ item.picture == '' ? picture : item.picture }}"
+                                        <img   ng-src="{{ item.pictures == '' ? picture : item.pictures }}"
                                              ng-click="uploadPicture()">
                                     </div>
                                     <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>

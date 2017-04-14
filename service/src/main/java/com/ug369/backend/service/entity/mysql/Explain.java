@@ -21,6 +21,24 @@ public class Explain {
     private Integer status;
     private Boolean isdel;
     private String pictures;
+    private String applypeople;
+    private String applydetail;
+
+    public String getApplypeople() {
+        return applypeople;
+    }
+
+    public void setApplypeople(String applypeople) {
+        this.applypeople = applypeople;
+    }
+
+    public String getApplydetail() {
+        return applydetail;
+    }
+
+    public void setApplydetail(String applydetail) {
+        this.applydetail = applydetail;
+    }
 
     public long getId() {
         return id;

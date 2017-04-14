@@ -110,7 +110,9 @@
 		    formData.append('file',$scope.file);
 		    formData.append('id', $scope.item.id);
 		    formData.append('linkUrl', $scope.item.linkUrl);
-		    formData.append('summary', $scope.item.summary);
+			if ($scope.item.summary != null){
+				formData.append('summary', $scope.item.summary);
+			}
 		    formData.append('context', $scope.item.context);
 		    formData.append('isLink', $scope.item.isLink);
 		    formData.append('typeId', $scope.typeId);

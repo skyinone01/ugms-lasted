@@ -36,7 +36,8 @@ public class WelcomeService {
     }
 
     @Transactional
-    public void createOrUpdate(Long id, String picture, String title, Integer useable, Date begin_date, Integer orders,Integer status) {
+    public void createOrUpdate(Long id, String picture, String title, Integer useable,
+                               Date begin_date, Integer orders,Integer status,String applyDetail,String applyPeople) {
         Welcome one;
         if (id!=null && id.longValue() != 0){
             one = welcomeRepository.findOne(id);
@@ -48,8 +49,10 @@ public class WelcomeService {
             one.setCreate_date(new Date());
         }
 
-        if (status!=null && status!=0){
+        if (status!=null && (status==2 || status==3)){
             one.setStatus(status);
+            one.setApplydetail(applyDetail);
+            one.setApplypeople(applyPeople);
         }else {
             one.setStatus(1);
         }

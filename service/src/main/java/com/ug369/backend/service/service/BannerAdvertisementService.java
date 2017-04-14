@@ -51,8 +51,10 @@ public class BannerAdvertisementService {
             one.setCreateDate(new Date());
         }
 
-        if (request.getStatus()!=null && request.getStatus()!=0){
+        if (request.getStatus()!=null && (request.getStatus()==2 || request.getStatus()==3)){
             one.setStatus(request.getStatus());
+            one.setApplydetail(request.getApplyDetail());
+            one.setApplypeople(request.getName());
         }else {
             one.setStatus(1);
         }

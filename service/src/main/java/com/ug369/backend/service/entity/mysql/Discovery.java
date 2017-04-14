@@ -31,6 +31,24 @@ public class Discovery {
     private Boolean isdel;
     private Integer status;
     private String summary;
+    private String applypeople;
+    private String applydetail;
+
+    public String getApplypeople() {
+        return applypeople;
+    }
+
+    public void setApplypeople(String applypeople) {
+        this.applypeople = applypeople;
+    }
+
+    public String getApplydetail() {
+        return applydetail;
+    }
+
+    public void setApplydetail(String applydetail) {
+        this.applydetail = applydetail;
+    }
 
     public Long getId() {
         return id;

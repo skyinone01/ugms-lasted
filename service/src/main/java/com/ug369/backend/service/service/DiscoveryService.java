@@ -69,8 +69,10 @@ public class DiscoveryService {
             one.setCreateDate(new Date());
         }
 
-        if (request.getStatus()!=null){
+        if (request.getStatus()!=null && (request.getStatus()==2 || request.getStatus()==3)){
             one.setStatus(request.getStatus());
+            one.setApplydetail(request.getApplyDetail());
+            one.setApplypeople(request.getApplyPeople());
         }else {
             one.setStatus(1);
         }

@@ -1,6 +1,7 @@
 package com.ug369.backend.outerapi.controller;
 
 import com.ug369.backend.bean.base.request.PageRequest;
+import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
@@ -9,6 +10,7 @@ import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
+import com.ug369.backend.outerapi.annotation.UserInjected;
 import com.ug369.backend.service.entity.mysql.Welcome;
 import com.ug369.backend.service.service.WelcomeService;
 import com.ug369.backend.utils.StringUtils;
@@ -60,9 +62,11 @@ public class WelcomeController {
                                   @RequestParam(value = "id") Long id,
                                   @RequestParam(value = "useable",required = false) Integer useable,
                                   @RequestParam(value = "begin_date",required = false) String begin_date,
+                                  @RequestParam(value = "applyDetail",required = false) String applyDetail,
                                   @RequestParam(value = "orders",required = false) Integer orders,
                                   @RequestParam(value = "status",required = false) Integer status,
-                                  @RequestParam(value = "file",required = false) MultipartFile file) throws NoSuchAlgorithmException, IOException, ParseException {
+                                  @RequestParam(value = "file",required = false) MultipartFile file,
+                                  @UserInjected WebUser user) throws NoSuchAlgorithmException, IOException, ParseException {
 
 
         String picUrl = null;
@@ -89,7 +93,7 @@ public class WelcomeController {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             begin = simpleDateFormat.parse(begin_date);
         }
-        welcomeService.createOrUpdate(id,picUrl,title,useable,begin,orders,status);
+        welcomeService.createOrUpdate(id,picUrl,title,useable,begin,orders,status,applyDetail,user.getName());
 
         return BasicResponse.success();
     }

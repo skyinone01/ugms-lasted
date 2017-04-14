@@ -71,6 +71,7 @@ public class MessageHelpShareController {
                                   @RequestParam(value = "orderId",required = false) Integer orderId,
                                   @RequestParam(value = "context",required = false) String context,
                                   @RequestParam(value = "summary",required = false) String summary,
+                                  @RequestParam(value = "applyDetail",required = false) String applyDetail,
                                   @RequestParam(value = "category",required = false) String category,
                                   @RequestParam(value = "linkUrl",required = false) String linkUrl,
                                   @RequestParam(value = "status",required = false) Integer status,
@@ -108,6 +109,8 @@ public class MessageHelpShareController {
         contentRequest.setOrderId(orderId);
         contentRequest.setPictures(picUrl);
         contentRequest.setLinkUrl(linkUrl);
+        contentRequest.setApplyDetail(applyDetail);
+        contentRequest.setApplyPeople(user.getName());
 
         messageHelpShareService.createOrUpdate(contentRequest);
         return BasicResponse.success();

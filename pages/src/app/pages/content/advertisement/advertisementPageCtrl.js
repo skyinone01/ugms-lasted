@@ -33,7 +33,19 @@
 		$scope.showButton = function(index,name){
 			if(name == 'edit'){
 				var s = $scope.items[index].status;
-				if(s==4 || s==5){
+				if(s==4){
+					return false;
+				}
+			}
+			if(name == 'delete'){
+				var s = $scope.items[index].status;
+				if(s==4 ){
+					return false;
+				}
+			}
+			if(name == 'operate'){
+				var s = $scope.items[index].status;
+				if(s==3){
 					return false;
 				}
 			}
@@ -101,7 +113,7 @@
 					op=4;
 					break;
 				case "停用":
-					op=2;
+					op=5;
 					break;
 			}
 

@@ -21,6 +21,24 @@ public class DiscoveryRequest {
     private Boolean isdel;
     private Integer status;
     private String summary;
+    private String applyDetail;
+    private String applyPeople;
+
+    public String getApplyDetail() {
+        return applyDetail;
+    }
+
+    public void setApplyDetail(String applyDetail) {
+        this.applyDetail = applyDetail;
+    }
+
+    public String getApplyPeople() {
+        return applyPeople;
+    }
+
+    public void setApplyPeople(String applyPeople) {
+        this.applyPeople = applyPeople;
+    }
 
     public Long getId() {
         return id;

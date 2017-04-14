@@ -115,6 +115,17 @@
 		$scope.setApplyLayout = function(x){
 			$scope.layoutCode = x.layout.code;
 		}
+		$scope.showUseable = function(useable){
+			if(useable){
+				$scope.useableStr = "是";
+			}else{
+				$scope.useableStr = "否";
+			}
+			if (op == 1){
+				return false;
+			}
+			return true;
+		}
 		$scope.saveOrUpdate = function(dismis){
 
 		    var formData = new FormData();
@@ -124,7 +135,9 @@
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}
-		    formData.append('useable',$scope.item.useable);
+			if($scope.item.useable != null){
+				formData.append('useable',$scope.item.useable);
+			}
 		    formData.append('content',$scope.item.content);
 		    formData.append('type',$scope.typeStr);
 			if($scope.layoutCode!=null){

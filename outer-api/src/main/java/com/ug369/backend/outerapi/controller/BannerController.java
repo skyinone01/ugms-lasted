@@ -1,6 +1,7 @@
 package com.ug369.backend.outerapi.controller;
 
 import com.ug369.backend.bean.base.request.PageRequest;
+import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
@@ -9,6 +10,7 @@ import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
+import com.ug369.backend.outerapi.annotation.UserInjected;
 import com.ug369.backend.service.entity.mysql.Banner;
 import com.ug369.backend.service.service.BannerAdvertisementService;
 import com.ug369.backend.utils.StringUtils;
@@ -70,7 +72,9 @@ public class BannerController {
                                   @RequestParam(value = "status",required = false) Integer status,
                                   @RequestParam(value = "isBanner",required = false) Integer isBanner,
                                   @RequestParam(value = "isDefault",required = false) Boolean isDefault,
-                                  @RequestParam(value = "file",required = false) MultipartFile file) throws NoSuchAlgorithmException, IOException, ParseException {
+                                  @RequestParam(value = "applyDetail",required = false) String applyDetail,
+                                  @RequestParam(value = "file",required = false) MultipartFile file,
+                                  @UserInjected WebUser user) throws NoSuchAlgorithmException, IOException, ParseException {
 
 
         String picUrl = null;
@@ -110,6 +114,8 @@ public class BannerController {
         bannerRequest.setUseable(useable);
         bannerRequest.setIsBanner(isBanner);
         bannerRequest.setIsdefault(isDefault);
+        bannerRequest.setApplyDetail(applyDetail);
+        bannerRequest.setApplyPeople(user.getName());
 
         //广告
         bannerRequest.setContactName(contactName);

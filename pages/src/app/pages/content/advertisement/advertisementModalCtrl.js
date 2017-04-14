@@ -122,10 +122,16 @@
 			formData.append('link', $scope.welcome.link);
 			formData.append('title',$scope.welcome.title);
 			formData.append('content',$scope.welcome.content);
-			formData.append('weight',$scope.welcome.weight);
+			if($scope.welcome.weight !=null){
+				formData.append('weight',$scope.welcome.weight);
+			}
 			formData.append('type',$scope.typeId);
-			formData.append('contactName',$scope.welcome.contactName);
-			formData.append('contactPhone',$scope.welcome.contactPhone);
+			if($scope.welcome.contactName !=null){
+				formData.append('contactName',$scope.welcome.contactName);
+			}
+			if($scope.welcome.contactPhone !=null){
+				formData.append('contactPhone',$scope.welcome.contactPhone);
+			}
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}

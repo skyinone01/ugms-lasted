@@ -74,7 +74,7 @@
                                 <div class="col-sm-9">
                                     <input type="number" name="weight"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.weight"
                                            placeholder="整数..." required>
-                                    <span ng-show="myForm.weight.$error.required" style="color:red" >权重是必须的</span>
+                                    <!--<span ng-show="myForm.weight.$error.required" style="color:red" >权重是必须的</span>-->
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                 <div class="col-sm-9">
                                     <input type="text" name="contactName"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.contactName"
                                            placeholder="联系人..." required>
-                                    <span ng-show="myForm.contactName.$error.required" style="color:red" >联系人是必须的</span>
+                                    <!--<span ng-show="myForm.contactName.$error.required" style="color:red" >联系人是必须的</span>-->
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                                 <div class="col-sm-9">
                                     <input type="text" name="contactphone"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.contactPhone"
                                            placeholder="联系人..." required>
-                                    <span ng-show="myForm.contactphone.$error.required" style="color:red" >联系电话是必须的</span>
+                                    <!--<span ng-show="myForm.contactphone.$error.required" style="color:red" >联系电话是必须的</span>-->
                                 </div>
                             </div>
                         </div>
@@ -223,9 +223,6 @@
                             myForm.date.$error.required||
                             myForm.enddate.$error.required||
                             myForm.content.$error.required||
-                            myForm.weight.$error.required||
-                            myForm.contactName.$error.required||
-                            myForm.contactphone.$error.required||
                             myForm.type.$error.required||
                             (showApply() && myForm.apply.$error.required)||
                             myForm.picmark.$error.required">提交</button>

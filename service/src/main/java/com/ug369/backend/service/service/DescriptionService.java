@@ -62,8 +62,10 @@ public class DescriptionService {
             one = new Explain();
         }
 
-        if (request.getStatus()!=null ){
+        if (request.getStatus()!=null &&(request.getStatus()==2 || request.getStatus()==3)){
             one.setStatus(request.getStatus());
+            one.setApplydetail(request.getApplyDetail());
+            one.setApplypeople(request.getApplyPeople());
         }else{
             one.setStatus(1);
         }
@@ -76,7 +78,7 @@ public class DescriptionService {
         if (request.getType()!=null){
             one.setType(request.getType());
         }
-        if (request.getUseable()!=null && request.getUseable()==false){
+        if (request.getUseable()==null && request.getUseable()==false){
             one.setUseable(false);
         }else {
             one.setUseable(true);

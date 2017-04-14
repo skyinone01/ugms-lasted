@@ -60,8 +60,12 @@ public class MessageHelpShareService {
             one.setCreateDate(new Date());
             one.setUserId(request.getUserId());
         }
-        if (request.getStatus()!=null){
+        if (request.getStatus()!=null&& (request.getStatus()==2 || request.getStatus()==3)){
             one.setStatus(request.getStatus());
+            one.setApplydetail(request.getApplyDetail());
+            one.setApplypeople(request.getApplyPeople());
+        }else {
+            one.setStatus(1);
         }
 
         if (!StringUtils.isEmpty(request.getContext())){

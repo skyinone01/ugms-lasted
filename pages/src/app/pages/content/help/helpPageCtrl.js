@@ -23,15 +23,27 @@
         }
 		$scope.listItem();
 
-        $scope.showButton = function(index,name){
-            if(name == 'edit'){
-                var s = $scope.items[index].status;
-                if(s==4 || s==5){
-                    return false;
-                }
-            }
-            return true;
-        }
+		$scope.showButton = function(index,name){
+			if(name == 'edit'){
+				var s = $scope.items[index].status;
+				if(s==4){
+					return false;
+				}
+			}
+			if(name == 'delete'){
+				var s = $scope.items[index].status;
+				if(s==4 ){
+					return false;
+				}
+			}
+			if(name == 'operate'){
+				var s = $scope.items[index].status;
+				if(s==3){
+					return false;
+				}
+			}
+			return true;
+		}
 
 		$scope.deleteOne = function(id){
 			var result = confirm('确认删除！');
