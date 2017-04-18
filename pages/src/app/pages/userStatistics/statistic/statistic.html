@@ -103,19 +103,38 @@
             <uib-tab heading="UV(用户统计)">
                 <div class="col-lg-12 col-md-12 col-sm-12"
                      ba-panel
-                     ba-panel-title='<div class="row"><div class="col-xs-9">UV(用户统计)</div><div class="col-xs-3"><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-success">年</button><button type="button" class="btn btn-success">月</button><button type="button" class="btn btn-success">日</button></div></div></div>'>
+                     ba-panel-title='<div class="row"><div class="col-xs-9">UV(用户统计)</div>
+                     <div class="col-xs-3">
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                     <button type="button" class="btn btn-success">年</button>
+                     <button type="button" class="btn btn-success">月</button>
+                     <button type="button" class="btn btn-success">日</button>
+                     </div></div></div>'>
                     <dashboard-uv></dashboard-uv>
                 </div>
             </uib-tab>
             <uib-tab heading="用户机型统计">
                 <div class="col-lg-12 col-md-12 col-sm-12"
                      ba-panel
-                     ba-panel-title='<div class="row"><div class="col-xs-9">用户机型统计</div><div class="col-xs-3"><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-success">年</button><button type="button" class="btn btn-success">月</button><button type="button" class="btn btn-success">日</button></div></div></div>'>
-                    <div class="col-xs-6">
-                        <dashboard-device-pie></dashboard-device-pie>
+                     ba-panel-title='<div class="row"><div class="col-xs-9">用户机型统计</div>
+                     <div class="col-xs-3" ng-class="{&apos;hidden&apos;:$root.isDeviceBackShow}">
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isDeviceYear}" ng-click="deviceDetail(1,$event)">年</button>
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isDeviceMonth}" ng-click="deviceDetail(2,$event)">月</button>
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isDeviceDay}" ng-click="deviceDetail(3,$event)">日</button>
+                     </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isDeviceBackHidden}">
+                     <button type="button" class="btn btn-primary"  ng-click="deviceBack($event)">返回</button></div></div>'>
+                     <div class="col-xs-12 row" ng-class="{'hidden':isDashoardDeviceShow}">
+                    	<div class="col-xs-6">
+                        	<dashboard-device-pie></dashboard-device-pie>
+                    	</div>
+	                    <div class="col-xs-6">
+	                        <dashboard-device></dashboard-device>
+	                    </div>
                     </div>
-                    <div class="col-xs-6">
-                        <dashboard-device></dashboard-device>
+                    
+                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardDeviceTypeShow}">
+                        <dashboard-device-type>{{$root.deviceType}}</dashboard-device-type>
                     </div>
                 </div>
             </uib-tab>

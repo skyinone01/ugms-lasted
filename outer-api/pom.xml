@@ -79,6 +79,47 @@
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
+        
+        <dependency>
+	      <groupId>com.cloopen</groupId>
+	      <artifactId>rest-sdk</artifactId>
+	      <version>2.7</version>
+	      <scope>system</scope>
+	      <systemPath>E:/jar/CCP_REST_SDK_JAVA_v2.7r.jar</systemPath>
+	    </dependency>
+	    
+	    <dependency>
+	      <groupId>org.apache.poi</groupId>
+	      <artifactId>poi</artifactId>
+	      <version>3.15</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.apache.poi</groupId>
+	      <artifactId>poi-ooxml</artifactId>
+	      <version>3.15</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.github.virtuald</groupId>
+	      <artifactId>curvesapi</artifactId>
+	      <version>1.04</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.apache.poi</groupId>
+	      <artifactId>poi-ooxml-schemas</artifactId>
+	      <version>3.15</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.apache.poi</groupId>
+	      <artifactId>poi-scratchpad</artifactId>
+	      <version>3.15</version>
+	    </dependency>
+	      <dependency>
+	          <groupId>org.apache.commons</groupId>
+	          <artifactId>commons-collections4</artifactId>
+	          <version>RELEASE</version>
+	      </dependency>
+	    
+        
     </dependencies>
 
     <build>

@@ -98,6 +98,33 @@ public class StatisticsController {
         List<UserCountStatistics> countryList = service.selectCountDay(dateMap);
         return new DataResponse(countryList);
     }
+    
+    @RequestMapping("/statistic/pv-count-year")
+    public DataResponse<UserCountStatistics> selectPvCountYear(String startDate,String endDate) {
+        Map dateMap = new HashMap();
+        dateMap.put("startDate",startDate);
+        dateMap.put("endDate",endDate);
+        List<UserCountStatistics> countryList = service.selectPvCountYear(dateMap);
+        return new DataResponse(countryList);
+    }
+
+    @RequestMapping("/statistic/pv-count-month")
+    public DataResponse<UserCountStatistics> selectPvCountMonth(String startDate,String endDate) {
+        Map dateMap = new HashMap();
+        dateMap.put("startDate",startDate);
+        dateMap.put("endDate",endDate);
+        List<UserCountStatistics> countryList = service.selectPvCountMonth(dateMap);
+        return new DataResponse(countryList);
+    }
+
+    @RequestMapping("/statistic/pv-count-day")
+    public DataResponse<UserCountStatistics> selectPvCountDay(String startDate,String endDate) {
+        Map dateMap = new HashMap();
+        dateMap.put("startDate",startDate);
+        dateMap.put("endDate",endDate);
+        List<UserCountStatistics> countryList = service.selectPvCountDay(dateMap);
+        return new DataResponse(countryList);
+    }
 
     @RequestMapping("/statistic/device")
     public DataResponse<UserDeviceStatistics> selectDevice() {

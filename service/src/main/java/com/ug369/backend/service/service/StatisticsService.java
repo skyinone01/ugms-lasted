@@ -45,6 +45,18 @@ public class StatisticsService {
     public List<UserCountStatistics> selectCountDay(Map dateMap) {
         return statisticsRepository.getData("Statistics.selectUserCountDay", dateMap);
     }
+    
+    public List<UserCountStatistics> selectPvCountYear(Map dateMap) {
+        return statisticsRepository.getData("Statistics.selectPvCountYear", dateMap);
+    }
+
+    public List<UserCountStatistics> selectPvCountMonth(Map dateMap) {
+        return statisticsRepository.getData("Statistics.selectPvCountMonth", dateMap);
+    }
+
+    public List<UserCountStatistics> selectPvCountDay(Map dateMap) {
+        return statisticsRepository.getData("Statistics.selectPvCountDay", dateMap);
+    }
 
     public List<UserDeviceStatistics> selectDevice() {
         return statisticsRepository.getData("Statistics.selectDevice", null);

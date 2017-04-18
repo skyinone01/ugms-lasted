@@ -195,6 +195,39 @@
         count DESC
         limit 20
     </select>
+    
+    <!--pv 年-->
+    <select id="selectPvCountYear" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT COUNT(1) AS COUNT , IFNULL(DATE_FORMAT( u.createTime , '%Y%m'), '其他') AS TYPE
+        FROM yg_sys_uservisitlog u 
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            where createTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY DATE_FORMAT( u.createTime , '%Y%m')
+        ORDER BY createTime ASC
+    </select>
+    
+    <!--pv 月-->
+    <select id="selectPvCountMonth" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT COUNT(1) AS COUNT , IFNULL(DATE_FORMAT( u.createTime , '%Y%m%d'), '其他') AS TYPE
+        FROM yg_sys_uservisitlog u 
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            where createTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY DATE_FORMAT( u.createTime , '%Y%m%d')
+        ORDER BY createTime ASC
+    </select>
+    
+    <!--pv 日-->
+    <select id="selectPvCountDay" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT COUNT(1) AS COUNT , IFNULL(DATE_FORMAT( u.createTime , '%Y%m%d%h'), '其他') AS TYPE
+        FROM yg_sys_uservisitlog u 
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            where createTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY DATE_FORMAT( u.createTime , '%Y%m%d%h')
+        ORDER BY createTime ASC
+    </select>
 
     <!--性别-->
     <select id="selectSex" resultMap="SexMap">
@@ -207,7 +240,18 @@
         group by user_sex
     </select>
 
-    <!--月-->
+	<!--年龄 年-->
+    <select id="selectUserCountYear" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m') as type
+        from yg_user_info u
+        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        </if>
+        GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m')
+        ORDER BY userCreateTime asc;
+    </select>
+    
+    <!--年龄 月-->
     <select id="selectUserCountMonth" parameterType="hashmap" resultMap="UserCountMap">
         SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m%d') as type
         from yg_user_info u
@@ -218,18 +262,7 @@
         ORDER BY userCreateTime asc;
     </select>
 
-    <!--年-->
-    <select id="selectUserCountYear" parameterType="hashmap" resultMap="UserCountMap">
-        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m') as type
-        from yg_user_info u
-        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
-            where userCreateTime BETWEEN #{startDate} AND #{endDate}
-        </if>
-        GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m')
-        ORDER BY userCreateTime asc;
-    </select>
-
-    <!--年-->
+    <!--年龄 日-->
     <select id="selectUserCountDay" parameterType="hashmap" resultMap="UserCountMap">
         SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m%d%h') as type
         from yg_user_info u

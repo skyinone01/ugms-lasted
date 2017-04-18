@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Basic">
+
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.request.BasicRequest">
+        SELECT
+        u.user_id as userId,
+        u.user_name as userName,
+        IF(u.useable IS NULL, 1, u.useable) AS useable,
+        (IF(b.deviceType = 0, 'IOS', IF(b.deviceType = 1, 'Android', IF(b.deviceType = 2, '微信', b.deviceType)))) AS deviceType,
+        (IF(u.user_name IS NOT NULL, '用户名', IF(u.user_mobile IS NOT NULL, '手机号', '第三方'))) AS accountType,
+        u.user_mobile as userMobile
+        FROM yg_user_info u
+        LEFT JOIN yg_user_base_info b ON b.user_id = u.user_id
+        LEFT JOIN user_health uh ON uh.user_id = u.user_id
+        where 1=1
+        <if test="userName != null">
+        	and u.user_name like CONCAT('%', #{userName}, '%')
+        </if>
+        ORDER BY u.add_time DESC
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM yg_user_info u
+        LEFT JOIN yg_user_base_info b ON b.user_id = u.user_id
+        LEFT JOIN user_health uh ON uh.user_id = u.user_id
+        where 1=1
+        <if test="userName != null">
+        	and u.user_name like CONCAT('%', #{userName}, '%')
+        </if>
+    </select>
+    
+    <select id="findOne" resultType="com.ug369.backend.bean.bean.request.BasicRequest" parameterType="java.lang.Long">
+        SELECT u.`user_id` AS userId, u.`user_name` AS username, u.`user_mobile` AS userMobile, 
+        	ub.`user_sex` AS userSex, ub.`user_birthday` AS userBirthday, uh.`user_height` AS userHeight, 
+        	uh.`user_sleep` AS userSleep, uh.`user_experience` AS userExperience, u.`userCreateTime` AS userCreateTime 
+        FROM yg_user_info u, yg_user_base_info ub, user_health uh 
+        WHERE u.`user_id` = ub.`user_id` 
+        AND u.`user_id` = uh.`user_id`
+        and u.user_id = #{userId}
+    </select>
+    
+    <update id="updateU" parameterType="com.ug369.backend.bean.bean.request.BasicRequest" >
+	    update yg_user_info t
+	    <set >
+	    	t.user_id = #{userId},
+	      <if test="userName != null" >
+	        t.user_name = #{userName},
+	      </if>
+	      <if test="userMobile != null" >
+	        t.user_mobile = #{userMobile},
+	      </if>
+	      <if test="userPwd != null" >
+	        t.user_pwd = #{userPwd},
+	      </if>
+	    </set>
+	    where t.user_id = #{userId}
+  	</update>
+  	
+  	<update id="updateUb" parameterType="com.ug369.backend.bean.bean.request.BasicRequest" >
+	    update yg_user_base_info t
+	    <set >
+	    	t.user_id = #{userId},
+	      <if test="userSex != null" >
+	        t.user_sex = #{userSex},
+	      </if>
+	      <if test="userBirthday != null" >
+	        t.user_birthday = #{userBirthday},
+	      </if>
+	    </set>
+	    where t.user_id = #{userId}
+  	</update>
+  	
+  	<update id="updateUh" parameterType="com.ug369.backend.bean.bean.request.BasicRequest" >
+	    update user_health t
+	    <set >
+	    	t.user_id = #{userId},
+	      <if test="userHeight != null" >
+	        t.user_height = #{userHeight},
+	      </if>
+	      <if test="userSleep != null" >
+	        t.user_sleep = #{userSleep},
+	      </if>
+	      <if test="userExperience != null" >
+	        t.user_experience = #{userExperience},
+	      </if>
+	    </set>
+	    where t.user_id = #{userId}
+  	</update>
+	
+	<update id="updateStatus" parameterType="com.ug369.backend.bean.bean.request.BasicRequest" >
+	    update yg_user_info  t
+	    <set >
+	      <if test="useable != null" >
+	        t.useable = #{useable},
+	      </if>
+	    </set>
+	    where t.user_id = #{userId}
+  	</update>
+  	
+  	
+  	<select id="statsExportUsers" resultType="java.util.Map" parameterType="java.util.Map">
+        SELECT
+		  t2.userId,
+		  t2.userName,
+		  IFNULL(ROUND(t2.tuday - t2.userAge), 0) AS userAge,
+		  IF(t2.userGender = 1, '男', '女') AS userGender,
+		  t2.userPhone,
+		  t2.terminal,
+		  SUM(t2.online_time) AS onlineTime,
+		  t2.userCity,
+		  t2.userCreateTime
+		FROM
+		  (SELECT
+		    t.userId,
+		    u.user_name AS userName,
+		    u.user_mobile AS userPhone,
+		    bs.user_birthday,
+		    CAST(
+		      SUBSTRING(bs.user_birthday, 1, 4) AS SIGNED
+		    ) AS userAge,
+		    CAST(
+		      DATE_FORMAT(SYSDATE(), '%Y') AS SIGNED
+		    ) AS tuday,
+		    bs.user_sex AS userGender,
+		    bs.user_city AS userCity,
+		    u.userCreateTime,
+		    IF (
+		      bs.deviceType IS NULL
+		      OR bs.deviceType = 0,
+		      'IOS',
+		      'Android'
+		    ) AS terminal,
+		    ROUND((t.quitTime - t.loginTime) / 60) AS online_time
+		  FROM
+		    (SELECT
+		      uv.userId,
+		      UNIX_TIMESTAMP(uv.loginDate) AS loginTime,
+		      UNIX_TIMESTAMP(uv.quitDate) AS quitTime
+		    FROM
+		      yg_sys_uservisitlog uv
+		    WHERE 1 = 1
+		      AND uv.logType = 'activeUser'
+		      AND uv.loginDate IS NOT NULL
+		      AND uv.quitDate IS NOT NULL
+		      AND uv.userId IS NOT NULL) t
+		    LEFT JOIN `yg_user_info` u
+		      ON u.user_id = t.userId
+		    LEFT JOIN yg_user_base_info bs
+		      ON bs.user_id = u.user_id
+		  WHERE 1 = 1
+  		<if test="startDate != null and endDate != null">
+            AND u.userCreateTime BETWEEN STR_TO_DATE(#{startDate},'%Y-%m-%d %H:%i:%s') 
+            AND  STR_TO_DATE(#{endDate},'%Y-%m-%d %H:%i:%s')
+        </if>
+        <if test="userName != null">
+            AND u.user_name like CONCAT('%', #{userName}, '%')
+        </if>
+   	) t2
+	GROUP BY t2.userId;
+
+    </select>
+  	
+  	
+  	
+  	
+</mapper>

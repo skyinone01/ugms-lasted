@@ -5,12 +5,12 @@
 (function () {
 	'use strict';
 	angular.module('BlurAdmin.pages.dashboard')
-		.controller('DashboardPvTypeCtrl', DashboardPvTypeCtrl);
+		.controller('DashboardDeviceTypeCtrl', DashboardDeviceTypeCtrl);
 
 	/** @ngInject */
-	function DashboardPvTypeCtrl(baConfig, layoutPaths,$scope,$rootScope,appBase) {
+	function DashboardDeviceTypeCtrl(baConfig, layoutPaths,$scope,$rootScope,appBase) {
 		var layoutColors = baConfig.colors;
-		var pvdatas = [];
+		var deviceDatas = [];
 		var apiPath = 'http://localhost:8080';
 		function getData(bdate,edate) {
 			debugger;
@@ -18,55 +18,17 @@
 			appBase.doGet('statistic/module',param, function (response) {
 			console.log(response.data);
 			response.data.forEach(function (value, index, array) {
-				pvdatas.push({
+				deviceDatas.push({
 					country: value.type,
 					visits: value.count,
 					color: layoutColors.primary
 				})
 			});
-			/*datas = [
-				{
-					country: '30岁以下',
-					visits: response.data[0],
-					color: layoutColors.primary
-				},
-				{
-					country: '30-40岁',
-					visits: response.data[1],
-					color: layoutColors.danger
-
-				},
-				{
-					country: '40-50岁',
-					visits: response.data[2],
-					color: layoutColors.info
-				},
-				{
-					country: '50-60岁',
-					visits: response.data[3],
-					color: layoutColors.success
-				},
-				{
-					country: '60-70岁',
-					visits: response.data[4],
-					color: layoutColors.warning
-				},
-				{
-					country: '70-80岁',
-					visits: response.data[5],
-					color: layoutColors.primaryLight
-				},
-				{
-					country: '80岁以上',
-					visits: response.data[6],
-					color: layoutColors.danger
-				}
-			];*/
-			var map = AmCharts.makeChart('barPvChart', {
+			var map = AmCharts.makeChart('barDeviceChart', {
 				type: 'serial',
 				theme: 'blur',
 				color: layoutColors.defaultText,
-				dataProvider: pvdatas,
+				dataProvider: deviceDatas,
 				startDuration: 1,
 				graphs: [
 					{
@@ -102,11 +64,11 @@
 		function getDataByType(type,bdate,edate) {
 			var getPath='statistic';
 			if(type==1){
-				getPath=getPath+"/pv-count-year"
+				//getPath=getPath+"/device-count-year"
 			}else if(type==2){
-				getPath=getPath+"/pv-count-month"
+				//getPath=getPath+"/device-count-month"
 			}else if(type==3){
-				getPath=getPath+"/pv-count-day"
+				//getPath=getPath+"/device-count-day"
 			}else{
 				getPath=getPath+"/pv-count-year"
 			}
@@ -120,7 +82,7 @@
 						color: layoutColors.primary
 					})
 				});
-				var map = AmCharts.makeChart('barPvChart', {
+				var map = AmCharts.makeChart('barDeviceChart', {
 					type: 'serial',
 					theme: 'blur',
 					color: layoutColors.defaultText,
@@ -161,26 +123,26 @@
 
 		function handleClick(event)
 		{
-			$rootScope.isPvBackShow=true;
-			$rootScope.isPvBackHidden=false;
+			$rootScope.isDeviceBackShow=true;
+			$rootScope.isDeviceBackHidden=false;
 			$scope.$apply();
 			var bdate=typeof($rootScope.startDate)!="undefined"?new moment($rootScope.startDate).format('YYYYMMDD'):""
 			var edate=typeof($rootScope.endDate)!="undefined"?new moment($rootScope.endDate).format('YYYYMMDD'):""
-			//if($scope.PvValue==3){
+			//if($scope.DeviceValue==3){
 			//	if(bdate!="")bdate=bdate+""+event.item.category.substring(0,2);
 			//	if(edate!="")edate=edate+""+event.item.category.substring(0,2);
 			//}
-			if($scope.PvValue==1) {
+			if($scope.DeviceValue==1) {
 				var tmpbdate = event.item.category+""+"01";
 				var tmpedate = event.item.category+""+"31";
 			}
-			if($scope.PvValue==2) {
+			if($scope.DeviceValue==2) {
 				var tmpbdate = event.item.category+""+"000000";
 				var tmpedate = event.item.category+""+"235959";
 				bdate=bdate+""+"000000";
 				edate=edate+""+"235959";
 			}
-			if($scope.PvValue==3) {
+			if($scope.DeviceValue==3) {
 				var tmpbdate = event.item.category+""+"0000";
 				var tmpedate = event.item.category+""+"5959";
 				bdate=bdate+""+"000000";
@@ -189,17 +151,17 @@
 			if(bdate<tmpbdate)bdate=tmpbdate;
 			if(edate>tmpedate)edate=tmpedate;
 			getData(bdate,edate);
-			//alert($scope.PvValue);
-			//$scope.PvValue=2;
-			//alert($scope.PvValue);
+			//alert($scope.DeviceValue);
+			//$scope.DeviceValue=2;
+			//alert($scope.DeviceValue);
 
 		}
 
-		$scope.$watch('PvValue',function () {
-			if($scope.PvValue!=0) {
-				getDataByType($scope.PvValue, typeof($rootScope.startDate) != "undefined" ? new moment($rootScope.startDate).format('YYYYMMDD') : "", typeof($rootScope.endDate) != "undefined" ? new moment($rootScope.endDate).format('YYYYMMDD') : "");
+		$scope.$watch('DeviceValue',function () {
+			if($scope.DeviceValue!=0) {
+				getDataByType($scope.DeviceValue, typeof($rootScope.startDate) != "undefined" ? new moment($rootScope.startDate).format('YYYYMMDD') : "", typeof($rootScope.endDate) != "undefined" ? new moment($rootScope.endDate).format('YYYYMMDD') : "");
 			}else{
-				getDataByType($rootScope.pvType, typeof($rootScope.startDate) != "undefined" ? new moment($rootScope.startDate).format('YYYYMMDD') : "", typeof($rootScope.endDate) != "undefined" ? new moment($rootScope.endDate).format('YYYYMMDD') : "");
+				getDataByType($rootScope.DeviceType, typeof($rootScope.startDate) != "undefined" ? new moment($rootScope.startDate).format('YYYYMMDD') : "", typeof($rootScope.endDate) != "undefined" ? new moment($rootScope.endDate).format('YYYYMMDD') : "");
 			}
 		},true);
 	}
