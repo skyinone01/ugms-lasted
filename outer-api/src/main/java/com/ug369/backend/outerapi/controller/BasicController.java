@@ -166,7 +166,7 @@ public class BasicController {
             
             HSSFWorkbook wb = ExcelUtils.getHSSFWorkbook(sheetName, title, values, null);
             fileName = new String(fileName.getBytes(),"GBK"); 
-    		response.setContentType("application/vnd.ms-excel;charset=UTF-8");  /*new String("用户统计数据.xls".getBytes("gb2312"),"ISO8859-1"))*/
+    		response.setContentType("application/vnd.ms-excel;charset=UTF-8");
             response.setHeader("Content-Disposition", "attachment;filename="+new String("用户统计数据.xls".getBytes("gb2312"),"ISO8859-1"));  
             OutputStream os = response.getOutputStream();
     		wb.write(os);
