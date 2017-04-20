@@ -4,15 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.ug369.backend.bean.base.request.PageRequest;
-import com.ug369.backend.bean.base.request.WebUser;
-//import com.github.pagehelper.PageHelper;
-//import com.github.pagehelper.PageInfo;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
-import com.ug369.backend.outerapi.annotation.UserInjected;
-import com.ug369.backend.service.entity.mysql.Content;
 import com.ug369.backend.service.entity.mysql.Instructions;
 import com.ug369.backend.service.entity.mysql.InstructionsXH;
 import com.ug369.backend.service.service.InstructionsService;
@@ -26,7 +21,7 @@ public class InstructionsController {
     private InstructionsService instructionsService;
 
     @RequestMapping(value = "/instructions", method = RequestMethod.GET)
-    public PagedDataResponse<InstructionsXH> welcome(@PageDefault PageRequest pageRequest) {
+    public PagedDataResponse<InstructionsXH> instructions(@PageDefault PageRequest pageRequest) {
         PagedResult<InstructionsXH> users = instructionsService.selectXH(pageRequest);
 
         return PagedDataResponse.of(users);

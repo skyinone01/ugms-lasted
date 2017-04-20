@@ -33,17 +33,8 @@ import java.util.Map;
 @RestController
 public class BasicController {
 	
-	@Autowired
-    private BannerAdvertisementService bannerAdvertisementService;
-
     @Autowired
     private BasicService basicService;
-
-    @Value("${ugms.static.file.path}")
-    private String filePath;
-
-    @Value("${ugms.static.url}")
-    private String staticUrl;
 
     /**
      * basic页列表列表
@@ -59,7 +50,7 @@ public class BasicController {
      * 详情
      */
     @RequestMapping(value = "/basic/{userId}", method = RequestMethod.GET)
-    public DataResponse<BasicRequest> welcomeOne(@PathVariable("userId") long userId) {
+    public DataResponse<BasicRequest> basicOne(@PathVariable("userId") long userId) {
 
     	BasicRequest response = basicService.findOne(userId);
         return new DataResponse<>(response);
