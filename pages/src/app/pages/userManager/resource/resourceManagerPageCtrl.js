@@ -15,7 +15,8 @@
         $scope.update = [];
 
         $scope.listResource=function(){
-            appBase.doGet("resources",null,function(ret){
+            var param = "page="+1+"&perPage="+50;
+            appBase.doGet("resources?"+param,null,function(ret){
                  $scope.resources = ret.data.items;
                  $scope.update = ret.data.items.slice(0);
             })

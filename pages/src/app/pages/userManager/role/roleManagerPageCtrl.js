@@ -129,12 +129,12 @@
         };
     }
 
-    function RoleResourceCtrl($scope,$uibModal,$uibModalInstance,roles,index,appBase) {
+    function RoleResourceCtrl($scope,roles,index,appBase) {
 
         $scope.visible = [{'value':'true','text':'true'},{'value':'false','text':'false'}]
 
         $scope.items=[];
-        appBase.doGet("role/resources/?rid="+roles[index].id,null,function(ret){
+        appBase.doGet("role/resources/?rid="+roles[index].id+"&perPage=50",null,function(ret){
             $scope.items = ret.data.items;
         })
 

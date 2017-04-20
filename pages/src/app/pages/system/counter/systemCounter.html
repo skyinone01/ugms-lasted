@@ -1,0 +1,52 @@
+<div  class="panel-content">
+
+  <div class="form-group row clearfix datepicker">
+    <label class="col-sm-3 control-label" style="font-size: 15px;margin-top: 10px">查询日期</label>
+
+    <div class="col-sm-9" ng-controller="datePickerPopupCtrl" style="width:15%;margin-left: -350px">
+      <p class="input-group">
+        <input type="text" id="data_id" name="date1" ng-change="setDate()"  ng-show="false" class="form-control"
+               uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="date"
+               is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+               show-button-bar="false" readonly required/>
+        <input type="text" id="data_date" name="date" ng-disabled="true" ng-model="realDate" class="form-control"
+               ng-required="true" readonly required/>
+        <span class="input-group-btn">
+          <button type="button"  class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+        </span>
+
+      </p>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <h2>CPU使用情况(百分比)</h2>
+  </div>
+  <div id="cpu"></div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <h2>内存使用情况(单位Gb) 总量:{{tmemory}}Gb</h2>
+  </div>
+  <div id="memory"></div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <h2>磁盘使用情况(单位Gb) 总量:{{tstorage}}Gb</h2>
+  </div>
+  <div id="storage"></div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <h2>网络带宽使用情况(单位Kb/s) 总带宽:{{tnetwork}}Mb/s</h2>
+  </div>
+  <div id="network"></div>
+</div>
