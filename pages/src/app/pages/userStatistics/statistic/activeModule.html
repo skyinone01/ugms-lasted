@@ -1,0 +1,47 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+            <em class="ion-ios-close-empty sn-link-close"></em>
+        </button>
+    </div>
+    <form name="myForm" novalidate>
+
+    <div ba-panel style="margin-top: 10px">
+
+
+    <table class="table " st-table="smartTableData">
+
+        <thead>
+        <tr class="primary">
+
+            <td></td>
+            <td>活跃模块</td>
+            <td>访问次数</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in items">
+            <td class="table-id">
+                {{$index+1}}
+                <!-- <span style="display: none"   e-name="id"  e-required>
+                              {{ item.userId || '0' }}
+                </span> -->
+            </td>
+            <td>{{item.type}}</td>
+            <td>{{item.count}}次</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td colspan="8" class="text-center">
+                <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                {{page}}/{{totalPage}}
+                <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+    </form>
+</div>

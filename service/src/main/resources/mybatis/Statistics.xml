@@ -333,4 +333,178 @@
         ORDER BY
             type ASC
     </select>
+    
+    <!-- 用户姓别统计 -->
+    <select id="userSexSts" resultType="java.util.Map">
+        SELECT t1.users, if(t1.userSex = 1, '男', if(t1.userSex = 2, '女', t1.userSex)) as userSex from (
+            SELECT
+              if(bs.user_sex is null, '未知', bs.user_sex) as userSex,
+              count(1) as users
+            from yg_user_info u
+            LEFT JOIN yg_user_base_info bs on bs.user_id = u.user_id
+            WHERE 1=1
+              <if test="null != startDate and null != endDate">
+                  AND u.userCreateTime BETWEEN DATE_FORMAT(#{startDate}, '%Y-%m-%d') AND DATE_FORMAT(#{endDate}, '%Y-%m-%d')
+              </if>
+            GROUP BY bs.user_sex
+        )t1;
+    </select>
+    
+    <!-- 用户年龄统计 -->
+    <select id="userAgeSts" resultType="java.util.Map">
+        SELECT
+            SUM(t3.users) as users,
+                if(t3.userAge BETWEEN 0  and 30, '30岁以下',
+                if(t3.userAge BETWEEN 30 and 40, '30~40岁',
+                if(t3.userAge BETWEEN 40 and 50, '40~50岁',
+                if(t3.userAge BETWEEN 50 and 60, '50~60岁',
+                if(t3.userAge BETWEEN 60 and 70, '60~70岁',
+                if(t3.userAge BETWEEN 70 and 80, '70~80岁', '80以上'))))))
+            as userAgeRange
+        from (
+            SELECT (t2.tuday - t2.birthday) as userAge, t2.users from (
+                SELECT
+                    CAST(SUBSTRING(bs.user_birthday , 1, 4) AS SIGNED) AS birthday,
+                    count(1) as users,
+                    CAST(DATE_FORMAT(SYSDATE(), '%Y') AS SIGNED) AS tuday
+                from yg_user_info u
+                LEFT JOIN yg_user_base_info bs on bs.user_id = u.user_id
+                WHERE 1=1
+                  <if test="null != startDate and null != endDate">
+                      AND u.userCreateTime BETWEEN DATE_FORMAT(#{startDate}, '%Y-%m-%d') AND DATE_FORMAT(#{endDate}, '%Y-%m-%d')
+                  </if>
+
+                GROUP BY birthday
+            )t2
+        )t3 GROUP BY userAgeRange;
+    </select>
+    
+    <!-- 新增用户统计 -->
+    <select id="userAddSts" resultType="java.util.Map">
+        SELECT
+            count(1) as users,
+            DATE_FORMAT(u.userCreateTime, '%Y年%m月%d日') as createTime
+        from yg_user_info u
+        WHERE 1=1
+            <if test="null != startDate and null != endDate">
+                AND u.userCreateTime BETWEEN DATE_FORMAT(#{startDate}, '%Y-%m-%d') AND DATE_FORMAT(#{endDate}, '%Y-%m-%d')
+            </if>
+        GROUP BY createTime
+        ORDER BY createTime asc;
+    </select>
+    
+    <!-- 模块访问 -->
+    <select id="moduleAccSts" resultType="java.util.Map">
+        SELECT
+            count(1) as accCounts,
+            uv.moduleName as moduleName
+        from yg_sys_uservisitlog uv
+        WHERE 1=1
+            AND uv.logType = 'moduleStats'
+            <if test="null != startDate and null != endDate">
+                AND uv.createTime BETWEEN DATE_FORMAT(#{startDate}, '%Y-%m-%d') AND DATE_FORMAT(#{endDate}, '%Y-%m-%d')
+            </if>
+        GROUP BY moduleName;
+    </select>
+    
+    <!-- 终端分布统计 -->
+    <select id="terminalRangSts" resultType="java.util.Map">
+        SELECT
+            count(1) as users,
+            if(bs.model_number is null or bs.model_number = '', '未知', bs.model_number) as modelNumber
+        from yg_user_info u
+        LEFT JOIN yg_user_base_info bs on bs.user_id = u.user_id
+        WHERE 1=1
+            <if test="null != startDate and null != endDate">
+                AND u.userCreateTime BETWEEN DATE_FORMAT(#{startDate}, '%Y-%m-%d') AND DATE_FORMAT(#{endDate}, '%Y-%m-%d')
+            </if>
+        GROUP BY modelNumber;
+    </select>
+    
+   	 <!-- 更多活跃用户 -->
+    <select id="statsActiveUsers" resultMap="UserMap">
+    SELECT * from (
+        SELECT
+        count(1) count ,
+        b.user_name type
+        FROM
+        yg_sys_uservisitlog a
+        LEFT OUTER JOIN yg_user_info b ON a.userId = b.user_id
+        where b.user_name is not null
+        GROUP BY
+        a.userId
+        order by count desc
+        limit 100) b
+    </select>
+    
+    <select id="getActiveUsersCount" resultType="int">
+        SELECT count(1) from (
+        SELECT
+        count(1) count ,
+        b.user_name type
+        FROM
+        yg_sys_uservisitlog a
+        LEFT OUTER JOIN yg_user_info b ON a.userId = b.user_id
+        where b.user_name is not null
+        GROUP BY
+        a.userId
+        order by count desc
+        limit 100) b
+    </select>
+    
+   	<!--  更多活跃机型 -->
+    <select id="statsActiveDevices" resultMap="UserMap">
+        SELECT
+            model_number type ,
+            count(1) count
+        FROM
+            yg_user_base_info
+        WHERE
+            model_number IS NOT NULL
+        GROUP BY
+            model_number
+        ORDER BY
+            count DESC
+    </select>
+    
+    <select id="getActiveDevicesCount" resultType="int">
+        SELECT count(1) from (
+        SELECT
+            model_number type ,
+            count(1) count
+        FROM
+            yg_user_base_info
+        WHERE
+            model_number IS NOT NULL
+        GROUP BY
+            model_number
+        ORDER BY
+            count DESC) b
+    </select>
+    
+    <!-- 更多活跃模块 -->
+    <select id="statsActiveModules" resultMap="UserMap">
+        SELECT
+        count(1) count ,
+        moduleName type
+        FROM
+        yg_sys_uservisitlog a
+        where moduleName is not null
+        GROUP BY
+        moduleName
+        order by count desc
+    </select>
+    
+    <select id="getActiveModulesCount" resultType="int">
+        SELECT count(1) from (
+        SELECT
+        count(1) count ,
+        moduleName type
+        FROM
+        yg_sys_uservisitlog a
+        where moduleName is not null
+        GROUP BY
+        moduleName
+        order by count desc) b
+    </select>
 </mapper>

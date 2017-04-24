@@ -1,10 +1,19 @@
 package com.ug369.backend.outerapi.controller;
 
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.ug369.backend.bean.base.request.PageRequest;
 import com.ug369.backend.bean.base.response.DataResponse;
+import com.ug369.backend.bean.base.response.PagedDataResponse;
+import com.ug369.backend.bean.bean.request.BasicRequest;
+import com.ug369.backend.bean.result.PagedResult;
+import com.ug369.backend.outerapi.annotation.PageDefault;
 import com.ug369.backend.service.entity.mysql.Statistics;
 import com.ug369.backend.service.entity.mysql.TotalStatistics;
 import com.ug369.backend.service.entity.mysql.UserAgeStatistics;
@@ -12,11 +21,24 @@ import com.ug369.backend.service.entity.mysql.UserCountStatistics;
 import com.ug369.backend.service.entity.mysql.UserDeviceStatistics;
 import com.ug369.backend.service.entity.mysql.UserModuleStatistics;
 import com.ug369.backend.service.entity.mysql.UserSexStatistics;
+import com.ug369.backend.service.repository.rdbsupport.domain.UserImportTemplete;
 import com.ug369.backend.service.service.StatisticsService;
 
+import java.io.File;
+import java.io.OutputStream;
+import java.text.Collator;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 public class StatisticsController {
@@ -167,6 +189,109 @@ public class StatisticsController {
     public DataResponse<UserCountStatistics> selectUv() {
         List<UserCountStatistics> countryList = service.selectUv();
         return new DataResponse(countryList);
+    }
+    
+    
+    /**
+     * 导出用户综合统计数据
+     * @param startDate
+     * @param endDate
+     * @param request
+     * @param response
+     * @throws Exception
+     */
+    private static final SimpleDateFormat exportFormat = new SimpleDateFormat("yyyy-MM-dd");
+    @RequestMapping("/statistic/exportComprehensiveUserStats")
+    public void exportComprehensiveUserStats(String startDate, String endDate, HttpServletRequest request, HttpServletResponse response) throws Exception{
+    	String path = "/src/main/resources/userComprehensivExportTemplete.xls";
+    	File templeteFile = new File(System.getProperty("user.dir")+path.replace("/", "\\"));
+        Workbook workbook = WorkbookFactory.create(templeteFile);
+
+        List<String> statsUserAgeTem = Arrays.asList(UserImportTemplete.STATS_USER_AGE);
+        List<String> statsModuleAcc  = Arrays.asList(UserImportTemplete.STATS_MODULE_ACC);
+
+        //用户年龄统计
+        int rowNum = 1;
+        Row row0 = workbook.getSheetAt(0).createRow(rowNum);
+        for(Map.Entry<String, Object> item : service.statsExportUserAge(startDate, endDate).entrySet()){
+            if(statsUserAgeTem.contains(item.getKey().toString())){
+                row0.createCell(UserImportTemplete.indexOfAge(item.getKey().toString())).setCellValue(item.getValue().toString());
+            }
+        }
+        //新增用户统计
+        rowNum = 0;
+        List<String> newAddUserTem = new ArrayList<>();
+        Row row1 = workbook.getSheetAt(1).createRow(rowNum);
+        Map<String, Object> newAddUsers = service.statsExportUserAdd(startDate, endDate);
+        for(Map.Entry<String, Object> item : newAddUsers.entrySet()){
+            if(!item.getKey().equals("用户总数")){
+                newAddUserTem.add(item.getKey().toString());
+            }
+        }
+        Collections.sort(newAddUserTem, Collator.getInstance(Locale.CHINA));
+        newAddUserTem.add(0, "用户总数");
+        for(String col : newAddUserTem){
+            row1.createCell(newAddUserTem.indexOf(col)).setCellValue(col);
+        }
+        rowNum ++;
+        Row row12 = workbook.getSheetAt(1).createRow(rowNum);
+        for(Map.Entry<String, Object> item : newAddUsers.entrySet()){
+            row12.createCell(newAddUserTem.indexOf(item.getKey().toString())).setCellValue(item.getValue().toString());
+        }
+
+        //模块访问统计
+        rowNum = 1;
+        Row row2 = workbook.getSheetAt(2).createRow(rowNum);
+        for(Map.Entry<String, Object> item : service.statsExportModuleAcc(startDate, endDate).entrySet()){
+            if(statsModuleAcc.contains(item.getKey().toString())){
+                row2.createCell(UserImportTemplete.indexOfModuleAcc(item.getKey().toString())).setCellValue(item.getValue().toString());
+            }
+        }
+
+        //终端分布统计
+        rowNum = 0;
+        List<String> terminalRangeTem = new ArrayList<>();
+        Row row3 = workbook.getSheetAt(3).createRow(rowNum);
+        Map<String, Object> terminalRangeSts = service.statsExportTerminalRang(startDate, endDate);
+        for(Map.Entry<String, Object> item : terminalRangeSts.entrySet()){
+            if(!item.getKey().equals("用户总数")){
+                terminalRangeTem.add(item.getKey().toString());
+            }
+        }
+        Collections.sort(terminalRangeTem, Collator.getInstance(Locale.CHINA));
+        terminalRangeTem.add(0, "用户总数");
+        for(String col : terminalRangeTem){
+            row3.createCell(terminalRangeTem.indexOf(col)).setCellValue(col);
+        }
+        rowNum ++;
+        Row row32 = workbook.getSheetAt(3).createRow(rowNum);
+        for(Map.Entry<String, Object> item : service.statsExportTerminalRang(startDate, endDate).entrySet()){
+            row32.createCell(terminalRangeTem.indexOf(item.getKey().toString())).setCellValue(item.getValue().toString());
+        }
+
+        response.setHeader("Content-Disposition", "attachment;filename="+new String("用户综合统计数据.xls".getBytes(), "iso8859-1"));
+        response.setCharacterEncoding("utf-8");
+        OutputStream out = response.getOutputStream();
+        workbook.write(out);
+        out.flush();
+    }
+    
+    @RequestMapping(value = "/statistic/activeUser", method = RequestMethod.GET)
+    public PagedDataResponse<BasicRequest> activeUserList(@PageDefault PageRequest pageRequest) {
+        PagedResult<UserCountStatistics> users = service.getActiveUserList(pageRequest);
+        return PagedDataResponse.of(users);
+    }
+    
+    @RequestMapping(value = "/statistic/activeModule", method = RequestMethod.GET)
+    public PagedDataResponse<BasicRequest> activeModuleList(@PageDefault PageRequest pageRequest) {
+        PagedResult<UserCountStatistics> module = service.getActiveModuleList(pageRequest);
+        return PagedDataResponse.of(module);
+    }
+    
+    @RequestMapping(value = "/statistic/activeDevice", method = RequestMethod.GET)
+    public PagedDataResponse<BasicRequest> activeDeviceList(@PageDefault PageRequest pageRequest) {
+        PagedResult<UserCountStatistics> device = service.getActiveDeviceList(pageRequest);
+        return PagedDataResponse.of(device);
     }
 
 }

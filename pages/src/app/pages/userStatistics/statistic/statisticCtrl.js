@@ -9,7 +9,9 @@
 		.controller('StatisticCtrl', StatisticCtrl);
 
 	/** @ngInject */
-	function StatisticCtrl($scope, $http,$rootScope,appBase) {
+	function StatisticCtrl($scope,$uibModal, $http,$rootScope,baProgressModal,appBase,appCommon) {
+		var localPath = appCommon.autoCompleteUrl();//'http://localhost:8080';
+		var apiPath = localPath.substring(0, localPath.lastIndexOf('/'));
 		var agetype;
 		var pvtype;
 		$scope.DateType="2";
@@ -32,7 +34,8 @@
 			$scope.userTable = [];
 			response.data.forEach(function (value, index, array) {
 				$scope.userTable.push({
-					type: value.type
+					type: value.type,
+					count:value.count
 				})
 			});
 		});
@@ -41,7 +44,8 @@
 			$scope.moduleTable = [];
 			response.data.forEach(function (value, index, array) {
 				$scope.moduleTable.push({
-					type: value.type
+					type: value.type,
+					count:value.count
 				})
 			});
 		});
@@ -50,7 +54,8 @@
 			$scope.deviceTable = [];
 			response.data.forEach(function (value, index, array) {
 				$scope.deviceTable.push({
-					type: value.type.length > 15 ? value.type.substr(0, 30) + '...' : value.type
+					type: value.type.length > 15 ? value.type.substr(0, 20) + '...' : value.type,
+					count:value.count
 				})
 			});
 		});
@@ -67,6 +72,75 @@
 
 		function open() {
 			$scope.opened = true;
+		};
+		
+		//活跃用户
+		$scope.activeUser = function(){
+			$uibModal.open({
+				animation: true,
+				templateUrl: 'app/pages/userStatistics/statistic/activeUser.html',
+				size: 'lg',
+				controller: 'ActiveUserCtrl'
+			});
+		}
+		$scope.openProgressDialog = baProgressModal.open;
+		
+		//活跃机型
+		$scope.activeDevice = function(){
+			$uibModal.open({
+				animation: true,
+				templateUrl: 'app/pages/userStatistics/statistic/activeDevice.html',
+				size: 'lg',
+				controller: 'ActiveDeviceCtrl'
+			});
+		}
+		$scope.openProgressDialog = baProgressModal.open;
+		
+		//活跃模块
+		$scope.activeModule = function(){
+			$uibModal.open({
+				animation: true,
+				templateUrl: 'app/pages/userStatistics/statistic/activeModule.html',
+				size: 'lg',
+				controller: 'ActiveModuleCtrl'
+			});
+		}
+		$scope.openProgressDialog = baProgressModal.open;
+		
+		
+		$scope.export = function () {
+			var startDate = $("#startDate").val();
+			var endDate = $("#endDate").val();
+			var param = "&startDate="+startDate+"&endDate="+endDate;
+			
+			window.location.href=apiPath+'/statistic/exportComprehensiveUserStats?'+param;
+		}
+		
+		$scope.exportUserStats = function () {
+			var startDate = $("#startDate").val();
+			var endDate = $("#endDate").val();
+			var userName = $("#searchNameValue").val();
+			
+			var param = "";
+			if(userName!=""&& userName!=undefined){
+				param = param + "&userName="+userName;
+			}else{
+				param = param + "&userName="+null;
+			}
+			
+			/*if(startDate!=""&& startDate!=undefined){
+				param = param + "&startDate="+startDate;
+			}else{
+				param = param + "&startDate="+null;
+			}
+			if(endDate!=""&& endDate!=undefined){
+				param = param + "&endDate="+endDate;
+			}else{
+				param = param + "&endDate="+null;
+			}*/
+			
+			window.location.href=apiPath+'/basic/exportUserStats?'+param;
+			
 		}
 		
 		//年龄
@@ -176,7 +250,6 @@
 		}
 		
 		//device 机型
-		//PV(模块点击统计)
 		$scope.isDashoardDeviceShow=false;
 		$scope.isDashoardDeviceTypeShow=true;
 		$rootScope.isDeviceBackShow=false;
