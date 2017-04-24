@@ -31,6 +31,9 @@
         from yg_sys_userleavemessage ulm
         LEFT JOIN `yg_user_info` u on u.user_id = ulm.userId
         LEFT JOIN yg_user_base_info b on b.user_id = u.user_id
+        <if test="userName != null">
+        	and u.user_name like CONCAT('%', #{userName}, '%')
+        </if>
     </select>
     
     <select id="findOne" resultType="com.ug369.backend.bean.bean.request.LeaveMessageRequest" parameterType="java.lang.Long">

@@ -203,8 +203,10 @@ public class StatisticsController {
     private static final SimpleDateFormat exportFormat = new SimpleDateFormat("yyyy-MM-dd");
     @RequestMapping("/statistic/exportComprehensiveUserStats")
     public void exportComprehensiveUserStats(String startDate, String endDate, HttpServletRequest request, HttpServletResponse response) throws Exception{
-    	String path = "/src/main/resources/userComprehensivExportTemplete.xls";
-    	File templeteFile = new File(System.getProperty("user.dir")+path.replace("/", "\\"));
+    	String path = "/data/userComprehensivExportTemplete.xls";
+    	//本地测试用/src/main/resources  测试服务用/data 注意服务器“/”的问题
+    	//String path = "/src/main/resources/userComprehensivExportTemplete.xls";
+    	File templeteFile = new File(System.getProperty("user.dir")+path);
         Workbook workbook = WorkbookFactory.create(templeteFile);
 
         List<String> statsUserAgeTem = Arrays.asList(UserImportTemplete.STATS_USER_AGE);
