@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "yg_sys_advertisement")
-public class Banner {
+public class Banner implements Cloneable{
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -202,5 +202,16 @@ public class Banner {
 
     public void setIsdel(Boolean isdel) {
         this.isdel = isdel;
+    }
+
+    @Override
+    public Banner clone() {
+        Banner stu = null;
+        try{
+            stu = (Banner)super.clone();
+        }catch(CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return stu;
     }
 }

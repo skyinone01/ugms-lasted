@@ -12,13 +12,13 @@
         u.contactName as contactName,u.contactPhone as contactPhone,
         u.weight as weight,u.isdefault as isdefault
         FROM yg_sys_advertisement u
-        where u.isBanner =#{type} and u.status!=0 and u.status is not NULL
+        where u.isBanner =#{type} and  u.status is not NULL
     </select>
 
     <select id="getCount" resultType="int">
         SELECT COUNT(id)
         FROM yg_sys_advertisement u
-         where u.isBanner =#{type} and u.status!=0 and u.status is not NULL
+         where u.isBanner =#{type} and u.status is not NULL
     </select>
 
 </mapper>

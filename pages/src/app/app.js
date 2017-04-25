@@ -98,7 +98,7 @@ angular.module('BlurAdmin')
 //                return item.stateRef.trim() === stateRef
 //              });
       },
-        editable: function (stateRef) {
+        edit: function (stateRef) {
             stateRef = stateRef.trim();
             for(var i=0;i<permissionList.length;i++){
                 var item = permissionList[i];
@@ -109,7 +109,7 @@ angular.module('BlurAdmin')
             return false;
 
         },
-        deleteable: function (stateRef) {
+        delete: function (stateRef) {
             stateRef = stateRef.trim();
             for(var i=0;i<permissionList.length;i++){
                 var item = permissionList[i];
@@ -120,11 +120,71 @@ angular.module('BlurAdmin')
             return false;
 
         },
-        operateable: function (stateRef) {
+        request: function (stateRef) {
             stateRef = stateRef.trim();
             for(var i=0;i<permissionList.length;i++){
                 var item = permissionList[i];
-                if( item.stateRef.trim() === stateRef && item.operateable == true){
+                if( item.stateRef.trim() === stateRef && item.requestable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        cancel: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.cancelable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        apply: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.applyable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        release: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.releaseable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        up: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.upable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        down: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.downable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        copy: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.copyable == true){
                     return true;
                 }
             }

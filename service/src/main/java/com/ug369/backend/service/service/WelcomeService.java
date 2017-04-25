@@ -54,7 +54,7 @@ public class WelcomeService {
             one.setApplydetail(applyDetail);
             one.setApplypeople(applyPeople);
         }else {
-            one.setStatus(1);
+            one.setStatus(0);
         }
         if (!StringUtils.isEmpty(title)){
             one.setContent(title);
@@ -103,7 +103,24 @@ public class WelcomeService {
         if (one == null){
             throw  new UserException(UgmsStatus.NOT_FOUND,"此欢迎页不在了");
         }
-        one.setStatus(op);
-        welcomeRepository.save(one);
+        if (op ==11){
+            Welcome newone = new Welcome();
+            newone.setStatus(0);
+            newone.setA_order(one.getA_order());
+            newone.setBegin_date(one.getBegin_date());
+            newone.setContent(one.getContent());
+            newone.setCreate_date(new Date());
+            newone.setLink(one.getLink());
+            newone.setGroup_id(one.getGroup_id());
+            newone.setIsgroup(one.getIsgroup());
+            newone.setUseable(one.getUseable());
+            newone.setTimer(one.getTimer());
+            newone.setPicture(one.getPicture());
+
+            welcomeRepository.save(newone);
+        }else {
+            one.setStatus(op);
+            welcomeRepository.save(one);
+        }
     }
 }

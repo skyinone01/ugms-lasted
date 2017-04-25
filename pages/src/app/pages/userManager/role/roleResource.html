@@ -1,5 +1,5 @@
 
-<div class="modal-content" style="width: 800px">
+<div class="modal-content" style="width: 1000px">
     <div class="modal-header">
         <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
             <em class="ion-ios-close-empty sn-link-close"></em>
@@ -19,10 +19,16 @@
                                 <th class="table-id" st-sort="id" st-sort-default="true">#</th>
                                 <th st-sort="firstName">资源名称</th>
                                 <th st-sort="lastName">路由</th>
-                                <th st-sort="username">是否可见</th>
-                                <th st-sort="edit">是否可编辑</th>
-                                <th st-sort="delete">是否可删除</th>
-                                <th st-sort="operate">是否可审核</th>
+                                <th st-sort="visible">查看</th>
+                                <th st-sort="edit">编辑</th>
+                                <th st-sort="request">提交审核</th>
+                                <th st-sort="cancel">撤销审核</th>
+                                <th st-sort="apply">审核</th>
+                                <th st-sort="release">发布</th>
+                                <th st-sort="up">启用</th>
+                                <th st-sort="down">停用</th>
+                                <th st-sort="delete">删除</th>
+                                <th st-sort="copy">复制</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -41,11 +47,29 @@
                                 <td name="edit">
                                     <input type="checkbox" ng-model="item.edit" id="checkboxedit" >
                                 </td>
+                                <td name="request">
+                                    <input type="checkbox" ng-model="item.request" id="checkboxrequest" >
+                                </td>
+                                <td name="cancel">
+                                    <input type="checkbox" ng-model="item.cancel" id="checkboxcancel" >
+                                </td>
+                                <td name="apply">
+                                    <input type="checkbox" ng-model="item.apply" id="checkboxapply" >
+                                </td>
+                                <td name="release">
+                                    <input type="checkbox" ng-model="item.release" id="checkboxrelease" >
+                                </td>
+                                <td name="up">
+                                    <input type="checkbox" ng-model="item.up" id="checkboxup" >
+                                </td>
+                                <td name="down">
+                                    <input type="checkbox" ng-model="item.down" id="checkboxdown" >
+                                </td>
                                 <td name="delete">
                                     <input type="checkbox" ng-model="item.delete" id="checkboxdelete" >
                                 </td>
-                                <td name="operate">
-                                    <input type="checkbox" ng-model="item.operate" id="checkboxoperate" >
+                                <td name="copy">
+                                    <input type="checkbox" ng-model="item.copy" id="checkboxcopy" >
                                 </td>
                             </tr>
                             </tbody>

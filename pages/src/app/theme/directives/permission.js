@@ -16,21 +16,63 @@
                 var flag = value[1];
                 switch (flag){
                     case "edit":
-                        if(permissions.editable(stateRef)){
+                        if(permissions.edit(stateRef)){
+                            element.show();
+                        }else {
+                            element.hide();
+                        }
+                        break;
+                    case "request":
+                        if(permissions.request(stateRef)){
+                            element.show();
+                        }else {
+                            element.hide();
+                        }
+                        break;
+                    case "cancel":
+                        if(permissions.cancel(stateRef)){
+                            element.show();
+                        }else {
+                            element.hide();
+                        }
+                        break;
+                    case "apply":
+                        if(permissions.apply(stateRef)){
+                            element.show();
+                        }else {
+                            element.hide();
+                        }
+                        break;
+                    case "release":
+                        if(permissions.release(stateRef)){
+                            element.show();
+                        }else {
+                            element.hide();
+                        }
+                        break;
+                    case "up":
+                        if(permissions.up(stateRef)){
+                            element.show();
+                        }else {
+                            element.hide();
+                        }
+                        break;
+                    case "down":
+                        if(permissions.down(stateRef)){
                             element.show();
                         }else {
                             element.hide();
                         }
                         break;
                     case "delete":
-                        if(permissions.deleteable(stateRef)){
+                        if(permissions.delete(stateRef)){
                             element.show();
                         }else {
                             element.hide();
                         }
                         break;
-                    case "operate":
-                        if(permissions.operateable(stateRef)){
+                    case "copy":
+                        if(permissions.copy(stateRef)){
                             element.show();
                         }else {
                             element.hide();

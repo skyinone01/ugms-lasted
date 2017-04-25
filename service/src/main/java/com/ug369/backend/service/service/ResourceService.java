@@ -90,7 +90,13 @@ public class ResourceService {
                 o.setVisible(true);
                 o.setDelete(or.getDeleteable());
                 o.setEdit(or.getEditable());
-                o.setOperate(or.getOperateable());
+                o.setApply(or.getApplyable());
+                o.setCancel(or.getCancelable());
+                o.setCopy(or.getCopyable());
+                o.setDown(or.getDownable());
+                o.setRelease(or.getReleaseable());
+                o.setRequest(or.getRequestable());
+                o.setUp(or.getUpable());
                 return;
             }
         }));
@@ -117,7 +123,13 @@ public class ResourceService {
             rr.setRole(roleId);
             rr.setDeleteable(o.isDelete());
             rr.setEditable(o.isEdit());
-            rr.setOperateable(o.isOperate());
+            rr.setApplyable(o.isApply());
+            rr.setCancelable(o.isCancel());
+            rr.setCopyable(o.isCopy());
+            rr.setDownable(o.isDown());
+            rr.setReleaseable(o.isRelease());
+            rr.setRequestable(o.isRequest());
+            rr.setUpable(o.isUp());
             roleResourceRepository.save(rr);
         });
 

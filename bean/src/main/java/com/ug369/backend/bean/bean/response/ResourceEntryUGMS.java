@@ -11,17 +11,15 @@ public class ResourceEntryUGMS {
     private String state;
     private String description;
     private boolean visible;
-    private boolean delete;
+    private boolean request;
     private boolean edit;
-    private boolean operate;
-
-    public boolean isVisible() {
-        return visible;
-    }
-
-    public void setVisible(boolean visible) {
-        this.visible = visible;
-    }
+    private boolean cancel;
+    private boolean apply;
+    private boolean release;
+    private boolean up;
+    private boolean down;
+    private boolean delete;
+    private boolean copy;
 
     public long getId() {
         return id;
@@ -63,12 +61,20 @@ public class ResourceEntryUGMS {
         this.description = description;
     }
 
-    public boolean isDelete() {
-        return delete;
+    public boolean isVisible() {
+        return visible;
     }
 
-    public void setDelete(boolean delete) {
-        this.delete = delete;
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
+
+    public boolean isRequest() {
+        return request;
+    }
+
+    public void setRequest(boolean request) {
+        this.request = request;
     }
 
     public boolean isEdit() {
@@ -79,11 +85,59 @@ public class ResourceEntryUGMS {
         this.edit = edit;
     }
 
-    public boolean isOperate() {
-        return operate;
+    public boolean isCancel() {
+        return cancel;
     }
 
-    public void setOperate(boolean operate) {
-        this.operate = operate;
+    public void setCancel(boolean cancel) {
+        this.cancel = cancel;
+    }
+
+    public boolean isApply() {
+        return apply;
+    }
+
+    public void setApply(boolean apply) {
+        this.apply = apply;
+    }
+
+    public boolean isRelease() {
+        return release;
+    }
+
+    public void setRelease(boolean release) {
+        this.release = release;
+    }
+
+    public boolean isUp() {
+        return up;
+    }
+
+    public void setUp(boolean up) {
+        this.up = up;
+    }
+
+    public boolean isDown() {
+        return down;
+    }
+
+    public void setDown(boolean down) {
+        this.down = down;
+    }
+
+    public boolean isDelete() {
+        return delete;
+    }
+
+    public void setDelete(boolean delete) {
+        this.delete = delete;
+    }
+
+    public boolean isCopy() {
+        return copy;
+    }
+
+    public void setCopy(boolean copy) {
+        this.copy = copy;
     }
 }

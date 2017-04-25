@@ -56,7 +56,7 @@ public class BannerAdvertisementService {
             one.setApplydetail(request.getApplyDetail());
             one.setApplypeople(request.getApplyPeople());
         }else {
-            one.setStatus(1);
+            one.setStatus(0);
         }
         if (request.getIsBanner() != null &&request.getIsBanner()==1){
             one.setBanner(true);
@@ -128,7 +128,29 @@ public class BannerAdvertisementService {
         if (one == null){
             throw  new UserException(UgmsStatus.NOT_FOUND,"Banner页不在了");
         }
-        one.setStatus(op);
-        bannerRepository.save(one);
+        if (op ==11){
+            Banner newone = new Banner();
+            newone.setStatus(0);
+            newone.setBanner(one.getBanner());
+            newone.setBeginDate(one.getBeginDate());
+            newone.setContactName(one.getContactName());
+            newone.setContactPhone(one.getContactName());
+            newone.setContent(one.getContent());
+            newone.setCreateDate(one.getCreateDate());
+            newone.setEndDate(one.getEndDate());
+            newone.setIsdefault(one.getIsdefault());
+            newone.setLink(one.getLink());
+            newone.setName(one.getName());
+            newone.setOrderId(one.getOrderId());
+            newone.setPicture(one.getPicture());
+            newone.setType(one.getType());
+            newone.setUseable(one.getUseable());
+            newone.setWeight(one.getWeight());
+            bannerRepository.save(newone);
+        }else {
+            one.setStatus(op);
+            bannerRepository.save(one);
+        }
+
     }
 }

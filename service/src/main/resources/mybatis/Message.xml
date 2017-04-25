@@ -14,7 +14,7 @@
         u.pictures as pictures
         FROM yg_sys_content u
         WHERE u.category = #{category}
-        AND u.status &gt; 0 AND u.status &lt; 6
+        AND u.status &gt; -1 AND u.status &lt; 6
         <!--<if test="userId != null">-->
               <!--AND u.userId = #{userId}-->
         <!--</if>-->
@@ -31,7 +31,7 @@
         SELECT COUNT(id)
         FROM yg_sys_content u
         WHERE u.category = #{category}
-        AND u.status &gt; 0 AND u.status &lt; 6
+        AND u.status &gt; -1 AND u.status &lt; 6
         <!--<if test="userId != null">-->
             <!--AND u.userId = #{userId}-->
         <!--</if>-->

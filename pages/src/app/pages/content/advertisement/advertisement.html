@@ -70,14 +70,57 @@
                     编辑
                 </button>
 
-                <button has-permission="content.advertisement:operate"  class="status-button btn-primary btn-xs btn "
+                <button has-permission="content.advertisement:request"  class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="operation(showButtonName($index),item.id)"
-                        ng-show="showButton($index,'operate')"
+                        ng-click="operation(1,item.id)"
+                        ng-show="showButton($index,'request')"
                 >
-                    {{showButtonName($index)}}
+                    提交审核
                 </button>
-                <button has-permission="content.advertisement:delete" class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
+                <button has-permission="content.advertisement:cancel"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(0,item.id)"
+                        ng-show="showButton($index,'cancel')"
+                >
+                    撤销审核
+                </button>
+                <button has-permission="content.advertisement:apply"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(10,item.id)"
+                        ng-show="showButton($index,'apply')"
+                >
+                    审核
+                </button>
+                <button has-permission="content.advertisement:release"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'release')"
+                >
+                    发布
+                </button>
+                <button has-permission="content.advertisement:up"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'up')"
+                >
+                    启用
+                </button>
+                <button has-permission="content.advertisement:down"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(5,item.id)"
+                        ng-show="showButton($index,'down')"
+                >
+                    停用
+                </button>
+                <button has-permission="content.advertisement:copy"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(11,item.id)"
+                        ng-show="showButton($index,'copy')"
+                >
+                    复制
+                </button>
+                <button has-permission="content.advertisement:delete" class="status-button btn btn-danger btn-xs btn-success"
+                        ng-show="showButton($index,'delete')"
                         ng-click="deleteOne(item.id)">删除</button>
             </td>
         </tr>

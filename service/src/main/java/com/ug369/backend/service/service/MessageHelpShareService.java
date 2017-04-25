@@ -65,7 +65,7 @@ public class MessageHelpShareService {
             one.setApplydetail(request.getApplydetail());
             one.setApplypeople(request.getApplypeople());
         }else {
-            one.setStatus(1);
+            one.setStatus(0);
         }
 
         if (!StringUtils.isEmpty(request.getContext())){
@@ -123,8 +123,32 @@ public class MessageHelpShareService {
         if (one == null){
             throw  new UserException(UgmsStatus.NOT_FOUND,"修改项不在了");
         }
-        one.setStatus(op);
-        messageHelpShareRepository.save(one);
+        if (op ==11){
+            Content newone = new Content();
+            newone.setStatus(0);
+            newone.setTitle(one.getTitle());
+            newone.setContext(one.getContext());
+            newone.setCreateDate(new Date());
+            newone.setIcon(one.getIcon());
+            newone.setLink(one.isLink());
+            newone.setLinkUrl(one.getLinkUrl());
+            newone.setMark(one.isMark());
+            newone.setOrderId(one.getOrderId());
+            newone.setSummary(one.getSummary());
+            newone.setTypeId(one.getTypeId());
+            newone.setCategory(one.getCategory());
+            newone.setMessageType(one.getMessageType());
+            newone.setUserId(one.getUserId());
+            newone.setTypeStr(one.getTypeStr());
+            newone.setSenderId(one.getSenderId());
+            newone.setReaded(one.isReaded());
+            newone.setPictures(one.getPictures());
+
+            messageHelpShareRepository.save(newone);
+        }else {
+            one.setStatus(op);
+            messageHelpShareRepository.save(one);
+        }
     }
 
     public List<TypeRequest> getTypes() {

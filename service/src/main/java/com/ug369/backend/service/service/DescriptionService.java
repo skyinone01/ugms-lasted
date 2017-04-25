@@ -67,7 +67,7 @@ public class DescriptionService {
             one.setApplydetail(request.getApplyDetail());
             one.setApplypeople(request.getApplyPeople());
         }else{
-            one.setStatus(1);
+            one.setStatus(0);
         }
         if (!StringUtils.isEmpty(request.getContent())){
             one.setContent(request.getContent());
@@ -110,7 +110,19 @@ public class DescriptionService {
         if (one == null){
             throw  new UserException(UgmsStatus.NOT_FOUND);
         }
-        one.setStatus(op);
-        descriptionRepository.save(one);
+        if (op ==11){
+            Explain newone = new Explain();
+            newone.setStatus(0);
+            newone.setContent(one.getContent());
+            newone.setLayoutCode(one.getLayoutCode());
+            newone.setPictures(one.getPictures());
+            newone.setTitle(one.getTitle());
+            newone.setType(one.getType());
+            newone.setUseable(one.getUseable());
+            descriptionRepository.save(newone);
+        }else {
+            one.setStatus(op);
+            descriptionRepository.save(one);
+        }
     }
 }

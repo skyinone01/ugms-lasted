@@ -22,23 +22,6 @@
         		})
         }
 		$scope.listItem();
-
-		$scope.showButton = function(index,name){
-			if(name == 'edit'){
-				var s = $scope.items[index].status;
-				if(s==4){
-					return false;
-				}
-			}
-			if(name == 'delete'){
-				var s = $scope.items[index].status;
-				if(s==4 ){
-					return false;
-				}
-			}
-			return true;
-		}
-
 		$scope.deleteOne = function(id){
 			var result = confirm('确认删除！');
 			if(!result){
@@ -65,14 +48,16 @@
 		};
 		$scope.openProgressDialog = baProgressModal.open;
 
-		$scope.statusEmu = ["待审核","审批通过","审批未通过","已发布","已作废"];
+		$scope.statusEmu = ["草稿","待审核","审批通过","审批未通过","已发布","已作废"];
 		$scope.showStatus = function(status){
-			return $scope.statusEmu[status-1];
+			return $scope.statusEmu[status];
 		}
 
-		//0草稿、1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
+		//1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
 		$scope.showButtonName = function(index){
 			switch($scope.items[index].status){
+				case 0:
+					return "提交审核";
 				case 1:
 					return "审核";
 				case 2:
@@ -85,27 +70,84 @@
 					return "启用";
 			}
 		}
+		$scope.showButton = function(index,name){
+			if(name == 'edit'){
+				var s = $scope.items[index].status;
+				if(s==4){
+					return false;
+				}
+				return true;
+			}
+			if(name == 'request'){
+				var s = $scope.items[index].status;
+				if(s==0 ){
+					return true;
+				}
+				return false;
+			}
+			if(name == 'cancel'){
+				var s = $scope.items[index].status;
+				if(s==1 ){
+					return true;
+				}
+				return false;
+			}
+			if(name == 'apply'){
+				var s = $scope.items[index].status;
+				if(s==1 ){
+					return true;
+				}
+				return false;
+			}
+			if(name == 'release'){
+				var s = $scope.items[index].status;
+				if(s==2 ){
+					return true;
+				}
+				return false;
+			}
+			if(name == 'up'){
+				var s = $scope.items[index].status;
+				if(s==5 ){
+					return true;
+				}
+				return false;
+			}
+			if(name == 'down'){
+				var s = $scope.items[index].status;
+				if(s==4 ){
+					return true;
+				}
+				return false;
+			}
+			if(name == 'delete'){
+				var s = $scope.items[index].status;
+				if(s==4 ){
+					return false;
+				}
+				return true;
+			}
+			if(name == 'copy'){
+				var s = $scope.items[index].status;
+				if(s==5 ){
+					return true;
+				}
+				return false;
+			}
+
+			return true;
+		}
 		//审核 1 发布 2 启用 3 停用 4
 		//1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
-		$scope.operation = function(name,id){
-			var op=0;
-			switch(name){
-				case "审核":
-					$scope.open('app/pages/content/message/messageModal.html', 'lg',id,4)
-					return;
-				case "发布":
-					op=4;
-					break;
-				case "启用":
-					op=4;
-					break;
-				case "停用":
-					op=5;
-					break;
+		$scope.operation = function(op,id){
+
+			if(op == 10){
+				$scope.open('app/pages/content/message/messageModal.html', 'lg',id,4);
+				return;
 			}
 
 			appBase.doPut("message/"+id+"?op="+op,null,function(response){
-				appBase.bubMsg(name+"成功");
+				appBase.bubMsg("操作成功");
 				$scope.listItem();
 			});
 		}

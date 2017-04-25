@@ -74,7 +74,7 @@ public class DiscoveryService {
             one.setApplydetail(request.getApplyDetail());
             one.setApplypeople(request.getApplyPeople());
         }else {
-            one.setStatus(1);
+            one.setStatus(0);
         }
         if (!StringUtils.isEmpty(request.getTitle())){
             one.setTitle(request.getTitle());
@@ -121,8 +121,24 @@ public class DiscoveryService {
         if (one == null){
             throw  new UserException(UgmsStatus.NOT_FOUND);
         }
-        one.setStatus(op);
-        discoveryRepository.save(one);
+        if (op ==11){
+            Discovery newone = new Discovery();
+            newone.setStatus(0);
+            newone.setTitle(one.getTitle());
+            newone.setContext(one.getContext());
+            newone.setCreateDate(new Date());
+            newone.setIcon(one.getIcon());
+            newone.setLink(one.getLink());
+            newone.setLinkUrl(one.getLinkUrl());
+            newone.setMark(one.getMark());
+            newone.setOrderId(one.getOrderId());
+            newone.setSummary(one.getSummary());
+            newone.setTypeId(one.getTypeId());
+            discoveryRepository.save(newone);
+        }else {
+            one.setStatus(op);
+            discoveryRepository.save(one);
+        }
     }
 
     public void deleteType(Integer id) {

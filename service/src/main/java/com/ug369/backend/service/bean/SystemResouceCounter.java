@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -31,7 +30,7 @@ public class SystemResouceCounter {
     @Autowired
     private SystemMonitorRepository monitorRepository;
 
-    @Scheduled(fixedDelay = 900000)
+//    @Scheduled(fixedDelay = 900000)
     private void monitor(){
 
         //memory

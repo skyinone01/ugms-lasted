@@ -21,14 +21,14 @@ public class Content {
     @Column(name = "orderid")
     private Integer orderId;
     @Column(name = "ismark")
-    private boolean isMark=false;
+    private Boolean isMark=false;
     @Column(name = "islink")
-    private boolean isLink=false;
+    private Boolean isLink=false;
     @Column(name = "linkurl")
     private String linkUrl;
     @Column(name = "typeid")
     private Integer typeId;
-    private boolean isdel=false;
+    private Boolean isdel=false;
     private Integer status;
     private String summary;
     private String category;
@@ -36,12 +36,12 @@ public class Content {
     private String typeStr;
     @Column(name = "senderid")
     private Integer senderId;
-    private boolean readed =false;
+    private Boolean readed =false;
     @Column(name = "messagetype")
-    private int messageType;
+    private Integer messageType;
     @Column(name = "userid")
     private Integer userId;
-    private boolean issystem = false;
+    private Boolean issystem = false;
     private String pictures;
     private String applypeople;
     private String applydetail;
@@ -110,19 +110,19 @@ public class Content {
         this.orderId = orderId;
     }
 
-    public boolean isMark() {
+    public Boolean isMark() {
         return isMark;
     }
 
-    public void setMark(boolean mark) {
+    public void setMark(Boolean mark) {
         isMark = mark;
     }
 
-    public boolean isLink() {
+    public Boolean isLink() {
         return isLink;
     }
 
-    public void setLink(boolean link) {
+    public void setLink(Boolean link) {
         isLink = link;
     }
 
@@ -142,11 +142,11 @@ public class Content {
         this.typeId = typeId;
     }
 
-    public boolean isdel() {
+    public Boolean isdel() {
         return isdel;
     }
 
-    public void setIsdel(boolean isdel) {
+    public void setIsdel(Boolean isdel) {
         this.isdel = isdel;
     }
 
@@ -190,19 +190,19 @@ public class Content {
         this.senderId = senderId;
     }
 
-    public boolean isReaded() {
+    public Boolean isReaded() {
         return readed;
     }
 
-    public void setReaded(boolean readed) {
+    public void setReaded(Boolean readed) {
         this.readed = readed;
     }
 
-    public int getMessageType() {
+    public Integer getMessageType() {
         return messageType;
     }
 
-    public void setMessageType(int messageType) {
+    public void setMessageType(Integer messageType) {
         this.messageType = messageType;
     }
 
@@ -214,11 +214,11 @@ public class Content {
         this.userId = userId;
     }
 
-    public boolean issystem() {
+    public Boolean issystem() {
         return issystem;
     }
 
-    public void setIssystem(boolean issystem) {
+    public void setIssystem(Boolean issystem) {
         this.issystem = issystem;
     }
 
