@@ -57,6 +57,7 @@
                             element.hide();
                         }
                         break;
+
                     case "down":
                         if(permissions.down(stateRef)){
                             element.show();

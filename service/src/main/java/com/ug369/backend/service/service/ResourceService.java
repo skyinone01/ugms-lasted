@@ -44,6 +44,7 @@ public class ResourceService {
     }
 
 
+
     public void deleteOne(long rid){
         resourceRepository.delete(rid);
     }

@@ -56,6 +56,7 @@
 
 
 
+
 		$scope.removePicture = function () {
 			$scope.picture = $filter('appImage')('theme/no-photo.png');
 			$scope.noPicture = true;

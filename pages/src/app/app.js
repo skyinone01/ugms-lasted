@@ -4,7 +4,7 @@
 
 var API_ROOT ="http://127.0.0.1:8080/";
 var PAGES_ROOT ="http://127.0.0.1:3000/";
-
+//
 function getToken(){
     var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
     if(arr=document.cookie.match(reg)){
