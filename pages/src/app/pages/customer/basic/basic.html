@@ -84,28 +84,21 @@
                 >
                     基础资料管理
                 </button> -->
-                <button class="status-button btn btn-xs btn-primary "
+                <button has-permission="customer.basic:edit" class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
                         ng-click="open('app/pages/customer/basic/basicModal.html', 'lg',item.userId)"
                 >
-                     资料管理
+                     	资料管理
                 </button>
-                <button class="status-button btn btn-xs btn-primary "
+                <button has-permission="customer.basic:edit" class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
                         ng-click="sendSMS(item.userId)"
                 >
-                     密码重置
+                    	 密码重置
                 </button>
 
-                <!-- <button class="status-button btn-primary btn-xs btn "
-                        data-toggle="modal"
-                        ng-click="operation(showButtonName($index),item.id)"
-                        ng-show="showButton($index,'operate')"
-                >
-                    {{showButtonName($index)}}
-                </button> -->
-                <button class="status-button btn btn-danger btn-xs btn-success" ng-click="updateStatus(item.userId,0)" ng-show="showButtonStop($index,item.useable)">停止</button>
-                <button class="status-button btn btn-danger btn-xs btn-success" ng-click="updateStatus(item.userId,1)" ng-show="showButtonRePlay($index,item.useable)">恢复</button> 
+                <button has-permission="customer.basic:down" class="status-button btn btn-danger btn-xs btn-success" ng-click="updateStatus(item.userId,0)" ng-show="showButtonStop($index,item.useable)">停止</button>
+                <button has-permission="customer.basic:up" class="status-button btn btn-danger btn-xs btn-success" ng-click="updateStatus(item.userId,1)" ng-show="showButtonRePlay($index,item.useable)">恢复</button> 
             </td>
         </tr>
         </tbody>

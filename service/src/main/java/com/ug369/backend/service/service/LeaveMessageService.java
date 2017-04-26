@@ -27,10 +27,16 @@ public class LeaveMessageService {
     private LeaveMessageRepository leaveMessageRepository;
     
 
-    public PagedResult<LeaveMessageRequest> getAll(PageRequest pageRequest, String userName) {
+    public PagedResult<LeaveMessageRequest> getAll(PageRequest pageRequest, String userName, String startDate, String endDate) {
     	HashMap<String, String> param = new HashMap<String, String>();
-    	if(!StringUtils.isEmpty(userName)&&!userName.equals("null")){
+    	if(!StringUtils.isEmpty(userName)){
     		param.put("userName", userName);
+    	}
+    	if(!StringUtils.isEmpty(startDate)){
+    		param.put("startDate", startDate);
+    	}
+    	if(!StringUtils.isEmpty(endDate)){
+    		param.put("endDate", endDate);
     	}
         PagedResult<LeaveMessageRequest> leaveMessage = leaveMessageRepository.getDataPageBatch("LeaveMessage.getAll", "LeaveMessage.getCount", param,pageRequest);
         return leaveMessage;

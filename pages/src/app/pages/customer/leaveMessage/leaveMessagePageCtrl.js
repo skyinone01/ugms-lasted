@@ -15,12 +15,11 @@
         $scope.listItem = function(){
 			var param = "page="+$scope.page+"&perPage="+$scope.perPage;
 			var userName = $("#searchNameValue").val();
-			if(userName!=""&& userName!=undefined){
-				param = param + "&userName="+userName;
-			}else{
-				param = param + "&userName="+null;
-			}
-			appBase.doGet("leaveMessage?"+param,null,function(response){
+			var startDate = $("#startDate").val();
+			var endDate = $("#endDate").val();
+			
+			param = param + "&userName="+userName+"&startDate="+startDate+"&endDate="+endDate;
+			appBase.doGet("leaveMessage/selectList?"+param,null,function(response){
         		     if(response.data != null){
         		         $scope.items = response.data.items;
         		         $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
