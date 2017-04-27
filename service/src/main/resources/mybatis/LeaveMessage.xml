@@ -24,6 +24,12 @@
         <if test="userName != null">
         	and u.user_name like CONCAT('%', #{userName}, '%')
         </if>
+        <if test="startDate != null">
+        	<![CDATA[and ulm.createTime >= DATE_FORMAT(#{startDate}, '%Y-%m-%d %H:%i:%s')]]> 
+        </if>
+        <if test="endDate != null">
+        	<![CDATA[and ulm.createTime <= DATE_FORMAT(#{endDate}, '%Y-%m-%d %H:%i:%s')]]> 
+        </if>
     </select>
 
     <select id="getCount" resultType="int">
@@ -33,6 +39,12 @@
         LEFT JOIN yg_user_base_info b on b.user_id = u.user_id
         <if test="userName != null">
         	and u.user_name like CONCAT('%', #{userName}, '%')
+        </if>
+        <if test="startDate != null">
+        	<![CDATA[and ulm.createTime >= DATE_FORMAT(#{startDate}, '%Y-%m-%d %H:%i:%s')]]> 
+        </if>
+        <if test="endDate != null">
+        	<![CDATA[and ulm.createTime <= DATE_FORMAT(#{endDate}, '%Y-%m-%d %H:%i:%s')]]> 
         </if>
     </select>
     

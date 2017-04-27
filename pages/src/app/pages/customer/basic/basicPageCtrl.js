@@ -61,7 +61,13 @@
 		
 		
 		$scope.updateStatus = function (id, status) {
-			var result = confirm('确认停止用户信息？');
+			var result = "";
+			if(status == 0){
+				result = confirm('确认停止用户信息？');
+			}else{
+				result = confirm('确认恢复用户信息？');
+			}
+			
 			if(!result){
 				return;
 			}

@@ -47,10 +47,10 @@ public class LeaveMessageController {
     /**
      * basic页列表列表
      */
-    @RequestMapping(value = "/leaveMessage", method = RequestMethod.GET)
-    public PagedDataResponse<LeaveMessageRequest> leaveMessageList(@PageDefault PageRequest pageRequest, @RequestParam(value = "userName") String userName) {
+    @RequestMapping(value = "/leaveMessage/selectList")
+    public PagedDataResponse<LeaveMessageRequest> leaveMessageList(@PageDefault PageRequest pageRequest, String userName, String startDate, String endDate) {
 
-        PagedResult<LeaveMessageRequest> leaveMessage = leaveMessageService.getAll(pageRequest, userName);
+        PagedResult<LeaveMessageRequest> leaveMessage = leaveMessageService.getAll(pageRequest, userName, startDate, endDate);
 
         return PagedDataResponse.of(leaveMessage);
     }
