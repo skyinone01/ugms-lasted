@@ -37,6 +37,10 @@ public class RoleService {
         return roleRepository.findByName(name);
     }
 
+    public Role findById(long id) {
+        return roleRepository.findById(id);
+    }
+
 
     public List<RoleEntry> getRoleList() {
         Iterable<Role> all = roleRepository.findAll();

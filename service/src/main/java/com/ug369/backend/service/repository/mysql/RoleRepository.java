@@ -12,4 +12,6 @@ public interface RoleRepository extends RDBRepository<Role, Long> {
 
 
     Role findByName(String name);
+
+    Role findById(long id);
 }

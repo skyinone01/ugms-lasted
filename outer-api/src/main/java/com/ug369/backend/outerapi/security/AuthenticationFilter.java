@@ -5,6 +5,7 @@ import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.service.entity.mysql.User;
 import com.ug369.backend.service.entity.mysql.UserRole;
+import com.ug369.backend.service.service.RoleService;
 import com.ug369.backend.service.service.UserService;
 import com.ug369.backend.utils.TokenUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -36,6 +37,9 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 	UserService userService;
 
 	@Autowired
+	RoleService roleService;
+
+	@Autowired
 	ObjectMapper objectMapper;
 
     public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filter)
@@ -56,6 +60,9 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 							webUser.setName(user.getName());
 							webUser.setRole(role.getRole());
 							webUser.setUsername(user.getUsername());
+							webUser.setEmail(user.getEmail());
+							webUser.setRolename(roleService.findById(role.getRole()).getName());
+							webUser.setDepartment(user.getDepartment());
 							SecurityContextHolder.getContext().setAuthentication(
 									new UsernamePasswordAuthenticationToken(webUser, webUser, AuthorityUtils
 											.createAuthorityList("ROLE_" + role.getId())));

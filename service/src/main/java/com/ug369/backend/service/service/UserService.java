@@ -1,6 +1,7 @@
 package com.ug369.backend.service.service;
 
 import com.ug369.backend.bean.base.request.PageRequest;
+import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.bean.request.UserRequest;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
@@ -126,5 +127,15 @@ public class UserService {
 
     public void delete(long id) {
         userRepository.delete(id);
+    }
+
+    public void changePassword(WebUser user, String password, String npassword) {
+        User user1 = getUser(user.getUsername(), password);
+        if (user1 == null){
+            throw new UserException(UgmsStatus.NOT_FOUND,"旧密码错误");
+        }
+        user1.setPassword(bCryptPasswordEncoder.encode(npassword));
+
+        userRepository.save(user1);
     }
 }

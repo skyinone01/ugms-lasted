@@ -82,7 +82,7 @@
 		$scope.showButton = function(index,name){
 			if(name == 'edit'){
 				var s = $scope.items[index].status;
-				if(s==4){
+				if(s==4||s==5||s==1||s==2){
 					return false;
 				}
 				return true;
@@ -138,7 +138,7 @@
 			}
 			if(name == 'copy'){
 				var s = $scope.items[index].status;
-				if(s==5 ){
+				if(s==5 || s==4){
 					return true;
 				}
 				return false;
