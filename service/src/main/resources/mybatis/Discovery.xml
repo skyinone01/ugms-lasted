@@ -17,6 +17,7 @@
         u.typeId as typeId,u.linkUrl as linkUrl,
         u.islink as isLink
         FROM yg_content_discovery u
+        ORDER BY u.createDate DESC
     </select>
 
     <select id="getCount" resultType="int">

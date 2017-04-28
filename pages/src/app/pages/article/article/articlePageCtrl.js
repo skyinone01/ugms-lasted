@@ -4,17 +4,17 @@
 (function () {
 	'use strict';
 
-	angular.module('BlurAdmin.pages.content.advertisement')
-			.controller('AdvertisementPageCtrl', AdvertisementPageCtrl);
+	angular.module('BlurAdmin.pages.article.article')
+			.controller('ArticlePageCtrl', ArticlePageCtrl);
 
 	/** @ngInject */
-	function AdvertisementPageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
+	function ArticlePageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
 
 		$scope.perPage = 20;
 		$scope.page = 1;
 		$scope.listItem = function(){
 			var param = "page="+$scope.page+"&perPage="+$scope.perPage+"&type=0";
-			appBase.doGet("banner?"+param,null,function(response){
+			appBase.doGet("article?"+param,null,function(response){
 				if(response.data != null){
 					$scope.items = response.data.items;
 
@@ -23,12 +23,8 @@
 				}
 			})
 		}
-
-
-		$scope.pageNum = 1;
 		$scope.searchNameValue = '';
 		$scope.listItem();
-
 
 		$scope.showButton = function(index,name){
 			if(name == 'edit'){
@@ -103,7 +99,7 @@
 			if(!result){
 				return;
 			}
-			appBase.doDelete("banner/"+id,null,function(res){
+			appBase.doDelete("article/"+id,null,function(res){
 				appBase.bubMsg("删除成功");
 				$scope.listItem();
 			});
@@ -115,7 +111,7 @@
 				animation: true,
 				templateUrl: page,
 				size: size,
-				controller: 'advertisementModalCtrl',
+				controller: 'articleModalCtrl',
 				resolve: {
 					modelId: id,
 					op: opstr,
@@ -150,10 +146,10 @@
 		//1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
 		$scope.operation = function(op,id){
 			if(op == 10){
-				$scope.open('app/pages/content/advertisement/advertisementModal.html', 'lg',id,4);
+				$scope.open('app/pages/article/article/articleModal.html', 'lg',id,4);
 				return;
 			}
-			appBase.doPut("banner/"+id+"?op="+op,null,function(response){
+			appBase.doPut("article/"+id+"?op="+op,null,function(response){
 				appBase.bubMsg("操作成功");
 				$scope.listItem();
 			});

@@ -13,6 +13,7 @@
         u.weight as weight,u.isdefault as isdefault
         FROM yg_sys_advertisement u
         where u.isBanner =#{type} and  u.status is not NULL
+        ORDER BY u.createDate DESC
     </select>
 
     <select id="getCount" resultType="int">

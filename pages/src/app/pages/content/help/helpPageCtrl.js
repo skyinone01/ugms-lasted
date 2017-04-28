@@ -123,10 +123,10 @@
 			}
 			if(name == 'delete'){
 				var s = $scope.items[index].status;
-				if(s==4 ){
-					return false;
+				if(s==0 || s ==5 ){
+					return true;
 				}
-				return true;
+				return false;
 			}
 			if(name == 'copy'){
 				var s = $scope.items[index].status;

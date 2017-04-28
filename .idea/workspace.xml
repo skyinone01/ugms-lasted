@@ -1,42 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="">
+    <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="1 权限拆分 ip回复">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/article.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/article/article.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/article/article.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/article/articleModal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/article/articleModalCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/article/articlePageCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/category/category.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/column/column.module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/label/label.module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/PermissionResponse.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/PermissionResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/ResourceEntryUGMS.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/ResourceEntryUGMS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/bower.json" afterPath="$PROJECT_DIR$/pages/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/app.js" afterPath="$PROJECT_DIR$/pages/src/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisement.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisement.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/banner/banner.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/banner/banner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/banner/bannerPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/banner/bannerPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/description/description.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/description/description.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/description/descriptionPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/description/descriptionPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/discovery/discovery.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/discovery/discovery.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/discovery/discoveryPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/discovery/discoveryPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/help/help.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/help/help.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/help/helpPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/help/helpPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/message/message.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/message/message.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/message/messagePageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/message/messagePageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/share/share.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/share/share.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/share/sharePageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/share/sharePageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleResource.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleResource.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/pages.module.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/pages.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/editableRowTable.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/editableRowTable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/directives/permission.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/directives/permission.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/bean/SystemResouceCounter.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/bean/SystemResouceCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Banner.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Banner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Content.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Content.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/RoleResource.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/RoleResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/BannerAdvertisementService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/BannerAdvertisementService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DescriptionService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DescriptionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DiscoveryService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DiscoveryService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/MessageHelpShareService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/MessageHelpShareService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/WelcomeService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/WelcomeService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/Banner.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Banner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/Message.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Message.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/Discovery.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Discovery.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/mybatis/Welcome.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mybatis/Welcome.xml" />
     </list>
     <ignored path="regina-webapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,67 +76,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="permission.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/theme/directives/permission.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.875">
-              <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ResourceController.java">
+      <file leaf-file-name="article.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/article.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java">
+      <file leaf-file-name="articleModal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/articleModal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7145969">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resource.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml">
+      <file leaf-file-name="article.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/article.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4366198">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding>
-                <marker date="1493089521251" expanded="true" signature="314:729" placeholder="SELECT r.sta..ug_resource..." />
-                <marker date="1493089521251" expanded="true" signature="828:940" placeholder="SELECT r.id ..ug_resource..." />
-                <marker date="1493089521251" expanded="true" signature="1057:1184" placeholder="SELECT u.id ..ug_resource..." />
-                <marker date="1493089521251" expanded="true" signature="1252:1293" placeholder="SELECT count..ug_resource..." />
-                <marker date="1493089521251" expanded="true" signature="1369:1428" placeholder="DELETE FROM ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bannerPageCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/banner/bannerPageCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.65625">
-              <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="banner.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/banner/banner.html">
+      <file leaf-file-name="baSidebar.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.923077">
-              <caret line="89" column="55" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8063063">
+              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -211,33 +200,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementModal.html" />
-        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/SystemtMonitorController.java" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/pages.module.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/system/counter/systemtCounter.module.js" />
-        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ResourceController.java" />
-        <option value="$PROJECT_DIR$/outer-api/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/resourceManagerPageCtrl.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/system/system.module.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/system/counter/systemCounter.directive.js" />
-        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Monitor.xml" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/SystemMonitorService.java" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/system/counter/systemCounter.html" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/system/counter/systemCounterPageCtrl.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/theme/directives/permission.js" />
-        <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/BannerController.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/bean/SystemResouceCounter.java" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleResource.html" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/RoleResource.java" />
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/PermissionResponse.java" />
-        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Banner.xml" />
-        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Message.xml" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisement.html" />
         <option value="$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/ResourceEntryUGMS.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Banner.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DescriptionService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DiscoveryService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/MessageHelpShareService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/WelcomeService.java" />
@@ -247,21 +211,46 @@
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/message/message.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/share/share.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html" />
-        <option value="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/app.js" />
-        <option value="$PROJECT_DIR$/pages/src/auth.html" />
-        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/BannerAdvertisementService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Content.java" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/content/banner/bannerPageCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/content/banner/banner.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisement.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisement.module.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementModal.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementModalCtrl.js" />
+        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/BannerAdvertisementService.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DescriptionService.java" />
+        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Banner.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Discovery.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Welcome.xml" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementPageCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/content/banner/bannerPageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/description/descriptionPageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/discovery/discoveryPageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/help/helpPageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/message/messagePageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/share/sharePageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/content/banner/banner.html" />
-        <option value="$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/role/editableRowTable.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/theme/directives/permission.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/article.module.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/article/article.module.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/category/category.module.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/column/column.module.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/label/label.module.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/article/articleModalCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/article/articlePageCtrl.js" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/bean/SystemResouceCounter.java" />
+        <option value="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
+        <option value="$PROJECT_DIR$/pages/src/auth.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/theme/theme.constants.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/article/article.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/article/articleModal.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/pages.module.js" />
+        <option value="$PROJECT_DIR$/pages/bower.json" />
+        <option value="$PROJECT_DIR$/pages/src/app/app.js" />
       </list>
     </option>
   </component>
@@ -373,16 +362,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ugms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -426,174 +406,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mybatis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -660,62 +472,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -746,7 +502,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -776,355 +532,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="welcome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="message" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="help" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="discovery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="description" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="banner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advertisement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outer-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outer-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outer-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ug-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outer-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="outerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ugms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1168,11 +595,11 @@
       <recent name="com.heclouds.regina.bean.api.request" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\shanghaihuisheng\ug-mgmt\service\src\main\resources\mybatis" />
-      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\sass\theme\dashboard" />
-      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\system\counter" />
-      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\system" />
-      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\content\discovery" />
+      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\article\article" />
+      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\article\label" />
+      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\article\column" />
+      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\article\category" />
+      <recent name="E:\shanghaihuisheng\ug-mgmt\pages\src\app\pages\article" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ug369.backend.service.repository.mysql" />
@@ -1964,31 +1391,22 @@
       <workItem from="1492735495759" duration="14093000" />
       <workItem from="1492756240871" duration="5280000" />
       <workItem from="1493013099942" duration="7478000" />
-      <workItem from="1493084368555" duration="4986000" />
-    </task>
-    <task id="LOCAL-00166">
-      <created>1477469911192</created>
-      <option name="number" value="00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1477469911200</updated>
-    </task>
-    <task id="LOCAL-00167">
-      <created>1478661853984</created>
-      <option name="number" value="00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1478661853991</updated>
-    </task>
-    <task id="LOCAL-00168">
-      <created>1479193782195</created>
-      <option name="number" value="00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1479193782205</updated>
-    </task>
-    <task id="LOCAL-00169">
-      <created>1479359251407</created>
-      <option name="number" value="00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1479359251417</updated>
+      <workItem from="1493084368555" duration="8259000" />
+      <workItem from="1493101594015" duration="1663000" />
+      <workItem from="1493255922761" duration="8583000" />
+      <workItem from="1493280857507" duration="256000" />
+      <workItem from="1493281176297" duration="19000" />
+      <workItem from="1493281259265" duration="255000" />
+      <workItem from="1493281603720" duration="1020000" />
+      <workItem from="1493282663914" duration="801000" />
+      <workItem from="1493283592226" duration="255000" />
+      <workItem from="1493341034213" duration="1245000" />
+      <workItem from="1493342742553" duration="16000" />
+      <workItem from="1493358512789" duration="124000" />
+      <workItem from="1493358717433" duration="174000" />
+      <workItem from="1493359127020" duration="45000" />
+      <workItem from="1493360589491" duration="121000" />
+      <workItem from="1493360827594" duration="20000" />
     </task>
     <task id="LOCAL-00170">
       <created>1479366189993</created>
@@ -2260,11 +1678,35 @@
       <option name="project" value="LOCAL" />
       <updated>1492674964562</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="1 权限拆分">
+      <created>1493089874974</created>
+      <option name="number" value="00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1493089875001</updated>
+    </task>
+    <task id="LOCAL-00216" summary="1 权限拆分 ip回复">
+      <created>1493101801787</created>
+      <option name="number" value="00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1493101801787</updated>
+    </task>
+    <task id="LOCAL-00217" summary="1 权限拆分 ip回复">
+      <created>1493273096984</created>
+      <option name="number" value="00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1493273096984</updated>
+    </task>
+    <task id="LOCAL-00218" summary="1 权限修改">
+      <created>1493273220295</created>
+      <option name="number" value="00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1493273220296</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1851885000" />
+    <option name="totallyTimeSpent" value="1869755000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -2282,15 +1724,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2023939" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21653971" sideWeight="0.49785867" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23394994" sideWeight="0.5106838" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14957266" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15010683" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64961916" sideWeight="0.491453" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46681175" sideWeight="0.49305555" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2318376" sideWeight="0.4948052" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22489317" sideWeight="0.4948052" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2298,7 +1738,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27136752" sideWeight="0.5051948" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4874864" sideWeight="0.48931623" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2307,10 +1746,13 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26985854" sideWeight="0.48931623" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21653971" sideWeight="0.49785867" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19586506" sideWeight="0.49305555" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20674646" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2327,9 +1769,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mid night" />
-    <MESSAGE value="1.权限问题修改&#10;2.新增全局权限" />
-    <MESSAGE value="1.欢迎页列表&#10;2.操作 启用 停用 删除" />
     <MESSAGE value="&#10;" />
     <MESSAGE value="1 新增上传文件控件&#10;" />
     <MESSAGE value="1 新增multipart请求angular js支持&#10;2 welcome表修改&#10;" />
@@ -2352,7 +1791,10 @@
     <MESSAGE value="1 提示错误修改" />
     <MESSAGE value="1 系统管理" />
     <MESSAGE value="1 url 修改  系统管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 url 修改  系统管理" />
+    <MESSAGE value="1 权限拆分" />
+    <MESSAGE value="1 权限修改" />
+    <MESSAGE value="1 权限拆分 ip回复" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 权限拆分 ip回复" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.872093" />
   </component>
   <component name="XDebuggerManager">
@@ -2592,8 +2034,12 @@
           <properties />
           <option name="timeStamp" value="439" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/src/app/theme/directives/permission.js</url>
+          <option name="timeStamp" value="450" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="450" />
+      <option name="time" value="451" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -2606,396 +2052,329 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Discovery.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/discovery/discoveryPageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.48718">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <marker date="1491969082476" expanded="true" signature="499:788" placeholder="SELECT u.id ..yg_content_discovery..." />
-            <marker date="1491969082476" expanded="true" signature="856:908" placeholder="SELECT COUNT..yg_content_discovery..." />
-            <marker date="1491969082476" expanded="true" signature="978:1068" placeholder="SELECT id,ty..yg_sys_type..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Instructions.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/help/helpPageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="79.97436">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1491984857821" expanded="true" signature="785:1656" placeholder="select id,ti..id..." />
-            <marker date="1491984857821" expanded="true" signature="847:1646" placeholder="SELECT id,ti..." />
-            <marker date="1491984857821" expanded="true" signature="1728:1777" placeholder="SELECT COUNT..yg_sys_instructions..." />
-            <marker date="1491984857821" expanded="true" signature="2030:2799" placeholder="update yg_sy..." />
-            <marker date="1491984857821" expanded="true" signature="2939:3105" placeholder="SELECT t.id,..yg_sys_instructions..." />
-            <marker date="1491984857821" expanded="true" signature="3179:3227" placeholder="DELETE FROM ..." />
-            <marker date="1491984857821" expanded="true" signature="3335:3790" placeholder="INSERT INTO yg_sys_instructions..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="13" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/LeaveMessage.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/message/messagePageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.384615">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493019342893" expanded="true" signature="1259:1439" placeholder="SELECT COUNT..yg_sys_userleavemessage..." />
-            <marker date="1493019342893" expanded="true" signature="1704:1825" placeholder="select id as..yg_sys_userleavemessage..." />
-            <marker date="1493019342893" expanded="true" signature="1949:2181" placeholder="update yg_sy..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Message.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/share/sharePageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.743589">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-          <folding>
-            <marker date="1492750110670" expanded="true" signature="284:894" placeholder="SELECT u.id ..yg_sys_content..." />
-            <marker date="1492750110670" expanded="true" signature="1006:1124" placeholder="SELECT u.id ..." />
-            <marker date="1492750110670" expanded="true" signature="1192:1326" placeholder="SELECT COUNT..yg_sys_content..." />
-            <marker date="1492750110670" expanded="true" signature="1546:2049" placeholder="select c.id ..yg_sys_content..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Monitor.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6153846">
-          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
-          <folding>
-            <marker date="1492655313940" expanded="true" signature="287:347" placeholder="SELECT * FRO..ug_monitor..." />
-            <marker date="1492655313940" expanded="true" signature="287:348" placeholder="SELECT * FRO..ug_monitor..." />
-            <marker date="1492655313940" expanded="true" signature="287:388" placeholder="SELECT * FRO..ug_monitor..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="13" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Statistics.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManager.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493013268612" expanded="true" signature="2783:2966" placeholder="select devic..." />
-            <marker date="1493013268612" expanded="true" signature="2976:3129" placeholder="select 2 typ..." />
-            <marker date="1493013268612" expanded="true" signature="3139:3268" placeholder="select 3 typ..." />
-            <marker date="1493013268612" expanded="true" signature="3278:3457" placeholder="select user_..." />
-            <marker date="1493013268612" expanded="true" signature="3467:3626" placeholder="select 0 typ..." />
-            <marker date="1493013268612" expanded="true" signature="3636:3780" placeholder="select 1 typ..." />
-            <marker date="1493013268612" expanded="true" signature="3889:4996" placeholder="select b.age..." />
-            <marker date="1493013268612" expanded="true" signature="5085:5241" placeholder="select count..yg_user_base_info..." />
-            <marker date="1493013268612" expanded="true" signature="5085:6895" placeholder="select count..." />
-            <marker date="1493013268612" expanded="true" signature="5270:5534" placeholder="select count..yg_user_base_info..." />
-            <marker date="1493013268612" expanded="true" signature="5563:5827" placeholder="select count..yg_user_base_info..." />
-            <marker date="1493013268612" expanded="true" signature="5856:6121" placeholder="select count..yg_user_base_info..." />
-            <marker date="1493013268612" expanded="true" signature="6150:6415" placeholder="select count..yg_user_base_info..." />
-            <marker date="1493013268612" expanded="true" signature="6444:6709" placeholder="select count..yg_user_base_info..." />
-            <marker date="1493013268612" expanded="true" signature="6738:6895" placeholder="select count..yg_user_base_info..." />
-            <marker date="1493013268612" expanded="true" signature="6987:7224" placeholder="SELECT devic..." />
-            <marker date="1493013268612" expanded="true" signature="7314:7782" placeholder="SELECT count..." />
-            <marker date="1493013268612" expanded="true" signature="7911:8289" placeholder="SELECT COUNT..." />
-            <marker date="1493013268612" expanded="true" signature="8419:8801" placeholder="SELECT COUNT..." />
-            <marker date="1493013268612" expanded="true" signature="8929:9315" placeholder="SELECT COUNT..." />
-            <marker date="1493013268612" expanded="true" signature="9400:9701" placeholder="select user_..." />
-            <marker date="1493013268612" expanded="true" signature="9825:10197" placeholder="SELECT count..." />
-            <marker date="1493013268612" expanded="true" signature="10330:10706" placeholder="SELECT count..." />
-            <marker date="1493013268612" expanded="true" signature="10833:11213" placeholder="SELECT count..." />
-            <marker date="1493013268612" expanded="true" signature="11293:11571" placeholder="SELECT count..." />
-            <marker date="1493013268612" expanded="true" signature="11652:11909" placeholder="SELECT model..." />
-            <marker date="1493013268612" expanded="true" signature="11990:12205" placeholder="SELECT count..." />
-            <marker date="1493013268612" expanded="true" signature="12290:12693" placeholder="SELECT count..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/User.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/user/userManagerPageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1490930380997" expanded="true" signature="280:508" placeholder="SELECT u.id ..ug_user..." />
-            <marker date="1490930380997" expanded="true" signature="576:613" placeholder="SELECT count..ug_user..." />
-            <marker date="1490930380997" expanded="true" signature="732:903" placeholder="SELECT u.id ..ug_user..." />
-          </folding>
+          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Welcome.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18858954">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1492140796071" expanded="true" signature="283:506" placeholder="SELECT u.id ..yg_content_guide..." />
-            <marker date="1492140796071" expanded="true" signature="574:622" placeholder="SELECT COUNT..yg_content_guide..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementModalCtrl.js">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/role/roleManagerPageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/ResourceEntryUGMS.java">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/user/editableRowTable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+        <state vertical-scroll-proportion="-7.282051">
+          <caret line="58" column="104" selection-start-line="58" selection-start-column="79" selection-end-line="58" selection-end-column="104" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/response/PermissionResponse.java">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/role/editableRowTable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.047923323">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36">
-          <caret line="465" column="0" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.743589">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/BannerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="156" column="44" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Banner.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/MvcConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="207" column="17" selection-start-line="207" selection-start-column="17" selection-end-line="207" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1272#1273#0" expanded="false" />
-            <element signature="e#1306#1307#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1406#1407#0" expanded="false" />
-            <element signature="e#1444#1445#0" expanded="false" />
-            <element signature="e#1478#1479#0" expanded="false" />
-            <element signature="e#1532#1533#0" expanded="false" />
-            <element signature="e#1578#1579#0" expanded="false" />
-            <element signature="e#1608#1609#0" expanded="false" />
-            <element signature="e#1633#1634#0" expanded="false" />
-            <element signature="e#1670#1671#0" expanded="false" />
-            <element signature="e#1698#1699#0" expanded="false" />
-            <element signature="e#1729#1730#0" expanded="false" />
-            <element signature="e#1756#1757#0" expanded="false" />
-            <element signature="e#1796#1797#0" expanded="false" />
-            <element signature="e#1828#1829#0" expanded="false" />
-            <element signature="e#1862#1863#0" expanded="false" />
-            <element signature="e#1892#1893#0" expanded="false" />
-            <element signature="e#1938#1939#0" expanded="false" />
-            <element signature="e#1976#1977#0" expanded="false" />
-            <element signature="e#2010#2011#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-            <element signature="e#2086#2087#0" expanded="false" />
-            <element signature="e#2124#2125#0" expanded="false" />
-            <element signature="e#2159#2160#0" expanded="false" />
-            <element signature="e#2189#2190#0" expanded="false" />
-            <element signature="e#2236#2237#0" expanded="false" />
-            <element signature="e#2274#2275#0" expanded="false" />
-            <element signature="e#2305#2306#0" expanded="false" />
-            <element signature="e#2332#2333#0" expanded="false" />
-            <element signature="e#2372#2373#0" expanded="false" />
-            <element signature="e#2404#2405#0" expanded="false" />
-            <element signature="e#2438#2439#0" expanded="false" />
-            <element signature="e#2470#2471#0" expanded="false" />
-            <element signature="e#2518#2519#0" expanded="false" />
-            <element signature="e#2560#2561#0" expanded="false" />
-            <element signature="e#2592#2593#0" expanded="false" />
-            <element signature="e#2622#2623#0" expanded="false" />
-            <element signature="e#2666#2667#0" expanded="false" />
-            <element signature="e#2704#2705#0" expanded="false" />
-            <element signature="e#2739#2740#0" expanded="false" />
-            <element signature="e#2772#2773#0" expanded="false" />
-            <element signature="e#2822#2823#0" expanded="false" />
-            <element signature="e#2866#2867#0" expanded="false" />
-            <element signature="e#2900#2901#0" expanded="false" />
-            <element signature="e#2929#2930#0" expanded="false" />
-            <element signature="e#2974#2975#0" expanded="false" />
-            <element signature="e#3010#3011#0" expanded="false" />
-            <element signature="e#3044#3045#0" expanded="false" />
-            <element signature="e#3073#3074#0" expanded="false" />
-            <element signature="e#3118#3119#0" expanded="false" />
-            <element signature="e#3154#3155#0" expanded="false" />
-            <element signature="e#3191#3192#0" expanded="false" />
-            <element signature="e#3223#3224#0" expanded="false" />
-            <element signature="e#3274#3275#0" expanded="false" />
-            <element signature="e#3316#3317#0" expanded="false" />
-            <element signature="e#3351#3352#0" expanded="false" />
-            <element signature="e#3381#3382#0" expanded="false" />
-            <element signature="e#3428#3429#0" expanded="false" />
-            <element signature="e#3466#3467#0" expanded="false" />
-            <element signature="e#3500#3501#0" expanded="false" />
-            <element signature="e#3531#3532#0" expanded="false" />
-            <element signature="e#3576#3577#0" expanded="false" />
-            <element signature="e#3609#3610#0" expanded="false" />
-            <element signature="e#3641#3642#0" expanded="false" />
-            <element signature="e#3668#3669#0" expanded="false" />
-            <element signature="e#3709#3710#0" expanded="false" />
-            <element signature="e#3741#3742#0" expanded="false" />
-            <element signature="e#3779#3780#0" expanded="false" />
-            <element signature="e#3813#3814#0" expanded="false" />
-            <element signature="e#3867#3868#0" expanded="false" />
-            <element signature="e#3913#3914#0" expanded="false" />
-            <element signature="e#3952#3953#0" expanded="false" />
-            <element signature="e#3987#3988#0" expanded="false" />
-            <element signature="e#4043#4044#0" expanded="false" />
-            <element signature="e#4091#4092#0" expanded="false" />
-            <element signature="e#4124#4125#0" expanded="false" />
-            <element signature="e#4152#4153#0" expanded="false" />
-            <element signature="e#4195#4196#0" expanded="false" />
-            <element signature="e#4229#4230#0" expanded="false" />
-          </folding>
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/TokenController.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/PageDefault.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/SystemtMonitorController.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/MyImplicitNamingStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/MessageHelpShareController.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/TimeZoneResovler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/LeaveMessageController.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/UserInjected.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-60.48718">
-          <caret line="123" column="65" selection-start-line="57" selection-start-column="16" selection-end-line="123" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/banner/bannerModalCtrl.js">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/annotation/UserResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DescriptionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.5625">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/DiscoveryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.5625">
-          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/LeaveMessageService.java">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/AuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/WelcomeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.4375">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/description/description.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0422535">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/discovery/discovery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6197183">
-          <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/help/help.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33279222">
-          <caret line="119" column="52" selection-start-line="119" selection-start-column="52" selection-end-line="119" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/message/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8084416">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/share/share.html">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/MethodSecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="53" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/UgmsAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/security/UgmsAuthenticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/ExceptionMessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.module.js">
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/UgmsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/UgmsConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/domain/UgmsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/repository/rdbsupport/domain/UserImportTemplete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/directives/permission.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Welcome.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.615385">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/appBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/category/category.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisement.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/services/preloader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/label/label.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7094595">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/articleModalCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3716216">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/articlePageCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9459459">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bower_components/angular-smart-table/dist/smart-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1891892">
+          <caret line="348" column="27" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bower_components/angular-ueditor/dist/angular-ueditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/bean/SystemResouceCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91519433">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/theme/theme.constants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/articleModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/app.js">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/article.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -3003,157 +2382,37 @@
     <entry file="file://$PROJECT_DIR$/pages/src/auth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcome.html">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/components/tree/tree.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="43" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="0.527027">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/BannerAdvertisementService.java">
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/pages.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="9" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Boolean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4364261">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/MessageHelpShareService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/Content.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.71875">
-          <caret line="200" column="18" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/advertisement/advertisementPageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="156" column="36" selection-start-line="156" selection-start-column="36" selection-end-line="156" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/description/descriptionPageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="164" column="36" selection-start-line="164" selection-start-column="36" selection-end-line="164" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/discovery/discoveryPageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="156" column="36" selection-start-line="156" selection-start-column="36" selection-end-line="156" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/message/messagePageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="34" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/help/helpPageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/share/sharePageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/welcome/welcomePageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/banner/bannerPageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.65625">
-          <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/content/banner/banner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.923077">
-          <caret line="89" column="55" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/theme/directives/permission.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.875">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/resources/mybatis/Resource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4366198">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <marker date="1493089521251" expanded="true" signature="314:729" placeholder="SELECT r.sta..ug_resource..." />
-            <marker date="1493089521251" expanded="true" signature="828:940" placeholder="SELECT r.id ..ug_resource..." />
-            <marker date="1493089521251" expanded="true" signature="1057:1184" placeholder="SELECT u.id ..ug_resource..." />
-            <marker date="1493089521251" expanded="true" signature="1252:1293" placeholder="SELECT count..ug_resource..." />
-            <marker date="1493089521251" expanded="true" signature="1369:1428" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7145969">
+        <state vertical-scroll-proportion="0.033783782">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8063063">
+          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
           <folding />
         </state>
       </provider>

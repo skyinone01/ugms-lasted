@@ -9,6 +9,7 @@
         u.picture as picture,u.status as status,u.a_order as orders,
         u.create_date as create_date,u.begin_date as begin_date
         FROM yg_content_guide u
+        ORDER BY u.create_date DESC
     </select>
 
     <select id="getCount" resultType="int">

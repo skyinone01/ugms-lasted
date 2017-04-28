@@ -136,7 +136,7 @@ public class BannerAdvertisementService {
             newone.setContactName(one.getContactName());
             newone.setContactPhone(one.getContactName());
             newone.setContent(one.getContent());
-            newone.setCreateDate(one.getCreateDate());
+            newone.setCreateDate(new Date());
             newone.setEndDate(one.getEndDate());
             newone.setIsdefault(one.getIsdefault());
             newone.setLink(one.getLink());

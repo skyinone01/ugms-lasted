@@ -38,7 +38,7 @@
                 <button type="submit" ng-click="saveRole($index)"  ng-disabled="rowform.$waiting"  class="btn btn-primary editable-table-button btn-xs">
                     保存
                 </button>
-                <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">
+                <button type="button" ng-disabled="rowform.$waiting" ng-click="cancel(rowform.$cancel())" class="btn btn-default editable-table-button btn-xs">
                     取消
                 </button>
             </form>

@@ -97,8 +97,8 @@
             }
         };
 
-        $scope.cancelRole = function(index){
-
+        $scope.cancel = function(index){
+            $scope.listRole();
         };
 
         $scope.deleteRole = function(index){
