@@ -1,9 +1,9 @@
 'use strict';
-var API_ROOT ="http://120.26.221.137:8080/";
-var PAGES_ROOT ="http://120.26.221.137:3000/ugms/";
-//
-//var API_ROOT ="http://127.0.0.1:8080/";
-//var PAGES_ROOT ="http://127.0.0.1:3000/";
+//var API_ROOT ="http://120.26.221.137:8080/";
+//var PAGES_ROOT ="http://120.26.221.137:3000/ugms/";
+
+var API_ROOT ="http://127.0.0.1:8080/";
+var PAGES_ROOT ="http://127.0.0.1:3000/";
 
 function getToken(){
     var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
@@ -45,6 +45,7 @@ var app = angular.module('BlurAdmin', [
             "xeditable",
             'ui.slimscroll',
             'ngJsTree',
+            //'ng.ueditor',
             'angular-progress-button-styles',
 
             'BlurAdmin.theme',
@@ -69,7 +70,6 @@ angular.element(document).ready(function() {
         angular.bootstrap(document, ['BlurAdmin']);
      },
      error:function(error){
-
         window.location.href = PAGES_ROOT +"auth.html";
      }
    });
@@ -98,7 +98,98 @@ angular.module('BlurAdmin')
 //                return item.stateRef.trim() === stateRef
 //              });
       },
+        edit: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.editable == true){
+                    return true;
+                }
+            }
+            return false;
 
+        },
+        delete: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.deleteable == true){
+                    return true;
+                }
+            }
+            return false;
+
+        },
+        request: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.requestable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        cancel: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.cancelable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        apply: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.applyable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        release: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.releaseable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        up: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.upable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        down: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.downable == true){
+                    return true;
+                }
+            }
+            return false;
+        },
+        copy: function (stateRef) {
+            stateRef = stateRef.trim();
+            for(var i=0;i<permissionList.length;i++){
+                var item = permissionList[i];
+                if( item.stateRef.trim() === stateRef && item.copyable == true){
+                    return true;
+                }
+            }
+            return false;
+        }
    };
   });
 
