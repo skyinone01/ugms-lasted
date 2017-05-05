@@ -10,6 +10,7 @@
 
 	/** @ngInject */
 	function articleModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
+		var UE
 		var modelId= $stateParams.modelId,op=$stateParams.op;
 
 		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];

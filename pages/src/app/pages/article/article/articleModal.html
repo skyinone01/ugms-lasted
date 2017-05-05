@@ -1,5 +1,6 @@
-<!--<script type="text/javascript" src="./editor/ueditor.config.js"></script>-->
-<!--<script type="text/javascript" src="./editor/ueditor.all.js"></script>-->
+<script type="text/javascript" src="app/pages/article/article/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="app/pages/article/article/ueditor/ueditor.all.js"></script>
+<!--<script type="text/javascript" src="http://zqjimlove.github.io/angular-ueditor/dist/angular-ueditor.js"></script>-->
 
 <div class="modal-content" >
     <form name="myForm" novalidate>
@@ -96,9 +97,16 @@
                             </div>
                         </div>
                     </div>
-
-
-
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">内容</label>
+                                <div class="col-sm-9" >
+                                    <div class="ueditor" ng-model="content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row" ng-show="showApply()">
                         <div class="col-md-6">
                             <div class="form-group row clearfix">

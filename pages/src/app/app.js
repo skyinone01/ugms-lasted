@@ -1,9 +1,9 @@
 'use strict';
-var API_ROOT ="http://120.26.221.137:8080/";
-var PAGES_ROOT ="http://120.26.221.137:3000/ugms/";
-//
-//var API_ROOT ="http://127.0.0.1:8080/";
-//var PAGES_ROOT ="http://127.0.0.1:3000/";
+//var API_ROOT ="http://120.26.221.137:8080/";
+//var PAGES_ROOT ="http://120.26.221.137:3000/ugms/";
+
+var API_ROOT ="http://127.0.0.1:8080/";
+var PAGES_ROOT ="http://127.0.0.1:3000/";
 
 function getToken(){
     var arr,token,reg=new RegExp("(^| )"+"token"+"=([^;]*)(;|$)");
@@ -45,7 +45,6 @@ var app = angular.module('BlurAdmin', [
             "xeditable",
             'ui.slimscroll',
             'ngJsTree',
-            //'ng.ueditor',
             'angular-progress-button-styles',
 
             'BlurAdmin.theme',

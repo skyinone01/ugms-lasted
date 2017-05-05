@@ -9,6 +9,7 @@
        'BlurAdmin.pages.article.category',
        'BlurAdmin.pages.article.column',
        'BlurAdmin.pages.article.label',
+        'ng.ueditor',
     ])
         .config(routeConfig);
 
