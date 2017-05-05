@@ -9,12 +9,13 @@
 			.controller('articleModalCtrl', articleModalCtrl);
 
 	/** @ngInject */
-	function articleModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
+	function articleModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
+		var modelId= $stateParams.modelId,op=$stateParams.op;
 
-		$scope.picture = $filter('appImage')('theme/no-photo.png');
 		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
 		$scope.types=[{'value':0,'text':'内部广告'},{'value':1,'text':'外部广告'}];
 		$scope.showApplyDetail =false;
+		$scope.labels=[{'id':0,'name':'养生'},{'id':1,'name':'健康'}]
 
 		if(modelId == 0){
 			$scope.welcome = {
@@ -57,9 +58,9 @@
 
 
 
-		$scope.removePicture = function () {
-			$scope.picture = $filter('appImage')('theme/no-photo.png');
-			$scope.noPicture = true;
+		$scope.removeLabel = function (id) {
+			//$scope.picture = $filter('appImage')('theme/no-photo.png');
+			//$scope.noPicture = true;
 		};
 
 		//op 1 新增 2详情 3编辑 4 审核

@@ -21,7 +21,12 @@
                     icon: 'ion-grid',
                     order: 10,
               }
-            });
+            }).state('article.article.add', {
+            url: '/:modelId/:op',
+            templateUrl: 'app/pages/article/article/articleModal.html',
+            title: '新增文章',
+            controller: "articleModalCtrl"
+        });
 
     }
 })();

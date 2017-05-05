@@ -108,6 +108,7 @@ public class BannerAdvertisementService {
         if (request.getWeight()!=null){
             one.setWeight(request.getWeight());
         }
+        one.setUseable(true);
         bannerRepository.save(one);
     }
 

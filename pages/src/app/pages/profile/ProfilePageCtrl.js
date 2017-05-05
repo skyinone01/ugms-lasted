@@ -17,20 +17,25 @@
       })
     }
     $scope.getUser();
-    $scope.password="";
-    $scope.npassword="";
+    $scope.formdata ={
+      npassword:"",
+      password:""
+    };
     $scope.savePassword = function(){
-      if($scope.password == null || $scope.password.trim() == ""){
+      if($scope.formdata.password == null || $scope.formdata.password.trim() == ""){
           appBase.bubMsg("请输入旧密码");
         return
       }
-      if($scope.npassword == null || $scope.npassword.trim() == ""){
+      if($scope.formdata.npassword == null || $scope.formdata.npassword.trim() == ""){
         appBase.bubMsg("请输入新密码");
         return
       }
-      var data = '{"password":'+$scope.password +',"npassword":'+$scope.npassword+'}';
-      appBase.doPut("user",data,function(){
-        appBase.bubMsg("修改成功");
+      var data = '?password='+$scope.formdata.password +'&npassword='+$scope.formdata.npassword;
+      appBase.doPut("user"+data,null,function(){
+        if(confirm("修改成功,请重新登录")){
+          appBase.goLogin();
+        }
+
       })
     }
     //$scope.picture = $filter('profilePicture')('Nasta');

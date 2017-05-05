@@ -1,3 +1,4 @@
+<ui-view>
 <div class="row">
     <div class="col-md-9">
         <div class="row">
@@ -15,8 +16,8 @@
     <div class="col-md-3 text-right">
         <button has-permission="article.article:edit" type="button"
                 class="btn btn-info"
-                data-toggle="modal"
-                ng-click="open('app/pages/article/article/articleModal.html', 'lg',0,1)">
+                ui-sref="article.article.add({modelId:1,op:2})"
+               >
             新增文章
         </button>
     </div>
@@ -47,7 +48,7 @@
             </td>
             <td>{{item.title}}</td>
             <td>{{showStatus(item.status)}}</td>
-            <td>{{item.createDate | date:'longDate'}}</td>
+            <td>{{item.createtime | date:'longDate'}}</td>
             <td>
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
@@ -132,3 +133,5 @@
         </tfoot>
     </table>
 </div>
+
+</ui-view>

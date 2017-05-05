@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Article">
+
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.request.ArticleRequest">
+        SELECT u.id as id,u.content as content,u.title as title,
+        u.summary as summary,u.status as status,u.typeid as typeid,
+        u.createtime as createtime,u.typestr as typestr
+        FROM ug_article u
+        where  u.status is not NULL
+        ORDER BY u.createtime DESC
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(id)
+        FROM ug_article u
+         where u.status is not NULL
+    </select>
+
+</mapper>

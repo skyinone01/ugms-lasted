@@ -11,7 +11,7 @@ public enum UgmsStatus {
 	 */
 	SUCCESS(0, "succ"), 
 	
-	AUTH_FAILED(1, "登录失败"),
+	AUTH_FAILED(1, "鉴权失败"),
 	
 	BAD_REQUEST(2, "请求参数错误"),
 	
