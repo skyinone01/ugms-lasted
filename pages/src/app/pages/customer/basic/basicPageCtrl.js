@@ -26,8 +26,24 @@
         		     if(response.data != null){
         		         $scope.items = response.data.items;
         		         $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
+//        		         debugger;
+        		         if(response.data.total_count < $scope.perPage){
+        		        	 var param = "page=1&perPage="+$scope.perPage;
+        		 			if(userName!=""&& userName!=undefined){
+        		 				param = param + "&userName="+userName;
+        		 			}else{
+        		 				param = param + "&userName="+null;
+        		 			}
+        		        	 appBase.doGet("basic?"+param,null,function(response){
+        	        		     if(response.data != null){
+        	        		         $scope.items = response.data.items;
+        	        		         $scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
+        	        		         $scope.page = 1;
+        	        		     }
+        		        	 }) 
+        		         }
         		     }
-        		})
+        	})
         }
 		$scope.listItem();
 		
@@ -77,14 +93,22 @@
 				$scope.listItem();
             });
 		};
-		
+		//密码重置
 		$scope.sendSMS = function (id) {
 			var param = "userId="+id;
 			appBase.doPost("basic/sendSMS4ResetPwd?"+param,null,function(res){
                 appBase.bubMsg("操作成功");
 				$scope.listItem();
             });
+			
+//			$http.post(apiPath+'/basic/sendSMS4ResetPwd?userId=' + id, null)
+//			.then(function (response) {
+//				alert(response);
+//			});
+
 		}
+		
+
 		
 		/*$scope.selectUser = function (userName) {
 			appBase.doGet("basic/selectUser?"+param,null,function(res){

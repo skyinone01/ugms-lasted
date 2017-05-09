@@ -17,7 +17,7 @@
         		has-permission="instructions.instruction:edit"
                 class="btn btn-info"
                 data-toggle="modal"
-                ng-click="open('app/pages/userInstructions/instructions/instructionsModal.html', 'lg')">
+                ng-click="open('app/pages/userInstructions/instructions/instructionsModal.html', 'lg',0,1)">
             添加使用说明
         </button>
     </div>
@@ -43,13 +43,13 @@
                 <button	has-permission="instructions.instruction:edit" 
                 		class="status-button btn btn-xs btn-warning"
                         data-toggle="modal"
-                        ng-click="open('app/pages/userInstructions/instructions/instructionsModal.html', 'lg',item.id)"
+                        ng-click="open('app/pages/userInstructions/instructions/instructionsModal.html', 'lg',item.id,2)"
                 >
                     修改
                 </button>
                 <button class="status-button btn btn-xs btn-info"
                         data-toggle="modal"
-                        ng-click="open('app/pages/userInstructions/instructions/instructionsModal.html', 'lg',item.id)"
+                        ng-click="open('app/pages/userInstructions/instructions/instructionsModal.html', 'lg',item.id,3)"
                 >
                     查看
                 </button>

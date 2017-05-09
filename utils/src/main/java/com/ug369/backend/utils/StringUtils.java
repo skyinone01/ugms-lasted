@@ -64,4 +64,17 @@ public class StringUtils {
             return null;
         }
     }
+    
+    /**
+     * 获取文件后缀名
+     * @param str
+     * @return
+     */
+    public static String getFileSuff(String str){
+    	if("".equals(str))
+    		return "";
+    	int pos = str.lastIndexOf(".");
+    	String s = str.substring(pos);
+    	return s;
+    }
 }

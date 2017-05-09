@@ -8,9 +8,11 @@
 	angular.module('BlurAdmin.pages.userInstructions.instruction')
 		.controller('InstructionsCtrl', InstructionsCtrl);
 
+//	$scope, $uibModalInstance, modelId, $http,fileReader, $filter, appBase,$state
+//	$scope, $uibModalInstance, modelId, $http,fileReader, $filter,appCommon
 	/** @ngInject */
-	function InstructionsCtrl($scope, $http, $uibModal, baProgressModal,appCommon,appBase) {
-		debugger;
+	function InstructionsCtrl($scope, $http, $uibModal, baProgressModal,appCommon,appBase,$state) {
+		//debugger;
 		var localPath = appCommon.autoCompleteUrl();//'http://localhost:8080';
 		var apiPath = localPath.substring(0, localPath.lastIndexOf('/'));
 		$scope.standardItem = {};
@@ -45,14 +47,15 @@
 
 		
 		
-		$scope.open = function (page, size, id) {
+		$scope.open = function (page, size, id,opstr) {
 			$uibModal.open({
 				animation: true,
 				templateUrl: page,
 				size: size,
 				controller: 'instructionsModalCtrl',
 				resolve: {
-					modelId: id
+					modelId: id,
+					op: opstr,
 				}
 			});
 		};
