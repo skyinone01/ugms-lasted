@@ -22,23 +22,25 @@
     <select id="getAllLabel" resultType="com.ug369.backend.bean.bean.request.ArticleLabelRequest">
         SELECT *
         FROM ug_article_label u
+        where u.name like #{name}
 
     </select>
 
     <select id="getLabelCount" resultType="int">
         SELECT COUNT(u.id)
         FROM ug_article_label u
+        where u.name like #{name}
     </select>
 
     <select id="getAllLevel" resultType="com.ug369.backend.bean.bean.request.ArticleLevelRequest">
         SELECT *
-        FROM ug_article_level u
+        FROM ug_article_category u
 
     </select>
 
     <select id="getLevelCount" resultType="int">
         SELECT COUNT(u.id)
-        FROM ug_article_level u
+        FROM ug_article_category u
     </select>
 
 </mapper>

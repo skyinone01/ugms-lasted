@@ -45,7 +45,7 @@ public class ArticleController {
     public PagedDataResponse<ArticleRequest> article(@PageDefault PageRequest pageRequest) {
         PagedResult<ArticleRequest> users = articleService.getAll(pageRequest);
 
-        return PagedDataResponse.of(null);
+        return PagedDataResponse.of(users);
     }
 
 
@@ -129,19 +129,19 @@ public class ArticleController {
      * level  level level level
      *
      */
-    @RequestMapping(value = "/articleLevel", method = RequestMethod.GET)
+    @RequestMapping(value = "/articleCategory", method = RequestMethod.GET)
     public PagedDataResponse<ArticleLevelRequest> level(@PageDefault PageRequest pageRequest) {
         PagedResult<ArticleLevelRequest> labels = articleService.getAllLevel(pageRequest);
 
         return PagedDataResponse.of(labels);
     }
-    @RequestMapping(value = "/articleLevel", method = RequestMethod.PUT)
+    @RequestMapping(value = "/articleCategory", method = RequestMethod.PUT)
     public BasicResponse levelUpdate(@RequestBody ArticleLevelRequest request) {
         articleService.addOrUpdateLevel(request);
         return BasicResponse.success();
     }
 
-    @RequestMapping(value = "/articleLevel/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/articleCategory/{id}", method = RequestMethod.DELETE)
     public BasicResponse levelDel(@PathVariable("id") Long id) {
         articleService.deleteLevel(id);
         return BasicResponse.success();
@@ -153,8 +153,8 @@ public class ArticleController {
      *
      */
     @RequestMapping(value = "/articleLabel", method = RequestMethod.GET)
-    public PagedDataResponse<ArticleLabelRequest> label(@PageDefault PageRequest pageRequest) {
-        PagedResult<ArticleLabelRequest> labels = articleService.getAllLabel(pageRequest);
+    public PagedDataResponse<ArticleLabelRequest> label(@PageDefault PageRequest pageRequest,@RequestParam("searchValue") String name) {
+        PagedResult<ArticleLabelRequest> labels = articleService.getAllLabel(pageRequest,name);
 
         return PagedDataResponse.of(labels);
     }

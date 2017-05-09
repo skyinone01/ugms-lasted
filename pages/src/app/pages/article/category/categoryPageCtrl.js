@@ -5,20 +5,19 @@
 (function () {
 	'use strict';
 
-	angular.module('BlurAdmin.pages.article.label')
-		.controller('LabelPageCtrl', LabelPageCtrl);
+	angular.module('BlurAdmin.pages.article.category')
+		.controller('CategoryPageCtrl', CategoryPageCtrl);
 
 	/** @ngInject */
-	function LabelPageCtrl($scope,$filter,appBase) {
+	function CategoryPageCtrl($scope,appBase) {
 
 		$scope.types = [];
-		$scope.role = [];
 		$scope.update = [];
 
 		$scope.perPage = 30;
 		$scope.page = 1;
-		$scope.listType = function(searchValue){
-			appBase.doGet("articleLabel?page="+$scope.page+"&perPage="+$scope.perPage+"&searchValue="+searchValue,null,function(response){
+		$scope.listType = function(){
+			appBase.doGet("articleCategory?page="+$scope.page+"&perPage="+$scope.perPage,null,function(response){
 				if(response.data != null){
 					$scope.types = response.data.items;
 					$scope.update = response.data.items.slice(0);
@@ -26,44 +25,11 @@
 				}
 			})
 		}
-		$scope.searchValue={
-			value:"",
-			level:0
-		};
-		$scope.listType($scope.searchValue.value);
-
-		$scope.search = function () {
-			$scope.listType($scope.searchValue.value);
-		}
-
-		$scope.filterLevel = function () {
-			if($scope.searchValue.level.value==0){
-				$scope.types = $scope.update;
-			}else {
-				$scope.types = $filter('filter')($scope.update, {level: $scope.searchValue.level.value});
-			}
-
-		}
-
-		$scope.level=[{'value':1,'text':'一级'},{'value':2,'text':'二级'},{'value':3,'text':'三级'}]
-		$scope.levelSearch=[{'value':0,'text':'全部'},{'value':1,'text':'一级'},{'value':2,'text':'二级'},{'value':3,'text':'三级'}]
-		//$scope.listLevel=function(){
-		//	appBase.doGet("/articleLevel/list",null,function(ret){
-		//		$scope.level = ret.data;
-		//	})
-		//}
-		//$scope.listLevel();
+		$scope.listType();
 
 		$scope.cancel = function(){
-			$scope.listType($scope.searchValue.value);
+			$scope.listType();
 		}
-
-		$scope.showLevel = function(type) {
-			if(type.level && $scope.level.length) {
-				var selected = $filter('filter')($scope.level, {value: type.level});
-				return selected.length ? selected[0].text : '未设置';
-			} else return '未设置'
-		};
 
 		$scope.removeType = function(index) {
 			$scope.types.splice(index, 1);
@@ -90,11 +56,11 @@
 				appBase.bubMsg("名称不能为空");
 				return;
 			}
-			if (data.level == null || data.level == 0){
-				appBase.bubMsg("级别不能为空");
+			if (data.sort == null || data.sort == 0){
+				appBase.bubMsg("排序不能为空");
 				return;
 			}
-			appBase.doPut("articleLabel",data,function(ret){
+			appBase.doPut("articleCategory",data,function(ret){
 				appBase.bubMsg("保存成功");
 				$scope.listType();
 			})
@@ -109,8 +75,8 @@
 					case "name":
 						$scope.insert[index-$scope.update.length].name =data;
 						break;
-					case "level":
-						$scope.insert[index-$scope.update.length].level =data;
+					case "sort":
+						$scope.insert[index-$scope.update.length].sort =data;
 						break;
 				}
 			}else{
@@ -118,18 +84,15 @@
 					case "name":
 						$scope.update[index].name =data;
 						break;
-					case "level":
-						$scope.update[index].level =data;
+					case "sort":
+						$scope.update[index].sort =data;
 						break;
 				}
 			}
 		};
 
-		$scope.cancelSave = function(index){
-
-		};
 		$scope.deleteType = function(index){
-			appBase.doDelete("articleLevel/"+$scope.types[index].id,null,function(ret){
+			appBase.doDelete("articleCategory/"+$scope.types[index].id,null,function(ret){
 				appBase.bubMsg("删除成功");
 				$scope.listType();
 				//$scope.removeType(index);

@@ -3,38 +3,15 @@
     <div class="row">
         <div class="col-md-12">
             <div ba-panel ba-panel-title="标签列表" ba-panel-class="with-scroll">
-
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <input type="text"
-                            ng-model="searchValue.value"
-                            class="form-control with-danger-addon"
-                            placeholder="请输入标签名称..."
-                            ng-change="searchValueChange()"
-                            >
-                        </div>
-                        <button class="btn btn-primary" ng-click="search()">搜索</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        筛选: &nbsp&nbsp&nbsp&nbsp
-                        <select style="width: 100px;height:30px"
-                                ng-model="searchValue.level" ng-change="filterLevel()" ng-options="x.text for x in levelSearch">
-                        </select>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <button class="btn btn-primary" style="float:right" ng-click="addType()">新增标签</button>
-                        <!--<div class="btn btn-primary" >-->
-                            <!--<button class="btn btn-primary" ng-click="addType()">新增标签</button>-->
-                        <!--</div>-->
-                    </div>
-
+                <div class="add-row-editable-table">
+                    <button class="btn btn-primary" ng-click="addType()">新增类别</button>
                 </div>
-
                 <table class="table table-bordered table-hover table-condensed">
                     <tbody>
                     <tr>
                         <td></td>
-                        <td>标签名</td>
-                        <td>级别</td>
+                        <td>类别名称</td>
+                        <td>排序号</td>
                         <td>操作</td>
                     </tr>
                     <tr ng-repeat="type in types"  class="editable-row"  >
@@ -49,11 +26,10 @@
                               {{ type.name || '' }}
                             </span>
                         </td>
-                        <td class="select-td" >
-                            <span id="{{$index}}_{{type.level}}" editable-select="type.level"  e-name="level" e-form="rowform" e-selectpicker
-                                  e-ng-options="s.value as s.text for s in level">
-                              {{ showLevel(type) }}
-                            </span >
+                        <td >
+                            <span editable-text="type.sort"  e-name="sort" e-form="rowform" e-required  >
+                              {{ type.sort || '' }}
+                            </span>
                         </td>
 
                         <td>

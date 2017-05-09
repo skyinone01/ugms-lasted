@@ -1,6 +1,6 @@
 package com.ug369.backend.service.repository.mysql;
 
-import com.ug369.backend.service.entity.mysql.ArticleLevel;
+import com.ug369.backend.service.entity.mysql.ArticleCategory;
 import com.ug369.backend.service.repository.rdbsupport.RDBRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * Created by Roy on 2017/3/27.
  */
 @Repository
-public interface ArticleLevelRepository extends RDBRepository<ArticleLevel, Long> {
+public interface ArticleLevelRepository extends RDBRepository<ArticleCategory, Long> {
 
 
 }

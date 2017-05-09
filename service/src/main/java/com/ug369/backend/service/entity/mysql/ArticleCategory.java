@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Created by Roy on 2017/3/27.
  */
 @Entity
-@Table(name = "ug_article_level")
-public class ArticleLevel {
+@Table(name = "ug_article_category")
+public class ArticleCategory {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

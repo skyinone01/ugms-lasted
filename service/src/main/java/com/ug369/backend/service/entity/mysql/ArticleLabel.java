@@ -13,16 +13,7 @@ public class ArticleLabel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String levelname;
     private Integer level;
-
-    public String getLevelname() {
-        return levelname;
-    }
-
-    public void setLevelname(String levelname) {
-        this.levelname = levelname;
-    }
 
     public Long getId() {
         return id;
