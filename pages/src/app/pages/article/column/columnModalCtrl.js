@@ -5,11 +5,11 @@
 (function () {
 	'use strict';
 
-	angular.module('BlurAdmin.pages.article.article')
-			.controller('articleModalCtrl', articleModalCtrl);
+	angular.module('BlurAdmin.pages.article.column')
+			.controller('columnModalCtrl', columnModalCtrl);
 
 	/** @ngInject */
-	function articleModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
+	function columnModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
 		$scope.config={
 			"content" : "<p>test1</p>",
 			"focus" : true,

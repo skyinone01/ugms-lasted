@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="750c3a07-6269-4ad0-9990-44a66ec8d49b" name="Default" comment="1 软文管">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/editableRowTable.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/editableRowTable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/article/column/column.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/column/column.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/article/column/columnModalCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/column/columnModalCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/pages/article/label/label.html" afterPath="$PROJECT_DIR$/pages/src/app/pages/article/label/label.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" afterPath="$PROJECT_DIR$/pages/src/app/theme/components/baSidebar/baSidebar.service.js" />
     </list>
     <ignored path="regina-webapi.iws" />
@@ -49,78 +52,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="columnPageCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="column.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6153846">
-              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleColumnController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ArticleColumnController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pages.module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/pages.module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editableRowTable.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editableRowTable.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/resource/editableRowTable.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77452666">
+            <state vertical-scroll-proportion="-11.538462">
               <caret line="51" column="165" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="165" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activeDevice.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userStatistics/statistic/activeDevice.html">
+      <file leaf-file-name="resourceManager.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/resource/resourceManager.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.1538463">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activeModule.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userStatistics/statistic/activeModule.html">
+      <file leaf-file-name="userResouce.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/userResouce.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.230769">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activeUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userStatistics/statistic/activeUser.html">
+      <file leaf-file-name="articlePageCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/articlePageCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="columnModal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnModal.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -129,11 +102,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ArticleController.java">
+      <file leaf-file-name="columnPageCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="columnModalCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnModalCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="column.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="column.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5163511">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="label.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/label/label.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3846154">
+              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -203,7 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/BannerAdvertisementService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/MessageHelpShareService.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/DemoController.java" />
         <option value="$PROJECT_DIR$/pages/bower.json" />
@@ -237,7 +249,6 @@
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/level/level.module.js" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/entity/mysql/ArticleLabel.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/article/label/label.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/categroy/category.module.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/categroy/category.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/categroy/categoryPageCtrl.js" />
@@ -247,13 +258,15 @@
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/category/category.module.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/category/categoryPageCtrl.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/category/category.html" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/article/column/column.html" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/article/label/labelPageCtrl.js" />
-        <option value="$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ArticleColumnController.java" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/pages.module.js" />
         <option value="$PROJECT_DIR$/pages/src/app/pages/userManager/resource/editableRowTable.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/column/columnModalCtrl.js" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/label/label.html" />
+        <option value="$PROJECT_DIR$/pages/src/app/pages/article/column/column.html" />
       </list>
     </option>
   </component>
@@ -717,7 +730,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="userManager" />
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -747,11 +760,113 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="userManager" />
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
+              <option name="myItemId" value="label" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ug-mgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ug-mgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="column" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ug-mgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ug-mgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="category" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ug-mgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ug-mgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1912,13 +2027,7 @@
       <workItem from="1493859514258" duration="19797000" />
       <workItem from="1493945824955" duration="21638000" />
       <workItem from="1494205066923" duration="25430000" />
-      <workItem from="1494291532758" duration="23187000" />
-    </task>
-    <task id="LOCAL-00178" summary="kk">
-      <created>1489051110211</created>
-      <option name="number" value="00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1489051110211</updated>
+      <workItem from="1494291532758" duration="23914000" />
     </task>
     <task id="LOCAL-00179" summary="mid night">
       <created>1489420049388</created>
@@ -2208,11 +2317,17 @@
       <option name="project" value="LOCAL" />
       <updated>1494320614912</updated>
     </task>
-    <option name="localTasksCounter" value="227" />
+    <task id="LOCAL-00227" summary="1 软文管">
+      <created>1494321067335</created>
+      <option name="number" value="00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1494321067336</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1973164000" />
+    <option name="totallyTimeSpent" value="1973891000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -2567,40 +2682,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/ArtcleFileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outer-api/src/main/java/com/ug369/backend/outerapi/controller/BannerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/ug369/backend/service/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6614951">
-          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/request/ArticleRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/ug369/backend/bean/bean/request/ArticleLabelRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2809,14 +2890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/label/label.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2889,44 +2962,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/label/label.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="29" column="22" selection-start-line="6" selection-start-column="16" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnModalCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/label/labelPageCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.0">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6153846">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -2989,8 +3028,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/resource/editableRowTable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77452666">
+        <state vertical-scroll-proportion="-11.538462">
           <caret line="51" column="165" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="165" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/resource/resourceManager.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/userManager/userResouce.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/article/articlePageCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnModalCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/columnPageCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/label/label.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3846154">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/src/app/pages/article/column/column.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5163511">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding />
         </state>
       </provider>
