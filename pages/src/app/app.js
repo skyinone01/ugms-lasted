@@ -45,6 +45,7 @@ var app = angular.module('BlurAdmin', [
             "xeditable",
             'ui.slimscroll',
             'ngJsTree',
+            'ueditor.directive',
             'angular-progress-button-styles',
 
             'BlurAdmin.theme',

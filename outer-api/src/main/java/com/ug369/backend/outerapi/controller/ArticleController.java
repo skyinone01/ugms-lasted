@@ -5,9 +5,12 @@ import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
+import com.ug369.backend.bean.bean.request.ArticleLabelRequest;
+import com.ug369.backend.bean.bean.request.ArticleLevelRequest;
 import com.ug369.backend.bean.bean.request.ArticleRequest;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
+import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
 import com.ug369.backend.outerapi.annotation.UserInjected;
 import com.ug369.backend.service.entity.mysql.Article;
@@ -39,11 +42,13 @@ public class ArticleController {
     private String staticUrl;
 
     @RequestMapping(value = "/article", method = RequestMethod.GET)
-    public PagedDataResponse<ArticleRequest> welcome(@PageDefault PageRequest pageRequest) {
-//        PagedResult<ArticleRequest> users = articleService.getAll(pageRequest);
+    public PagedDataResponse<ArticleRequest> article(@PageDefault PageRequest pageRequest) {
+        PagedResult<ArticleRequest> users = articleService.getAll(pageRequest);
 
         return PagedDataResponse.of(null);
     }
+
+
 
     @RequestMapping(value = "/article/file", method = RequestMethod.POST)
     public DataResponse welcome(@PageDefault PageRequest pageRequest,
@@ -100,7 +105,7 @@ public class ArticleController {
 
 
     @RequestMapping(value = "/article/{id}", method = RequestMethod.DELETE)
-    public BasicResponse welcome(@PathVariable("id") long id) {
+    public BasicResponse one(@PathVariable("id") long id) {
 
         articleService.delete(id);
         return BasicResponse.success();
@@ -117,6 +122,51 @@ public class ArticleController {
     public BasicResponse updateOne(@PathVariable("id") Integer id,@RequestParam("op") int op) {
 
         articleService.changeStatus(id,op);
+        return BasicResponse.success();
+    }
+
+    /**
+     * level  level level level
+     *
+     */
+    @RequestMapping(value = "/articleLevel", method = RequestMethod.GET)
+    public PagedDataResponse<ArticleLevelRequest> level(@PageDefault PageRequest pageRequest) {
+        PagedResult<ArticleLevelRequest> labels = articleService.getAllLevel(pageRequest);
+
+        return PagedDataResponse.of(labels);
+    }
+    @RequestMapping(value = "/articleLevel", method = RequestMethod.PUT)
+    public BasicResponse levelUpdate(@RequestBody ArticleLevelRequest request) {
+        articleService.addOrUpdateLevel(request);
+        return BasicResponse.success();
+    }
+
+    @RequestMapping(value = "/articleLevel/{id}", method = RequestMethod.DELETE)
+    public BasicResponse levelDel(@PathVariable("id") Long id) {
+        articleService.deleteLevel(id);
+        return BasicResponse.success();
+    }
+
+
+    /**
+     * label  label label label
+     *
+     */
+    @RequestMapping(value = "/articleLabel", method = RequestMethod.GET)
+    public PagedDataResponse<ArticleLabelRequest> label(@PageDefault PageRequest pageRequest) {
+        PagedResult<ArticleLabelRequest> labels = articleService.getAllLabel(pageRequest);
+
+        return PagedDataResponse.of(labels);
+    }
+    @RequestMapping(value = "/articleLabel", method = RequestMethod.PUT)
+    public BasicResponse labelUpdate(@RequestBody ArticleLabelRequest request) {
+        articleService.addOrUpdateLable(request);
+        return BasicResponse.success();
+    }
+
+    @RequestMapping(value = "/articleLabel/{id}", method = RequestMethod.DELETE)
+    public BasicResponse labelDel(@PathVariable("id") Long id) {
+        articleService.deleteLabel(id);
         return BasicResponse.success();
     }
 

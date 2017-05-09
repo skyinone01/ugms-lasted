@@ -10,13 +10,47 @@
 
 	/** @ngInject */
 	function articleModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
-		var UE
+		$scope.config={
+			"content" : "<p>test1</p>",
+			"focus" : true,
+			"indentValue":"2em",
+			"initialFrameWidth":1000,
+			"initialFrameHeight":320,
+			"readonly" : false ,
+			"enableAutoSave": false,
+			"saveInterval": 500,
+			"fullscreen" : false,
+			"imagePopup":true,
+			"allHtmlEnabled":false,
+			"functions" :['map','insertimage','insertvideo','attachment','insertcode','template', 'background', 'wordimage']
+		};
+		$scope.config2={
+			functions :['map']
+		};
+		$scope.getContent=function(id){
+			var content=$scope.ueditorGetContent(id);
+			alert(content);
+		}
+		$scope.getContentTxt=function(id){
+			var content=$scope.ueditorGetContentTxt(id);
+			alert(content);
+		}
+		$scope.setContent=function(){
+			$scope.ueditorSetContent("container","111111");
+		}
+		$scope.setContent2=function(){
+			$scope.ueditorSetContent("container2","222222");
+		}
+
+
+
 		var modelId= $stateParams.modelId,op=$stateParams.op;
 
 		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
 		$scope.types=[{'value':0,'text':'内部广告'},{'value':1,'text':'外部广告'}];
 		$scope.showApplyDetail =false;
 		$scope.labels=[{'id':0,'name':'养生'},{'id':1,'name':'健康'}]
+
 
 		if(modelId == 0){
 			$scope.welcome = {

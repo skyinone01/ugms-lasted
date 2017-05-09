@@ -1,20 +1,14 @@
-package com.ug369.backend.service.entity.mysql;
-
-import javax.persistence.*;
+package com.ug369.backend.bean.bean.request;
 
 /**
- * Created by Roy on 2017/3/27.
+ * Created by Roy on 2017/5/4.
  */
-@Entity
-@Table(name = "ug_article_label")
-public class ArticleLabel {
-    private static final long serialVersionUID = 2406271872055393481L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ArticleLabelRequest {
+
     private Long id;
     private String name;
-    private String levelname;
     private Integer level;
+    private String levelname;
 
     public String getLevelname() {
         return levelname;

@@ -1,11 +1,16 @@
 package com.ug369.backend.service.service;
 
 import com.ug369.backend.bean.base.request.PageRequest;
+import com.ug369.backend.bean.bean.request.ArticleLabelRequest;
+import com.ug369.backend.bean.bean.request.ArticleLevelRequest;
 import com.ug369.backend.bean.bean.request.ArticleRequest;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.service.entity.mysql.Article;
+import com.ug369.backend.service.entity.mysql.ArticleLabel;
+import com.ug369.backend.service.entity.mysql.ArticleLevel;
+import com.ug369.backend.service.repository.mysql.ArticleLabelRepository;
 import com.ug369.backend.service.repository.mysql.ArticleRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +28,12 @@ public class ArticleService {
 
     @Autowired
     private ArticleRepository articleRepository;
+
+    @Autowired
+    private ArticleLabelRepository articleLabelRepository;
+
+    @Autowired
+    private com.ug369.backend.service.repository.mysql.ArticleLevelRepository articleLevelRepository;
 
 
     public PagedResult<ArticleRequest> getAll(PageRequest pageRequest) {
@@ -111,5 +122,63 @@ public class ArticleService {
             articleRepository.save(one);
         }
 
+    }
+
+    public PagedResult<ArticleLabelRequest> getAllLabel(PageRequest pageRequest) {
+
+        return articleLabelRepository.getDataPageBatch("Article.getAllLabel", "Article.getLabelCount", new HashMap<>(), pageRequest);
+
+    }
+
+    public void addOrUpdateLable(ArticleLabelRequest request){
+
+        ArticleLabel label;
+        if (request.getId() == null || request.getId().longValue() ==0){
+            label = articleLabelRepository.findOne(request.getId());
+            if (label == null){
+                throw new UserException(UgmsStatus.NOT_FOUND);
+            }
+        }else {
+            label = new ArticleLabel();
+        }
+        label.setLevel(request.getLevel());
+        label.setName(request.getName());
+        label.setLevelname(request.getLevelname());
+
+        articleLabelRepository.save(label);
+    }
+    public void deleteLabel(Long id){
+        if (id==null || id.longValue()==0){
+            throw new UserException(UgmsStatus.BAD_REQUEST);
+        }
+        articleLabelRepository.delete(id);
+    }
+
+    public PagedResult<ArticleLevelRequest> getAllLevel(PageRequest pageRequest) {
+        return articleLabelRepository.getDataPageBatch("Article.getAllLevel", "Article.getLevelCount", new HashMap<>(), pageRequest);
+
+    }
+
+    public void addOrUpdateLevel(ArticleLevelRequest request){
+
+        ArticleLevel level;
+        if (request.getId() == null || request.getId().longValue() ==0){
+            level = articleLevelRepository.findOne(request.getId());
+            if (level == null){
+                throw new UserException(UgmsStatus.NOT_FOUND);
+            }
+        }else {
+            level = new ArticleLevel();
+        }
+        level.setSort(request.getSort());
+        level.setName(request.getName());
+
+        articleLevelRepository.save(level);
+    }
+    public void deleteLevel(Long id){
+        if (id==null || id.longValue()==0){
+            throw new UserException(UgmsStatus.BAD_REQUEST);
+        }
+        articleLevelRepository.delete(id);
     }
 }

@@ -1,5 +1,6 @@
 package com.ug369.backend.outerapi.security;
 
+import com.baidu.ueditor.ActionEnter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.exception.UserException;
@@ -18,10 +19,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by roy on 2017/3/7.
@@ -44,6 +47,25 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 
     public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filter)
             throws AuthenticationException, IOException, ServletException {
+
+		if(request.getRequestURI().contains("controller")){
+
+			request.setCharacterEncoding( "utf-8" );
+			response.setHeader("Content-Type" , "text/html");
+			ServletContext application=this.getServletContext();
+			String rootPath = application.getRealPath( "/" );
+			String action = request.getParameter("action");
+			String result = new ActionEnter( request, rootPath ).exec();
+			if( action!=null &&
+					(action.equals("listfile") || action.equals("listimage") ) ){
+				rootPath = rootPath.replace("\\", "/");
+				result = result.replaceAll(rootPath, "");
+			}
+			PrintWriter writer = response.getWriter();
+			writer.write( result );
+			System.out.println(request.getRequestURI());
+			return;
+		}
 
 	    if (!request.getRequestURI().equals("/token")){
 			String token = request.getHeader("token");
