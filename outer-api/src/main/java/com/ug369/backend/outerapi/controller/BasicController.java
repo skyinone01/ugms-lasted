@@ -113,7 +113,7 @@ public class BasicController {
     public BasicResponse sendSMS4ResetPwd(@RequestParam("userId") int userId){
     	BasicRequest user = basicService.findOne(userId);
     	if(org.apache.commons.lang3.StringUtils.isEmpty(user.getModelNumber())){
-    		SMSUtils.sendPwdprompt(user.getUserMobile(), "111111");
+//    		SMSUtils.sendPwdprompt(user.getUserMobile(), "111111");
     		user.setUserPwd(DigestUtils.md5Hex("111111"));
     		basicService.update(user);
     	
