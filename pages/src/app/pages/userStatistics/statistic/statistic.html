@@ -80,6 +80,12 @@
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvDay}" ng-click="pvDetail(3,$event)">日</button>
                      </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isPvBackHidden}">
                      <button type="button" class="btn btn-primary"  ng-click="pvBack($event)">返回</button></div></div>'>
+                    <!-- 
+                    <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvYear}" ng-click="pvDetail(1,$event)">年</button>
+                    <select ng-class="{&apos;active&apos;:isPvYear}" style="width: 100px;" id="pid" title="YEAR" ng-model="year"></select>
+                    <select ng-class="{&apos;active&apos;:isPvYear}" style="width: 100px;" id="pid" title="YEAR" ng-model="year"></select>
+                    <select ng-class="{&apos;active&apos;:isPvYear}" style="width: 100px;" id="pid" title="YEAR" ng-model="year"></select>
+                     -->
                     <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvShow}">
                     	<dashboard-module></dashboard-module>
                     </div>
@@ -108,9 +114,6 @@
                      ba-panel-title='<div class="row"><div class="col-xs-9">用户机型统计</div>
                      <div class="col-xs-3" ng-class="{&apos;hidden&apos;:$root.isDeviceBackShow}">
                      <div class="btn-group" role="group" aria-label="Basic example">
-                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isDeviceYear}" ng-click="deviceDetail(1,$event)">年</button>
-                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isDeviceMonth}" ng-click="deviceDetail(2,$event)">月</button>
-                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isDeviceDay}" ng-click="deviceDetail(3,$event)">日</button>
                      </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isDeviceBackHidden}">
                      <button type="button" class="btn btn-primary"  ng-click="deviceBack($event)">返回</button></div></div>'>
                      <div class="col-xs-12 row" ng-class="{'hidden':isDashoardDeviceShow}">

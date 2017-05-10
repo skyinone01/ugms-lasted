@@ -6,6 +6,8 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import sun.misc.BASE64Decoder;
+
 import com.ug369.backend.bean.base.request.PageRequest;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
@@ -21,6 +23,7 @@ import com.ug369.backend.utils.StringUtils;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringReader;
@@ -76,33 +79,20 @@ public class InstructionsController {
             if(!StringUtils.isPicture(instructions.getContent())){
                 throw  new UserException(UgmsStatus.BAD_REQUEST,"图片格式不符合要求");
             }
-            System.out.println("base64:"+instructions.getImgUrl());
             int pos = instructions.getImgUrl().indexOf(",");
             String data = instructions.getImgUrl().substring(pos+1);
-            System.out.println(data);
             ByteBuffer buffer = ByteBuffer.wrap(data.getBytes());
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
             messageDigest.update(buffer);
-//            byte[] md5sum = messageDigest.digest();
             String name = System.currentTimeMillis() + StringUtils.getFileSuff(instructions.getContent());
-            File img = new File(filePath + name);
-            BufferedReader br = null; 
-            BufferedWriter bw = null; 
             try {
-          	  br = new BufferedReader(new StringReader(data)); 
-                bw = new BufferedWriter(new FileWriter(img)); 
-                char buf[] = new char[1024 * 64];         //字符缓冲区 
-                int len; 
-                while ((len = br.read(buf)) != -1) { 
-                        bw.write(buf, 0, len); 
-                } 
-                bw.flush(); 
-                br.close(); 
-                bw.close(); 
-//  			org.apache.commons.io.FileUtils.writeByteArrayToFile(img, data.getBytes(),false);
-  		} catch (IOException e) {
-  			e.printStackTrace();
-  		}
+            	byte[] buffers = new BASE64Decoder().decodeBuffer(data);
+                FileOutputStream out = new FileOutputStream(filePath + name);
+                out.write(buffers);
+                out.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
             picUrl = staticUrl+name;
         }
         instructions.setImgUrl(picUrl);
@@ -132,30 +122,19 @@ public class InstructionsController {
           }
           int pos = instructions.getImgUrl().indexOf(",");
           String data = instructions.getImgUrl().substring(pos+1);
-          System.out.println(data);
           ByteBuffer buffer = ByteBuffer.wrap(data.getBytes());
           MessageDigest messageDigest = MessageDigest.getInstance("MD5");
           messageDigest.update(buffer);
 //          byte[] md5sum = messageDigest.digest();
           String name = System.currentTimeMillis() + StringUtils.getFileSuff(instructions.getContent());
-          File img = new File(filePath + name);
-          BufferedReader br = null; 
-          BufferedWriter bw = null; 
           try {
-        	  br = new BufferedReader(new StringReader(data)); 
-              bw = new BufferedWriter(new FileWriter(img)); 
-              char buf[] = new char[1024 * 64];         //字符缓冲区 
-              int len; 
-              while ((len = br.read(buf)) != -1) { 
-                      bw.write(buf, 0, len); 
-              } 
-              bw.flush(); 
-              br.close(); 
-              bw.close(); 
-//			org.apache.commons.io.FileUtils.writeByteArrayToFile(img, data.getBytes(),false);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+          	byte[] buffers = new BASE64Decoder().decodeBuffer(data);
+              FileOutputStream out = new FileOutputStream(filePath + name);
+              out.write(buffers);
+              out.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
           picUrl = staticUrl+name;
       }
       instructions.setImgUrl(picUrl);
