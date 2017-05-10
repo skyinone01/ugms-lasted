@@ -12,9 +12,9 @@
             </div>
             <button class="btn btn-info" ng-click="search()">查找专栏</button>
 
-            <button tyle="float:right" has-permission="article.article:edit" type="button"
+            <button tyle="float:right" has-permission="article.column:edit" type="button"
                 class="btn btn-primary" style="float: right"
-                ui-sref="article.column.add({modelId:1,op:2})"
+                ui-sref="article.column.add({modelId:0,op:1})"
                 >
             新增专栏
             </button>
@@ -52,14 +52,14 @@
             <td>
                 <button class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="open('app/pages/article/article/articleModal.html', 'lg',item.id,2)"
+                        ui-sref="article.column.add({modelId:item.id,op:2})"
                         ng-show="showButton($index,'detail')"
                 >
                     详情
                 </button>
                 <button has-permission="article.article:edit"  class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
-                        ng-click="open('app/pages/article/article/articleModal.html', 'lg',item.id,3)"
+                        ui-sref="article.column.add({modelId:item.id,op:3})"
                         ng-show="showButton($index,'edit')"
                 >
                     编辑
@@ -81,7 +81,7 @@
                 </button>
                 <button has-permission="article.article:apply"  class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="operation(10,item.id)"
+                        ui-sref="article.column.add({modelId:item.id,op:10})"
                         ng-show="showButton($index,'apply')"
                 >
                     审核

@@ -43,4 +43,24 @@
         FROM ug_article_category u
     </select>
 
+    <select id="getAllColumn" resultType="com.ug369.backend.service.entity.mysql.ArticleColumn">
+        SELECT *
+        FROM ug_article_column u
+        ORDER BY u.createtime DESC
+
+    </select>
+
+    <select id="getColumnCount" resultType="int">
+        SELECT COUNT(u.id)
+        FROM ug_article_column u
+    </select>
+
+
+    <select id="getArticleByColumn" resultType="com.ug369.backend.service.entity.mysql.Article">
+        SELECT a.id,a.title
+        FROM ug_article_column_re ac,ug_artcle a
+        WHERE ac.article = a.id AND ac.column = #{column}
+        ORDER BY a.creattime DESC
+    </select>
+
 </mapper>
