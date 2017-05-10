@@ -14,14 +14,14 @@
                             ng-change="searchValueChange()"
                             >
                         </div>
-                        <button class="btn btn-primary" ng-click="search()">搜索</button>
+                        <button class="btn btn-info" ng-click="search()">搜索</button>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                         筛选: &nbsp&nbsp&nbsp&nbsp
                         <select style="width: 100px;height:30px"
                                 ng-model="searchValue.level" ng-change="filterLevel()" ng-options="x.text for x in levelSearch">
                         </select>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <button class="btn btn-primary" style="float:right" ng-click="addType()">新增标签</button>
+                        <button class="btn btn-primary" has-permission="article.label:edit" style="float:right" ng-click="addType()">新增标签</button>
                         <!--<div class="btn btn-primary" >-->
                             <!--<button class="btn btn-primary" ng-click="addType()">新增标签</button>-->
                         <!--</div>-->
@@ -67,8 +67,8 @@
                                 </button>
                             </form>
                             <div class="buttons" ng-show="!rowform.$visible">
-                                <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
-                                <button class="btn btn-danger editable-table-button btn-xs" ng-click="deleteType($index)">删除</button>
+                                <button has-permission="article.label:edit" class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
+                                <button has-permission="article.label:delete" class="btn btn-danger editable-table-button btn-xs" ng-click="deleteType($index)">删除</button>
                             </div>
                         </td>
                     </tr>

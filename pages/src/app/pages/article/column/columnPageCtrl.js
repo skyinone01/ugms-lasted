@@ -4,11 +4,11 @@
 (function () {
 	'use strict';
 
-	angular.module('BlurAdmin.pages.article.article')
-			.controller('ArticlePageCtrl', ArticlePageCtrl);
+	angular.module('BlurAdmin.pages.article.column')
+			.controller('ColumnPageCtrl', ColumnPageCtrl);
 
 	/** @ngInject */
-	function ArticlePageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
+	function ColumnPageCtrl($scope,$uibModal, baProgressModal, $filter,appBase) {
 
 		$scope.perPage = 20;
 		$scope.page = 1;

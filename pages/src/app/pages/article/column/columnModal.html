@@ -1,7 +1,3 @@
-<script type="text/javascript" src="app/pages/article/article/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" src="app/pages/article/article/ueditor/ueditor.all.js"></script>
-<!--<script type="text/javascript" src="http://zqjimlove.github.io/angular-ueditor/dist/angular-ueditor.js"></script>-->
-
 <div class="modal-content" >
     <form name="myForm" novalidate>
         <div class="modal-body">
@@ -12,7 +8,7 @@
                             <div class="form-group row clearfix">
                                 <label for="inputName" class="col-sm-3 control-label">标题</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="title" ng-disabled="inputEdit" class="form-control" ng-model="welcome.title" id="inputName"
+                                    <input type="text" name="title" ng-disabled="inputEdit" class="form-control" ng-model="item.title" id="inputName"
                                            placeholder="请输入标题..." required>
                                     <span ng-show="myForm.title.$error.required" style="color:red" >标题是必须的</span>
                                 </div>
@@ -23,33 +19,35 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row clearfix">
-                                <label for="inputName" class="col-sm-3 control-label">类别</label>
+                                <label class="col-sm-3 control-label">图片</label>
                                 <div class="col-sm-9">
-                                    <select name="applySelect" selectpicker="selectpicker" ng-options="s.text for s in types"
-                                            class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="type"
-                                            tabindex="-98" style="" ng-change="selectType(this)">
-                                    </select>
-                                    <p>
-                                        <input  type="text" ng-show="false" name="type" ng-model="typeid" required>
-                                        <span ng-show="myForm.type.$error.required" style="color:red">类别是必须的</span>
-                                    </p>
-                                </div>
+                                    <div class="userpic">
+                                        <div class="userpic-wrapper">
+                                            <img   ng-src="{{ item.picture == '' ? picture : item.picture }}"
+                                                   ng-click="uploadPicture()">
+                                        </div>
+                                        <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
+                                        <a href class="change-userpic" ng-click="uploadPicture()">选择图片</a>
+                                        <input type="file" ng-disabled="inputEdit" name="url" ng-show="false" id="uploadFile" ng-model="item.url"
+                                               ng-file-select="onFileSelect($files)" required>
 
+                                    </div>
+                                    <input id="hidden_img" type="text" ng-show="false" name="picmark" ng-model="picmark" required>
+                                    <span ng-show="myForm.picmark.$error.required" style="color:red">图片是必须的</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row clearfix">
-                                <label for="inputName" class="col-sm-3 control-label">标签</label>
+                                <label for="inputName" class="col-sm-3 control-label">价格</label>
                                 <div class="labels col-sm-9">
                                     <div>
-                                        <div ng-repeat="label in labels" style="display: inline-flex; border: 1.3px solid #63bbb2;border-radius:15%">
-                                            <i class="ion-ios-close-outline" ng-click="removeLabel(label.id)" ></i>
-                                            <span class="tag label" style="color: #63bbb2">{{label.name}}</span>
-                                        </div>
-                                        <div style="display: inline-flex">
-                                            <i class="ion-plus-round"></i><span class="label-input-stub">添加</span>
+                                        <div style="display: inline-flex;">
+                                            <label><input name="free" type="radio" value="" />免费 </label>
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                            <label><input name="nonefree" type="radio" value="" />付费 </label>
                                         </div>
                                     </div>
 
@@ -61,10 +59,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row clearfix">
-                                <label for="inputName" class="col-sm-3 control-label">来源</label>
+                                <label for="inputName" class="col-sm-3 control-label">添加文章</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="source"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.source"
-                                           placeholder="来源..." required>
+                                    <input type="text" name="source"  ng-disabled="inputEdit" class="form-control" ng-model="item.source"
+                                           placeholder="" required>添加
                                     <!--<span ng-show="myForm.contactphone.$error.required" style="color:red" >联系电话是必须的</span>-->
                                 </div>
                             </div>
@@ -74,42 +72,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row clearfix">
-                                <label for="inputName" class="col-sm-3 control-label">作者</label>
+                                <label for="inputName" class="col-sm-3 control-label">已添加文章</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="author"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.author"
-                                           placeholder="作者..." required>
-                                    <!--<span ng-show="myForm.contactphone.$error.required" style="color:red" >联系电话是必须的</span>-->
+                                    <div include-with-scope="app/pages/article/column/articleTable.html" ></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group row clearfix">
-                                <label for="inputName" class="col-sm-3 control-label">摘要</label>
-                                <div class="col-sm-9">
-                                <textarea name="content" ng-disabled="inputEdit" class="form-control" ng-model="welcome.summary"
-                                          placeholder="请输入摘要..." required></textarea>
-                                    <!--<input type="text" name="content" ng-disabled="inputEdit" class="form-control" ng-model="item.context"-->
-                                    <!--placeholder="请输入内容..." required>-->
-                                    <span ng-show="myForm.content.$error.required" style="color:red" >摘要是必须的</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group row clearfix">
-                                <label for="inputName" class="col-sm-3 control-label">内容</label>
-                                <div class="col-sm-9" >
-                                    <!--<div class="ueditor" ng-model="content"></div>-->
-                                    <div ueditor id="container"  config="{{config}}" ></div>
-                                    <!--<div ueditor id="container2" config="{{config2}}" style="margin-top:20px" ></div>-->
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row" ng-show="showApply()">
                         <div class="col-md-6">
                             <div class="form-group row clearfix">

@@ -4,7 +4,7 @@
         <div class="col-md-12">
             <div ba-panel ba-panel-title="标签列表" ba-panel-class="with-scroll">
                 <div class="add-row-editable-table">
-                    <button class="btn btn-primary" ng-click="addType()">新增类别</button>
+                    <button has-permission="article.category:edit" style="float: right" class="btn btn-primary" ng-click="addType()">新增类别</button>
                 </div>
                 <table class="table table-bordered table-hover table-condensed">
                     <tbody>
@@ -43,8 +43,8 @@
                                 </button>
                             </form>
                             <div class="buttons" ng-show="!rowform.$visible">
-                                <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
-                                <button class="btn btn-danger editable-table-button btn-xs" ng-click="deleteType($index)">删除</button>
+                                <button has-permission="article.category:edit" class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
+                                <button has-permission="article.category:delete" class="btn btn-danger editable-table-button btn-xs" ng-click="deleteType($index)">删除</button>
                             </div>
                         </td>
                     </tr>
