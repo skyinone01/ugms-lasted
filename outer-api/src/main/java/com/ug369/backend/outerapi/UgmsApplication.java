@@ -11,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 public class UgmsApplication {
 
     public static void main(String[] args) {
+
         ApplicationContext context = SpringApplication.run(UgmsApplication.class, args);
         ContextUtils.setApplicationContext(context);
 
