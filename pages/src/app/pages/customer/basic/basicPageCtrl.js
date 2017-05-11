@@ -116,20 +116,19 @@
 				$scope.listItem();
             });
 		}*/
-		
+
 		$scope.exportUserStats = function () {
 			var startDate = $("#startDate").val();
 			var endDate = $("#endDate").val();
 			var userName = $("#searchNameValue").val();
-			
 			var param = "";
 			if(userName!=""&& userName!=undefined){
 				param = param + "&userName="+userName;
 			}else{
 				param = param + "&userName="+null;
 			}
-			
-			/*if(startDate!=""&& startDate!=undefined){
+
+			if(startDate!=""&& startDate!=undefined){
 				param = param + "&startDate="+startDate;
 			}else{
 				param = param + "&startDate="+null;
@@ -138,13 +137,14 @@
 				param = param + "&endDate="+endDate;
 			}else{
 				param = param + "&endDate="+null;
-			}*/
-			
+			}
+
 			window.location.href=apiPath+'/basic/exportUserStats?'+param;
-			
+
 		}
 
-        $scope.upAble = function(page){
+
+		$scope.upAble = function(page){
             if(page == 1){
                 return true;
             }
