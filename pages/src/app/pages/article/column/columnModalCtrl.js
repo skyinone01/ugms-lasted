@@ -10,88 +10,46 @@
 
 	/** @ngInject */
 	function columnModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
-		$scope.config={
-			"content" : "<p>test1</p>",
-			"focus" : true,
-			"indentValue":"2em",
-			"initialFrameWidth":1000,
-			"initialFrameHeight":320,
-			"readonly" : false ,
-			"enableAutoSave": false,
-			"saveInterval": 500,
-			"fullscreen" : false,
-			"imagePopup":true,
-			"allHtmlEnabled":false,
-			"functions" :['map','insertimage','insertvideo','attachment','insertcode','template', 'background', 'wordimage']
-		};
-		$scope.config2={
-			functions :['map']
-		};
-		$scope.getContent=function(id){
-			var content=$scope.ueditorGetContent(id);
-			alert(content);
-		}
-		$scope.getContentTxt=function(id){
-			var content=$scope.ueditorGetContentTxt(id);
-			alert(content);
-		}
-		$scope.setContent=function(){
-			$scope.ueditorSetContent("container","111111");
-		}
-		$scope.setContent2=function(){
-			$scope.ueditorSetContent("container2","222222");
-		}
-
-
 
 		var modelId= $stateParams.modelId,op=$stateParams.op;
-
-		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
-		$scope.types=[{'value':0,'text':'内部广告'},{'value':1,'text':'外部广告'}];
+		modelId = 0;
 		$scope.showApplyDetail =false;
-		$scope.labels=[{'id':0,'name':'养生'},{'id':1,'name':'健康'}]
-
 
 		if(modelId == 0){
-			$scope.welcome = {
+			$scope.item = {
 				id: 0,
 				title: '',
 				url: '',
-				useable: '',
-				beginDate: '',
-				endDate: '',
-				orders: '',
+				paymode: true,
+				payitem1:{price:0,month:0},
+				payitem2:{price:0,month:0},
+				payitem3:{price:0,month:0},
 				link: '',
-				status:'',
-				weight:'',
-				contactName:'',
-				contactPhone:'',
-				applydetail:'',
-				applypeole:'',
-				type:'',
+				articles:[],
+				aplydetail:'',
+				applypeole:''
 			};
 		}else{
 
-			appBase.doGet("banner/"+modelId,null,function(response){
-				$scope.welcome=response.data;
-				//$("#data_date").val(response.data.begin_date)
-				for(var i =0;i<$scope.types.length;i++){
-					if($scope.types[i].value == response.data.type){
-						$scope.type = $scope.types[i];
-					}
-				}
+			appBase.doGet("articleColumn/"+modelId,null,function(response){
+				$scope.item=response.data;
 				if( response.data.status==3 && op==2){
 					$scope.showApplyDetail =true;
 				}
-				$scope.typeId = response.data.type;
-				$scope.realDate =response.data.beginDate
-				$scope.realendDate =response.data.endDate
 				$scope.picmark = "mark"
 			});
 		}
 
-
-
+		$scope.showSubmit = function(){
+			if(op ==2){
+				return false;
+			}else {
+				return true
+			}
+		}
+		$scope.months=[{'value':1,'text':'1个月'},{'value':2,'text':'2个月'},{'value':3,'text':'3个月'},{'value':4,'text':'4个月'},
+			  {'value':5,'text':'5个月'},{'value':6,'text':'6个月'},{'value':7,'text':'7个月'},{'value':8,'text':'8个月'},
+			 {'value':9,'text':'9个月'},{'value':10,'text':'10个月'},{'value':11,'text':'11个月'},{'value':12,'text':'12个月'}]
 
 		$scope.removeLabel = function (id) {
 			//$scope.picture = $filter('appImage')('theme/no-photo.png');
@@ -133,14 +91,7 @@
 			$uibModalInstance.close($scope.link);
 		};
 
-		$scope.setDate = function(){
-			$scope.realDate = $("#data_id").val();
-			//$("#data_date").val($("#data_id").val());
-		}
-		$scope.setEndDate = function(){
-			$scope.realendDate = $("#data_endid").val();
-			//$("#data_date").val($("#data_id").val());
-		}
+
 		$scope.showApply = function(){
 			if(op ==4){
 				return true;

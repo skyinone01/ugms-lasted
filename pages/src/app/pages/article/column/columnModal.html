@@ -1,4 +1,4 @@
-<div class="modal-content" >
+<div class="modal-content" ng-init="inputEdit=initInput()">
     <form name="myForm" novalidate>
         <div class="modal-body">
             <div ba-panel ba-panel-class="profile-page" ng-init="inputEdit=initInput()">
@@ -42,13 +42,50 @@
                         <div class="col-md-6">
                             <div class="form-group row clearfix">
                                 <label for="inputName" class="col-sm-3 control-label">价格</label>
-                                <div class="labels col-sm-9">
-                                    <div>
-                                        <div style="display: inline-flex;">
-                                            <label><input name="free" type="radio" value="" />免费 </label>
-                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                            <label><input name="nonefree" type="radio" value="" />付费 </label>
-                                        </div>
+                                <div class="col-sm-9">
+                                    <div style="display: inline-flex;">
+                                        <label><input name="paymode" ng-value=false ng-model="item.paymode" type="radio"/>免费 </label>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                        <label><input name="paymode" ng-value=true ng-model="item.paymode"  type="radio" />付费 </label>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="item.paymode">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label"></label>
+                                <div class="col-sm-9">
+                                    <div style="display: inline-flex">
+                                        <label for="inputName" class="col-sm-3 control-label">1.</label>
+
+                                        <input type="number"  style="width: 100px" ng-disabled="inputEdit" class="form-control" ng-model="item.payitem1.price"
+                                                 placeholder="" required>&nbsp&nbsp&nbsp元/&nbsp&nbsp&nbsp
+                                        <select style="width: 80px;height:30px"
+                                                ng-disabled="inputEdit" ng-model="item.payitem1.month"  ng-options="x.text for x in months">
+                                        </select>
+                                    </div><br>
+                                    <div style="display: inline-flex">
+                                        <label for="inputName" class="col-sm-3 control-label">2.</label>
+
+                                        <input type="number"  style="width: 100px" ng-disabled="inputEdit" class="form-control" ng-model="item.payitem2.price"
+                                               placeholder="" required>&nbsp&nbsp&nbsp元/&nbsp&nbsp&nbsp
+                                        <select ng-disabled="inputEdit" style="width: 80px;height:30px"
+                                                ng-model="item.payitem2.month"  ng-options="x.text for x in months">
+                                        </select>
+                                    </div><br>
+                                    <div style="display: inline-flex">
+                                        <label for="inputName" class="col-sm-3 control-label">3.</label>
+
+                                        <input type="number"  style="width: 100px" ng-disabled="inputEdit" class="form-control" ng-model="item.payitem3.price"
+                                               placeholder="" required>&nbsp&nbsp&nbsp元/&nbsp&nbsp&nbsp
+                                        <select ng-disabled="inputEdit"style="width: 80px;height:30px"
+                                                ng-model="item.payitem3.month"  ng-options="x.text for x in months">
+                                        </select>
                                     </div>
 
                                 </div>
@@ -61,9 +98,27 @@
                             <div class="form-group row clearfix">
                                 <label for="inputName" class="col-sm-3 control-label">添加文章</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="source"  ng-disabled="inputEdit" class="form-control" ng-model="item.source"
-                                           placeholder="" required>添加
+                                    <div style="display: inline-flex">
+
+                                        <input type="text" name="source"  ng-disabled="inputEdit" class="form-control" ng-model="item.source"
+                                               placeholder="" required>
+                                        <button has-permission="article.column:edit" type="button" ng-disabled="inputEdit" class="btn btn-info" ng-click="addArticle()">添加</button>
+                                    </div>
+
                                     <!--<span ng-show="myForm.contactphone.$error.required" style="color:red" >联系电话是必须的</span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" style="color: #00a0e9" class="col-sm-3 control-label">已添加文章</label>
+                                <div class="col-sm-9">
+
                                 </div>
                             </div>
                         </div>
@@ -72,7 +127,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row clearfix">
-                                <label for="inputName" class="col-sm-3 control-label">已添加文章</label>
+                                <label for="inputName" class="col-sm-3 control-label"></label>
                                 <div class="col-sm-9">
                                     <div include-with-scope="app/pages/article/column/articleTable.html" ></div>
                                 </div>
@@ -131,10 +186,6 @@
             <button type="button" class="btn btn-primary" ng-click="saveOrUpdate($dismiss())" ng-show="showSubmit()"
                     ng-disabled="myForm.orders.$error.required ||
                             myForm.title.$error.required||
-                            myForm.date.$error.required||
-                            myForm.enddate.$error.required||
-                            myForm.content.$error.required||
-                            myForm.type.$error.required||
                             (showApply() && myForm.apply.$error.required)||
                             (showApplyDetail && myForm.applydetail.$error.required)||
                             myForm.picmark.$error.required">提交</button>

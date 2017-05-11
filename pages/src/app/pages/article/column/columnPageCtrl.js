@@ -14,10 +14,8 @@
 		$scope.page = 1;
 		$scope.listItem = function(searchValue){
 			var param = "page="+$scope.page+"&perPage="+$scope.perPage+"&searchValue="+searchValue;
-			appBase.doGet("article?"+param,null,function(response){
+			appBase.doGet("articleColumn?"+param,null,function(response){
 				if(response.data != null){
-					$scope.items = response.data.items;
-
 					$scope.items = response.data.items;
 					$scope.totalPage = Math.ceil(response.data.total_count/$scope.perPage);
 				}
@@ -103,7 +101,7 @@
 			if(!result){
 				return;
 			}
-			appBase.doDelete("article/"+id,null,function(res){
+			appBase.doDelete("articleColumn/"+id,null,function(res){
 				appBase.bubMsg("删除成功");
 				$scope.listItem();
 			});
@@ -153,7 +151,7 @@
 				$scope.open('app/pages/article/article/articleModal.html', 'lg',id,4);
 				return;
 			}
-			appBase.doPut("article/"+id+"?op="+op,null,function(response){
+			appBase.doPut("articleColumn/"+id+"?op="+op,null,function(response){
 				appBase.bubMsg("操作成功");
 				$scope.listItem();
 			});

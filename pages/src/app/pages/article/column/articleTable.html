@@ -6,20 +6,20 @@
         <td>序号</td>
         <td>操作</td>
     </tr>
-    <tr ng-repeat="article in column.articles"  class="editable-row"  >
+    <tr ng-repeat="article in item.articles"    >
         <td >
             {{$index}}
-            <span style="display: none"   e-name="id" e-form="rowform" e-required>
+            <span style="display: none"   e-name="index" e-form="rowform" e-required>
           {{ role.id || '0' }}
         </span>
         </td>
         <td >
-        <span editable-text="article.name"  e-name="title" e-form="rowform" e-required  >
+        <span e-name="title" e-form="rowform" e-required  >
           {{ article.title || 'empty' }}
         </span>
         </td>
         <td>
-        <span editable-text="article.id"  e-name="id" e-form="rowform" e-required  >
+        <span   e-name="id" e-form="rowform" e-required  >
           {{ article.id || 'empty' }}
         </span>
         </td>
