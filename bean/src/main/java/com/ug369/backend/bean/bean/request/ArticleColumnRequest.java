@@ -10,11 +10,20 @@ public class ArticleColumnRequest {
 
     private long id;
     private String title;
+    private String picture;
     private boolean paymode;
     private PayItem payItem1;
     private PayItem payItem2;
     private PayItem payItem3;
     private List<SimpleArticle> articles = new ArrayList<>();
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
     public long getId() {
         return id;

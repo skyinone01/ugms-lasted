@@ -16,7 +16,7 @@
     <select id="getCount" resultType="int">
         SELECT COUNT(id)
         FROM ug_article u
-         where u.status is not NULL
+        where u.status is not NULL
     </select>
 
     <select id="getAllLabel" resultType="com.ug369.backend.bean.bean.request.ArticleLabelRequest">
@@ -57,10 +57,10 @@
 
 
     <select id="getArticleByColumn" resultType="com.ug369.backend.service.entity.mysql.Article">
-        SELECT a.id,a.title
-        FROM ug_article_column_re ac,ug_artcle a
+        SELECT a.id,a.title, a.createtime
+        FROM ug_article_column_re ac,ug_article a
         WHERE ac.article = a.id AND ac.column = #{column}
-        ORDER BY a.creattime DESC
+        ORDER BY a.createtime DESC
     </select>
 
 </mapper>

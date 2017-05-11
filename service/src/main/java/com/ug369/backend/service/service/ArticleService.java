@@ -214,6 +214,7 @@ public class ArticleService {
             result.setId(one.getId());
             result.setPaymode(one.getPaymode());
             result.setTitle(one.getTitle());
+            result.setPicture(one.getPicture());
             if (one.getPaymode() ){
                 String payitem1 = one.getPayitem1();
                 String[] split = payitem1.split("_");
@@ -221,11 +222,11 @@ public class ArticleService {
 
                 String payitem2 = one.getPayitem2();
                 String[] split2 = payitem2.split("_");
-                result.setPayItem1(Integer.parseInt(split2[0]),Integer.parseInt(split2[1]));
+                result.setPayItem2(Integer.parseInt(split2[0]),Integer.parseInt(split2[1]));
 
                 String payitem3= one.getPayitem3();
                 String[] split3 = payitem3.split("_");
-                result.setPayItem1(Integer.parseInt(split3[0]),Integer.parseInt(split3[1]));
+                result.setPayItem3(Integer.parseInt(split3[0]),Integer.parseInt(split3[1]));
 
             }
 

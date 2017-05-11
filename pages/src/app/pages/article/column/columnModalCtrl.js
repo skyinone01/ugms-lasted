@@ -12,7 +12,6 @@
 	function columnModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
 
 		var modelId= $stateParams.modelId,op=$stateParams.op;
-		modelId = 0;
 		$scope.showApplyDetail =false;
 
 		if(modelId == 0){
@@ -79,7 +78,7 @@
 		$scope.getFile = function (file) {
 			fileReader.readAsDataUrl(file, $scope)
 					.then(function (result) {
-						$scope.welcome.picture = result;
+						$scope.item.picture = result;
 						$scope.picmark="mark";
 					});
 			$scope.file = file;
@@ -90,7 +89,6 @@
 		$scope.ok = function () {
 			$uibModalInstance.close($scope.link);
 		};
-
 
 		$scope.showApply = function(){
 			if(op ==4){
@@ -111,48 +109,35 @@
 				}
 			}
 		}
-		$scope.selectType = function(x){
-			$scope.typeId = x.type.value;
-		}
 		$scope.saveOrUpdate = function(dismis){
+            var formData = new FormData();
+            formData.append('id',$scope.item.id);
+		    if(op == 10){
+	            if($scope.item.applydetail !=null){
+    				formData.append('applyDetail',$scope.item.applydetail);
+    			}
+                if ($scope.applyStatus != null){
+    				formData.append('status',$scope.applyStatus);
+    			}
 
-			var formData = new FormData();
-			formData.append('file',$scope.file);
-			formData.append('id', $scope.welcome.id);
-			formData.append('link', $scope.welcome.link);
-			formData.append('title',$scope.welcome.title);
-			formData.append('content',$scope.welcome.content);
-			if($scope.welcome.weight !=null){
-				formData.append('weight',$scope.welcome.weight);
-			}
-			formData.append('type',$scope.typeId);
-			if($scope.welcome.applydetail !=null){
-				formData.append('applyDetail',$scope.welcome.applydetail);
-			}
-			if($scope.welcome.contactName !=null){
-				formData.append('contactName',$scope.welcome.contactName);
-			}
-			if($scope.welcome.contactPhone !=null){
-				formData.append('contactPhone',$scope.welcome.contactPhone);
-			}
-			if ($scope.applyStatus != null){
-				formData.append('status',$scope.applyStatus);
-			}
-			if ($scope.realDate != null){
-				formData.append('beginDate',$scope.realDate );
-			}
-			if ($scope.realendDate != null){
-				formData.append('endDate',$scope.realendDate);
-			}
 
-			formData.append('useable',1);
-			formData.append('orderId',$scope.welcome.orderId);
-			formData.append('isBanner',0);
+		    }else{
 
-			appBase.doFormData("banner",formData,function(response){
+			    formData.append('file',$scope.file);
+			    formData.append('title',$scope.item.title);
+                formData.append('type',$scope.typeId);
+                formData.append('paymode',$scope.item.paymode);
+                if($scope.item.paymode){
+                    formData.append('payitem1',$scope.item.payitem1.price+"_"+$scope.item.payitem1.month.value);
+                    formData.append('payitem2',$scope.item.payitem2.price+"_"+$scope.item.payitem2.month.value);
+                    formData.append('payitem3',$scope.item.payitem3.price+"_"+$scope.item.payitem3.month.value);
+                }
+
+		    }
+			appBase.doFormData("articleColumn",formData,function(response){
 				appBase.bubMsg("保存成功");
 				dismis;
-				$state.go("content.advertisement", {}, { reload: true });
+				$state.go("article.column", {}, { reload: true });
 			});
 		}
 	}
