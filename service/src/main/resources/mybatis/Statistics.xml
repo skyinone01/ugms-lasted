@@ -196,13 +196,46 @@
         limit 20
     </select>
     
+    
+    <select id="selectPvModule" parameterType="hashmap" resultMap="ModuleMap">
+        SELECT
+        count(id) count ,
+        a.moduleName type
+        FROM
+        yg_sys_uservisitlog a
+        WHERE
+        a.moduleName IS NOT NULL
+        AND a.logType = 'moduleStats'
+        <if test="year != '' ">
+            AND YEAR(createTime) = #{year}
+        </if>
+        <if test="month != '' ">
+            AND MONTH(createTime) = #{month}
+        </if>
+        <if test="day != '' ">
+            AND DAY(createTime) = #{day}
+        </if>
+        GROUP BY
+        a.moduleId ,
+        a.moduleName
+        ORDER BY
+        count DESC
+        limit 20
+    </select>
+    
     <!--pv 年-->
     <select id="selectPvCountYear" parameterType="hashmap" resultMap="UserCountMap">
         SELECT COUNT(1) AS COUNT , IFNULL(DATE_FORMAT( u.createTime , '%Y%m'), '其他') AS TYPE
         FROM yg_sys_uservisitlog u 
-        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
-            where createTime BETWEEN #{startDate} AND #{endDate}
-        </if>
+        <where>
+        	<if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            	AND createTime BETWEEN #{startDate} AND #{endDate}
+	        </if>
+	        <if test="moduleName !='' and moduleName != null">
+	            AND u.moduleName = #{moduleName}
+	        </if>
+        </where>
+        
         GROUP BY DATE_FORMAT( u.createTime , '%Y%m')
         ORDER BY createTime ASC
     </select>
@@ -211,9 +244,14 @@
     <select id="selectPvCountMonth" parameterType="hashmap" resultMap="UserCountMap">
         SELECT COUNT(1) AS COUNT , IFNULL(DATE_FORMAT( u.createTime , '%Y%m%d'), '其他') AS TYPE
         FROM yg_sys_uservisitlog u 
-        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
-            where createTime BETWEEN #{startDate} AND #{endDate}
-        </if>
+        <where>
+        	<if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            	AND createTime BETWEEN #{startDate} AND #{endDate}
+	        </if>
+	        <if test="moduleName !='' and moduleName != null">
+	            AND u.moduleName = #{moduleName}
+	        </if>
+        </where>
         GROUP BY DATE_FORMAT( u.createTime , '%Y%m%d')
         ORDER BY createTime ASC
     </select>
@@ -222,11 +260,43 @@
     <select id="selectPvCountDay" parameterType="hashmap" resultMap="UserCountMap">
         SELECT COUNT(1) AS COUNT , IFNULL(DATE_FORMAT( u.createTime , '%Y%m%d%h'), '其他') AS TYPE
         FROM yg_sys_uservisitlog u 
-        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
-            where createTime BETWEEN #{startDate} AND #{endDate}
-        </if>
+        <where>
+        	<if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
+            	AND createTime BETWEEN #{startDate} AND #{endDate}
+	        </if>
+	        <if test="moduleName !='' and moduleName != null">
+	            AND u.moduleName = #{moduleName}
+	        </if>
+        </where>
         GROUP BY DATE_FORMAT( u.createTime , '%Y%m%d%h')
         ORDER BY createTime ASC
+    </select>
+    
+    
+    
+    <!--pv 获取某一年所有月份统计信息-->
+    <select id="selectPvCountYearByModule" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT MONTH(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
+		WHERE YEAR(createTime) = #{selectedYear} AND d.`moduleName` = #{moduleName}
+		GROUP BY MONTH(createTime)
+    </select>
+    
+    
+    <!--pv 获取某一月所有天统计信息-->
+    <select id="selectPvCountMonthByModule" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT DAY(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
+		WHERE MONTH(createTime) = #{selectedMonth} AND d.`moduleName` = #{moduleName}
+		AND YEAR(createTime) = #{selectedYear}
+		GROUP BY DAY(createTime)
+    </select>
+    
+    <!--pv 获取某一天所有整点统计信息-->
+    <select id="selectPvCountDayByModule" parameterType="hashmap" resultMap="UserCountMap">
+        SELECT HOUR(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
+		WHERE DAY(createTime) = #{selectedDay} AND d.`moduleName` = #{moduleName}
+		AND YEAR(createTime) = #{selectedYear}
+		AND MONTH(createTime) = #{selectedMonth}
+		GROUP BY HOUR(createTime)
     </select>
 
     <!--性别-->

@@ -6,6 +6,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -34,4 +35,33 @@ public class TimeUtils {
     }
 
 
+    /**
+     * 获取年月日
+     * @param type
+     * @return
+     */
+    public static int getCurrentDate(int type){
+    	Calendar c = Calendar.getInstance();
+    	int date = 0;
+    	switch (type) {
+		case 1:
+			date = c.get(Calendar.YEAR);
+			break;
+		case 2:
+			date = c.get(Calendar.MONTH) + 1;
+			break;
+		case 3:
+			date = c.get(Calendar.DAY_OF_MONTH);
+			break;
+
+		default:
+			break;
+		}
+    	System.out.println(date);
+    	return date;
+    }
+    
+    public static void main(String[] args) {
+    	getCurrentDate(2);
+	}
 }

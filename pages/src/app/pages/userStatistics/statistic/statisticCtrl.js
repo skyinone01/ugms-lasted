@@ -9,12 +9,17 @@
 		.controller('StatisticCtrl', StatisticCtrl);
 
 	/** @ngInject */
-	function StatisticCtrl($scope,$uibModal, $http,$rootScope,baProgressModal,appBase,appCommon) {
+	function StatisticCtrl($scope,$uibModal, $http,$rootScope,baProgressModal,appBase,appCommon,baConfig, layoutPaths) {
+		var layoutColors = baConfig.colors;
 		var localPath = appCommon.autoCompleteUrl();//'http://localhost:8080';
 		var apiPath = localPath.substring(0, localPath.lastIndexOf('/'));
 		var agetype;
 		var pvtype;
 		$scope.DateType="2";
+		$scope.year = ["2013", "2014", "2015","2016","2017","2018","2019"];
+		$scope.month = ["1", "2", "3","4","5","6","7","8","9","10","11","12"];
+		$scope.day = ["1", "2", "3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
+		
 		/*$scope.export = (function () {
 			$http.get('http://localhost:8080/exports/').then(function (response) {
 				function downloadFile(fileName, urlData) {
@@ -213,40 +218,132 @@
 		}
 		
 		function pvDetail(type,$event) {
-			$rootScope.pvType=type;
-			if(type==1) {
-				if ($scope.isPvYear == true) {
-					$scope.isPvYear = false;
-				}else {
-					$scope.isPvYear = true;
-					$scope.isPvMonth = false;
-					$scope.isPvDay = false;
-				}
-			}else if(type==2){
-				if ($scope.isPvMonth == true) {
-					$scope.isPvMonth = false;
-				}else {
-					$scope.isPvYear = false;
-					$scope.isPvMonth = true;
-					$scope.isPvDay = false;
-				}
-			}else if(type==3){
-				if ($scope.isPvDay == true) {
-					$scope.isPvDay = false;
-				}else {
-					$scope.isPvYear = false;
-					$scope.isPvMonth = false;
-					$scope.isPvDay = true;
-				}
-			}
-			if($scope.isPvYear||$scope.isPvMonth||$scope.isPvDay)	{
-				$scope.isDashoardPvShow=true;
-				$scope.isDashoardPvTypeShow=false;
-			}else {
-				$scope.isDashoardPvShow=false;
-				$scope.isDashoardPvTypeShow=true;
-			}
-			$scope.PvValue=type;
+			var name = "";
+			var datas = [];
+			if(type == 1)
+				name = "1";
+			if(type == 2)
+				name = "2";
+			if(type == 3)
+				name = "3";
+//			$scope.selectPv = true;
+//			$scope.isDashoardPvShow = true;
+			var param = {"type":name};
+			var datas=[];
+			$scope.selectPv = false;
+			appBase.doGet("statistic/selectPvModule",param, function (response) {
+				response.data.forEach(function (value, index, array) {
+					datas.push({
+						country: value.type,
+						visits: value.count,
+						color: layoutColors.primary
+					})
+				});
+				var map = AmCharts.makeChart('barModuleChart', {
+					type: 'serial',
+					theme: 'blur',
+					color: layoutColors.defaultText,
+					dataProvider: datas,
+					startDuration: 1,
+					graphs: [
+						{
+							balloonText: '<b>[[category]]: [[value]]</b>',
+							fillColorsField: 'color',
+							fillAlphas: 0.7,
+							lineAlpha: 0.2,
+							type: 'column',
+							valueField: 'visits'
+						}
+					],
+					chartCursor: {
+						categoryBalloonEnabled: false,
+						cursorAlpha: 0,
+						zoomable: false
+					},
+					categoryField: 'country',
+					categoryAxis: {
+						gridPosition: 'start',
+						labelRotation: 45,
+						gridAlpha: 0.5,
+						gridColor: layoutColors.border,
+					},
+					export: {
+						enabled: true
+					},
+					creditsPosition: 'top-right',
+					pathToImages: layoutPaths.images.amChart
+				});
+				map.addListener("clickGraphItem", handleClick);
+			});
+			
+		}
+		
+		//柱状图点击事件
+		function handleClick(event){
+			$scope.isDashoardPvTypeShow = false;
+			$scope.isDashoardPvShow = true;
+			$scope.moduleName = event.item.category;
+			$rootScope.isPvBackShow = true;
+//			$scope.isPvYear = true;
+//			$scope.isPvMonth = true;
+//			$scope.isPvDay = true;
+			$scope.pvBack = true;
+			alert(event.item.category);
+			getData(1,"2016",event.item.category);
+		}
+		
+		//初始化
+		function getData(type,selectedYear,moduleName) {
+			var getPath = 'statistic/pv-count';
+//			var param={"type":type,"time":data,"moduleName":$scope.moduleName};
+			var param={"type":type,"selectedYear":selectedYear,"selectedMonth":"","selectedDay":"","moduleName":moduleName};
+			var datas=[];
+			$scope.selectPv = false;
+			appBase.doGet(getPath,param, function (response) {
+				response.data.forEach(function (value, index, array) {
+					datas.push({
+						country: value.type + "月",
+						visits: value.count,
+						color: layoutColors.primary
+					})
+				});
+				var map = AmCharts.makeChart('barPvChart', {
+					type: 'serial',
+					theme: 'blur',
+					color: layoutColors.defaultText,
+					dataProvider: datas,
+					startDuration: 1,
+					graphs: [
+						{
+							balloonText: '<b>[[category]]: [[value]]</b>',
+							fillColorsField: 'color',
+							fillAlphas: 0.7,
+							lineAlpha: 0.2,
+							type: 'column',
+							valueField: 'visits'
+						}
+					],
+					chartCursor: {
+						categoryBalloonEnabled: false,
+						cursorAlpha: 0,
+						zoomable: false
+					},
+					categoryField: 'country',
+					categoryAxis: {
+						gridPosition: 'start',
+						labelRotation: 45,
+						gridAlpha: 0.5,
+						gridColor: layoutColors.border,
+					},
+					export: {
+						enabled: true
+					},
+					creditsPosition: 'top-right',
+					pathToImages: layoutPaths.images.amChart
+				});
+				
+
+			});
 		}
 		
 		//device 机型

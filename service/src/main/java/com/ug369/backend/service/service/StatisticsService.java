@@ -60,6 +60,16 @@ public class StatisticsService {
     public List<UserCountStatistics> selectPvCountDay(Map dateMap) {
         return statisticsRepository.getData("Statistics.selectPvCountDay", dateMap);
     }
+    
+    /**
+     * 获取模块年月日统计信息
+     * @param data
+     * @param dateMap
+     * @return
+     */
+    public List<UserCountStatistics> selectPvCount(String data,Map dateMap) {
+        return statisticsRepository.getData(data, dateMap);
+    }
 
     public List<UserDeviceStatistics> selectDevice() {
         return statisticsRepository.getData("Statistics.selectDevice", null);
@@ -67,6 +77,15 @@ public class StatisticsService {
 
     public List<UserModuleStatistics> selectModule() {
         return statisticsRepository.getData("Statistics.selectModule", null);
+    }
+    
+    /**
+     * 查询pv相关数据
+     * @param dateMap
+     * @return
+     */
+    public List<UserModuleStatistics> selectPvModule(Map dateMap) {
+        return statisticsRepository.getData("Statistics.selectPvModule", dateMap);
     }
 
     public List<UserSexStatistics> selectSex() {

@@ -79,13 +79,16 @@
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvMonth}" ng-click="pvDetail(2,$event)">月</button>
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvDay}" ng-click="pvDetail(3,$event)">日</button>
                      </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isPvBackHidden}">
-                     <button type="button" class="btn btn-primary"  ng-click="pvBack($event)">返回</button></div></div>'>
-                    <!-- 
-                    <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvYear}" ng-click="pvDetail(1,$event)">年</button>
-                    <select ng-class="{&apos;active&apos;:isPvYear}" style="width: 100px;" id="pid" title="YEAR" ng-model="year"></select>
-                    <select ng-class="{&apos;active&apos;:isPvYear}" style="width: 100px;" id="pid" title="YEAR" ng-model="year"></select>
-                    <select ng-class="{&apos;active&apos;:isPvYear}" style="width: 100px;" id="pid" title="YEAR" ng-model="year"></select>
-                     -->
+                     <button type="button" class="btn btn-primary" ng-class="{&apos;hidden&apos;:$root.pvBackBtn} ng-click="pvBack($event)">返回</button></div></div>'>
+                    <!-- -->
+                    <div ng-class="{'hidden':selectPv}" >
+                    	<input type="hidden" ng-model="moduleName"></input>
+				                    年：<select style="width: 100px" ng-class="{'hidden':selectPvYear}" ng-model="selectedYear" ng-init="selectedYear = year[3]" ng-options="x for x in year" ng-change="pvSelectDetail(1,this)"></select>
+				                    月：<select style="width: 100px" ng-class="{'hidden':selectPvMonth}" ng-model="selectedMonth" ng-init="selectedMonth = month[0]" ng-options="x for x in month" ng-change="pvSelectDetail(2,this)"></select>
+				                    日：<select style="width: 100px" ng-class="{'hidden':selectPvDay}" ng-model="selectedDay" ng-init="selectedDay = day[0]" ng-options="x for x in day" ng-change="pvSelectDetail(3,this)"></select>
+				         <button type="button" class="btn btn-primary" ng-click="pvBacks()" style="float: right;">返回</button>
+                     </div>
+                     
                     <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvShow}">
                     	<dashboard-module></dashboard-module>
                     </div>

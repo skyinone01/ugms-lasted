@@ -1,7 +1,6 @@
 package com.ug369.backend.outerapi.controller;
 
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -14,7 +13,6 @@ import com.ug369.backend.bean.base.response.PagedDataResponse;
 import com.ug369.backend.bean.bean.request.BasicRequest;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
-import com.ug369.backend.service.entity.mysql.Statistics;
 import com.ug369.backend.service.entity.mysql.TotalStatistics;
 import com.ug369.backend.service.entity.mysql.UserAgeStatistics;
 import com.ug369.backend.service.entity.mysql.UserCountStatistics;
@@ -23,6 +21,7 @@ import com.ug369.backend.service.entity.mysql.UserModuleStatistics;
 import com.ug369.backend.service.entity.mysql.UserSexStatistics;
 import com.ug369.backend.service.repository.rdbsupport.domain.UserImportTemplete;
 import com.ug369.backend.service.service.StatisticsService;
+import com.ug369.backend.utils.TimeUtils;
 
 import java.io.File;
 import java.io.OutputStream;
@@ -31,7 +30,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -51,9 +49,10 @@ public class StatisticsController {
         return countryList;
     }*/
 
-    @RequestMapping(value = "/statistic/total")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping(value = "/statistic/total")
     public DataResponse selectTotal() {
-        Map result = new HashMap();
+        Map<String, Integer> result = new HashMap<String, Integer>();
         List<TotalStatistics> countryList = service.selectTotal();
         result.put("other", countryList.get(0).getCount());
         result.put("ios", countryList.get(1).getCount());
@@ -68,9 +67,9 @@ public class StatisticsController {
     }
 
     @RequestMapping("/statistic/age")
-    public DataResponse selectAge(String startDate,String endDate) {
-        Map result = new HashMap();
-        Map dateMap = new HashMap();
+    public DataResponse<Map<String, Integer>> selectAge(String startDate,String endDate) {
+        Map<String, Integer> result = new HashMap<String, Integer>();
+        Map<String, String> dateMap = new HashMap<String, String>();
         dateMap.put("startDate",startDate);
         dateMap.put("endDate",endDate);
         List<UserAgeStatistics> countryList = service.selectAge(dateMap);
@@ -91,101 +90,198 @@ public class StatisticsController {
             result.put("5", 0);
             result.put("6", 0);
         }
-        return new DataResponse(result);
+        return new DataResponse<Map<String, Integer>>(result);
     }
 
-    @RequestMapping("/statistic/count-year")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/count-year")
     public DataResponse<UserCountStatistics> selectCountYear(String startDate,String endDate) {
-        Map dateMap = new HashMap();
+    	System.out.println("startDate = " + startDate + "   endDate = " + endDate);
+        Map<String, String> dateMap = new HashMap<String, String>();
         dateMap.put("startDate",startDate);
         dateMap.put("endDate",endDate);
         List<UserCountStatistics> countryList = service.selectCountYear(dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/count-month")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/count-month")
     public DataResponse<UserCountStatistics> selectCountMonth(String startDate,String endDate) {
-        Map dateMap = new HashMap();
+    	System.out.println("startDate = " + startDate + "   endDate = " + endDate);
+        Map<String, String> dateMap = new HashMap<String, String>();
         dateMap.put("startDate",startDate);
         dateMap.put("endDate",endDate);
         List<UserCountStatistics> countryList = service.selectCountMonth(dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/count-day")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/count-day")
     public DataResponse<UserCountStatistics> selectCountDay(String startDate,String endDate) {
-        Map dateMap = new HashMap();
+    	System.out.println("startDate = " + startDate + "   endDate = " + endDate);
+        Map<String, String> dateMap = new HashMap<String, String>();
         dateMap.put("startDate",startDate);
         dateMap.put("endDate",endDate);
         List<UserCountStatistics> countryList = service.selectCountDay(dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
     }
     
-    @RequestMapping("/statistic/pv-count-year")
-    public DataResponse<UserCountStatistics> selectPvCountYear(String startDate,String endDate) {
-        Map dateMap = new HashMap();
+    
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/pv-count-year")
+    public DataResponse<UserCountStatistics> selectPvCountYear(String startDate,String endDate,String moduleName) {
+    	System.out.println("startDate = " + startDate + "   endDate = " + endDate + "   moduleName = " + moduleName);
+    	System.out.println("pv-count-year");
+        Map<String, String> dateMap = new HashMap<String, String>();
         dateMap.put("startDate",startDate);
         dateMap.put("endDate",endDate);
+        dateMap.put("moduleName",moduleName);
         List<UserCountStatistics> countryList = service.selectPvCountYear(dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/pv-count-month")
-    public DataResponse<UserCountStatistics> selectPvCountMonth(String startDate,String endDate) {
-        Map dateMap = new HashMap();
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/pv-count-month")
+    public DataResponse<UserCountStatistics> selectPvCountMonth(String startDate,String endDate,String moduleName) {
+    	System.out.println("startDate = " + startDate + "   endDate = " + endDate + "   moduleName = " + moduleName);
+    	System.out.println("pv-count-month");
+        Map<String, String> dateMap = new HashMap<String, String>();
         dateMap.put("startDate",startDate);
         dateMap.put("endDate",endDate);
+        dateMap.put("moduleName",moduleName);
         List<UserCountStatistics> countryList = service.selectPvCountMonth(dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/pv-count-day")
-    public DataResponse<UserCountStatistics> selectPvCountDay(String startDate,String endDate) {
-        Map dateMap = new HashMap();
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/pv-count-day")
+    public DataResponse<UserCountStatistics> selectPvCountDay(String startDate,String endDate,String moduleName) {
+    	System.out.println("startDate = " + startDate + "   endDate = " + endDate + "   moduleName = " + moduleName);
+    	System.out.println("pv-count-day");
+        Map<String, String> dateMap = new HashMap<String, String>();
         dateMap.put("startDate",startDate);
         dateMap.put("endDate",endDate);
+        dateMap.put("moduleName",moduleName);
         List<UserCountStatistics> countryList = service.selectPvCountDay(dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
+        return new DataResponse(countryList);
+    }
+    
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/pv-count")
+    public DataResponse<UserCountStatistics> selectPvCount(String type,String selectedYear,
+    		String selectedMonth,String selectedDay,String moduleName) {
+    	System.out.println("type = " + type + "   selectedYear = " + selectedYear + "   selectedMonth = " + selectedMonth + "   selectedDay = " + selectedDay + "   moduleName = " + moduleName);
+        Map<String, String> dateMap = new HashMap<String, String>();
+        dateMap.put("selectedYear",selectedYear);
+        dateMap.put("selectedMonth",selectedMonth);
+        dateMap.put("selectedDay",selectedDay);
+        dateMap.put("moduleName",moduleName);
+        String data = "";
+        switch (Integer.parseInt(type)) {
+		case 1:
+			data = "Statistics.selectPvCountYearByModule";
+			break;
+		case 2:
+			data = "Statistics.selectPvCountMonthByModule";
+			break;
+		case 3:
+			data = "Statistics.selectPvCountDayByModule";
+			break;
+		default:
+			break;
+		}
+        List<UserCountStatistics> countryList = service.selectPvCount(data, dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/device")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping("/statistic/device")
     public DataResponse<UserDeviceStatistics> selectDevice() {
         List<UserDeviceStatistics> countryList = service.selectDevice();
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/module")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping("/statistic/module")
     public DataResponse<UserModuleStatistics> selectModule() {
         List<UserModuleStatistics> countryList = service.selectModule();
+        for (UserModuleStatistics userModuleStatistics : countryList) {
+			System.out.println(userModuleStatistics.toString());
+		}
+        return new DataResponse(countryList);
+    }
+    
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping("/statistic/selectPvModule")
+    public DataResponse<UserModuleStatistics> selectPvModule(String type) {
+    	String year = "";
+    	String month = "";
+    	String day = "";
+    	switch (type) {
+		case "1":
+			year = TimeUtils.getCurrentDate(1)+"";
+			break;
+		case "2":
+			year = TimeUtils.getCurrentDate(1)+"";
+			month = TimeUtils.getCurrentDate(2)+"";
+			break;
+		case "3":
+			year = TimeUtils.getCurrentDate(1)+"";
+			month = TimeUtils.getCurrentDate(2)+"";
+			month = TimeUtils.getCurrentDate(3)+"";
+			break;
+		default:
+			break;
+		}
+    	Map<String, String> dateMap = new HashMap<String, String>();
+        dateMap.put("year",year);
+        dateMap.put("month",month);
+        dateMap.put("day",day);
+        List<UserModuleStatistics> countryList = service.selectPvModule(dateMap);
+        for (UserModuleStatistics userModuleStatistics : countryList) {
+			System.out.println(userModuleStatistics.toString());
+		}
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/sex")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping("/statistic/sex")
     public DataResponse<UserSexStatistics> selectSex() {
         List<UserSexStatistics> countryList = service.selectSex();
         return new DataResponse(countryList);
     }
 
 
-    @RequestMapping("/statistic/active-user")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/active-user")
     public DataResponse<UserCountStatistics> selectActiveUser() {
         List<UserCountStatistics> countryList = service.selectActiveUser();
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/active-module")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping("/statistic/active-module")
     public DataResponse<UserCountStatistics> selectActiveModule() {
         List<UserCountStatistics> countryList = service.selectActiveModule();
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/active-device")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping("/statistic/active-device")
     public DataResponse<UserCountStatistics> selectActiveDevice() {
         List<UserCountStatistics> countryList = service.selectActiveDevice();
         return new DataResponse(countryList);
     }
 
-    @RequestMapping("/statistic/uv")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping("/statistic/uv")
     public DataResponse<UserCountStatistics> selectUv() {
         List<UserCountStatistics> countryList = service.selectUv();
         return new DataResponse(countryList);
@@ -200,7 +296,7 @@ public class StatisticsController {
      * @param response
      * @throws Exception
      */
-    private static final SimpleDateFormat exportFormat = new SimpleDateFormat("yyyy-MM-dd");
+    protected static final SimpleDateFormat exportFormat = new SimpleDateFormat("yyyy-MM-dd");
     @RequestMapping("/statistic/exportComprehensiveUserStats")
     public void exportComprehensiveUserStats(String startDate, String endDate, HttpServletRequest request, HttpServletResponse response) throws Exception{
     	String path = "/data/userComprehensivExportTemplete.xls";
@@ -278,19 +374,22 @@ public class StatisticsController {
         out.flush();
     }
     
-    @RequestMapping(value = "/statistic/activeUser", method = RequestMethod.GET)
+    @SuppressWarnings("unchecked")
+	@RequestMapping(value = "/statistic/activeUser", method = RequestMethod.GET)
     public PagedDataResponse<BasicRequest> activeUserList(@PageDefault PageRequest pageRequest) {
         PagedResult<UserCountStatistics> users = service.getActiveUserList(pageRequest);
         return PagedDataResponse.of(users);
     }
     
-    @RequestMapping(value = "/statistic/activeModule", method = RequestMethod.GET)
+    @SuppressWarnings("unchecked")
+	@RequestMapping(value = "/statistic/activeModule", method = RequestMethod.GET)
     public PagedDataResponse<BasicRequest> activeModuleList(@PageDefault PageRequest pageRequest) {
         PagedResult<UserCountStatistics> module = service.getActiveModuleList(pageRequest);
         return PagedDataResponse.of(module);
     }
     
-    @RequestMapping(value = "/statistic/activeDevice", method = RequestMethod.GET)
+    @SuppressWarnings("unchecked")
+	@RequestMapping(value = "/statistic/activeDevice", method = RequestMethod.GET)
     public PagedDataResponse<BasicRequest> activeDeviceList(@PageDefault PageRequest pageRequest) {
         PagedResult<UserCountStatistics> device = service.getActiveDeviceList(pageRequest);
         return PagedDataResponse.of(device);

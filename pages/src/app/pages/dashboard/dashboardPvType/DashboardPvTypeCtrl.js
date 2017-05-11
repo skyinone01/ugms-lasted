@@ -13,10 +13,8 @@
 		var pvdatas = [];
 		var apiPath = 'http://localhost:8080';
 		function getData(bdate,edate) {
-			debugger;
 			var param={startDate:bdate,endDate:edate};
 			appBase.doGet('statistic/module',param, function (response) {
-			console.log(response.data);
 			response.data.forEach(function (value, index, array) {
 				pvdatas.push({
 					country: value.type,
@@ -96,67 +94,71 @@
 				creditsPosition: 'top-right',
 				pathToImages: layoutPaths.images.amChart
 			});
+			
 		});
 
 	}
+		
+		
+		
 		function getDataByType(type,bdate,edate) {
-			var getPath='statistic';
-			if(type==1){
-				getPath=getPath+"/pv-count-year"
-			}else if(type==2){
-				getPath=getPath+"/pv-count-month"
-			}else if(type==3){
-				getPath=getPath+"/pv-count-day"
-			}else{
-				getPath=getPath+"/pv-count-year"
-			}
-			var param={"startDate":bdate,"endDate":edate};
-			var datas=[];
-			appBase.doGet(getPath,param, function (response) {
-				response.data.forEach(function (value, index, array) {
-					datas.push({
-						country: value.type,
-						visits: value.count,
-						color: layoutColors.primary
-					})
-				});
-				var map = AmCharts.makeChart('barPvChart', {
-					type: 'serial',
-					theme: 'blur',
-					color: layoutColors.defaultText,
-					dataProvider: datas,
-					startDuration: 1,
-					graphs: [
-						{
-							balloonText: '<b>[[category]]: [[value]]</b>',
-							fillColorsField: 'color',
-							fillAlphas: 0.7,
-							lineAlpha: 0.2,
-							type: 'column',
-							valueField: 'visits'
-						}
-					],
-					chartCursor: {
-						categoryBalloonEnabled: false,
-						cursorAlpha: 0,
-						zoomable: false
-					},
-					categoryField: 'country',
-					categoryAxis: {
-						gridPosition: 'start',
-						labelRotation: 45,
-						gridAlpha: 0.5,
-						gridColor: layoutColors.border,
-					},
-					export: {
-						enabled: true
-					},
-					creditsPosition: 'top-right',
-					pathToImages: layoutPaths.images.amChart
-				});
-				map.addListener("clickGraphItem", handleClick);
-
-			});
+//			var getPath='statistic';
+//			if(type==1){
+//				getPath=getPath+"/pv-count-year"
+//			}else if(type==2){
+//				getPath=getPath+"/pv-count-month"
+//			}else if(type==3){
+//				getPath=getPath+"/pv-count-day"
+//			}else{
+//				getPath=getPath+"/pv-count-year"
+//			}
+//			var param={"startDate":bdate,"endDate":edate};
+//			var datas=[];
+//			appBase.doGet(getPath,param, function (response) {
+//				response.data.forEach(function (value, index, array) {
+//					datas.push({
+//						country: value.type,
+//						visits: value.count,
+//						color: layoutColors.primary
+//					})
+//				});
+//				var map = AmCharts.makeChart('barPvChart', {
+//					type: 'serial',
+//					theme: 'blur',
+//					color: layoutColors.defaultText,
+//					dataProvider: datas,
+//					startDuration: 1,
+//					graphs: [
+//						{
+//							balloonText: '<b>[[category]]: [[value]]</b>',
+//							fillColorsField: 'color',
+//							fillAlphas: 0.7,
+//							lineAlpha: 0.2,
+//							type: 'column',
+//							valueField: 'visits'
+//						}
+//					],
+//					chartCursor: {
+//						categoryBalloonEnabled: false,
+//						cursorAlpha: 0,
+//						zoomable: false
+//					},
+//					categoryField: 'country',
+//					categoryAxis: {
+//						gridPosition: 'start',
+//						labelRotation: 45,
+//						gridAlpha: 0.5,
+//						gridColor: layoutColors.border,
+//					},
+//					export: {
+//						enabled: true
+//					},
+//					creditsPosition: 'top-right',
+//					pathToImages: layoutPaths.images.amChart
+//				});
+////				map.addListener("clickGraphItem", handleClick);
+//
+//			});
 		}
 
 		function handleClick(event)

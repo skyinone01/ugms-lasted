@@ -1,7 +1,6 @@
 package com.ug369.backend.service.entity.mysql;
 
 import javax.persistence.Table;
-import java.util.Date;
 
 @Table(name = "yg_sys_uservisitlog")
 public class UserModuleStatistics {
@@ -24,4 +23,10 @@ public class UserModuleStatistics {
     public void setCount(Integer count) {
         this.count = count;
     }
+
+	@Override
+	public String toString() {
+		return "UserModuleStatistics [type=" + type + ", count=" + count + "]";
+	}
+    
 }

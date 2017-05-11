@@ -23,4 +23,10 @@ public class UserCountStatistics {
     public void setCount(Integer count) {
         this.count = count;
     }
+
+	@Override
+	public String toString() {
+		return "UserCountStatistics [type=" + type + ", count=" + count + "]";
+	}
+    
 }
