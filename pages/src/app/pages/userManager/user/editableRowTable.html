@@ -1,5 +1,5 @@
 <div class="add-row-editable-table">
-    <button class="btn btn-primary" ng-click="addUser()">新增用户</button>
+    <button has-permission="users.user:edit" class="btn btn-primary" ng-click="addUser()">新增用户</button>
 </div>
 <table class="table table-bordered table-hover table-condensed">
     <tr>
@@ -35,7 +35,7 @@
         </span>
         </td>
         <td>
-        <span editable-text="user.email"  e-name="email" e-form="rowform" e-required  >
+        <span editable-text="user.email"  e-name="email" e-form="rowform" e-required >
           {{ user.email || '' }}
         </span>
         </td>
@@ -56,13 +56,13 @@
                 <button type="submit" ng-click="saveUser($index)"  ng-disabled="rowform.$waiting"  class="btn btn-primary editable-table-button btn-xs">
                     保存
                 </button>
-                <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">
+                <button type="button" ng-disabled="rowform.$waiting" ng-click="cancel(rowform.$cancel())" class="btn btn-default editable-table-button btn-xs">
                     取消
                 </button>
             </form>
             <div class="buttons" ng-show="!rowform.$visible">
-                <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
-                <button class="btn btn-danger editable-table-button btn-xs" ng-click="deleteUser($index)">删除</button>
+                <button has-permission="users.user:edit" id="editbutton" class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
+                <button has-permission="users.user:delete" class="btn btn-danger editable-table-button btn-xs" ng-click="deleteUser($index)">删除</button>
             </div>
         </td>
     </tr>

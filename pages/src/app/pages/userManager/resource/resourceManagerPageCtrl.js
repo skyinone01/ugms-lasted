@@ -15,7 +15,8 @@
         $scope.update = [];
 
         $scope.listResource=function(){
-            appBase.doGet("resources",null,function(ret){
+            var param = "page="+1+"&perPage="+50;
+            appBase.doGet("resources?"+param,null,function(ret){
                  $scope.resources = ret.data.items;
                  $scope.update = ret.data.items.slice(0);
             })
@@ -45,6 +46,26 @@
             }else{
                 data = $scope.update[index];
             }
+            if(data.name == null || data.name.trim() ==""){
+                appBase.bubMsg("资源名称不能为空");
+                $scope.listResource();
+                return;
+            }
+            if(data.description == null || data.description.trim() ==""){
+                appBase.bubMsg("描述不能为空");
+                $scope.listResource();
+                return;
+            }
+            if(data.state == null || data.state.trim() ==""){
+                appBase.bubMsg("前端路由不能为空");
+                $scope.listResource();
+                return;
+            }
+            if(data.url == null || data.url.trim() ==""){
+                appBase.bubMsg("匹配URI不能为空");
+                $scope.listResource();
+                return;
+            }
             appBase.doPost("resources",data,function(ret){
                 appBase.bubMsg("保存成功");
                 $scope.listResource();
@@ -59,16 +80,16 @@
             if(index >= $scope.update.length){
                  switch(name){
                        case "description":
-                           $scope.insert[index].description =data;
+                           $scope.insert[index-$scope.update.length].description =data;
                              break;
                        case "name":
-                           $scope.insert[index].name =data;
+                           $scope.insert[index-$scope.update.length].name =data;
                              break;
                        case "url":
-                           $scope.insert[index].url =data;
+                           $scope.insert[index-$scope.update.length].url =data;
                              break;
                        case "state":
-                           $scope.insert[index].state =data;
+                           $scope.insert[index-$scope.update.length].state =data;
                              break;
                  }
             }else{

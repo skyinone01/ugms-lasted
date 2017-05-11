@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="col-md-12 text-right">
+    
+    	<div class="col-sm-4"></div>
+        <div class="col-sm-4" ng-controller="StatisticCtrl">
+             <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options"
+                       ng-model="$root.startDate" is-open="opened" ng-required="true" close-text="Close"
+                       id="startDate" placeholder="请输入开始时间..."
+                       alt-input-formats="altInputFormats" show-button-bar="true"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p> 
+        </div>
+        <div class="col-sm-4" ng-controller="StatisticCtrl">
+             <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options"
+                       ng-model="$root.endDate" is-open="opened" ng-required="true" close-text="Close"
+                       id="endDate" placeholder="请输入结束时间..."
+                       alt-input-formats="altInputFormats" show-button-bar="true"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p> 
+        </div>
+    </div>
+    
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text"
+                       ng-model="searchNameValue"
+                       id="searchNameValue"
+                       class="form-control with-danger-addon"
+                       placeholder="请输入用户姓名进行搜索..." >
+                       
+            </div>
+            <button class="btn btn-primary "
+                        data-toggle="modal"
+                        ng-click="listItem()"> 查找用户
+                </button>
+        </div>
+    </div>
+</div>
+
+<div ba-panel style="margin-top: 10px">
+
+
+    <table class="table " st-table="smartTableData">
+        <thead>
+        <tr class="primary">
+
+            <td></td>
+            <td>留言</td>
+            <td>状态</td>
+            <td>用户</td>
+            <td>时间</td>
+            <td>平台</td>
+            <td>账号类型</td>
+            <td>手机号</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in items">
+            <td class="table-id">
+                {{$index}}
+                <span style="display: none"   e-name="id"  e-required>
+                              {{ item.id || '0' }}
+                </span>
+            </td>
+            <td>{{item.content}}</td>
+            <td>{{item.isreplay == '1' ? '已回复' : '待回复'}}</td>
+            <td>{{item.userName}}</td>
+            <td>{{item.createTime}}</td>
+            <td>{{item.deviceType}}</td>
+            <td>{{item.accountType}}</td>
+            <td>{{item.userMobile}}</td>
+            <td>
+                <!-- <button class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="open('app/pages/content/share/shareModal.html', 'lg',item.id,2)"
+                        ng-show="showButton($index,'detail')"
+                >
+                    基础资料管理
+                </button> -->
+                <button class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal"
+                        ng-click="open('app/pages/customer/leaveMessage/leaveMessageModal.html', 'lg',item.id, 1)"
+                        ng-show="showButton($index,item.isreplay)"
+                >
+                     回复
+                </button>
+                <button class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal"
+                        ng-click="open('app/pages/customer/leaveMessage/leaveMessageModal.html', 'lg',item.id, 2)"
+                >
+                     查看
+                </button>
+            </td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td colspan="8" class="text-center">
+                <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                {{page}}/{{totalPage}}
+                <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>

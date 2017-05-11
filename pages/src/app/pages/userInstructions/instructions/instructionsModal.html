@@ -1,0 +1,73 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+            <em class="ion-ios-close-empty sn-link-close"></em>
+        </button>
+    </div>
+    <form name="saveForm">
+    <div class="modal-body">
+        <div ba-panel ba-panel-class="profile-page">
+            <div class="panel-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label for="inputName" class="col-sm-3 control-label">标题</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="title" ng-disabled="inputEdit" class="form-control" ng-model="models.title" id="inputName"
+                                       placeholder="请输入标题..." required>
+                                <br/>
+                                <span ng-show="saveForm.title.$error.required" style="color:red" >标题是必须的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputOrder" class="col-sm-3 control-label">序号</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="inputOrder" ng-model="models.order"
+                                           placeholder="请输入序号...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-6">
+                    <div class="form-group row clearfix">
+                            <label for="pid" class="col-sm-3 control-label">上级标题</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="pid" title="上级标题" ng-model="models.pid"  ng-options="item.id as item.title for item in smartTableData">
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label class="col-sm-3 control-label">图片</label>
+                            <div class="col-sm-9">
+                                <div class="userpic">
+                                    <div class="userpic-wrapper">
+                                        <img ng-src="{{ models.imgUrl == '' ? picture : models.imgUrl }}"
+                                             ng-click="uploadPicture()">
+                                    </div>
+                                    <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
+                                    <a href class="change-userpic" ng-click="uploadPicture()">选择图片</a>
+                                    <input type="file" ng-disabled="inputEdit" name="imgUrl" ng-show="false" id="uploadFile" ng-model="models.imgUrl"
+                                           ng-file-select="onFileSelect($files)">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-class="{'hidden':isCommitShow}" ng-click="save()" ng-show="showSubmit()" ng-disabled="saveForm.orders.$error.required ||
+                            saveForm.title.$error.required">提交</button>
+    </div>
+    </form>
+</div>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Article">
+
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.request.ArticleRequest">
+        SELECT u.id as id,u.content as content,u.title as title,
+        u.summary as summary,u.status as status,u.typeid as typeid,
+        u.createtime as createtime,u.typestr as typestr
+        FROM ug_article u
+        where  u.status is not NULL
+        ORDER BY u.createtime DESC
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(id)
+        FROM ug_article u
+         where u.status is not NULL
+    </select>
+
+    <select id="getAllLabel" resultType="com.ug369.backend.bean.bean.request.ArticleLabelRequest">
+        SELECT *
+        FROM ug_article_label u
+        where u.name like #{name}
+
+    </select>
+
+    <select id="getLabelCount" resultType="int">
+        SELECT COUNT(u.id)
+        FROM ug_article_label u
+        where u.name like #{name}
+    </select>
+
+    <select id="getAllLevel" resultType="com.ug369.backend.bean.bean.request.ArticleLevelRequest">
+        SELECT *
+        FROM ug_article_category u
+
+    </select>
+
+    <select id="getLevelCount" resultType="int">
+        SELECT COUNT(u.id)
+        FROM ug_article_category u
+    </select>
+
+    <select id="getAllColumn" resultType="com.ug369.backend.service.entity.mysql.ArticleColumn">
+        SELECT *
+        FROM ug_article_column u
+        ORDER BY u.createtime DESC
+
+    </select>
+
+    <select id="getColumnCount" resultType="int">
+        SELECT COUNT(u.id)
+        FROM ug_article_column u
+    </select>
+
+
+    <select id="getArticleByColumn" resultType="com.ug369.backend.service.entity.mysql.Article">
+        SELECT a.id,a.title
+        FROM ug_article_column_re ac,ug_artcle a
+        WHERE ac.article = a.id AND ac.column = #{column}
+        ORDER BY a.creattime DESC
+    </select>
+
+</mapper>

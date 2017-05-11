@@ -1,0 +1,251 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+            <em class="ion-ios-close-empty sn-link-close"></em>
+        </button>
+    </div>
+    <form name="myForm" novalidate>
+
+
+        <div class="modal-body">
+            <div ba-panel ba-panel-class="profile-page" ng-init="inputEdit=initInput()">
+                <div class="panel-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">标题</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="title" ng-disabled="inputEdit" class="form-control" ng-model="welcome.title" id="inputName"
+                                           placeholder="请输入标题..." required>
+                                    <span ng-show="myForm.title.$error.required" style="color:red" >标题是必须的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">说明</label>
+                                <div class="col-sm-9">
+                                <textarea name="content" ng-disabled="inputEdit" class="form-control" ng-model="welcome.content"
+                                          placeholder="请输入说明..." required></textarea>
+                                    <!--<input type="text" name="content" ng-disabled="inputEdit" class="form-control" ng-model="item.context"-->
+                                    <!--placeholder="请输入内容..." required>-->
+                                    <span ng-show="myForm.content.$error.required" style="color:red" >说明是必须的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">类型</label>
+                                <div class="col-sm-9">
+                                    <select name="applySelect" selectpicker="selectpicker" ng-options="s.text for s in types"
+                                            class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="type"
+                                            tabindex="-98" style="" ng-change="selectType(this)">
+                                    </select>
+                                    <p>
+                                        <input  type="text" ng-show="false" name="type" ng-model="typeId" required>
+                                        <span ng-show="myForm.type.$error.required" style="color:red">类型是必须的</span>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">链接</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="link"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.link" id="inputLink"
+                                           placeholder="链接..." required>
+                                    <span ng-show="myForm.link.$error.required" style="color:red" >链接是必须的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">权重</label>
+                                <div class="col-sm-9">
+                                    <input type="number" name="weight"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.weight"
+                                           placeholder="整数..." required>
+                                    <!--<span ng-show="myForm.weight.$error.required" style="color:red" >权重是必须的</span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">联系人</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="contactName"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.contactName"
+                                           placeholder="联系人..." required>
+                                    <!--<span ng-show="myForm.contactName.$error.required" style="color:red" >联系人是必须的</span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">联系电话</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="contactphone"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.contactPhone"
+                                           placeholder="联系电话..." required>
+                                    <!--<span ng-show="myForm.contactphone.$error.required" style="color:red" >联系电话是必须的</span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">排序</label>
+                                <div class="col-sm-9">
+                                    <input type="number" name="orders"  ng-disabled="inputEdit" class="form-control" ng-model="welcome.orderId" id="inputSort"
+                                           placeholder="整数..." required>
+                                    <span ng-show="myForm.orders.$error.required" style="color:red" >排序是必须的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix datepicker">
+                                <label for="inputName" class="col-sm-3 control-label">起始日期</label>
+
+                                <div class="col-sm-9" ng-controller="datePickerPopupCtrl">
+
+                                    <p class="input-group">
+                                        <input type="text" id="data_id" name="date1" ng-change="setDate()" ng-disabled="inputEdit" ng-show="false" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="welcome.beginDate" is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" readonly required/>
+                                        <input type="text" id="data_date" name="date" ng-disabled="true" ng-model="realDate" class="form-control"   ng-required="true" readonly required/>
+                                    <span class="input-group-btn">
+                                    <button type="button" ng-disabled="inputEdit" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+
+                                    </p>
+                                    <span ng-show="myForm.date.$error.required" style="color:red">起始日期是必须的</span>
+                                    <!--<label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix datepicker">
+                                <label for="inputName" class="col-sm-3 control-label">截止日期</label>
+
+                                <div class="col-sm-9" ng-controller="datePickerPopupCtrl">
+
+                                    <p class="input-group">
+                                        <input type="text" id="data_endid" name="date1" ng-change="setEndDate()" ng-disabled="inputEdit" ng-show="false" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="welcome.endDate" is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" readonly required/>
+                                        <input type="text" id="data_enddate" name="enddate" ng-disabled="true" ng-model="realendDate" class="form-control"   ng-required="true" readonly required/>
+                                    <span class="input-group-btn">
+                                    <button type="button" ng-disabled="inputEdit" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+
+                                    </p>
+                                    <span ng-show="myForm.enddate.$error.required" style="color:red">截止日期是必须的</span>
+                                    <!--<label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label class="col-sm-3 control-label">图片</label>
+                                <div class="col-sm-9">
+                                    <div class="userpic">
+                                        <div class="userpic-wrapper">
+                                            <img   ng-src="{{ welcome.picture == '' ? picture : welcome.picture }}"
+                                                   ng-click="uploadPicture()">
+                                        </div>
+                                        <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
+                                        <a href class="change-userpic" ng-click="uploadPicture()">选择图片</a>
+                                        <input type="file" ng-disabled="inputEdit" name="url" ng-show="false" id="uploadFile" ng-model="welcome.url"
+                                               ng-file-select="onFileSelect($files)" required>
+
+                                    </div>
+                                    <input id="hidden_img" type="text" ng-show="false" name="picmark" ng-model="picmark" required>
+                                    <span ng-show="myForm.picmark.$error.required" style="color:red">图片是必须的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="showApply()">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">是否通过</label>
+                                <div class="col-sm-9">
+                                    <select name="applySelect" selectpicker="selectpicker" ng-options="s.value as s.text for s in useables"
+                                            class="editable-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="welcome.status"
+                                            tabindex="-98" style="" ng-change="setApplyStatus()" >
+
+                                    </select>
+                                    <p>
+                                        <input  type="text" ng-show="false" name="apply" ng-model="applyStatus" required>
+                                        <span ng-show="myForm.apply.$error.required" style="color:red">审核状态必须改变</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="!showSubmit()">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">审批人</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="applypeople"  class="form-control" ng-model="welcome.applypeople"
+                                           required readonly>
+                                    <!--<span ng-show="myForm.contactName.$error.required" style="color:red" >联系人是必须的</span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"  ng-show="showApplyDetail">
+                        <div class="col-md-6">
+                            <div class="form-group row clearfix">
+                                <label for="inputName" class="col-sm-3 control-label">未通过原因</label>
+                                <div class="col-sm-9">
+                                <textarea name="applydetail"  class="form-control" ng-model="welcome.applydetail"
+                                          placeholder="请输入未通过原因..." required></textarea>
+                                    <span ng-show="myForm.applydetail.$error.required" style="color:red" >未通过原因是必须的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" ng-click="saveOrUpdate($dismiss())" ng-show="showSubmit()"
+                    ng-disabled="myForm.orders.$error.required ||
+                            myForm.title.$error.required||
+                            myForm.date.$error.required||
+                            myForm.enddate.$error.required||
+                            myForm.content.$error.required||
+                            myForm.type.$error.required||
+                            (showApply() && myForm.apply.$error.required)||
+                            (showApplyDetail && myForm.applydetail.$error.required)||
+                            myForm.picmark.$error.required">提交</button>
+        </div>
+    </form>
+</div>

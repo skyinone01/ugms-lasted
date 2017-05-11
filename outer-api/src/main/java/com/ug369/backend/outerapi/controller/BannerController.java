@@ -1,6 +1,7 @@
 package com.ug369.backend.outerapi.controller;
 
 import com.ug369.backend.bean.base.request.PageRequest;
+import com.ug369.backend.bean.base.request.WebUser;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
@@ -9,8 +10,9 @@ import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
+import com.ug369.backend.outerapi.annotation.UserInjected;
 import com.ug369.backend.service.entity.mysql.Banner;
-import com.ug369.backend.service.service.BannerService;
+import com.ug369.backend.service.service.BannerAdvertisementService;
 import com.ug369.backend.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,7 +35,7 @@ import java.text.SimpleDateFormat;
 public class BannerController {
 
     @Autowired
-    private BannerService bannerService;
+    private BannerAdvertisementService bannerAdvertisementService;
 
     @Value("${ugms.static.file.path}")
     private String filePath;
@@ -45,8 +47,8 @@ public class BannerController {
      * banner页列表列表
      */
     @RequestMapping(value = "/banner", method = RequestMethod.GET)
-    public PagedDataResponse<BannerRequest> welcome(@PageDefault PageRequest pageRequest) {
-        PagedResult<BannerRequest> users = bannerService.getAll(pageRequest);
+    public PagedDataResponse<BannerRequest> welcome(@PageDefault PageRequest pageRequest,@RequestParam("type") int type) {
+        PagedResult<BannerRequest> users = bannerAdvertisementService.getAll(pageRequest,type);
 
         return PagedDataResponse.of(users);
     }
@@ -56,14 +58,23 @@ public class BannerController {
      */
     @RequestMapping(value = "/banner", method = RequestMethod.POST,consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public BasicResponse welcome( @RequestParam(value = "title",required = false) String title,
-                                  @RequestParam(value = "id") Long id,
+                                  @RequestParam(value = "id") Integer id,
                                   @RequestParam(value = "useable",required = false) Integer useable,
                                   @RequestParam(value = "beginDate",required = false) String begin_date,
                                   @RequestParam(value = "endDate",required = false) String endDate,
-                                  @RequestParam(value = "orders",required = false) Integer orderId,
+                                  @RequestParam(value = "orderId",required = false) Integer orderId,
                                   @RequestParam(value = "link",required = false) String link,
+                                  @RequestParam(value = "contactName",required = false) String contactName,
+                                  @RequestParam(value = "contactPhone",required = false) String contactPhone,
+                                  @RequestParam(value = "content",required = false) String content,
+                                  @RequestParam(value = "weight",required = false) Integer weight,
+                                  @RequestParam(value = "type",required = false) Integer type,
                                   @RequestParam(value = "status",required = false) Integer status,
-                                  @RequestParam(value = "file",required = false) MultipartFile file) throws NoSuchAlgorithmException, IOException, ParseException {
+                                  @RequestParam(value = "isBanner",required = false) Integer isBanner,
+                                  @RequestParam(value = "isDefault",required = false) Boolean isDefault,
+                                  @RequestParam(value = "applyDetail",required = false) String applyDetail,
+                                  @RequestParam(value = "file",required = false) MultipartFile file,
+                                  @UserInjected WebUser user) throws NoSuchAlgorithmException, IOException, ParseException {
 
 
         String picUrl = null;
@@ -94,14 +105,29 @@ public class BannerController {
             bannerRequest.setEndDate(simpleDateFormat.parse(endDate));
         }
 //        bannerRequest.setContent(title);
+        bannerRequest.setId(id);
         bannerRequest.setTitle(title);
         bannerRequest.setLink(link);
         bannerRequest.setId(id);
         bannerRequest.setOrderId(orderId);
         bannerRequest.setStatus(status);
         bannerRequest.setPicture(picUrl);
+        bannerRequest.setStatus(status);
+        bannerRequest.setLink(link);
+        bannerRequest.setUseable(useable);
+        bannerRequest.setIsBanner(isBanner);
+        bannerRequest.setIsdefault(isDefault);
+        bannerRequest.setApplyDetail(applyDetail);
+        bannerRequest.setApplyPeople(user.getName());
 
-        bannerService.createOrUpdate(bannerRequest);
+        //广告
+        bannerRequest.setContactName(contactName);
+        bannerRequest.setContactPhone(contactPhone);
+        bannerRequest.setWeight(weight);
+        bannerRequest.setType(type);
+        bannerRequest.setContent(content);
+
+        bannerAdvertisementService.createOrUpdate(bannerRequest);
         return BasicResponse.success();
     }
 
@@ -109,9 +135,9 @@ public class BannerController {
      * 删除
      */
     @RequestMapping(value = "/banner/{id}", method = RequestMethod.DELETE)
-    public BasicResponse welcome(@PathVariable("id") long id) {
+    public BasicResponse welcome(@PathVariable("id") Integer id) {
 
-        bannerService.delete(id);
+        bannerAdvertisementService.delete(id);
         return BasicResponse.success();
     }
 
@@ -119,9 +145,9 @@ public class BannerController {
      * 详情
      */
     @RequestMapping(value = "/banner/{id}", method = RequestMethod.GET)
-    public DataResponse<Banner> welcomeOne(@PathVariable("id") long id) {
+    public DataResponse<Banner> bannerOne(@PathVariable("id") int id) {
 
-        Banner response = bannerService.findOne(id);
+        Banner response = bannerAdvertisementService.findOne(id);
         return new DataResponse<>(response);
     }
 
@@ -129,9 +155,9 @@ public class BannerController {
      * 状态改变
      */
     @RequestMapping(value = "/banner/{id}", method = RequestMethod.PUT)
-    public BasicResponse updateOne(@PathVariable("id") long id,@RequestParam("op") int op) {
+    public BasicResponse updateOne(@PathVariable("id") Integer id,@RequestParam("op") int op) {
 
-        bannerService.changeStatus(id,op);
+        bannerAdvertisementService.changeStatus(id,op);
         return BasicResponse.success();
     }
 

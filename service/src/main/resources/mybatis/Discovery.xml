@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Discovery">
+
+    <resultMap id="typemap" type="map">
+        <result property="id" column="id" />
+        <result property="name" column="typeName" />
+        <result property="orderId" column="orderId" />
+    </resultMap>
+
+    <select id="getAll" resultType="com.ug369.backend.bean.bean.request.DiscoveryRequest">
+        SELECT u.id as id,u.context as context,u.title as title,
+        u.icon as icon,u.status as status,u.orderId as orderId,
+        u.createDate as createDate,u.summary as summary,
+        u.typeId as typeId,u.linkUrl as linkUrl,
+        u.islink as isLink
+        FROM yg_content_discovery u
+        ORDER BY u.createDate DESC
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(id)
+        FROM yg_content_discovery u
+    </select>
+
+    <select id="getType" resultMap="typemap">
+        SELECT id,typeName,orderId
+        FROM yg_sys_type
+        where isdel is NULL or isdel=0
+    </select>
+
+</mapper>

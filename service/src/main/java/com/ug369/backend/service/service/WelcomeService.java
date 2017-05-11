@@ -31,12 +31,13 @@ public class WelcomeService {
     }
 
     @Transactional
-    public void delete(long id) {
+    public void delete(Integer id) {
         welcomeRepository.delete(id);
     }
 
     @Transactional
-    public void createOrUpdate(Long id, String picture, String title, Integer useable, Date begin_date, Integer orders,Integer status) {
+    public void createOrUpdate(Integer id, String picture, String title, Boolean useable,
+                               Date begin_date, Integer orders,Integer status,String applyDetail,String applyPeople) {
         Welcome one;
         if (id!=null && id.longValue() != 0){
             one = welcomeRepository.findOne(id);
@@ -48,19 +49,21 @@ public class WelcomeService {
             one.setCreate_date(new Date());
         }
 
-        if (status!=null && status!=0){
+        if (status!=null && (status==2 || status==3)){
             one.setStatus(status);
+            one.setApplydetail(applyDetail);
+            one.setApplypeople(applyPeople);
         }else {
-            one.setStatus(1);
+            one.setStatus(0);
         }
         if (!StringUtils.isEmpty(title)){
-            one.setTitle(title);
+            one.setContent(title);
         }
         if (!StringUtils.isEmpty(picture)){
             one.setPicture(picture);
         }
         if(orders!=null){
-            one.setOrders(orders);
+            one.setA_order(orders);
         }
         if(begin_date!=null){
             one.setBegin_date(begin_date);
@@ -72,7 +75,7 @@ public class WelcomeService {
         welcomeRepository.save(one);
     }
 
-    public Welcome findOne(long id) {
+    public Welcome findOne(Integer id) {
 
         Welcome one = welcomeRepository.findOne(id);
         if (one == null){
@@ -93,14 +96,31 @@ public class WelcomeService {
 
 
     @Transactional
-    public void changeStatus(long id, int op) {
+    public void changeStatus(Integer id, int op) {
         //审核 1 发布 2 启用 3 停用 4
         //1待审批、2审批通过、3审批不通过、4已发布、5已作作废】
         Welcome one = welcomeRepository.findOne(id);
         if (one == null){
             throw  new UserException(UgmsStatus.NOT_FOUND,"此欢迎页不在了");
         }
-        one.setStatus(op);
-        welcomeRepository.save(one);
+        if (op ==11){
+            Welcome newone = new Welcome();
+            newone.setStatus(0);
+            newone.setA_order(one.getA_order());
+            newone.setBegin_date(one.getBegin_date());
+            newone.setContent(one.getContent());
+            newone.setCreate_date(new Date());
+            newone.setLink(one.getLink());
+            newone.setGroup_id(one.getGroup_id());
+            newone.setIsgroup(one.getIsgroup());
+            newone.setUseable(one.getUseable());
+            newone.setTimer(one.getTimer());
+            newone.setPicture(one.getPicture());
+
+            welcomeRepository.save(newone);
+        }else {
+            one.setStatus(op);
+            welcomeRepository.save(one);
+        }
     }
 }

@@ -1,0 +1,45 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+            <em class="ion-ios-close-empty sn-link-close"></em>
+        </button>
+    </div>
+    <form name="myForm" novalidate>
+
+    <div class="modal-body">
+        <div ba-panel ba-panel-class="profile-page" ng-init="inputEdit=initInput()">
+            <div class="panel-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label for="inputName" class="col-sm-3 control-label">用户留言</label>
+                            <div class="col-sm-12">
+                                <textarea name="content" ng-disabled="inputEdit" class="form-control" ng-model="item.content"
+                                          placeholder="请输入摘要..." required ng-disabled="true" readOnly></textarea>
+                                <!--<input type="text" name="content" ng-disabled="inputEdit" class="form-control" ng-model="item.context"-->
+                                <!--placeholder="请输入内容..." required>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row clearfix">
+                            <label for="inputName" class="col-sm-3 control-label">管理员回复</label>
+                            <div class="col-sm-12">
+                                <textarea name="replayContent" ng-disabled="inputEdit" class="form-control" ng-model="item.replayContent"
+                                          placeholder="请输入回复内容..." required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-show="showSubmit()" ng-click="save($dismiss())" >回复</button>
+    </div>
+    </form>
+</div>

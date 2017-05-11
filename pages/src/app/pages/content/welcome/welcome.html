@@ -13,7 +13,7 @@
     </div>
 
     <div class="col-md-3 text-right">
-        <button type="button"
+        <button has-permission="content.welcome:edit" type="button"
                 class="btn btn-info"
                 data-toggle="modal"
                 ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',0,1)">
@@ -60,7 +60,7 @@
                 >
                     详情
                 </button>
-                <button class="status-button btn btn-xs btn-primary "
+                <button has-permission="content.welcome:edit" class="status-button btn btn-xs btn-primary "
                         data-toggle="modal"
                         ng-click="open('app/pages/content/welcome/welcomeModal.html', 'lg',item.id,3)"
                         ng-show="showButton($index,'edit')"
@@ -68,14 +68,59 @@
                     编辑
                 </button>
 
-                <button class="status-button btn-primary btn-xs btn "
+
+
+                <button has-permission="content.welcome:request"  class="status-button btn-primary btn-xs btn "
                         data-toggle="modal"
-                        ng-click="operation(showButtonName($index),item.id)"
-                        ng-show="showButton($index,'operate')"
+                        ng-click="operation(1,item.id)"
+                        ng-show="showButton($index,'request')"
                 >
-                    {{showButtonName($index)}}
+                    提交审核
                 </button>
-                <button class="status-button btn btn-danger btn-xs btn-success" ng-show="showButton($index,'delete')"
+                <button has-permission="content.welcome:cancel"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(0,item.id)"
+                        ng-show="showButton($index,'cancel')"
+                >
+                    撤销审核
+                </button>
+                <button has-permission="content.welcome:apply"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(10,item.id)"
+                        ng-show="showButton($index,'apply')"
+                >
+                    审核
+                </button>
+                <button has-permission="content.advertisement:release"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'release')"
+                >
+                    发布
+                </button>
+                <button has-permission="content.welcome:up"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'up')"
+                >
+                    启用
+                </button>
+                <button has-permission="content.welcome:down"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(5,item.id)"
+                        ng-show="showButton($index,'down')"
+                >
+                    停用
+                </button>
+                <button has-permission="content.welcome:copy"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(11,item.id)"
+                        ng-show="showButton($index,'copy')"
+                >
+                    复制
+                </button>
+                <button has-permission="content.welcome:delete" class="status-button btn btn-danger btn-xs btn-success"
+                        ng-show="showButton($index,'delete')"
                         ng-click="deleteOne(item.id)">删除</button>
             </td>
         </tr>

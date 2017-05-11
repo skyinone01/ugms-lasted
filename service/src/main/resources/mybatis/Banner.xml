@@ -5,18 +5,21 @@
 <mapper namespace="Banner">
 
     <select id="getAll" resultType="com.ug369.backend.bean.bean.request.BannerRequest">
-        SELECT u.id as id,u.content as content,u.title as title,
-        u.picture as picture,u.status as status,u.order_id as orderId,
-        u.create_date as createDate,u.begin_date as beginDate,u.link as link,
-        u.end_date as endDate,
-        u.contact_name as contactName,u.contact_phone as contactPhone,
+        SELECT u.id as id,u.content as content,u.name as title,
+        u.picture as picture,u.status as status,u.orderId as orderId,
+        u.createDate as createDate,u.beginDate as beginDate,u.link as link,
+        u.endDate as endDate,
+        u.contactName as contactName,u.contactPhone as contactPhone,
         u.weight as weight,u.isdefault as isdefault
-        FROM ug_banner u
+        FROM yg_sys_advertisement u
+        where u.isBanner =#{type} and  u.status is not NULL
+        ORDER BY u.createDate DESC
     </select>
 
     <select id="getCount" resultType="int">
         SELECT COUNT(id)
-        FROM ug_banner u
+        FROM yg_sys_advertisement u
+         where u.isBanner =#{type} and u.status is not NULL
     </select>
 
 </mapper>

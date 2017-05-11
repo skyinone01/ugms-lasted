@@ -9,46 +9,62 @@ import java.util.Date;
  * Created by Roy on 2017/3/27.
  */
 @Entity
-@Table(name = "ug_banner")
-public class Banner {
+@Table(name = "yg_sys_advertisement")
+public class Banner implements Cloneable{
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
+    @JsonProperty(value = "title")
     private String name;
     private String picture;
     private String content;
-    private String title;
-    @JsonProperty(value = "orders")
-    private int orderId;
+    @Column(name="orderid")
+    private Integer orderId;
     private String link;
+    @Column(name="begindate")
     private Date beginDate;
+    @Column(name="enddate")
     private Date endDate;
+    @Column(name="createdate")
     private Date createDate;
-    private int status;
-    private int weight;
-    private int isdefault;
-    private int useable;
-    private int isBanner;
-    private int type;
+    private Integer status;
+    private Integer weight;
+    private Boolean isdefault;
+    private Boolean useable;
+    @Column(name="isbanner")
+    private Boolean isBanner;
+    private Integer type;
+    @Column(name="contactname")
     private String contactName;
+    @Column(name="contactphone")
     private String contactPhone;
-    private boolean isdel;
+    private Boolean isdel;
 
+    private String applypeople;
+    private String applydetail;
 
-    public String getTitle() {
-        return title;
+    public String getApplypeople() {
+        return applypeople;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setApplypeople(String applypeople) {
+        this.applypeople = applypeople;
     }
 
-    public long getId() {
+    public String getApplydetail() {
+        return applydetail;
+    }
+
+    public void setApplydetail(String applydetail) {
+        this.applydetail = applydetail;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -76,12 +92,11 @@ public class Banner {
         this.content = content;
     }
 
-
-    public int getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
@@ -117,51 +132,51 @@ public class Banner {
         this.createDate = createDate;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public int getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(Integer weight) {
         this.weight = weight;
     }
 
-    public int getIsdefault() {
+    public Boolean getIsdefault() {
         return isdefault;
     }
 
-    public void setIsdefault(int isdefault) {
+    public void setIsdefault(Boolean isdefault) {
         this.isdefault = isdefault;
     }
 
-    public int getUseable() {
+    public Boolean getUseable() {
         return useable;
     }
 
-    public void setUseable(int useable) {
+    public void setUseable(Boolean useable) {
         this.useable = useable;
     }
 
-    public int getIsBanner() {
+    public Boolean getBanner() {
         return isBanner;
     }
 
-    public void setIsBanner(int isBanner) {
-        this.isBanner = isBanner;
+    public void setBanner(Boolean banner) {
+        isBanner = banner;
     }
 
-    public int getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
@@ -181,11 +196,22 @@ public class Banner {
         this.contactPhone = contactPhone;
     }
 
-    public boolean isdel() {
+    public Boolean getIsdel() {
         return isdel;
     }
 
-    public void setIsdel(boolean isdel) {
+    public void setIsdel(Boolean isdel) {
         this.isdel = isdel;
+    }
+
+    @Override
+    public Banner clone() {
+        Banner stu = null;
+        try{
+            stu = (Banner)super.clone();
+        }catch(CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return stu;
     }
 }

@@ -1,0 +1,32 @@
+
+<table class="table table-bordered table-hover table-condensed">
+    <tr>
+        <td>ID</td>
+        <td>标题</td>
+        <td>序号</td>
+        <td>操作</td>
+    </tr>
+    <tr ng-repeat="article in item.articles"    >
+        <td >
+            {{$index}}
+            <span style="display: none"   e-name="index" e-form="rowform" e-required>
+          {{ role.id || '0' }}
+        </span>
+        </td>
+        <td >
+        <span e-name="title" e-form="rowform" e-required  >
+          {{ article.title || 'empty' }}
+        </span>
+        </td>
+        <td>
+        <span   e-name="id" e-form="rowform" e-required  >
+          {{ article.id || 'empty' }}
+        </span>
+        </td>
+        <td>
+            <div class="buttons" >
+                <button has-permission="article.column:edit"  class="btn btn-danger editable-table-button btn-xs" ng-click="deleteArticle(article.id)">删除</button>
+            </div>
+        </td>
+    </tr>
+</table>

@@ -24,6 +24,7 @@ public class DemoController {
 		request.setRole(1L);
 		request.setMobile("13800000000");
 		request.setPassword("abcd1234");
+		request.setDepartment("平台运营部");
 		userService.createOrUpdate(request);
 		return "ok";
 	}

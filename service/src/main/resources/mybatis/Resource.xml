@@ -5,7 +5,11 @@
 <mapper namespace="Resource">
 
     <select id="getByRole" parameterType="long" resultType="com.ug369.backend.bean.bean.response.PermissionResponse">
-        SELECT r.state as stateRef,r.name as name
+        SELECT r.state as stateRef,r.name as name,rr.deleteable as deleteable,
+        rr.editable as editable,rr.operateable as operateable,
+        rr.requestable as requestable,rr.applyable as applyable,
+        rr.upable as upable,rr.downable as downable,
+        rr.cancelable as cancelable,rr.releaseable,rr.copyable
         FROM ug_resource r,ug_role_resource rr
         where r.id = rr.resource and rr.role = #{rid}
     </select>
@@ -15,6 +19,7 @@
         FROM ug_resource r,ug_role_resource rr
         where r.id = rr.resource and rr.role = #{rid}
     </select>
+
 
     <select id="getAll" resultType="com.ug369.backend.bean.bean.response.ResourceEntryUGMS">
         SELECT u.id as id,u.name as name,u.state as state,

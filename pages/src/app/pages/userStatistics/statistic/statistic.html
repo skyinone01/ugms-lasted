@@ -1,0 +1,198 @@
+<div class="row">
+    <div class="col-md-12 text-right">
+        <div class="col-sm-4" ng-controller="StatisticCtrl">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options"
+                       ng-model="$root.startDate" is-open="opened" ng-required="true" close-text="Close"
+                       id="startDate" placeholder="请输入开始时间..."
+                       alt-input-formats="altInputFormats" show-button-bar="true"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+        <div class="col-sm-4" ng-controller="StatisticCtrl">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options"
+                       ng-model="$root.endDate" is-open="opened" ng-required="true" close-text="Close"
+                       id="endDate" placeholder="请输入结束时间..."
+                       alt-input-formats="altInputFormats" show-button-bar="true"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+         <button type="button"
+                class="btn btn-info"
+                ng-click="export()">
+            导出
+        </button>
+    </div>
+</div>
+<br/><br/>
+<div class="row">
+    <div class="col-xs-9">
+        <uib-tabset class="tabs-top">
+            <uib-tab heading="用户性别统计">
+                <div class="col-lg-12 col-md-12 col-sm-12"
+                     ba-panel
+                     ba-panel-title="用户性别统计">
+                    <div class="col-xs-6">
+                        <dashboard-sex-pie></dashboard-sex-pie>
+                    </div>
+                    <div class="col-xs-6">
+                        <dashboard-sex></dashboard-sex>
+                    </div>
+                </div>
+            </uib-tab>
+            <uib-tab heading="用户年龄统计">
+                <div class="col-lg-12 col-md-12 col-sm-12"
+                     ba-panel
+                     ba-panel-title='<div class="row"><div class="col-xs-9">用户年龄统计</div>'>
+                     <!-- <div class="col-xs-3" ng-class="{&apos;hidden&apos;:$root.isAgeBackShow}">
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                     <button type="button" class="btn btn-primary"  ng-class="{&apos;active&apos;:isAgeYear}" ng-click="ageDetail(1,$event)">年</button>
+                     <button type="button" class="btn btn-primary"  ng-class="{&apos;active&apos;:isAgeMonth}" ng-click="ageDetail(2,$event)">月</button>
+                     <button type="button" class="btn btn-primary" ng-class="{&apos;active&apos;:isAgeDay}" ng-click="ageDetail(3,$event)">日</button>
+                     </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isAgeBackHidden}">
+                     <button type="button" class="btn btn-primary"  ng-click="ageBack($event)">返回</button></div></div> -->
+                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardShow}">
+                        <div class="col-xs-6">
+                            <dashboard-map-pie></dashboard-map-pie>
+                        </div>
+                        <div class="col-xs-6">
+                            <dashboard-age-map></dashboard-age-map>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardTypeShow}">
+                        <dashboard-map-type>{{$root.ageType}}</dashboard-map-type>
+                    </div>
+                </div>
+            </uib-tab>
+            <uib-tab heading="PV(模块点击统计)">
+                <div class="col-lg-12 col-md-12 col-sm-12"
+                     ba-panel
+                     ba-panel-title='<div class="row"><div class="col-xs-9">PV(模块点击统计)</div>
+                     <div class="col-xs-3" ng-class="{&apos;hidden&apos;:$root.isPvBackShow}">
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvYear}" ng-click="pvDetail(1,$event)">年</button>
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvMonth}" ng-click="pvDetail(2,$event)">月</button>
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvDay}" ng-click="pvDetail(3,$event)">日</button>
+                     </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isPvBackHidden}">
+                     <button type="button" class="btn btn-primary" ng-class="{&apos;hidden&apos;:$root.pvBackBtn} ng-click="pvBack($event)">返回</button></div></div>'>
+                    <!-- -->
+                    <div ng-class="{'hidden':selectPv}" >
+                    	<input type="hidden" ng-model="moduleName"></input>
+				                    年：<select style="width: 100px" ng-class="{'hidden':selectPvYear}" ng-model="selectedYear" ng-init="selectedYear = year[3]" ng-options="x for x in year" ng-change="pvSelectDetail(1,this)"></select>
+				                    月：<select style="width: 100px" ng-class="{'hidden':selectPvMonth}" ng-model="selectedMonth" ng-init="selectedMonth = month[0]" ng-options="x for x in month" ng-change="pvSelectDetail(2,this)"></select>
+				                    日：<select style="width: 100px" ng-class="{'hidden':selectPvDay}" ng-model="selectedDay" ng-init="selectedDay = day[0]" ng-options="x for x in day" ng-change="pvSelectDetail(3,this)"></select>
+				         <button type="button" class="btn btn-primary" ng-click="pvBacks()" style="float: right;">返回</button>
+                     </div>
+                     
+                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvShow}">
+                    	<dashboard-module></dashboard-module>
+                    </div>
+                    
+                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvTypeShow}">
+                        <dashboard-pv-type>{{$root.pvType}}</dashboard-pv-type>
+                    </div>
+                </div>
+            </uib-tab>
+            <uib-tab heading="UV(用户统计)">
+                <div class="col-lg-12 col-md-12 col-sm-12"
+                     ba-panel
+                     ba-panel-title='<div class="row"><div class="col-xs-9">UV(用户统计)</div>
+                     <div class="col-xs-3">
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                     <button type="button" class="btn btn-success">年</button>
+                     <button type="button" class="btn btn-success">月</button>
+                     <button type="button" class="btn btn-success">日</button>
+                     </div></div></div>'>
+                    <dashboard-uv></dashboard-uv>
+                </div>
+            </uib-tab>
+            <uib-tab heading="用户机型统计">
+                <div class="col-lg-12 col-md-12 col-sm-12"
+                     ba-panel
+                     ba-panel-title='<div class="row"><div class="col-xs-9">用户机型统计</div>
+                     <div class="col-xs-3" ng-class="{&apos;hidden&apos;:$root.isDeviceBackShow}">
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                     </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isDeviceBackHidden}">
+                     <button type="button" class="btn btn-primary"  ng-click="deviceBack($event)">返回</button></div></div>'>
+                     <div class="col-xs-12 row" ng-class="{'hidden':isDashoardDeviceShow}">
+                    	<div class="col-xs-6">
+                        	<dashboard-device-pie></dashboard-device-pie>
+                    	</div>
+	                    <div class="col-xs-6">
+	                        <dashboard-device></dashboard-device>
+	                    </div>
+                    </div>
+                    
+                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardDeviceTypeShow}">
+                        <dashboard-device-type>{{$root.deviceType}}</dashboard-device-type>
+                    </div>
+                </div>
+            </uib-tab>
+            <uib-tab heading="新增用户统计">
+                <div class="col-lg-12 col-md-12 col-sm-12"
+                     ba-panel
+                     ba-panel-title='<div class="row"><div class="col-xs-9">新增用户统计</div><div class="col-xs-3"><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-success">年</button><button type="button" class="btn btn-success">月</button><button type="button" class="btn btn-success">日</button></div></div></div>'>
+                    <dashboard-user></dashboard-user>
+                </div>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+    <div class="col-xs-3">
+        <div class="row">
+            <div ba-panel ba-panel-title="">
+            <span>活跃用户</span>
+            <!-- <a href="javascript:void(0);" data-toggle="modal" ng-click="operUser('app/pages/userStatistics/statistic/activeUser.html', 'lg')" data-target="#active_user_model" style="float: right;">更多>></a> -->
+               <button class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal" 
+                        ng-click="activeUser()" style="float: right;">
+                  	更多>>
+                </button>
+                <table class="table table-bordered table-hover" st-table="userTable">
+                    <tr ng-repeat="item in userTable">
+                        <td class="table-id">{{item.type}}</td>
+                        <td class="table-id">{{item.count}}次</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div ba-panel ba-panel-title="">
+            <span>活跃模块</span>
+            <button class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal" 
+                        ng-click="activeModule()" style="float: right;">
+                  	更多>>
+            </button>
+            <!-- <a href="javascript:void(0);" ng-click="activeUser()" style="float: right;">更多>></a> -->
+                <table class="table table-bordered table-hover" st-table="moduleTable">
+                    <tr ng-repeat="item in moduleTable">
+                        <td class="table-id">{{item.type}}</td>
+                        <td class="table-id">{{item.count}}次</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div ba-panel ba-panel-title="">
+            <span>活跃机型</span>
+            <button class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal" 
+                        ng-click="activeDevice()" style="float: right;">
+                  	更多>>
+            </button>
+            <!-- <a href="javascript:void(0);"  style="float: right;">更多>></a> -->
+                <table class="table table-bordered table-hover" st-table="deviceTable">
+                    <tr ng-repeat="item in deviceTable">
+                        <td class="table-id">{{item.type}}</td>
+                        <td class="table-id">{{item.count}}次</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@
 
 	/** @ngInject */
 	function welcomeModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
-
+		$scope.showApplyDetail =false;
 		 if(modelId == 0){
 		    $scope.welcome = {
          			id: 0,
@@ -24,8 +24,11 @@
 		 }else{
 		     appBase.doGet("welcome/"+modelId,null,function(response){
                  $scope.welcome=response.data;
-				 $("#data_date").val(response.data.begin_date)
-				 $scope.realDate =response.data.begin_date
+				 $("#data_date").val(response.data.begin_date);
+				 if( response.data.status==3 && op==2){
+					 $scope.showApplyDetail =true;
+				 }
+				 $scope.realDate =response.data.begin_date;
 				 $scope.picmark = "mark"
 		     });
 		 }
@@ -89,6 +92,11 @@
 			var status = $scope.welcome.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 		$scope.saveOrUpdate = function(dismis){
@@ -103,6 +111,9 @@
 		    formData.append('useable',1);
 		    formData.append('begin_date',$("#data_id").val());
 		    formData.append('orders',$scope.welcome.orders);
+			if($scope.welcome.applydetail !=null){
+				formData.append('applyDetail',$scope.welcome.applydetail);
+			}
 
 		    appBase.doFormData("welcome",formData,function(response){
 		        appBase.bubMsg("保存成功");

@@ -44,6 +44,7 @@ public class ResourceService {
     }
 
 
+
     public void deleteOne(long rid){
         resourceRepository.delete(rid);
     }
@@ -85,14 +86,21 @@ public class ResourceService {
 
         Map map = new HashMap();
         PagedResult<ResourceEntryUGMS> dataPageBatch = resourceRepository.getDataPageBatch("Resource.getAll", "Resource.getCount", map, pageRequest);
-        dataPageBatch.getItems().forEach( o ->{
-            byRole.forEach(or ->{
-                if (or.getResource() == o.getId()){
-                    o.setVisible(true);
-                    return;
-                }
-            });
-        });
+        dataPageBatch.getItems().forEach( o -> byRole.forEach(or ->{
+            if (or.getResource() == o.getId()){
+                o.setVisible(true);
+                o.setDelete(or.getDeleteable());
+                o.setEdit(or.getEditable());
+                o.setApply(or.getApplyable());
+                o.setCancel(or.getCancelable());
+                o.setCopy(or.getCopyable());
+                o.setDown(or.getDownable());
+                o.setRelease(or.getReleaseable());
+                o.setRequest(or.getRequestable());
+                o.setUp(or.getUpable());
+                return;
+            }
+        }));
 
         return dataPageBatch;
 
@@ -102,18 +110,27 @@ public class ResourceService {
     public void updateRoleResource(Long roleId,List<ResourceEntryUGMS> resourceEntryUGMS) {
 
 
-        List<Long> add = new ArrayList<>();
+        List<ResourceEntryUGMS> add = new ArrayList<>();
         resourceEntryUGMS.forEach(o->{
             if(o.isVisible()){
-                add.add(o.getId());
+                add.add(o);
             }
         });
 
         roleResourceRepository.deleteByRole(roleId);
         add.forEach(o->{
             RoleResource rr = new RoleResource();
-            rr.setResource(o);
+            rr.setResource(o.getId());
             rr.setRole(roleId);
+            rr.setDeleteable(o.isDelete());
+            rr.setEditable(o.isEdit());
+            rr.setApplyable(o.isApply());
+            rr.setCancelable(o.isCancel());
+            rr.setCopyable(o.isCopy());
+            rr.setDownable(o.isDown());
+            rr.setReleaseable(o.isRelease());
+            rr.setRequestable(o.isRequest());
+            rr.setUpable(o.isUp());
             roleResourceRepository.save(rr);
         });
 

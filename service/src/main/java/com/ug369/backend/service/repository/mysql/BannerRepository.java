@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * Created by Roy on 2017/3/27.
  */
 @Repository
-public interface BannerRepository extends RDBRepository<Banner, Long> {
+public interface BannerRepository extends RDBRepository<Banner, Integer> {
 
 
 }

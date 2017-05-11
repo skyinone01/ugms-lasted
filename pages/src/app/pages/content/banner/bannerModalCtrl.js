@@ -1,6 +1,6 @@
 /**
- * @author roy
- * created on 05.04.2017
+ * @author a.demeshko
+ * created on 21.01.2016
  */
 (function () {
 	'use strict';
@@ -11,23 +11,29 @@
 	/** @ngInject */
 	function bannerModalCtrl($scope, $uibModalInstance, modelId,op, fileReader, $filter,appBase,$state) {
 
+		$scope.showApplyDetail =false;
 		 if(modelId == 0){
-		    $scope.item = {
+		    $scope.welcome = {
          			id: 0,
          			title: '',
          			url: '',
          			useable: '',
-         			beginDate: '',
+				    beginDate: '',
          			endDate: '',
          			orders: '',
+         			link: '',
          			status:''
          	};
 		 }else{
+
 		     appBase.doGet("banner/"+modelId,null,function(response){
-                 $scope.item=response.data;
-				 $("#data_date").val(response.data.begin_date)
+                 $scope.welcome=response.data;
+				 //$("#data_date").val(response.data.begin_date)
 				 $scope.realDate =response.data.beginDate
-				 $scope.realEndDate =response.data.endDate
+				 $scope.realendDate =response.data.endDate
+				 if( response.data.status==3 && op==2){
+					 $scope.showApplyDetail =true;
+				 }
 				 $scope.picmark = "mark"
 		     });
 		 }
@@ -64,7 +70,7 @@
 		$scope.getFile = function (file) {
 			fileReader.readAsDataUrl(file, $scope)
 				.then(function (result) {
-					$scope.item.picture = result;
+					$scope.welcome.picture = result;
 					$scope.picmark="mark";
 			});
 			$scope.file = file;
@@ -80,8 +86,8 @@
 			$scope.realDate = $("#data_id").val();
 			//$("#data_date").val($("#data_id").val());
 		}
-        $scope.setEndDate = function(){
-			$scope.realEndDate = $("#data_endId").val();
+		$scope.setEndDate = function(){
+			$scope.realendDate = $("#data_endid").val();
 			//$("#data_date").val($("#data_id").val());
 		}
 		$scope.showApply = function(){
@@ -92,25 +98,38 @@
 			}
 		}
 		$scope.setApplyStatus = function(){
-			var status = $scope.item.status;
+			var status = $scope.welcome.status;
 			if (status ==2 || status ==3){
 				$scope.applyStatus = status;
+				if(status==3){
+					$scope.showApplyDetail =true;
+				}else {
+					$scope.showApplyDetail =false;
+				}
 			}
 		}
 		$scope.saveOrUpdate = function(dismis){
 
 		    var formData = new FormData();
 		    formData.append('file',$scope.file);
-		    formData.append('id', $scope.item.id);
-		    formData.append('link', $scope.item.link);
-		    formData.append('title',$scope.item.title);
+		    formData.append('id', $scope.welcome.id);
+		    formData.append('link', $scope.welcome.link);
+		    formData.append('title',$scope.welcome.title);
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}
+			if ($scope.realDate != null){
+				formData.append('beginDate',$scope.realDate );
+			}
+			if ($scope.realendDate != null){
+				formData.append('endDate',$scope.realendDate);
+			}
+			if($scope.welcome.applydetail !=null){
+				formData.append('applyDetail',$scope.welcome.applydetail);
+			}
 		    formData.append('useable',1);
-		    formData.append('beginDate',$("#data_id").val());
-		    formData.append('endDate',$("#data_endId").val());
-		    formData.append('orders',$scope.item.orders);
+		    formData.append('orderId',$scope.welcome.orderId);
+		    formData.append('isBanner',1);
 
 		    appBase.doFormData("banner",formData,function(response){
 		        appBase.bubMsg("保存成功");

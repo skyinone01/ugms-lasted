@@ -80,10 +80,9 @@
             doFormData: function (uri,formData,callback) {
                 $http({
                     method: "POST",
-                    headers: {'token':appCommon.getToken()},
+                    headers: {'token':appCommon.getToken(),'Content-Type': undefined},
                     data: formData,
                     url: appCommon.autoCompleteUrl(uri),
-                    headers:{'Content-Type': undefined},
                     transformRequest:angular.identity,
                 }).success(function(result){
                     if(result.errno === 0){

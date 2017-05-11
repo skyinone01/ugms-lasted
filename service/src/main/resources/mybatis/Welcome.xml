@@ -5,15 +5,16 @@
 <mapper namespace="Welcome">
 
     <select id="getAll" resultType="com.ug369.backend.bean.bean.response.WelcomeEntry">
-        SELECT u.id as id,u.content as content,u.title as title,
-        u.picture as picture,u.status as status,u.orders as orders,
+        SELECT u.id as id,u.content as content,u.content as title,
+        u.picture as picture,u.status as status,u.a_order as orders,
         u.create_date as create_date,u.begin_date as begin_date
-        FROM ug_welcome u
+        FROM yg_content_guide u
+        ORDER BY u.create_date DESC
     </select>
 
     <select id="getCount" resultType="int">
         SELECT COUNT(id)
-        FROM ug_welcome u
+        FROM yg_content_guide u
     </select>
 
 </mapper>

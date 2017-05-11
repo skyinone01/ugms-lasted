@@ -1,0 +1,143 @@
+<div class="row">
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-3">
+                <!--<input type="text"-->
+                       <!--ng-model="searchNameValue"-->
+                       <!--class="form-control with-danger-addon"-->
+                       <!--placeholder="请输入名称..."-->
+                       <!--ng-change="selectStatus(page,searchNameValue)"-->
+                <!--&gt;-->
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 text-right">
+        <button has-permission="content.description:edit" type="button"
+                class="btn btn-info"
+                data-toggle="modal"
+                ng-click="open('app/pages/content/description/descriptionModal.html', 'lg',0,1,0)">
+            添加注意事项
+        </button>
+        <button type="button"
+                class="btn btn-info"
+                data-toggle="modal"
+                ng-click="open('app/pages/content/description/descriptionModal.html', 'lg',0,1,1)">
+            添加说明页
+        </button>
+    </div>
+</div>
+
+<div ba-panel style="margin-top: 10px">
+
+
+    <table class="table " st-table="smartTableData">
+
+        <thead>
+        <tr class="primary">
+
+            <td></td>
+            <td>标题</td>
+            <td>模板</td>
+            <td>类型</td>
+            <td>是否可用</td>
+            <td>状态</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in items">
+            <td class="table-id">
+                {{$index}}
+                <span style="display: none"   e-name="id"  e-required>
+                              {{ item.id || '0' }}
+                </span>
+            </td>
+            <td>{{item.title}}</td>
+            <td>{{item.layoutCode}}</td>
+            <td>{{showType(item.type)}}</td>
+            <td>{{showUseable(item.useable)}}</td>
+            <td>{{showStatus(item.status)}}</td>
+            <td>
+                <button class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="open('app/pages/content/description/descriptionModal.html', 'lg',item.id,2)"
+                        ng-show="showButton($index,'detail')"
+                >
+                    详情
+                </button>
+                <button has-permission="content.description:edit" class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal"
+                        ng-click="open('app/pages/content/description/descriptionModal.html', 'lg',item.id,3)"
+                        ng-show="showButton($index,'edit')"
+                >
+                    编辑
+                </button>
+
+                <button has-permission="content.description:request"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(1,item.id)"
+                        ng-show="showButton($index,'request')"
+                >
+                    提交审核
+                </button>
+                <button has-permission="content.description:cancel"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(0,item.id)"
+                        ng-show="showButton($index,'cancel')"
+                >
+                    撤销审核
+                </button>
+                <button has-permission="content.description:apply"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(10,item.id)"
+                        ng-show="showButton($index,'apply')"
+                >
+                    审核
+                </button>
+                <button has-permission="content.advertisement:release"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'release')"
+                >
+                    发布
+                </button>
+                <button has-permission="content.description:up"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'up')"
+                >
+                    启用
+                </button>
+                <button has-permission="content.description:down"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(5,item.id)"
+                        ng-show="showButton($index,'down')"
+                >
+                    停用
+                </button>
+                <button has-permission="content.description:copy"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(11,item.id)"
+                        ng-show="showButton($index,'copy')"
+                >
+                    复制
+                </button>
+                <button has-permission="content.description:delete" class="status-button btn btn-danger btn-xs btn-success"
+                        ng-show="showButton($index,'delete')"
+                        ng-click="deleteOne(item.id)">删除</button>
+            </td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td colspan="8" class="text-center">
+                <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                {{page}}/{{totalPage}}
+                <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>

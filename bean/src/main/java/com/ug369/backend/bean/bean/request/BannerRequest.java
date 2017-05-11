@@ -8,7 +8,7 @@ import java.util.Date;
  * Created by Roy on 2017/4/5.
  */
 public class BannerRequest {
-    private Long id;
+    private Integer id;
     private String name;
     private String picture;
     private String content;
@@ -22,14 +22,32 @@ public class BannerRequest {
     private Date createDate;
     private Integer status;
     private Integer weight;
-    private Integer isdefault;
+    private Boolean isdefault;
     private Integer useable;
     private Integer isBanner;
     private Integer type;
     private String contactName;
     private String contactPhone;
     private Integer isdel;
+    private String applyDetail;
+    private String applyPeople;
 
+
+    public String getApplyDetail() {
+        return applyDetail;
+    }
+
+    public void setApplyDetail(String applyDetail) {
+        this.applyDetail = applyDetail;
+    }
+
+    public String getApplyPeople() {
+        return applyPeople;
+    }
+
+    public void setApplyPeople(String applyPeople) {
+        this.applyPeople = applyPeople;
+    }
 
     public String getTitle() {
         return title;
@@ -39,11 +57,11 @@ public class BannerRequest {
         this.title = title;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -135,11 +153,11 @@ public class BannerRequest {
         this.weight = weight;
     }
 
-    public Integer getIsdefault() {
+    public Boolean getIsdefault() {
         return isdefault;
     }
 
-    public void setIsdefault(Integer isdefault) {
+    public void setIsdefault(Boolean isdefault) {
         this.isdefault = isdefault;
     }
 
