@@ -4,33 +4,23 @@ import com.ug369.backend.bean.base.request.PageRequest;
 import com.ug369.backend.bean.base.response.BasicResponse;
 import com.ug369.backend.bean.base.response.DataResponse;
 import com.ug369.backend.bean.base.response.PagedDataResponse;
-import com.ug369.backend.bean.bean.request.BannerRequest;
-import com.ug369.backend.bean.bean.request.BasicRequest;
 import com.ug369.backend.bean.bean.request.LeaveMessageRequest;
-import com.ug369.backend.bean.exception.UgmsStatus;
-import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
-import com.ug369.backend.service.entity.mysql.Banner;
-import com.ug369.backend.service.service.BannerAdvertisementService;
 import com.ug369.backend.service.service.BasicService;
 import com.ug369.backend.service.service.LeaveMessageService;
-import com.ug369.backend.utils.StringUtils;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Created by Administrator on 2017/3/22.
@@ -50,7 +40,32 @@ public class LeaveMessageController {
     @RequestMapping(value = "/leaveMessage/selectList")
     public PagedDataResponse<LeaveMessageRequest> leaveMessageList(@PageDefault PageRequest pageRequest, String userName, String startDate, String endDate) {
 
-        PagedResult<LeaveMessageRequest> leaveMessage = leaveMessageService.getAll(pageRequest, userName, startDate, endDate);
+        String startDateTime = "";
+        String endDateTime = "";
+        try {
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat sdf2 = new SimpleDateFormat("yyyyMMdd");
+
+            if(!StringUtils.isEmpty(startDate)){
+
+                startDateTime = sdf.format(sdf2.parse(startDate));
+            }
+            if(!StringUtils.isEmpty(endDate)){
+
+                Date end =sdf2.parse(endDate);
+                Calendar calendar = new GregorianCalendar();
+                calendar.setTime(end);
+                calendar.add(calendar.DATE, 1);
+                endDateTime = sdf.format(calendar.getTime());
+            }
+
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        PagedResult<LeaveMessageRequest> leaveMessage = leaveMessageService.getAll(pageRequest, userName, startDateTime, endDateTime);
 
         return PagedDataResponse.of(leaveMessage);
     }

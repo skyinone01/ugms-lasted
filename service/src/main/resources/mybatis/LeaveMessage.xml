@@ -22,13 +22,15 @@
         LEFT JOIN yg_user_base_info b on b.user_id = u.user_id
         where 1=1
         <if test="userName != null">
-        	and u.user_name like CONCAT('%', #{userName}, '%')
+            and u.user_name like CONCAT('%', #{userName}, '%')
         </if>
         <if test="startDate != null">
-        	<![CDATA[and ulm.createTime >= DATE_FORMAT(#{startDate}, '%Y-%m-%d %H:%i:%s')]]> 
+            <!-- <![CDATA[and ulm.createTime >= DATE_FORMAT(#{startDate}, '%Y-%m-%d %H:%i:%s')]]>  -->
+            and ulm.createTime &gt;= #{startDate}
         </if>
         <if test="endDate != null">
-        	<![CDATA[and ulm.createTime <= DATE_FORMAT(#{endDate}, '%Y-%m-%d %H:%i:%s')]]> 
+            <!-- <![CDATA[and ulm.createTime < DATE_FORMAT(#{endDate}, '%Y-%m-%d %H:%i:%s')]]>  -->
+            and ulm.createTime &lt; #{endDate}
         </if>
     </select>
 

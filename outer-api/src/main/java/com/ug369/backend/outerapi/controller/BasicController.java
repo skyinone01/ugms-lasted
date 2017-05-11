@@ -7,15 +7,13 @@ import com.ug369.backend.bean.base.response.PagedDataResponse;
 import com.ug369.backend.bean.bean.request.BasicRequest;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
-import com.ug369.backend.service.service.BannerAdvertisementService;
 import com.ug369.backend.service.service.BasicService;
 import com.ug369.backend.utils.ExcelUtils;
-import com.ug369.backend.utils.SMSUtils;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +25,8 @@ import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.*;
 import java.util.List;
 import java.util.Map;
 
@@ -125,19 +125,35 @@ public class BasicController {
 
     @RequestMapping(value = "/basic/exportUserStats")
     public void exportUserStats(@RequestParam(value = "userName") String userName,
-            /*@RequestParam(value = "startDate") String startDate,
-            @RequestParam(value = "endDate") String endDate,*/ HttpServletRequest request, HttpServletResponse response) throws Exception{
+                                @RequestParam(value = "startDate") String startDate,
+                                @RequestParam(value = "endDate") String endDate, HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
-        	
-    		String fileName = "用户统计数据.xls"; //文件名 
+
+            String fileName = "用户统计数据.xls"; //文件名
             String sheetName = "统计数据";//sheet名
-            
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");//yyyy-MM-dd HH:mm:ss
+            SimpleDateFormat sdf2 = new SimpleDateFormat("yyyyMMdd");
+            String start = "";
+            String end = "";
+            if(!StringUtils.isEmpty(startDate)  && !"null".equals(startDate)){
+
+                start = sdf.format(sdf2.parse(startDate));
+            }
+            if(!StringUtils.isEmpty(endDate) && !"null".equals(endDate)){
+
+                Date endDateTime =sdf2.parse(endDate);
+                Calendar calendar = new GregorianCalendar();
+                calendar.setTime(endDateTime);
+                calendar.add(calendar.DATE, 1);
+                end = sdf.format(calendar.getTime());
+            }
+
+
             String []title = new String[]{"用户名","年龄","性别","手机号","终端","访问时长","注册时间","城市"};//标题
-            
-            List<Map<String, Object>> list = basicService.statsExportUsers(userName, "", "");//内容list
-            
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            
+
+            List<Map<String, Object>> list = basicService.statsExportUsers(userName, start, end);//内容list
+
+
             String [][]values = new String[list.size()][];
             for(int i=0;i<list.size();i++){
                 values[i] = new String[title.length];
@@ -152,21 +168,21 @@ public class BasicController {
                 values[i][5] = new DecimalFormat("#.00").format(onlineTime) + "小时";
                 values[i][6] = null==list.get(i).get("userCreateTime") ? "/" : list.get(i).get("userCreateTime").toString();
                 values[i][7] = null==list.get(i).get("userCity") ? "/" : list.get(i).get("userCity").toString();
-                
+
             }
-            
+
             HSSFWorkbook wb = ExcelUtils.getHSSFWorkbook(sheetName, title, values, null);
-            fileName = new String(fileName.getBytes(),"GBK"); 
-    		response.setContentType("application/vnd.ms-excel;charset=UTF-8");
-            response.setHeader("Content-Disposition", "attachment;filename="+new String("用户统计数据.xls".getBytes("gb2312"),"ISO8859-1"));  
+            fileName = new String(fileName.getBytes(),"GBK");
+            response.setContentType("application/vnd.ms-excel;charset=UTF-8");
+            response.setHeader("Content-Disposition", "attachment;filename="+new String("用户统计数据.xls".getBytes("gb2312"),"ISO8859-1"));
             OutputStream os = response.getOutputStream();
-    		wb.write(os);
+            wb.write(os);
             os.flush();
             os.close();
-        
+
         } catch (Exception e) {
-			System.out.println(e);
-		}
+            System.out.println(e);
+        }
     }
     
 }
