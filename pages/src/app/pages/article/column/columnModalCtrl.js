@@ -14,6 +14,10 @@
 		var modelId= $stateParams.modelId,op=$stateParams.op;
 		$scope.showApplyDetail =false;
 
+		$scope.months=[{'value':1,'text':'1个月'},{'value':2,'text':'2个月'},{'value':3,'text':'3个月'},{'value':4,'text':'4个月'},
+			{'value':5,'text':'5个月'},{'value':6,'text':'6个月'},{'value':7,'text':'7个月'},{'value':8,'text':'8个月'},
+			{'value':9,'text':'9个月'},{'value':10,'text':'10个月'},{'value':11,'text':'11个月'},{'value':12,'text':'12个月'}]
+
 		if(modelId == 0){
 			$scope.item = {
 				id: 0,
@@ -35,6 +39,20 @@
 				if( response.data.status==3 && op==2){
 					$scope.showApplyDetail =true;
 				}
+				if(response.data.paymode){
+					for(var i =0;i<$scope.months.length;i++){
+						if($scope.months[i].value == response.data.payItem1.month){
+							$scope.item.payItem1.month = $scope.months[i];
+						}
+						if($scope.months[i].value == response.data.payItem2.month){
+							$scope.item.payItem2.month = $scope.months[i];
+						}
+						if($scope.months[i].value == response.data.payItem3.month){
+							$scope.item.payItem3.month = $scope.months[i];
+						}
+					}
+
+				}
 				$scope.picmark = "mark"
 			});
 		}
@@ -46,9 +64,7 @@
 				return true
 			}
 		}
-		$scope.months=[{'value':1,'text':'1个月'},{'value':2,'text':'2个月'},{'value':3,'text':'3个月'},{'value':4,'text':'4个月'},
-			  {'value':5,'text':'5个月'},{'value':6,'text':'6个月'},{'value':7,'text':'7个月'},{'value':8,'text':'8个月'},
-			 {'value':9,'text':'9个月'},{'value':10,'text':'10个月'},{'value':11,'text':'11个月'},{'value':12,'text':'12个月'}]
+
 
 		$scope.removeLabel = function (id) {
 			//$scope.picture = $filter('appImage')('theme/no-photo.png');
