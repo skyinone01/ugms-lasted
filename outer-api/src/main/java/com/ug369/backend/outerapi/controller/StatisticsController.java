@@ -280,13 +280,49 @@ public class StatisticsController {
         return new DataResponse(countryList);
     }
 
+    /**
+     * 初始化UV（所有年份的每个月统计数）
+     * @return
+     */
     @SuppressWarnings({ "rawtypes", "unchecked" })
 	@RequestMapping("/statistic/uv")
     public DataResponse<UserCountStatistics> selectUv() {
-        List<UserCountStatistics> countryList = service.selectUv();
+        List<UserCountStatistics> countryList = service.selectUvCount();
         return new DataResponse(countryList);
     }
     
+    /**
+     * 获取UV信息（年，月，日）
+     * @param type
+     * @return
+     */
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("/statistic/uv-count")
+    public DataResponse<UserCountStatistics> selectUvCount(String type,String selectedYear,
+    		String selectedMonth,String selectedDay) {
+    	System.out.println("type = " + type + "   selectedYear = " + selectedYear + "   selectedMonth = " + selectedMonth + "   selectedDay = " + selectedDay);
+        Map<String, String> dateMap = new HashMap<String, String>();
+        dateMap.put("selectedYear",selectedYear);
+        dateMap.put("selectedMonth",selectedMonth);
+        dateMap.put("selectedDay",selectedDay);
+        String data = "";
+        switch (Integer.parseInt(type)) {
+		case 1:
+			data = "Statistics.selectUvCountYearByModule";
+			break;
+		case 2:
+			data = "Statistics.selectUvCountMonthByModule";
+			break;
+		case 3:
+			data = "Statistics.selectUvCountDayByModule";
+			break;
+		default:
+			break;
+		}
+        List<UserCountStatistics> countryList = service.selectUvCount(data, dateMap);
+        System.out.println("countryList.size() = "+countryList.size());
+        return new DataResponse(countryList);
+    }
     
     /**
      * 导出用户综合统计数据

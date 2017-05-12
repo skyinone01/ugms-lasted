@@ -108,6 +108,24 @@ public class StatisticsService {
         return statisticsRepository.getData("Statistics.selectUv", null);
     }
     
+    /**
+     * 获取初始化时UV数据
+     * @return
+     */
+    public List<UserCountStatistics> selectUvCount(){
+        return statisticsRepository.getData("Statistics.selectUvCount", null);
+    }
+    
+    /**
+     * 获取UV年,月,日统计信息
+     * @param data
+     * @param dateMap
+     * @return
+     */
+    public List<UserCountStatistics> selectUvCount(String data,Map dateMap) {
+        return statisticsRepository.getData(data, dateMap);
+    }
+    
     public Map<String, Object> statsExportUserAge(String start, String end) {
         Map<String, Object> clos = new HashMap<>();
         Map<String, String> params = new HashMap<String, String>();

@@ -404,6 +404,96 @@
             type ASC
     </select>
     
+    <!-- uv -->
+    <select id="selectUvCount" resultMap="UserMap">
+    	<!-- 
+        SELECT CONCAT(CONCAT(YEAR(createTime),"年"),CONCAT(MONTH(createTime),"月")) `type`,
+		count(userId) `count`
+		FROM yg_sys_uservisitlog
+		WHERE userId IS NOT NULL AND createTime IS NOT NULL
+		GROUP BY YEAR(createTime),
+		MONTH(createTime) 
+		-->
+		
+		SELECT CONCAT(CONCAT(YEAR(a.createDate),"年"),CONCAT(MONTH(a.createDate),"月")) `type`,
+		SUM(a.userIdCount) AS `count` FROM(
+		SELECT  
+		CONCAT(CONCAT(YEAR(ys.createTime),"年"),CONCAT(MONTH(ys.createTime),"月")) `type`,
+		HOUR(ys.createTime) AS `hour`,
+		COUNT(DISTINCT ys.userId) AS userIdCount,
+		COUNT(*) AS visitnum,
+		ys.createTime AS createDate
+		FROM `yg_sys_uservisitlog` ys
+		WHERE ys.createTime IS NOT NULL AND ys.userId IS NOT NULL
+		GROUP BY 
+		DATE_FORMAT(ys.createTime,"%Y-%m-%d"),HOUR(ys.createTime)) a GROUP BY a.`type`
+    </select>
+    
+    
+    <!--uv 获取某一年所有月份统计信息-->
+    <select id="selectUvCountYearByModule" parameterType="hashmap" resultMap="UserCountMap">
+    	<!-- 
+        SELECT MONTH(createTime) AS `type`,COUNT(userId) as `count` FROM  yg_sys_uservisitlog AS d
+		WHERE YEAR(createTime) = #{selectedYear} AND userId IS NOT NULL AND createTime IS NOT NULL
+		GROUP BY MONTH(createTime)
+		 -->
+		SELECT MONTH(a.createDate) AS `type`,
+		SUM(a.userIdCount) AS `count` FROM(
+		SELECT  
+		CONCAT(CONCAT(YEAR(ys.createTime),"年"),CONCAT(MONTH(ys.createTime),"月")) `type`,
+		HOUR(ys.createTime) AS `hour`,
+		COUNT(DISTINCT ys.userId) AS userIdCount,
+		COUNT(*) AS visitnum,
+		ys.createTime AS createDate
+		FROM `yg_sys_uservisitlog` ys
+		WHERE ys.createTime IS NOT NULL AND ys.userId IS NOT NULL AND YEAR(ys.createTime) = #{selectedYear}
+		GROUP BY 
+		DATE_FORMAT(ys.createTime,"%Y-%m-%d"),HOUR(ys.createTime)) a GROUP BY a.`type`
+    </select>
+    
+    
+    <!--uv 获取某一月所有天统计信息-->
+    <select id="selectUvCountMonthByModule" parameterType="hashmap" resultMap="UserCountMap">
+        <!-- 
+        SELECT DAY(createTime) AS `type`,COUNT(userId) as `count` FROM  yg_sys_uservisitlog AS d
+		WHERE MONTH(createTime) = #{selectedMonth} AND userId IS NOT NULL AND createTime IS NOT NULL
+		AND YEAR(createTime) = #{selectedYear}
+		GROUP BY DAY(createTime)
+		 -->
+		SELECT DAY(createDate) AS `type`,SUM(userIdCount) AS `count` FROM(
+		SELECT  
+		DATE_FORMAT(ys.createTime,"%Y-%m-%d") AS `day`,
+		HOUR(ys.createTime) AS `hour`,
+		COUNT(DISTINCT ys.userId) AS userIdCount,
+		ys.createTime AS createDate,
+		COUNT(*) AS visitnum 
+		FROM `yg_sys_uservisitlog` ys
+		WHERE ys.createTime IS NOT NULL AND ys.userId IS NOT NULL AND 
+		YEAR(ys.createTime) = #{selectedYear} AND MONTH(ys.createTime) = #{selectedMonth}
+		GROUP BY 
+		DATE_FORMAT(ys.createTime,"%Y-%m-%d"),HOUR(ys.createTime)) a
+		GROUP BY `day`
+    </select>
+    
+    <!--uv 获取某一天所有整点统计信息-->
+    <select id="selectUvCountDayByModule" parameterType="hashmap" resultMap="UserCountMap">
+    	<!-- 
+        SELECT HOUR(createTime) AS `type`,COUNT(userId) as `count` FROM  yg_sys_uservisitlog AS d
+		WHERE DAY(createTime) = #{selectedDay} AND userId IS NOT NULL AND createTime IS NOT NULL
+		AND YEAR(createTime) = #{selectedYear}
+		AND MONTH(createTime) = #{selectedMonth}
+		GROUP BY HOUR(createTime)
+		 -->
+		SELECT  
+		HOUR(createTime) AS `type`,
+		COUNT(DISTINCT userId) AS `count`
+		FROM `yg_sys_uservisitlog`
+		WHERE createTime IS NOT NULL AND userId IS NOT NULL AND YEAR(createTime) = #{selectedYear} 
+		AND MONTH(createTime) = #{selectedMonth} AND DAY(createTime) = #{selectedDay}
+		GROUP BY 
+		DATE_FORMAT(createTime,"%Y-%m-%d"),HOUR(createTime)
+    </select>
+    
     <!-- 用户姓别统计 -->
     <select id="userSexSts" resultType="java.util.Map">
         SELECT t1.users, if(t1.userSex = 1, '男', if(t1.userSex = 2, '女', t1.userSex)) as userSex from (

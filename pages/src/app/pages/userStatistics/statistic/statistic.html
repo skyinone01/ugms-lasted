@@ -79,14 +79,17 @@
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvMonth}" ng-click="pvDetail(2,$event)">月</button>
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvDay}" ng-click="pvDetail(3,$event)">日</button>
                      </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isPvBackHidden}">
-                     <button type="button" class="btn btn-primary" ng-class="{&apos;hidden&apos;:$root.pvBackBtn} ng-click="pvBack($event)">返回</button></div></div>'>
+                     <button type="button" class="btn btn-primary" ng-click="pvBack($event)">返回</button></div></div>'>
                     <!-- -->
-                    <div ng-class="{'hidden':selectPv}" >
+                    <div ng-class="{'hidden':selectPv}" ng-model="selectPv">
                     	<input type="hidden" ng-model="moduleName"></input>
-				                    年：<select style="width: 100px" ng-class="{'hidden':selectPvYear}" ng-model="selectedYear" ng-init="selectedYear = year[3]" ng-options="x for x in year" ng-change="pvSelectDetail(1,this)"></select>
-				                    月：<select style="width: 100px" ng-class="{'hidden':selectPvMonth}" ng-model="selectedMonth" ng-init="selectedMonth = month[0]" ng-options="x for x in month" ng-change="pvSelectDetail(2,this)"></select>
-				                    日：<select style="width: 100px" ng-class="{'hidden':selectPvDay}" ng-model="selectedDay" ng-init="selectedDay = day[0]" ng-options="x for x in day" ng-change="pvSelectDetail(3,this)"></select>
-				         <button type="button" class="btn btn-primary" ng-click="pvBacks()" style="float: right;">返回</button>
+				        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;" ng-class="{'hidden':selectPvYearLab}">年：</label>
+				        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control" ng-class="{'hidden':selectPvYear}" ng-model="selectedYear" ng-init="selectedYear = year[0]" ng-options="x for x in year" ng-change="pvSelectDetail(1,this)"></select>
+				        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;margin-left: 20px;" ng-class="{'hidden':selectPvMonthLab}">月：</label>
+				        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control" ng-class="{'hidden':selectPvMonth}" ng-model="selectedMonth" ng-init="selectedMonth = month[0]" ng-options="x for x in month" ng-change="pvSelectDetail(2,this)"></select>
+				        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;margin-left: 20px;" ng-class="{'hidden':selectPvDayLab}">日：</label>
+				        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control" ng-class="{'hidden':selectPvDay}" ng-model="selectedDay" ng-init="selectedDay = day[0]" ng-options="x for x in day" ng-change="pvSelectDetail(3,this)"></select>
+				        <button type="button" class="btn btn-primary" ng-click="pvBacks()" style="float: right;" ng-class="{'hidden':selectPvBack}">返回</button>
                      </div>
                      
                     <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvShow}">
@@ -104,9 +107,9 @@
                      ba-panel-title='<div class="row"><div class="col-xs-9">UV(用户统计)</div>
                      <div class="col-xs-3">
                      <div class="btn-group" role="group" aria-label="Basic example">
-                     <button type="button" class="btn btn-success">年</button>
-                     <button type="button" class="btn btn-success">月</button>
-                     <button type="button" class="btn btn-success">日</button>
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isUvYear}" ng-click="uvDetail(1,$event)">年</button>
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isUvMonth}" ng-click="uvDetail(2,$event)">月</button>
+                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isUvDay}" ng-click="uvDetail(3,$event)">日</button>
                      </div></div></div>'>
                     <dashboard-uv></dashboard-uv>
                 </div>
