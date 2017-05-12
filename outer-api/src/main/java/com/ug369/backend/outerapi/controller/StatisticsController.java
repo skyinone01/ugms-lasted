@@ -235,7 +235,7 @@ public class StatisticsController {
 		case "3":
 			year = TimeUtils.getCurrentDate(1)+"";
 			month = TimeUtils.getCurrentDate(2)+"";
-			month = TimeUtils.getCurrentDate(3)+"";
+			day = TimeUtils.getCurrentDate(3)+"";
 			break;
 		default:
 			break;
@@ -245,9 +245,6 @@ public class StatisticsController {
         dateMap.put("month",month);
         dateMap.put("day",day);
         List<UserModuleStatistics> countryList = service.selectPvModule(dateMap);
-        for (UserModuleStatistics userModuleStatistics : countryList) {
-			System.out.println(userModuleStatistics.toString());
-		}
         return new DataResponse(countryList);
     }
 
