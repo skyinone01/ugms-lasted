@@ -24,7 +24,7 @@
             }).state('article.column.add', {
             url: '/:modelId/:op',
             templateUrl: 'app/pages/article/column/columnModal.html',
-            title: '新增文章',
+            title: '专栏操作',
             controller: "columnModalCtrl"
         });
 

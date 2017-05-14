@@ -25,7 +25,7 @@
         </td>
         <td>
             <div class="buttons" >
-                <button has-permission="article.column:edit"  class="btn btn-danger editable-table-button btn-xs" ng-click="deleteArticle(article.id)">删除</button>
+                <button has-permission="article.column:edit" ng-disabled="inputEdit"  class="btn btn-danger editable-table-button btn-xs" ng-click="deleteArticle(article.id)">删除</button>
             </div>
         </td>
     </tr>

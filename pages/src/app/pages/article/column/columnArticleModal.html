@@ -1,0 +1,71 @@
+<div class="widgets">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="文章列表" ba-panel-class="with-scroll">
+                <div class="add-row-editable-table">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="text"
+                                   ng-model="searchValue.value"
+                                   class="form-control with-danger-addon"
+                                   placeholder="请输入文章名称..."
+                            >
+                        </div>
+                        <button class="btn btn-info" ng-click="search()">搜索</button>
+
+                    </div>
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                    </tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>标题</td>
+                    <td>序号</td>
+                    <td>操作</td>
+                </tr>
+                <tr ng-repeat="article in items"    >
+                    <td >
+                        {{$index}}
+                        <span style="display: none"   e-name="index" e-form="rowform" e-required>
+          {{ article.id || '0' }}
+        </span>
+                    </td>
+                    <td >
+        <span e-name="title" e-form="rowform" e-required  >
+          {{ article.title || 'empty' }}
+        </span>
+                    </td>
+                    <td>
+        <span   e-name="id" e-form="rowform" e-required  >
+          {{ article.id || 'empty' }}
+        </span>
+                    </td>
+                    <td>
+                        <div class="buttons" >
+                            <button has-permission="article.column:edit"  class="btn btn-danger editable-table-button btn-xs" ng-click="addArticle(article.id)">添加</button>
+                        </div>
+                    </td>
+                </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="8" class="text-center">
+                            <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                            {{page}}/{{totalPage}}
+                            <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
+                        </td>
+                    </tr>
+                    </tfoot>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="$dismiss()">退出</button>
+    </div>
+
+</div>
+

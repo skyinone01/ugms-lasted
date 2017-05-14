@@ -43,9 +43,15 @@ public class ArticleService {
     private com.ug369.backend.service.repository.mysql.ArticleLevelRepository articleLevelRepository;
 
 
-    public PagedResult<ArticleRequest> getAll(PageRequest pageRequest) {
+    public PagedResult<ArticleRequest> getAll(PageRequest pageRequest,String name) {
 
-        return articleRepository.getDataPageBatch("Article.getAll", "Article.getCount", new HashMap<>(), pageRequest);
+        Map param = new HashMap<>();
+        if (!StringUtils.isEmpty(name)){
+            param.put("title","%"+name+"%");
+        }
+
+
+        return articleRepository.getDataPageBatch("Article.getAll", "Article.getCount", param, pageRequest);
 
     }
 
@@ -195,9 +201,13 @@ public class ArticleService {
     }
 
     @Transactional
-    public PagedResult<ArticleColumn> getAllColumn(PageRequest pageRequest) {
+    public PagedResult<ArticleColumn> getAllColumn(PageRequest pageRequest,String name) {
 
-        return articleLabelRepository.getDataPageBatch("Article.getAllColumn", "Article.getColumnCount", new HashMap<>(), pageRequest);
+        Map param = new HashMap<>();
+        if (!StringUtils.isEmpty(name)){
+            param.put("title","%"+name+"%");
+        }
+        return articleLabelRepository.getDataPageBatch("Article.getAllColumn", "Article.getColumnCount", param, pageRequest);
 
     }
     @Transactional
@@ -239,7 +249,7 @@ public class ArticleService {
     @Transactional
     public void deleteColumn(long id) {
 
-        articleColumnReRepository.deleteByColumn(id);
+        articleColumnReRepository.deleteByColumnid(id);
         articleColumnRepository.delete(id);
     }
 
@@ -263,12 +273,12 @@ public class ArticleService {
             newone.setPicture(one.getPicture());
             articleColumnRepository.save(newone);
 
-            List<ArticleColumnRe> byColumn = articleColumnReRepository.findByColumn(one.getId());
+            List<ArticleColumnRe> byColumn = articleColumnReRepository.findByColumnid(one.getId());
             if (byColumn !=null && byColumn.size()>0){
                 byColumn.forEach(o->{
                     ArticleColumnRe  articleColumnRe = new ArticleColumnRe();
-                    articleColumnRe.setArticle(o.getArticle());
-                    articleColumnRe.setColumn(newone.getId());
+                    articleColumnRe.setArticleid(o.getArticleid());
+                    articleColumnRe.setColumnid(newone.getId());
                     articleColumnReRepository.save(articleColumnRe);
                 });
             }
@@ -323,11 +333,23 @@ public class ArticleService {
     public void addArticleToColumn(Long column, Long article,boolean addable) {
         if (addable){
             ArticleColumnRe one = new ArticleColumnRe();
-            one.setArticle(article);
-            one.setColumn(column);
+            one.setArticleid(article);
+            one.setColumnid(column);
             articleColumnReRepository.save(one);
         }else {
-            articleColumnReRepository.deleteByColumnAndArticle(column,article);
+            ArticleColumnRe one = articleColumnReRepository.findByColumnidAndArticleid(column, article);
+            articleColumnReRepository.delete(one);
         }
+    }
+
+    public PagedResult<ArticleRequest> article4Column(PageRequest pageRequest, String name,Long columnid ) {
+        Map param = new HashMap<>();
+        param.put("columnid",columnid);
+        if (!StringUtils.isEmpty(name)){
+            param.put("title","%"+name+"%");
+        }
+
+
+        return articleRepository.getDataPageBatch("Article.article4Column", "Article.article4ColumnCount", param, pageRequest);
     }
 }

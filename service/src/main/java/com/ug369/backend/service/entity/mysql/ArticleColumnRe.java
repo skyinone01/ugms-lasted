@@ -12,8 +12,8 @@ public class ArticleColumnRe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long article;
-    private Long column;
+    private Long articleid;
+    private Long columnid;
 
     public Long getId() {
         return id;
@@ -23,19 +23,19 @@ public class ArticleColumnRe {
         this.id = id;
     }
 
-    public Long getArticle() {
-        return article;
+    public Long getArticleid() {
+        return articleid;
     }
 
-    public void setArticle(Long article) {
-        this.article = article;
+    public void setArticleid(Long articleid) {
+        this.articleid = articleid;
     }
 
-    public Long getColumn() {
-        return column;
+    public Long getColumnid() {
+        return columnid;
     }
 
-    public void setColumn(Long column) {
-        this.column = column;
+    public void setColumnid(Long columnid) {
+        this.columnid = columnid;
     }
 }

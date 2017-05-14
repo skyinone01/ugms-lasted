@@ -5,11 +5,13 @@
 <mapper namespace="Article">
 
     <select id="getAll" resultType="com.ug369.backend.bean.bean.request.ArticleRequest">
-        SELECT u.id as id,u.content as content,u.title as title,
-        u.summary as summary,u.status as status,u.typeid as typeid,
-        u.createtime as createtime,u.typestr as typestr
+        SELECT *
         FROM ug_article u
         where  u.status is not NULL
+        <if test="title != null">
+            and u.title like #{title}
+        </if>
+
         ORDER BY u.createtime DESC
     </select>
 
@@ -17,19 +19,50 @@
         SELECT COUNT(id)
         FROM ug_article u
         where u.status is not NULL
+        <if test="title != null">
+            and u.title like #{title}
+        </if>
+    </select>
+
+
+    <select id="article4Column" resultType="com.ug369.backend.bean.bean.request.ArticleRequest">
+        SELECT u.*
+        FROM ug_article u
+        where u.id not in ( select uc.articleid from ug_article_column_re uc where uc.columnid = #{columnid})
+        <if test="title != null">
+            and u.title like #{title}
+        </if>
+
+        ORDER BY u.createtime DESC
+    </select>
+
+    <select id="article4ColumnCount" resultType="int">
+        SELECT COUNT(u.id)
+        FROM ug_article u
+        where u.id not in ( select uc.articleid from ug_article_column_re uc where uc.columnid = #{columnid})
+        <if test="title != null">
+            and u.title like #{title}
+        </if>
+
     </select>
 
     <select id="getAllLabel" resultType="com.ug369.backend.bean.bean.request.ArticleLabelRequest">
         SELECT *
         FROM ug_article_label u
-        where u.name like #{name}
+        where 1 =1
+        <if test="title != null">
+            u.name like #{name}
+        </if>
 
     </select>
 
     <select id="getLabelCount" resultType="int">
         SELECT COUNT(u.id)
         FROM ug_article_label u
-        where u.name like #{name}
+        where 1=1
+        <if test="title != null">
+            u.name like #{name}
+        </if>
     </select>
 
     <select id="getAllLevel" resultType="com.ug369.backend.bean.bean.request.ArticleLevelRequest">
@@ -46,6 +79,10 @@
     <select id="getAllColumn" resultType="com.ug369.backend.service.entity.mysql.ArticleColumn">
         SELECT *
         FROM ug_article_column u
+        where 1 =1
+        <if test="title != null">
+            and u.title like #{title}
+        </if>
         ORDER BY u.createtime DESC
 
     </select>
@@ -53,13 +90,17 @@
     <select id="getColumnCount" resultType="int">
         SELECT COUNT(u.id)
         FROM ug_article_column u
+        where 1 =1
+        <if test="title != null">
+            and u.title like #{title}
+        </if>
     </select>
 
 
     <select id="getArticleByColumn" resultType="com.ug369.backend.service.entity.mysql.Article">
         SELECT a.id,a.title, a.createtime
         FROM ug_article_column_re ac,ug_article a
-        WHERE ac.article = a.id AND ac.column = #{column}
+        WHERE ac.articleid = a.id AND ac.columnid = #{column}
         ORDER BY a.createtime DESC
     </select>
 

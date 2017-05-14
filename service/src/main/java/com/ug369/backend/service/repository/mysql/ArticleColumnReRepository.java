@@ -12,9 +12,11 @@ import java.util.List;
 @Repository
 public interface ArticleColumnReRepository extends RDBRepository<ArticleColumnRe, Long> {
 
-    List<ArticleColumnRe> findByColumn(long column);
+    List<ArticleColumnRe> findByColumnid(long column);
 
-    void deleteByColumn(Long column);
+    void deleteByColumnid(Long column);
 
-    void deleteByColumnAndArticle(Long column, Long article);
+    void deleteByColumnidAndArticleid(Long column, Long article);
+
+    ArticleColumnRe findByColumnidAndArticleid(Long column, Long article);
 }

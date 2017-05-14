@@ -100,9 +100,9 @@
                                 <div class="col-sm-9">
                                     <div style="display: inline-flex">
 
-                                        <input type="text" name="source"  ng-disabled="inputEdit" class="form-control" ng-model="item.source"
+                                        <input type="text" name="source"  ng-disabled="inputEdit" class="form-control" ng-model="search.article"
                                                placeholder="" required>
-                                        <button has-permission="article.column:edit" type="button" ng-disabled="inputEdit" class="btn btn-info" ng-click="addArticle()">添加</button>
+                                        <button has-permission="article.column:edit" type="button" ng-disabled="inputEdit" class="btn btn-info" ng-click="open('app/pages/article/column/columnArticleModal.html', 'lg',search.article)">添加</button>
                                     </div>
 
                                     <!--<span ng-show="myForm.contactphone.$error.required" style="color:red" >联系电话是必须的</span>-->

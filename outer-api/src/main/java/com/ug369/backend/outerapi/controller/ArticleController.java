@@ -42,8 +42,18 @@ public class ArticleController {
     private String staticUrl;
 
     @RequestMapping(value = "/article", method = RequestMethod.GET)
-    public PagedDataResponse<ArticleRequest> article(@PageDefault PageRequest pageRequest) {
-        PagedResult<ArticleRequest> users = articleService.getAll(pageRequest);
+    public PagedDataResponse<ArticleRequest> article(@PageDefault PageRequest pageRequest,
+                                                     @RequestParam(value = "searchValue",required = false) String name) {
+        PagedResult<ArticleRequest> users = articleService.getAll(pageRequest,name);
+
+        return PagedDataResponse.of(users);
+    }
+
+    @RequestMapping(value = "/article4Column", method = RequestMethod.GET)
+    public PagedDataResponse<ArticleRequest> article4Column(@PageDefault PageRequest pageRequest,
+                                                            @RequestParam(value = "searchValue",required = false) String name,
+                                                            @RequestParam(value = "id") Long id) {
+        PagedResult<ArticleRequest> users = articleService.article4Column(pageRequest,name,id);
 
         return PagedDataResponse.of(users);
     }

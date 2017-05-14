@@ -25,7 +25,7 @@
 		$scope.listItem($scope.searchValue.value);
 
 		$scope.search = function () {
-			$scope.listType($scope.searchValue.value);
+			$scope.listItem($scope.searchValue.value);
 		}
 
 		$scope.showButton = function(index,name){

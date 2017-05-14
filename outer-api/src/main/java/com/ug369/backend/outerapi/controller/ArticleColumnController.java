@@ -40,8 +40,9 @@ public class ArticleColumnController {
     private String staticUrl;
 
     @RequestMapping(value = "/articleColumn", method = RequestMethod.GET)
-    public PagedDataResponse<ArticleColumn> articleColumns(@PageDefault PageRequest pageRequest) {
-        PagedResult<ArticleColumn> users = articleService.getAllColumn(pageRequest);
+    public PagedDataResponse<ArticleColumn> articleColumns(@PageDefault PageRequest pageRequest,
+                                                           @RequestParam(value = "searchValue",required = false) String name) {
+        PagedResult<ArticleColumn> users = articleService.getAllColumn(pageRequest,name);
 
         return PagedDataResponse.of(users);
     }
