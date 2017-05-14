@@ -6,7 +6,7 @@
         function($templateCache) {
             return {
                 restrict : 'AE',
-                template : '<script id="ueditorId" name="content" type="text/plain">这里写你的初始化内容</script>',
+                template : '<script id="ueditorId" name="content" type="text/plain">文章编辑</script>',
                 scope : false,
                 compile: function(element, attr) {
                     return {

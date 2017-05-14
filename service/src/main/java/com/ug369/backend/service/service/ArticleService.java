@@ -1,18 +1,12 @@
 package com.ug369.backend.service.service;
 
 import com.ug369.backend.bean.base.request.PageRequest;
-import com.ug369.backend.bean.bean.request.ArticleColumnRequest;
-import com.ug369.backend.bean.bean.request.ArticleLabelRequest;
-import com.ug369.backend.bean.bean.request.ArticleLevelRequest;
-import com.ug369.backend.bean.bean.request.ArticleRequest;
+import com.ug369.backend.bean.bean.request.*;
 import com.ug369.backend.bean.exception.UgmsStatus;
 import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.service.entity.mysql.*;
-import com.ug369.backend.service.repository.mysql.ArticleColumnReRepository;
-import com.ug369.backend.service.repository.mysql.ArticleColumnRepository;
-import com.ug369.backend.service.repository.mysql.ArticleLabelRepository;
-import com.ug369.backend.service.repository.mysql.ArticleRepository;
+import com.ug369.backend.service.repository.mysql.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,6 +32,8 @@ public class ArticleService {
     @Autowired
     private ArticleColumnReRepository articleColumnReRepository;
 
+    @Autowired
+    private ArticleLabelReRepository articleLabelReRepository;
 
     @Autowired
     private com.ug369.backend.service.repository.mysql.ArticleLevelRepository articleLevelRepository;
@@ -55,9 +51,39 @@ public class ArticleService {
 
     }
 
-    public Article findOne(long id) {
+    public ArticleRequest findOne(long id) {
 
-        return articleRepository.findOne(id);
+        Article one = articleRepository.findOne(id);
+        if(one == null){
+            throw new UserException(UgmsStatus.NOT_FOUND);
+        }
+        ArticleRequest result = new ArticleRequest();
+        result.setContent(one.getContent());
+        result.setTypestr(one.getTypestr());
+        result.setTypeid(one.getTypeid());
+        result.setApplydetail(one.getApplydetail());
+        result.setApplypeople(one.getApplypeople());
+        result.setAuthor(one.getAuthor());
+        result.setId(one.getId());
+        result.setTitle(one.getTitle());
+        result.setSummary(one.getSummary());
+        result.setAuthor(one.getAuthor());
+        result.setSource(one.getSource());
+
+        List<ArticleLabelRe> labelRes = articleLabelReRepository.findByArticle(one.getId());
+        if (labelRes!=null && labelRes.size()>0){
+            List<ArticleRequest.LabelBean> lables = new ArrayList<>();
+            for (ArticleLabelRe labelRe : labelRes) {
+                ArticleRequest.LabelBean temp = new ArticleRequest.LabelBean();
+                temp.setId(labelRe.getLabel());
+                temp.setName(labelRe.getLabelname());
+                lables.add(temp);
+            }
+            result.setLabels(lables);
+        }
+
+
+        return result;
     }
 
     public void delete(long id) {
@@ -351,5 +377,76 @@ public class ArticleService {
 
 
         return articleRepository.getDataPageBatch("Article.article4Column", "Article.article4ColumnCount", param, pageRequest);
+    }
+
+    public List<Map<String,Object>> listCategory() {
+
+        Iterable<ArticleCategory> all = articleLevelRepository.findAll();
+        List<Map<String,Object>> result = new ArrayList<>();
+        all.forEach(o->{
+            Map<String,Object> temp = new HashMap<String,Object>();
+            temp.put("text",o.getName());
+            temp.put("value",o.getId());
+            result.add(temp);
+        });
+        return result;
+    }
+
+    public List<List<ArticleLabelRequest>> articleLabelByLevel(String name,long article) {
+
+        Iterable<ArticleLabel> all = articleLabelRepository.findAll();
+        List<List<ArticleLabelRequest>> result = new ArrayList<>(3);
+        List<ArticleLabelRe> byArticle = articleLabelReRepository.findByArticle(article);
+        List<Long> added = new ArrayList<>();
+        if (byArticle!=null && byArticle.size()>0){
+            byArticle.forEach(o -> added.add(o.getLabel()));
+        }
+        if(all != null){
+            List<ArticleLabelRequest> level1  = new ArrayList<>();
+            List<ArticleLabelRequest> level2  = new ArrayList<>();
+            List<ArticleLabelRequest> level3  = new ArrayList<>();
+            all.forEach(o->{
+                ArticleLabelRequest temp = new ArticleLabelRequest();
+                temp.setName(o.getName());
+                temp.setId(o.getId());
+                if (added.contains(o.getId())){
+                    temp.setAdd(true);
+                }else {
+                    temp.setAdd(false);
+                }
+                switch (o.getLevel()){
+                    case 1:
+                        level1.add(temp);
+                        break;
+                    case 2:
+                        level2.add(temp);
+                        break;
+                    case 3:
+                        level3.add(temp);
+                        break;
+                }
+
+            });
+            result.add(0,level1);
+            result.add(1,level2);
+            result.add(2,level3);
+        }
+
+        return result;
+    }
+
+    public void addArticleLabel(Long label, Long article,boolean addable) {
+        if (addable){
+            ArticleLabelRe one = new ArticleLabelRe();
+            ArticleLabel labelone = articleLabelRepository.findOne(label);
+            one.setArticle(article);
+            one.setLabel(label);
+            one.setLabelname(labelone.getName());
+            articleLabelReRepository.save(one);
+        }else {
+            ArticleLabelRe one = articleLabelReRepository.findByArticleAndLabel(article,label);
+            articleLabelReRepository.delete(one);
+        }
+
     }
 }

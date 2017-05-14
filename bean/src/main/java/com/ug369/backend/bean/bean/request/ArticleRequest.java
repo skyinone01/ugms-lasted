@@ -1,5 +1,7 @@
 package com.ug369.backend.bean.bean.request;
 
+import java.util.List;
+
 /**
  * Created by Roy on 2017/5/4.
  */
@@ -16,6 +18,15 @@ public class ArticleRequest {
     private String summary;
     private String applypeople;
     private String applydetail;
+    private List<LabelBean> labels;
+
+    public List<LabelBean> getLabels() {
+        return labels;
+    }
+
+    public void setLabels(List<LabelBean> labels) {
+        this.labels = labels;
+    }
 
     public Long getId() {
         return id;
@@ -103,5 +114,26 @@ public class ArticleRequest {
 
     public void setApplydetail(String applydetail) {
         this.applydetail = applydetail;
+    }
+
+    public static class LabelBean {
+        private long id;
+        private String name;
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
     }
 }

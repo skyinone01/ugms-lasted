@@ -1,0 +1,78 @@
+<div class="widgets" ba-panel-class="height-scroll">
+    <div class="row" >
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="标签列表" ba-panel-class="with-scroll">
+                <div class="add-row-editable-table">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="text"
+                                   ng-model="searchValue.value"
+                                   class="form-control with-danger-addon"
+                                   placeholder="请输入标签名称..."
+                            >
+                        </div>
+                        <button class="btn btn-info" ng-click="search()">搜索</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="一级标签" >
+                <div>
+                    <div class="row">
+                        <button ng-repeat="label in labels[0]"
+                                style="display: inline-flex; border: 1.3px solid #63bbb2;border-radius:30%;margin-left:5px;margin-right:5px"
+                                type="button" class="btn btn-default  btn-xs"
+                                ng-click="addLabel(label.id)" ng-disabled="label.add">{{label.name}}
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="二级标签" >
+                <div>
+                    <div class="row">
+                        <button ng-repeat="label in labels[1]"
+                                style="display: inline-flex; border: 1.3px solid #63bbb2;border-radius:30%;margin-left:5px;margin-right:5px"
+                                type="button"
+                                class="btn btn-default  btn-xs" ng-click="addLabel(label.id)" ng-disabled="label.add">{{label.name}}
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="三级标签" >
+                <div>
+                    <div class="row">
+                        <button ng-repeat="label in labels[2]"
+                                style="display: inline-flex; border: 1.3px solid #63bbb2;border-radius:30%;margin-left:5px;margin-right:5px"
+                                type="button"
+                                class="btn btn-default  btn-xs" ng-click="addLabel(label.id)" ng-disabled="label.add">{{label.name}}
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="$dismiss()">退出</button>
+    </div>
+
+</div>
+

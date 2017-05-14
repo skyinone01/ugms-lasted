@@ -13,7 +13,6 @@ import com.ug369.backend.bean.exception.UserException;
 import com.ug369.backend.bean.result.PagedResult;
 import com.ug369.backend.outerapi.annotation.PageDefault;
 import com.ug369.backend.outerapi.annotation.UserInjected;
-import com.ug369.backend.service.entity.mysql.Article;
 import com.ug369.backend.service.service.ArticleService;
 import com.ug369.backend.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +27,8 @@ import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 public class ArticleController {
@@ -109,6 +110,8 @@ public class ArticleController {
         request.setApplypeople(user.getName());
         request.setContent(content);
         request.setAuthor(author);
+        request.setTypeid(typeid);
+        request.setTypestr(typestr);
         articleService.createOrUpdate(request);
         return BasicResponse.success();
     }
@@ -122,9 +125,9 @@ public class ArticleController {
     }
 
     @RequestMapping(value = "/article/{id}", method = RequestMethod.GET)
-    public DataResponse<Article> detailOne(@PathVariable("id") long id) {
+    public DataResponse<ArticleRequest> detailOne(@PathVariable("id") long id) {
 
-        Article response = articleService.findOne(id);
+        ArticleRequest response = articleService.findOne(id);
         return new DataResponse<>(response);
     }
 
@@ -132,6 +135,14 @@ public class ArticleController {
     public BasicResponse updateOne(@PathVariable("id") Integer id,@RequestParam("op") int op) {
 
         articleService.changeStatus(id,op);
+        return BasicResponse.success();
+    }
+
+    @RequestMapping(value = "/article/label", method = RequestMethod.PUT)
+    public BasicResponse articleLabelpdate( @RequestParam(value = "label") Long label,
+                                               @RequestParam(value = "addable") boolean addable,
+                                               @RequestParam(value = "article") Long article) {
+        articleService.addArticleLabel(label,article,addable);
         return BasicResponse.success();
     }
 
@@ -157,6 +168,13 @@ public class ArticleController {
         return BasicResponse.success();
     }
 
+    @RequestMapping(value = "/articleCategoryList", method = RequestMethod.GET)
+    public DataResponse listCategory() {
+        List<Map<String,Object>> category = articleService.listCategory();
+
+        return new DataResponse<>(category);
+    }
+
 
     /**
      * label  label label label
@@ -178,6 +196,14 @@ public class ArticleController {
     public BasicResponse labelDel(@PathVariable("id") Long id) {
         articleService.deleteLabel(id);
         return BasicResponse.success();
+    }
+
+    @RequestMapping(value = "/articleLabelByLevel", method = RequestMethod.GET)
+    public DataResponse articleLabelByLevel(@RequestParam(value = "searchValue",required = false) String name,
+                                                                             @RequestParam(value = "article",required = false) Long article) {
+        List<List<ArticleLabelRequest>> labels = articleService.articleLabelByLevel(name,article);
+
+        return new DataResponse<>(labels);
     }
 
 }

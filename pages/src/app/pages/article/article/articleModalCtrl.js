@@ -9,94 +9,110 @@
 			.controller('articleModalCtrl', articleModalCtrl);
 
 	/** @ngInject */
-	function articleModalCtrl($scope,$stateParams, fileReader, $filter,appBase,$state) {
-		$scope.config={
-			"content" : "<p>test1</p>",
-			"focus" : true,
-			"indentValue":"2em",
-			"initialFrameWidth":1000,
-			"initialFrameHeight":320,
-			"readonly" : false ,
-			"enableAutoSave": false,
-			"saveInterval": 500,
-			"fullscreen" : false,
-			"imagePopup":true,
-			"allHtmlEnabled":false,
-			"functions" :['map','insertimage','insertvideo','attachment','insertcode','template', 'background', 'wordimage']
-		};
-		$scope.config2={
-			functions :['map']
-		};
+	function articleModalCtrl($scope,$stateParams, fileReader, $uibModal,$filter,appBase,$state) {
+//		$scope.config={
+//			"content" : "<p>test1</p>",
+//			"focus" : true,
+//			"indentValue":"2em",
+//			"initialFrameWidth":1000,
+//			"initialFrameHeight":320,
+//			"readonly" : false ,
+//			"enableAutoSave": false,
+//			"saveInterval": 500,
+//			"fullscreen" : false,
+//			"imagePopup":true,
+//			"allHtmlEnabled":false,
+//			"functions" :['map','insertimage','insertvideo','attachment','insertcode','template', 'background', 'wordimage']
+//		};
 		$scope.getContent=function(id){
 			var content=$scope.ueditorGetContent(id);
 			alert(content);
 		}
 		$scope.getContentTxt=function(id){
 			var content=$scope.ueditorGetContentTxt(id);
-			alert(content);
 		}
 		$scope.setContent=function(){
 			$scope.ueditorSetContent("container","111111");
 		}
-		$scope.setContent2=function(){
-			$scope.ueditorSetContent("container2","222222");
-		}
 
 
+        $scope.listItem = function(){
+
+            if(modelId == 0){
+                $scope.item = {
+                    id: 0,
+                    title: '',
+                    typestr: '',
+                    typeid:0,
+                    summary:'',
+                    content:'',
+                    source:'',
+                    author:'',
+                    status:0,
+                };
+            }else{
+                appBase.doGet("article/"+modelId,null,function(response){
+                    $scope.item=response.data;
+                    //$("#data_date").val(response.data.begin_date)
+                    for(var i =0;i<$scope.categories.length;i++){
+                        if($scope.categories[i].value == response.data.type){
+                            $scope.type = $scope.categories[i];
+                        }
+                    }
+                    if( response.data.status==3 && op==2){
+                        $scope.showApplyDetail =true;
+                    }
+                    $scope.typeid = response.data.typeid;
+                    $scope.typestr = response.data.typestr;
+                    $scope.picmark = "mark"
+			    });
+            }
+
+        }
 
 		var modelId= $stateParams.modelId,op=$stateParams.op;
-
-		$scope.useables=[{'value':2,'text':'通过'},{'value':3,'text':'不通过'}];
-		$scope.types=[{'value':0,'text':'内部广告'},{'value':1,'text':'外部广告'}];
 		$scope.showApplyDetail =false;
 		$scope.labels=[{'id':0,'name':'养生'},{'id':1,'name':'健康'}]
-
-
-		if(modelId == 0){
-			$scope.welcome = {
-				id: 0,
-				title: '',
-				url: '',
-				useable: '',
-				beginDate: '',
-				endDate: '',
-				orders: '',
-				link: '',
-				status:'',
-				weight:'',
-				contactName:'',
-				contactPhone:'',
-				applydetail:'',
-				applypeole:'',
-				type:'',
-			};
-		}else{
-
-			appBase.doGet("banner/"+modelId,null,function(response){
-				$scope.welcome=response.data;
-				//$("#data_date").val(response.data.begin_date)
-				for(var i =0;i<$scope.types.length;i++){
-					if($scope.types[i].value == response.data.type){
-						$scope.type = $scope.types[i];
-					}
-				}
-				if( response.data.status==3 && op==2){
-					$scope.showApplyDetail =true;
-				}
-				$scope.typeId = response.data.type;
-				$scope.realDate =response.data.beginDate
-				$scope.realendDate =response.data.endDate
-				$scope.picmark = "mark"
-			});
+		$scope.listCategory = function(){
+            appBase.doGet("articleCategoryList",null,function(response){
+                 $scope.categories = response.data.slice(0);
+                 $scope.listItem();
+            })
 		}
+        $scope.listCategory();
 
+        $scope.removeLabel = function(labelId){
+            var param = "addable=0&article="+modelId+"&label="+labelId;
+            appBase.doPut("article/label?"+param,null,function(response){
+				appBase.bubMsg("操作成功");
+				$scope.listItem();
+			})
+        }
 
+		$scope.addLabel = function(){
+            if(modelId == 0){
+		        appBase.bubMsg("请先保存文章再添加标签");
+		        return;
+		    }
 
+			var modalInstance = $uibModal.open({
+				animation: true,
+				templateUrl: 'app/pages/article/article/articleLabelModal.html',
+				size: 'lg',
+				backdrop:"static",
+				controller: 'articleLabelModalCtrl',
+				resolve: {
+					columnId:  function() { return modelId; }
+				}
+			});
 
-		$scope.removeLabel = function (id) {
-			//$scope.picture = $filter('appImage')('theme/no-photo.png');
-			//$scope.noPicture = true;
-		};
+			modalInstance.result.then(function (result) {
+                 $scope.listItem();
+            }, function (reason) {
+                $scope.listItem();
+                console.log(reason);//点击空白区域，总会输出backdrop click，点击取消，则会暑促cancel
+             });
+		}
 
 		//op 1 新增 2详情 3编辑 4 审核
 		$scope.initInput= function(){
@@ -106,11 +122,6 @@
 				return false;
 			}
 		}
-
-		$scope.uploadPicture = function () {
-			var fileInput = document.getElementById('uploadFile');
-			fileInput.click();
-		};
 		$scope.showSubmit = function(){
 			if(op ==2){
 				return false;
@@ -118,29 +129,11 @@
 				return true
 			}
 		}
-		$scope.getFile = function (file) {
-			fileReader.readAsDataUrl(file, $scope)
-					.then(function (result) {
-						$scope.welcome.picture = result;
-						$scope.picmark="mark";
-					});
-			$scope.file = file;
-		};
-
 
 		$scope.link = '';
 		$scope.ok = function () {
 			$uibModalInstance.close($scope.link);
 		};
-
-		$scope.setDate = function(){
-			$scope.realDate = $("#data_id").val();
-			//$("#data_date").val($("#data_id").val());
-		}
-		$scope.setEndDate = function(){
-			$scope.realendDate = $("#data_endid").val();
-			//$("#data_date").val($("#data_id").val());
-		}
 		$scope.showApply = function(){
 			if(op ==4){
 				return true;
@@ -161,47 +154,32 @@
 			}
 		}
 		$scope.selectType = function(x){
-			$scope.typeId = x.type.value;
+			$scope.typeid = x.category.value;
+			$scope.typestr = x.category.text;
 		}
 		$scope.saveOrUpdate = function(dismis){
 
 			var formData = new FormData();
 			formData.append('file',$scope.file);
-			formData.append('id', $scope.welcome.id);
-			formData.append('link', $scope.welcome.link);
-			formData.append('title',$scope.welcome.title);
-			formData.append('content',$scope.welcome.content);
-			if($scope.welcome.weight !=null){
-				formData.append('weight',$scope.welcome.weight);
-			}
-			formData.append('type',$scope.typeId);
+			formData.append('id', $scope.item.id);
+			formData.append('title',$scope.item.title);
+			formData.append('content',$scope.item.content);
+			formData.append('summary',$scope.item.summary);
+			formData.append('source',$scope.item.source);
+			formData.append('author',$scope.item.author);
+			formData.append('typeid',$scope.typeid);
+			formData.append('typestr',$scope.typestr);
 			if($scope.welcome.applydetail !=null){
 				formData.append('applyDetail',$scope.welcome.applydetail);
-			}
-			if($scope.welcome.contactName !=null){
-				formData.append('contactName',$scope.welcome.contactName);
-			}
-			if($scope.welcome.contactPhone !=null){
-				formData.append('contactPhone',$scope.welcome.contactPhone);
 			}
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);
 			}
-			if ($scope.realDate != null){
-				formData.append('beginDate',$scope.realDate );
-			}
-			if ($scope.realendDate != null){
-				formData.append('endDate',$scope.realendDate);
-			}
 
-			formData.append('useable',1);
-			formData.append('orderId',$scope.welcome.orderId);
-			formData.append('isBanner',0);
-
-			appBase.doFormData("banner",formData,function(response){
+			appBase.doFormData("article",formData,function(response){
 				appBase.bubMsg("保存成功");
 				dismis;
-				$state.go("content.advertisement", {}, { reload: true });
+				$state.go("article.article", {}, { reload: true });
 			});
 		}
 	}

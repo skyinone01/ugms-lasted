@@ -9,6 +9,7 @@ public class ArticleLabelRequest {
     private String name;
     private Integer level;
     private String levelname;
+    private boolean add;
 
     public String getLevelname() {
         return levelname;
@@ -40,5 +41,13 @@ public class ArticleLabelRequest {
 
     public void setLevel(Integer level) {
         this.level = level;
+    }
+
+    public boolean isAdd() {
+        return add;
+    }
+
+    public void setAdd(boolean add) {
+        this.add = add;
     }
 }
