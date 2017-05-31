@@ -278,7 +278,7 @@
     <select id="selectPvCountYearByModule" parameterType="hashmap" resultMap="UserCountMap">
         SELECT MONTH(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
 		WHERE 1=1
-        <if test="selectedYear !='' and selectedYear != null">
+        <if test="selectedYear !='' and selectedYear != null and selectedYear!='请选择'">
         AND YEAR(createTime) = #{selectedYear}
         </if>
         <if test="moduleName !='' and moduleName != null">
@@ -292,13 +292,13 @@
     <select id="selectPvCountMonthByModule" parameterType="hashmap" resultMap="UserCountMap">
         SELECT DAY(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
 		WHERE 1=1
-        <if test="selectedMonth !='' and selectedMonth != null">
+        <if test="selectedMonth !='' and selectedMonth != null and and selectedMonth!='请选择'">
         And MONTH(createTime) = #{selectedMonth}
         </if>
         <if test="moduleName !='' and moduleName != null">
         AND d.`moduleName` = #{moduleName}
         </if>
-        <if test="selectedYear !='' and selectedYear != null">
+        <if test="selectedYear !='' and selectedYear != null and and selectedYear!='请选择'">
         AND YEAR(createTime) = #{selectedYear}
         </if>
 		GROUP BY DAY(createTime)
@@ -308,16 +308,16 @@
     <select id="selectPvCountDayByModule" parameterType="hashmap" resultMap="UserCountMap">
         SELECT HOUR(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
 		WHERE 1=1
-        <if test="selectedDay !='' and selectedDay != null">
+        <if test="selectedDay !='' and selectedDay != null  and selectedDay!='请选择'">
         AND DAY(createTime) = #{selectedDay}
         </if>
         <if test="moduleName !='' and moduleName != null">
         AND d.`moduleName` = #{moduleName}
         </if>
-        <if test="selectedYear !='' and selectedYear != null">
+        <if test="selectedYear !='' and selectedYear != null and selectedYear!='请选择'">
         AND YEAR(createTime) = #{selectedYear}
         </if>
-        <if test="selectedMonth !='' and selectedMonth != null">
+        <if test="selectedMonth !='' and selectedMonth != null and selectedMonth!='请选择'">
         AND MONTH(createTime) = #{selectedMonth}
         </if>
 		GROUP BY HOUR(createTime)
