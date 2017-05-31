@@ -296,9 +296,9 @@ public class StatisticsController {
     		String selectedMonth,String selectedDay) {
     	System.out.println("type = " + type + "   selectedYear = " + selectedYear + "   selectedMonth = " + selectedMonth + "   selectedDay = " + selectedDay);
         Map<String, String> dateMap = new HashMap<String, String>();
-        dateMap.put("selectedYear",selectedYear);
-        dateMap.put("selectedMonth",selectedMonth);
-        dateMap.put("selectedDay",selectedDay);
+        dateMap.put("selectYear",selectedYear);
+        dateMap.put("selectMonth",selectedMonth);
+        dateMap.put("selectDay",selectedDay);
         String data = "";
         switch (Integer.parseInt(type)) {
 		case 1:
