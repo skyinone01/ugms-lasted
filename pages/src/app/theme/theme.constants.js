@@ -10,7 +10,7 @@
   var API_ROOT = 'http://120.26.221.137:8080/';
 
   //var PAGE_ROOT = 'http://127.0.0.1:3000/';
-  //var API_ROOT = 'http://127.0.0.1:8080/';
+ // var API_ROOT = 'http://127.0.0.1:8080/';
 
   angular.module('BlurAdmin.theme')
     .constant('layoutSizes', {
