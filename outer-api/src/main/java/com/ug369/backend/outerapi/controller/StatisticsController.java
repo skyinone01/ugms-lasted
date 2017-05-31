@@ -95,11 +95,9 @@ public class StatisticsController {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping("/statistic/count-year")
-    public DataResponse<UserCountStatistics> selectCountYear(String startDate,String endDate) {
-    	System.out.println("startDate = " + startDate + "   endDate = " + endDate);
+    public DataResponse<UserCountStatistics> selectCountYear(String selectYear) {
         Map<String, String> dateMap = new HashMap<String, String>();
-        dateMap.put("startDate",startDate);
-        dateMap.put("endDate",endDate);
+        dateMap.put("selectYear",selectYear);
         List<UserCountStatistics> countryList = service.selectCountYear(dateMap);
         System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
@@ -107,11 +105,10 @@ public class StatisticsController {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping("/statistic/count-month")
-    public DataResponse<UserCountStatistics> selectCountMonth(String startDate,String endDate) {
-    	System.out.println("startDate = " + startDate + "   endDate = " + endDate);
+    public DataResponse<UserCountStatistics> selectCountMonth(String selectYear,String selectMonth) {
         Map<String, String> dateMap = new HashMap<String, String>();
-        dateMap.put("startDate",startDate);
-        dateMap.put("endDate",endDate);
+        dateMap.put("selectYear",selectYear);
+        dateMap.put("selectMonth",selectMonth);
         List<UserCountStatistics> countryList = service.selectCountMonth(dateMap);
         System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
@@ -119,11 +116,11 @@ public class StatisticsController {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping("/statistic/count-day")
-    public DataResponse<UserCountStatistics> selectCountDay(String startDate,String endDate) {
-    	System.out.println("startDate = " + startDate + "   endDate = " + endDate);
+    public DataResponse<UserCountStatistics> selectCountDay(String selectYear,String selectMonth,String selectDay) {
         Map<String, String> dateMap = new HashMap<String, String>();
-        dateMap.put("startDate",startDate);
-        dateMap.put("endDate",endDate);
+        dateMap.put("selectYear",selectYear);
+        dateMap.put("selectMonth",selectMonth);
+        dateMap.put("selectDay",selectDay);
         List<UserCountStatistics> countryList = service.selectCountDay(dateMap);
         System.out.println("countryList.size() = "+countryList.size());
         return new DataResponse(countryList);
@@ -305,13 +302,13 @@ public class StatisticsController {
         String data = "";
         switch (Integer.parseInt(type)) {
 		case 1:
-			data = "Statistics.selectUvCountYearByModule";
+			data = "Statistics.selectUserCountYear";
 			break;
 		case 2:
-			data = "Statistics.selectUvCountMonthByModule";
+			data = "Statistics.selectUserCountMonth";
 			break;
 		case 3:
-			data = "Statistics.selectUvCountDayByModule";
+			data = "Statistics.selectUserCountDay";
 			break;
 		default:
 			break;

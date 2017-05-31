@@ -13,6 +13,15 @@
 		var layoutColors = baConfig.colors;
 		var datas = [];
 		$scope.selectPv = true;
+		$scope.selectPvYear = false;
+		$scope.selectPvYearLab = false;
+		$scope.selectPvMonth = false;
+		$scope.selectPvMonthLab = false;
+		$scope.selectPvDay = false;
+		$scope.selectPvDayLab = false;
+		$scope.selectPvBack = true;
+		$scope.selectPv = true;
+		getPVData(1,'','','','');
 		appBase.doGet('statistic/module', null, function (response) {
 			response.data.forEach(function (value, index, array) {
 				datas.push({
@@ -88,14 +97,7 @@
 		
 		$rootScope.pvDetail = pvDetail;
 		function pvDetail(type,$event){
-			$scope.selectPvYear = true;
-			$scope.selectPvYearLab = true;
-			$scope.selectPvMonth = true;
-			$scope.selectPvMonthLab = true;
-			$scope.selectPvDay = true;
-			$scope.selectPvDayLab = true;
-			$scope.selectPvBack = true;
-			$scope.selectPv = true;
+
 			var name = "";
 			var datas = [];
 			if(type == 1)
@@ -110,6 +112,7 @@
 			var datas=[];
 			$scope.selectPv = false;
 			appBase.doGet("statistic/selectPvModule",param, function (response) {
+				//alert(response.data);
 				response.data.forEach(function (value, index, array) {
 					datas.push({
 						country: value.type,
@@ -156,7 +159,7 @@
 		}
 		
 		$scope.pvSelectDetail = pvSelectDetail;
-		
+
 		function pvSelectDetail(type,$event){
 			//初始化时
 			var selectedYear = $event.selectedYear;
@@ -168,6 +171,11 @@
 			var selectedDay = $event.selectedDay;
 			if(typeof(selectedDay) == "undefined")
 				selectedDay = "";
+			getPVData(type,selectedYear,selectedMonth,selectedDay,$scope.moduleName);
+
+		}
+
+		function getPVData(type,selectedYear,selectedMonth,selectedDay,moduleName) {
 			var getPath = 'statistic/pv-count';
 			var name = "";
 			if(type == 1)
@@ -176,8 +184,7 @@
 				name = "日";
 			if(type == 3)
 				name = "时";
-//			var param={"type":type,"time":data,"moduleName":$scope.moduleName};
-			var param={"type":type,"selectedYear":selectedYear,"selectedMonth":selectedMonth,"selectedDay":selectedDay,"moduleName":$scope.moduleName};
+			var param={"type":type,"selectedYear":selectedYear,"selectedMonth":selectedMonth,"selectedDay":selectedDay,"moduleName":moduleName};
 			var datas=[];
 			$scope.selectPv = false;
 			appBase.doGet(getPath,param, function (response) {
@@ -222,19 +229,20 @@
 					creditsPosition: 'top-right',
 					pathToImages: layoutPaths.images.amChart
 				});
-				
+
 
 			});
 		}
-		
+
 		$scope.pvBacks = pvBacks;
 		
 		function pvBacks(){
-			$scope.isDashoardPvTypeShow = true;
+			$scope.isDashoardPvTypeShow = false;
 			//
 			$scope.isDashoardPvShow = false;
 			//显示年月日
 			$rootScope.isPvBackShow = false;
+			$scope.moduleName="";
 			DashboardModuleCtrl(baConfig, layoutPaths,appBase,$scope,$rootScope);
 		}
 		
@@ -291,10 +299,12 @@
 
 			});
 		}
-	}
-	
-	
 
-	
-	
+		$scope.$watch('moduleName',function () {
+			if($scope.moduleName=="") {
+				getPVData(1,'','','','');
+		}
+		},true);
+
+	}
 })();

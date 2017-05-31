@@ -277,7 +277,13 @@
     <!--pv 获取某一年所有月份统计信息-->
     <select id="selectPvCountYearByModule" parameterType="hashmap" resultMap="UserCountMap">
         SELECT MONTH(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
-		WHERE YEAR(createTime) = #{selectedYear} AND d.`moduleName` = #{moduleName}
+		WHERE 1=1
+        <if test="selectedYear !='' and selectedYear != null">
+        AND YEAR(createTime) = #{selectedYear}
+        </if>
+        <if test="moduleName !='' and moduleName != null">
+        AND d.`moduleName` = #{moduleName}
+        </if>
 		GROUP BY MONTH(createTime)
     </select>
     
@@ -285,17 +291,35 @@
     <!--pv 获取某一月所有天统计信息-->
     <select id="selectPvCountMonthByModule" parameterType="hashmap" resultMap="UserCountMap">
         SELECT DAY(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
-		WHERE MONTH(createTime) = #{selectedMonth} AND d.`moduleName` = #{moduleName}
-		AND YEAR(createTime) = #{selectedYear}
+		WHERE 1=1
+        <if test="selectedMonth !='' and selectedMonth != null">
+        And MONTH(createTime) = #{selectedMonth}
+        </if>
+        <if test="moduleName !='' and moduleName != null">
+        AND d.`moduleName` = #{moduleName}
+        </if>
+        <if test="selectedYear !='' and selectedYear != null">
+        AND YEAR(createTime) = #{selectedYear}
+        </if>
 		GROUP BY DAY(createTime)
     </select>
     
     <!--pv 获取某一天所有整点统计信息-->
     <select id="selectPvCountDayByModule" parameterType="hashmap" resultMap="UserCountMap">
         SELECT HOUR(createTime) AS type,COUNT(1) as count FROM  yg_sys_uservisitlog AS d
-		WHERE DAY(createTime) = #{selectedDay} AND d.`moduleName` = #{moduleName}
-		AND YEAR(createTime) = #{selectedYear}
-		AND MONTH(createTime) = #{selectedMonth}
+		WHERE 1=1
+        <if test="selectedDay !='' and selectedDay != null">
+        AND DAY(createTime) = #{selectedDay}
+        </if>
+        <if test="moduleName !='' and moduleName != null">
+        AND d.`moduleName` = #{moduleName}
+        </if>
+        <if test="selectedYear !='' and selectedYear != null">
+        AND YEAR(createTime) = #{selectedYear}
+        </if>
+        <if test="selectedMonth !='' and selectedMonth != null">
+        AND MONTH(createTime) = #{selectedMonth}
+        </if>
 		GROUP BY HOUR(createTime)
     </select>
 
@@ -312,10 +336,11 @@
 
 	<!--年龄 年-->
     <select id="selectUserCountYear" parameterType="hashmap" resultMap="UserCountMap">
-        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m') as type
+        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y年%m月') as type
         from yg_user_info u
-        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
-            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        where 1=1
+        <if test="selectYear !='' and selectYear != null and selectYear !='请选择' ">
+            AND year(u.userCreateTime)=#{selectYear}
         </if>
         GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m')
         ORDER BY userCreateTime asc;
@@ -323,10 +348,16 @@
     
     <!--年龄 月-->
     <select id="selectUserCountMonth" parameterType="hashmap" resultMap="UserCountMap">
-        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m%d') as type
-        from yg_user_info u
-        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
-            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%d日') as type
+        from yg_user_info u where 1=1
+        <if test="selectYear !='' and selectYear != null and selectYear !='请选择'">
+           AND year(u.userCreateTime)=#{selectYear}
+        </if>
+        <if test="selectMonth !='' and selectMonth != null and selectMonth !='请选择'">
+           AND MONTH (u.userCreateTime)=#{selectMonth}
+        </if>
+        <if test="selectDay !='' and selectDay != null and selectDay !='请选择'">
+           AND Day(u.userCreateTime)=#{selectDay}
         </if>
         GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m%d')
         ORDER BY userCreateTime asc;
@@ -334,10 +365,16 @@
 
     <!--年龄 日-->
     <select id="selectUserCountDay" parameterType="hashmap" resultMap="UserCountMap">
-        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%Y%m%d%h') as type
-        from yg_user_info u
-        <if test="startDate !='' and startDate != null and endDate !='' and endDate != null">
-            where userCreateTime BETWEEN #{startDate} AND #{endDate}
+        SELECT count(1) as count , DATE_FORMAT( u.userCreateTime , '%h时') as type
+        from yg_user_info u where 1=1
+        <if test="selectYear !='' and selectYear != null and selectYear !='请选择'">
+            AND year(u.userCreateTime)=#{selectYear}
+        </if>
+        <if test="selectMonth !='' and selectMonth != null and selectMonth !='请选择'">
+            AND MONTH (u.userCreateTime)=#{selectMonth}
+        </if>
+        <if test="selectDay !='' and selectDay != null and selectDay !='请选择'">
+            AND Day(u.userCreateTime)=#{selectDay}
         </if>
         GROUP BY DATE_FORMAT( u.userCreateTime , '%Y%m%d%h')
         ORDER BY userCreateTime asc;
@@ -446,7 +483,10 @@
 		COUNT(*) AS visitnum,
 		ys.createTime AS createDate
 		FROM `yg_sys_uservisitlog` ys
-		WHERE ys.createTime IS NOT NULL AND ys.userId IS NOT NULL AND YEAR(ys.createTime) = #{selectedYear}
+		WHERE ys.createTime IS NOT NULL AND ys.userId IS NOT NULL
+        <if test="selectedYear !='' and selectedYear != null and selectedYear !='请选择'">
+        AND YEAR(ys.createTime) = #{selectedYear}
+        </if>
 		GROUP BY 
 		DATE_FORMAT(ys.createTime,"%Y-%m-%d"),HOUR(ys.createTime)) a GROUP BY a.`type`
     </select>
@@ -468,8 +508,13 @@
 		ys.createTime AS createDate,
 		COUNT(*) AS visitnum 
 		FROM `yg_sys_uservisitlog` ys
-		WHERE ys.createTime IS NOT NULL AND ys.userId IS NOT NULL AND 
-		YEAR(ys.createTime) = #{selectedYear} AND MONTH(ys.createTime) = #{selectedMonth}
+		WHERE ys.createTime IS NOT NULL AND ys.userId IS NOT NULL
+        <if test="selectedYear !='' and selectedYear != null and selectedYear !='请选择'">
+        AND YEAR(ys.createTime) = #{selectedYear}
+        </if>
+        <if test="selectedMonth !='' and selectedMonth != null and selectedMonth !='请选择'">
+        AND MONTH(ys.createTime) = #{selectedMonth}
+        </if>
 		GROUP BY 
 		DATE_FORMAT(ys.createTime,"%Y-%m-%d"),HOUR(ys.createTime)) a
 		GROUP BY `day`
@@ -488,8 +533,16 @@
 		HOUR(createTime) AS `type`,
 		COUNT(DISTINCT userId) AS `count`
 		FROM `yg_sys_uservisitlog`
-		WHERE createTime IS NOT NULL AND userId IS NOT NULL AND YEAR(createTime) = #{selectedYear} 
-		AND MONTH(createTime) = #{selectedMonth} AND DAY(createTime) = #{selectedDay}
+		WHERE createTime IS NOT NULL AND userId IS NOT NULL
+        <if test="selectedYear !='' and selectedYear != null and selectedYear !='请选择'">
+            AND YEAR(ys.createTime) = #{selectedYear}
+        </if>
+        <if test="selectedMonth !='' and selectedMonth != null and selectedMonth !='请选择'">
+            AND MONTH(ys.createTime) = #{selectedMonth}
+        </if>
+        <if test="selectedDay !='' and selectedDay != null and selectedDay !='请选择'">
+        AND DAY(createTime) = #{selectedDay}
+        </if>
 		GROUP BY 
 		DATE_FORMAT(createTime,"%Y-%m-%d"),HOUR(createTime)
     </select>

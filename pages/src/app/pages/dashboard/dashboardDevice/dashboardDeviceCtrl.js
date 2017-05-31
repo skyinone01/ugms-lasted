@@ -12,10 +12,10 @@
 	function DashboardDeviceCtrl(baConfig, layoutPaths,appBase) {
 		var layoutColors = baConfig.colors;
 		var datas = [];
-		appBase.doGet('statistic/device', null, function (response) {
-			response.data.forEach(function (value, index, array) {
+		appBase.doGet('statistic/activeDevice', null, function (response) {
+			response.data.items.forEach(function (value, index, array) {
 				datas.push({
-					country: value.type == 1 ? '苹果' : '安卓',
+					country: value.type ,
 					visits: value.count,
 					color: layoutColors.primary
 				})

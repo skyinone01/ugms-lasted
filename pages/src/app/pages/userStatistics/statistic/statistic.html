@@ -74,11 +74,12 @@
                      ba-panel
                      ba-panel-title='<div class="row"><div class="col-xs-9">PV(模块点击统计)</div>
                      <div class="col-xs-3" ng-class="{&apos;hidden&apos;:$root.isPvBackShow}">
-                     <div class="btn-group" role="group" aria-label="Basic example">
+                     <!--<div class="btn-group" role="group" aria-label="Basic example">
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvYear}" ng-click="pvDetail(1,$event)">年</button>
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvMonth}" ng-click="pvDetail(2,$event)">月</button>
                      <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isPvDay}" ng-click="pvDetail(3,$event)">日</button>
-                     </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isPvBackHidden}">
+                     </div>-->
+                     </div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isPvBackHidden}">
                      <button type="button" class="btn btn-primary" ng-click="pvBack($event)">返回</button></div></div>'>
                     <!-- -->
                     <div ng-class="{'hidden':selectPv}" ng-model="selectPv">
@@ -91,37 +92,39 @@
 				        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control" ng-class="{'hidden':selectPvDay}" ng-model="selectedDay" ng-init="selectedDay = day[0]" ng-options="x for x in day" ng-change="pvSelectDetail(3,this)"></select>
 				        <button type="button" class="btn btn-primary" ng-click="pvBacks()" style="float: right;" ng-class="{'hidden':selectPvBack}">返回</button>
                      </div>
-                     
-                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvShow}">
-                    	<dashboard-module></dashboard-module>
-                    </div>
-                    
                     <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvTypeShow}">
                         <dashboard-pv-type>{{$root.pvType}}</dashboard-pv-type>
                     </div>
+                    <div class="col-xs-12 row" ng-class="{'hidden':isDashoardPvShow}">
+                        <dashboard-module></dashboard-module>
+                    </div>
+
                 </div>
             </uib-tab>
             <uib-tab heading="UV(用户统计)">
                 <div class="col-lg-12 col-md-12 col-sm-12"
                      ba-panel
                      ba-panel-title='<div class="row"><div class="col-xs-9">UV(用户统计)</div>
-                     <div class="col-xs-3">
-                     <div class="btn-group" role="group" aria-label="Basic example">
-                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isUvYear}" ng-click="uvDetail(1,$event)">年</button>
-                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isUvMonth}" ng-click="uvDetail(2,$event)">月</button>
-                     <button type="button" class="btn btn-success" ng-class="{&apos;active&apos;:isUvDay}" ng-click="uvDetail(3,$event)">日</button>
-                     </div></div></div>'>
+                     </div>'>
+                    <div  ng-model="selectUv">
+                        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;" >年：</label>
+                        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control"  ng-model="selectedUvYear" ng-init="selectedUvYear = year[0]" ng-options="x for x in year" ng-change="uvSelectDetail(1,this)"></select>
+                        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;margin-left: 20px;" >月：</label>
+                        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control"  ng-model="selectedUvMonth" ng-init="selectedUvMonth = month[0]" ng-options="x for x in month" ng-change="uvSelectDetail(2,this)"></select>
+                        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;margin-left: 20px;"> 日：</label>
+                        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control"  ng-model="selectedUvDay" ng-init="selectedUvDay = day[0]" ng-options="x for x in day" ng-change="uvSelectDetail(3,this)"></select>
+                    </div>
                     <dashboard-uv></dashboard-uv>
                 </div>
             </uib-tab>
             <uib-tab heading="用户机型统计">
                 <div class="col-lg-12 col-md-12 col-sm-12"
                      ba-panel
-                     ba-panel-title='<div class="row"><div class="col-xs-9">用户机型统计</div>
+                     ba-panel-title='<div class="row"><div class="col-xs-9">用户机型统计</div><!--
                      <div class="col-xs-3" ng-class="{&apos;hidden&apos;:$root.isDeviceBackShow}">
                      <div class="btn-group" role="group" aria-label="Basic example">
                      </div></div><div class="col-xs-1" ng-class="{&apos;hidden&apos;:$root.isDeviceBackHidden}">
-                     <button type="button" class="btn btn-primary"  ng-click="deviceBack($event)">返回</button></div></div>'>
+                     <button type="button" class="btn btn-primary"  ng-click="deviceBack($event)">返回</button></div>--></div>'>
                      <div class="col-xs-12 row" ng-class="{'hidden':isDashoardDeviceShow}">
                     	<div class="col-xs-6">
                         	<dashboard-device-pie></dashboard-device-pie>
@@ -130,16 +133,25 @@
 	                        <dashboard-device></dashboard-device>
 	                    </div>
                     </div>
-                    
+                    <!--
                     <div class="col-xs-12 row" ng-class="{'hidden':isDashoardDeviceTypeShow}">
                         <dashboard-device-type>{{$root.deviceType}}</dashboard-device-type>
                     </div>
+                    !-->
                 </div>
             </uib-tab>
             <uib-tab heading="新增用户统计">
                 <div class="col-lg-12 col-md-12 col-sm-12"
                      ba-panel
-                     ba-panel-title='<div class="row"><div class="col-xs-9">新增用户统计</div><div class="col-xs-3"><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-success">年</button><button type="button" class="btn btn-success">月</button><button type="button" class="btn btn-success">日</button></div></div></div>'>
+                     ba-panel-title='<div class="row"><div class="col-xs-9">新增用户统计</div></div>'>
+                    <div  ng-model="selectNew">
+                        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;" >年：</label>
+                        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control"  ng-model="selectedNewYear" ng-init="selectedNewYear = year[0]" ng-options="x for x in year" ng-change="newSelectDetail(1,this)"></select>
+                        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;margin-left: 20px;" >月：</label>
+                        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control"  ng-model="selectedNewMonth" ng-init="selectedNewMonth = month[0]" ng-options="x for x in month" ng-change="newSelectDetail(2,this)"></select>
+                        <label for="pid" class="col-sm-1 control-label" style="padding-top: 7px;margin-left: 20px;"> 日：</label>
+                        <select style="width: 100px" class="row col-md-9 form-group row clearfix col-sm-8 form-control"  ng-model="selectedNewDay" ng-init="selectedNewDay = day[0]" ng-options="x for x in day" ng-change="newSelectDetail(3,this)"></select>
+                    </div>
                     <dashboard-user></dashboard-user>
                 </div>
             </uib-tab>

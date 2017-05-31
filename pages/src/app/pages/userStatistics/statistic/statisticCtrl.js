@@ -206,7 +206,7 @@
 		
 		//PV(模块点击统计)
 		$scope.isDashoardPvShow=false;
-		$scope.isDashoardPvTypeShow=true;
+		$scope.isDashoardPvTypeShow=false;
 		$rootScope.isPvBackShow=false;
 		$rootScope.isPvBackHidden=true;
 //		$scope.pvDetail = pvDetail;
@@ -217,7 +217,7 @@
 			$rootScope.isPvBackHidden=true;
 		}
 		
-		
+
 		//柱状图点击事件
 		function handleClick(event){
 			$scope.isDashoardPvTypeShow = false;
@@ -286,56 +286,56 @@
 			});
 		}
 		
-		//device 机型
-		$scope.isDashoardDeviceShow=false;
-		$scope.isDashoardDeviceTypeShow=true;
-		$rootScope.isDeviceBackShow=false;
-		$rootScope.isDeviceBackHidden=true;
-		$scope.deviceDetail = deviceDetail;
-		$scope.deviceBack = deviceBack;
-		function deviceBack($event) {
-			$scope.DeviceValue=0;
-			$rootScope.isDeviceBackShow=false;
-			$rootScope.isDeviceBackHidden=true;
-		}
-		
-		function deviceDetail(type,$event) {
-			$rootScope.deviceType=type;
-			if(type==1) {
-				if ($scope.isDeviceYear == true) {
-					$scope.isDeviceYear = false;
-				}else {
-					$scope.isDeviceYear = true;
-					$scope.isDeviceMonth = false;
-					$scope.isDeviceDay = false;
-				}
-			}else if(type==2){
-				if ($scope.isDeviceMonth == true) {
-					$scope.isDeviceMonth = false;
-				}else {
-					$scope.isDeviceYear = false;
-					$scope.isDeviceMonth = true;
-					$scope.isDeviceDay = false;
-				}
-			}else if(type==3){
-				if ($scope.isDeviceDay == true) {
-					$scope.isDeviceDay = false;
-				}else {
-					$scope.isDeviceYear = false;
-					$scope.isDeviceMonth = false;
-					$scope.isDeviceDay = true;
-				}
-			}
-			if($scope.isDeviceYear||$scope.isDeviceMonth||$scope.isDeviceDay)	{
-				$scope.isDashoardDeviceShow=true;
-				$scope.isDashoardDeviceTypeShow=false;
-			}else {
-				$scope.isDashoardDeviceShow=false;
-				$scope.isDashoardDeviceTypeShow=true;
-			}
-			$scope.DeviceValue=type;
-		}
-		
+		// //device 机型
+		// $scope.isDashoardDeviceShow=false;
+		// $scope.isDashoardDeviceTypeShow=true;
+		// $rootScope.isDeviceBackShow=false;
+		// $rootScope.isDeviceBackHidden=true;
+		// $scope.deviceDetail = deviceDetail;
+		// $scope.deviceBack = deviceBack;
+		// function deviceBack($event) {
+		// 	$scope.DeviceValue=0;
+		// 	$rootScope.isDeviceBackShow=false;
+		// 	$rootScope.isDeviceBackHidden=true;
+		// }
+		//
+		// function deviceDetail(type,$event) {
+		// 	$rootScope.deviceType=type;
+		// 	if(type==1) {
+		// 		if ($scope.isDeviceYear == true) {
+		// 			$scope.isDeviceYear = false;
+		// 		}else {
+		// 			$scope.isDeviceYear = true;
+		// 			$scope.isDeviceMonth = false;
+		// 			$scope.isDeviceDay = false;
+		// 		}
+		// 	}else if(type==2){
+		// 		if ($scope.isDeviceMonth == true) {
+		// 			$scope.isDeviceMonth = false;
+		// 		}else {
+		// 			$scope.isDeviceYear = false;
+		// 			$scope.isDeviceMonth = true;
+		// 			$scope.isDeviceDay = false;
+		// 		}
+		// 	}else if(type==3){
+		// 		if ($scope.isDeviceDay == true) {
+		// 			$scope.isDeviceDay = false;
+		// 		}else {
+		// 			$scope.isDeviceYear = false;
+		// 			$scope.isDeviceMonth = false;
+		// 			$scope.isDeviceDay = true;
+		// 		}
+		// 	}
+		// 	if($scope.isDeviceYear||$scope.isDeviceMonth||$scope.isDeviceDay)	{
+		// 		$scope.isDashoardDeviceShow=true;
+		// 		$scope.isDashoardDeviceTypeShow=false;
+		// 	}else {
+		// 		$scope.isDashoardDeviceShow=false;
+		// 		$scope.isDashoardDeviceTypeShow=true;
+		// 	}
+		// 	$scope.DeviceValue=type;
+		// }
+		//
 		$scope.uvDetail = uvDetail;
 		
 		function uvDetail(type,$event){

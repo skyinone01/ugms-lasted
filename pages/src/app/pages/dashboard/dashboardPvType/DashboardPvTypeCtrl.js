@@ -163,6 +163,7 @@
 
 		function handleClick(event)
 		{
+
 			$rootScope.isPvBackShow=true;
 			$rootScope.isPvBackHidden=false;
 			$scope.$apply();
@@ -172,6 +173,7 @@
 			//	if(bdate!="")bdate=bdate+""+event.item.category.substring(0,2);
 			//	if(edate!="")edate=edate+""+event.item.category.substring(0,2);
 			//}
+			alert(bdate);
 			if($scope.PvValue==1) {
 				var tmpbdate = event.item.category+""+"01";
 				var tmpedate = event.item.category+""+"31";
