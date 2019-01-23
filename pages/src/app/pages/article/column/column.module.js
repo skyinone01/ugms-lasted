@@ -14,7 +14,7 @@
         $stateProvider
             .state('article.column', {
               url: '/column',
-              templateUrl: 'app/pages/article/column/column.html',
+              templateUrl: 'app/pages/article/column/testPaper.html',
               controller: "ColumnPageCtrl",
               title: '专栏管理',
               sidebarMeta: {
@@ -23,7 +23,7 @@
               }
             }).state('article.column.add', {
             url: '/:modelId/:op',
-            templateUrl: 'app/pages/article/column/columnModal.html',
+            templateUrl: 'app/pages/article/column/testPaperModal.html',
             title: '专栏操作',
             controller: "columnModalCtrl"
         });

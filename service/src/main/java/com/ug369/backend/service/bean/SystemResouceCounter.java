@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Component
 @EnableAsync
-@EnableScheduling
+//@EnableScheduling
 public class SystemResouceCounter {
 
     private static Logger loger = LoggerFactory.getLogger(SystemResouceCounter.class);
@@ -31,7 +31,7 @@ public class SystemResouceCounter {
     @Autowired
     private SystemMonitorRepository monitorRepository;
 
-    @Scheduled(fixedDelay = 900000)
+//    @Scheduled(fixedDelay = 900000)
     private void monitor(){
 
         //memory

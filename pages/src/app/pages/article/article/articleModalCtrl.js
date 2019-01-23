@@ -10,31 +10,19 @@
 
 	/** @ngInject */
 	function articleModalCtrl($scope,$stateParams, fileReader, $uibModal,$filter,appBase,$state) {
-//		$scope.config={
-//			"content" : "<p>test1</p>",
-//			"focus" : true,
-//			"indentValue":"2em",
-//			"initialFrameWidth":1000,
-//			"initialFrameHeight":320,
-//			"readonly" : false ,
-//			"enableAutoSave": false,
-//			"saveInterval": 500,
-//			"fullscreen" : false,
-//			"imagePopup":true,
-//			"allHtmlEnabled":false,
-//			"functions" :['map','insertimage','insertvideo','attachment','insertcode','template', 'background', 'wordimage']
-//		};
+
 		$scope.getContent=function(id){
-			var content=$scope.ueditorGetContent(id);
-			alert(content);
-		}
-		$scope.getContentTxt=function(id){
-			var content=$scope.ueditorGetContentTxt(id);
-		}
-		$scope.setContent=function(){
-			$scope.ueditorSetContent("container","111111");
+            var editor = UE.getEditor(id);
+            return editor.getContent();
 		}
 
+		$scope.getContentTxt=function(id){
+            var editor = UE.getEditor(id);
+            return editor.getContentTxt();
+		}
+		$scope.setContent=function(id, value){
+			$scope.ueditorSetContent(id,value);
+		}
 
         $scope.listItem = function(){
 
@@ -163,14 +151,14 @@
 			formData.append('file',$scope.file);
 			formData.append('id', $scope.item.id);
 			formData.append('title',$scope.item.title);
-			formData.append('content',$scope.item.content);
+			formData.append('content',UE.getEditor('container').getContent());
 			formData.append('summary',$scope.item.summary);
 			formData.append('source',$scope.item.source);
 			formData.append('author',$scope.item.author);
 			formData.append('typeid',$scope.typeid);
 			formData.append('typestr',$scope.typestr);
-			if($scope.welcome.applydetail !=null){
-				formData.append('applyDetail',$scope.welcome.applydetail);
+			if($scope.applydetail !=null){
+				formData.append('applyDetail',$scope.applydetail);
 			}
 			if ($scope.applyStatus != null){
 				formData.append('status',$scope.applyStatus);

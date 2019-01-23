@@ -12,7 +12,7 @@
 	function routeConfig($stateProvider, $urlRouterProvider) {
 		
 		$stateProvider.state('statistics.statistic', {
-				url: '/statistic',
+				url: '/statistics/statistic',
 				title: '用户统计详情',
 				templateUrl: 'app/pages/userStatistics/statistic/statistic.html',
 				controller: 'StatisticCtrl',

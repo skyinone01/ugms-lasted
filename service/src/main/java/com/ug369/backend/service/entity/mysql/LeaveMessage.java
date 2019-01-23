@@ -11,7 +11,7 @@ public class LeaveMessage {
     private static final long serialVersionUID = 2406271872055393481L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private long id;
     private Integer userId;
     private String content;
     private String iscomplaint;
@@ -19,10 +19,10 @@ public class LeaveMessage {
     private String replayContent;
     private Date createTime;
     private Date updateTime;
-	public Integer getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public Integer getUserId() {

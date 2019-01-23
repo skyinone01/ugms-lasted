@@ -1,0 +1,108 @@
+<ui-view>
+<div class="row">
+
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text"
+                       ng-model="searchValue.value"
+                       class="form-control with-danger-addon"
+                       placeholder="请输入标签名称..."
+                >
+            </div>
+            <button class="btn btn-info" ng-click="search()">查找试卷</button>
+
+            <button tyle="float:right" has-permission="testPaper.testPaper:edit" type="button"
+                class="btn btn-primary" style="float: right"
+                ui-sref="testPaper.testPaper.add({modelId:0,op:1})"
+                >
+            新增试卷
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<div ba-panel style="margin-top: 10px">
+
+
+    <table class="table table-bordered table-hover" st-table="smartTableData">
+
+        <thead>
+        <tr class="primary">
+
+            <td></td>
+            <td>试卷标题</td>
+            <td>状态</td>
+            <td>创建时间</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in items">
+            <td class="table-id">
+                {{$index}}
+                <span style="display: none"   e-name="id"  e-required>
+                              {{ item.id || '0' }}
+                </span>
+            </td>
+            <td>{{item.title}}</td>
+            <td>{{showStatus(item.status)}}</td>
+            <td>{{item.createtime | date:'longDate'}}</td>
+            <td>
+                <button class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ui-sref="testPaper.testPaper.add({modelId:item.id,op:2})"
+                        ng-show="showButton($index,'detail')"
+                >
+                    详情
+                </button>
+                <button has-permission="testPaper.testPaper:edit"  class="status-button btn btn-xs btn-primary "
+                        data-toggle="modal"
+                        ui-sref="testPaper.testPaper.add({modelId:item.id,op:3})"
+                        ng-show="showButton($index,'edit')"
+                >
+                    编辑
+                </button>
+                <button has-permission="testPaper.testPaper:release"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'release')"
+                >
+                    发布
+                </button>
+                <button has-permission="testPaper.testPaper:up"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(4,item.id)"
+                        ng-show="showButton($index,'up')"
+                >
+                    启用
+                </button>
+                <button has-permission="testPaper.testPaper:down"  class="status-button btn-primary btn-xs btn "
+                        data-toggle="modal"
+                        ng-click="operation(5,item.id)"
+                        ng-show="showButton($index,'down')"
+                >
+                    停用
+                </button>
+                <button has-permission="testPaper.testPaper:delete" class="status-button btn btn-danger btn-xs btn-success"
+                        ng-show="showButton($index,'delete')"
+                        ng-click="deleteOne(item.id)">删除</button>
+            </td>
+        </tr>
+        </tbody>
+
+
+        <tfoot>
+        <tr>
+            <td colspan="8" class="text-center">
+                <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                {{page}}/{{totalPage}}
+                <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+</ui-view>

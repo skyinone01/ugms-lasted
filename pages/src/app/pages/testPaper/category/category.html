@@ -1,0 +1,66 @@
+<div class="widgets">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="标签列表" ba-panel-class="with-scroll">
+                <div class="add-row-editable-table">
+                    <button has-permission="article.category:edit" style="float: right" class="btn btn-primary" ng-click="addType()">新增类别</button>
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td>类别名称</td>
+                        <td>排序号</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr ng-repeat="type in types"  class="editable-row"  >
+                        <td >
+                            {{$index}}
+                                <span style="display: none"   e-name="id" e-form="rowform" e-required>
+                              {{ type.id || '0' }}
+                            </span>
+                        </td>
+                        <td >
+                            <span editable-text="type.name"  e-name="name" e-form="rowform" e-required  >
+                              {{ type.name || '' }}
+                            </span>
+                        </td>
+                        <td >
+                            <span editable-text="type.sort"  e-name="sort" e-form="rowform" e-required  >
+                              {{ type.sort || '' }}
+                            </span>
+                        </td>
+
+                        <td>
+                            <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline"
+                                  shown="inserted == type" >
+                                <button type="submit" ng-click="saveType($index)"  ng-disabled="rowform.$waiting"  class="btn btn-primary editable-table-button btn-xs">
+                                    保存
+                                </button>
+                                <button type="button" ng-disabled="rowform.$waiting" ng-click="cancel(rowform.$cancel())" class="btn btn-default editable-table-button btn-xs">
+                                    取消
+                                </button>
+                            </form>
+                            <div class="buttons" ng-show="!rowform.$visible">
+                                <button has-permission="article.category:edit" class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
+                                <button has-permission="article.category:delete" class="btn btn-danger editable-table-button btn-xs" ng-click="deleteType($index)">删除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="8" class="text-center">
+                            <input class="btn btn-primary" ng-disabled="upAble(page)" type="button" value="上一页" ng-click="btnUp(page)"/>
+                            {{page}}/{{totalPage}}
+                            <input class="btn btn-primary" ng-disabled="nextAble(page)" type="button" value="下一页" ng-click="btnNext(page)"/>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

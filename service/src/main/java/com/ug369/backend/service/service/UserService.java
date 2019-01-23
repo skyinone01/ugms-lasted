@@ -79,7 +79,7 @@ public class UserService {
                 userRoleRepository.save(userRole);
             }
             if (StringUtils.isNotEmpty(request.getPassword())){
-                user.setUsername(bCryptPasswordEncoder.encode(user.getPassword()));
+                user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
             }
             userRepository.save(user);
         }else {

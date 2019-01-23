@@ -1,0 +1,52 @@
+<div class="add-row-editable-table">
+    <button has-permission="users.role:edit" class="btn btn-primary" ng-click="addRole()">新增角色</button>
+
+</div>
+<table class="table table-bordered table-hover table-condensed">
+    <tr>
+        <td></td>
+        <td>角色名称</td>
+        <td>Code</td>
+        <td>描述</td>
+        <td>操作</td>
+    </tr>
+    <tr ng-repeat="role in roles"  class="editable-row"  >
+        <td >
+            {{$index}}
+            <span style="display: none"   e-name="id" e-form="rowform" e-required>
+          {{ role.id || '0' }}
+        </span>
+        </td>
+        <td >
+        <span editable-text="role.name"  e-name="name" e-form="rowform" e-required  >
+          {{ role.name || 'empty' }}
+        </span>
+        </td>
+        <td>
+        <span editable-text="role.code"  e-name="code" e-form="rowform" e-required  >
+          {{ role.code || 'empty' }}
+        </span>
+        </td>
+        <td >
+        <span editable-text="role.description" e-name="description"  e-form="rowform" e-required  >
+          {{ role.description || 'empty' }}
+        </span>
+        </td>
+        <td>
+            <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline"
+                  shown="inserted == role" >
+                <button type="submit" ng-click="saveRole($index)"  ng-disabled="rowform.$waiting"  class="btn btn-primary editable-table-button btn-xs">
+                    保存
+                </button>
+                <button type="button" ng-disabled="rowform.$waiting" ng-click="cancel(rowform.$cancel())" class="btn btn-default editable-table-button btn-xs">
+                    取消
+                </button>
+            </form>
+            <div class="buttons" ng-show="!rowform.$visible">
+                <button has-permission="users.role:edit"  class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">编辑</button>
+                <button has-permission="users.role:delete"  class="btn btn-danger editable-table-button btn-xs" ng-click="deleteRole($index)">删除</button>
+                <button has-permission="users.role:operate"  class="btn btn-primary editable-table-button btn-xs" ng-click="permission($index)">赋权</button>
+            </div>
+        </td>
+    </tr>
+</table>

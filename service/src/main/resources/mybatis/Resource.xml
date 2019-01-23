@@ -6,7 +6,7 @@
 
     <select id="getByRole" parameterType="long" resultType="com.ug369.backend.bean.bean.response.PermissionResponse">
         SELECT r.state as stateRef,r.name as name,rr.deleteable as deleteable,
-        rr.editable as editable,rr.operateable as operateable,
+        rr.editable as editable,
         rr.requestable as requestable,rr.applyable as applyable,
         rr.upable as upable,rr.downable as downable,
         rr.cancelable as cancelable,rr.releaseable,rr.copyable

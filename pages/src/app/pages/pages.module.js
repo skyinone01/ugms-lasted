@@ -26,6 +26,7 @@
     'BlurAdmin.pages.customer',
     'BlurAdmin.pages.system',
     'BlurAdmin.pages.article',
+    'BlurAdmin.pages.testPaper',
     //'BlurAdmin.pages.auth',
   ])
       .config(routeConfig);
